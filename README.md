@@ -36,6 +36,25 @@ had already entered before the very first snapshot are attributed to the week
 of their last visit at that moment (marked ≈ on the page — an upper bound;
 their entered/not-entered status is exact either way).
 
+## Status of the "entered" signal (verified 2026-08-18)
+
+The first live run confirmed the member object the Admin API v1 returns:
+`id, email, first_name, last_name, avatar, bio, location, time_zone,
+member_type, ambassador_level, referral_count, categories, permalink,
+created_at, updated_at`. **There is no last-visit field yet**, so the page
+currently shows the joined-per-day numbers (live and exact, from
+`created_at`) and dashes for the entered/week columns instead of a
+misleading zero. Two tracks to light them up:
+
+1. **Ask Mighty** which API exposes the "Last visit" column from the admin
+   People table (the API program contacts who enabled it for this Network in
+   July 2026 are the right people). The candidate field names are already
+   configured — the columns fill automatically the day such a field appears.
+2. **`updated_at` experiment** — each snapshot stores it; after a few days
+   of data, day-over-day movement will show whether it tracks member
+   activity (usable as an "active since" signal) or only profile edits.
+   Decide from the evidence, never silently.
+
 ## The one manual step: the API token
 
 Mighty's API program was enabled for lesko-help-2 in July 2026. The Admin API

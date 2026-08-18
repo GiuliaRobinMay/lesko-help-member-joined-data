@@ -140,6 +140,10 @@ def main():
             "members_tracked": len(members),
             "lookback_days": LOOKBACK_DAYS,
             "weeks": WEEKS,
+            # True once at least one member has an observed entry. The Admin
+            # API exposes no last-visit field today, so until an entry source
+            # exists the page must say "no data" rather than "0 entered".
+            "entry_signal": any(m["entry"] for m in members.values()),
         }
     else:
         asof = None
@@ -152,6 +156,7 @@ def main():
             "members_tracked": 0,
             "lookback_days": LOOKBACK_DAYS,
             "weeks": WEEKS,
+            "entry_signal": False,
         }
 
     with open(os.path.join(DOCS_DIR, "data.json"), "w") as fh:
@@ -179,13 +184,20 @@ def pretty(date_iso):
     return d.strftime("%a %e %b").replace("  ", " ")
 
 
-def render_rows(rows):
+def render_rows(rows, entry_signal):
     if not rows:
         return ""
     out = []
     for r in rows:
         dim = ' class="empty"' if r["joined"] == 0 else ""
         approx = '<span class="approx" title="Joined before tracking started; week timing is approximate">&asymp;</span> ' if r["approx"] else ""
+        if not entry_signal:
+            cells = '<td class="c0"></td>' * len(r["weeks"])
+            out.append(
+                '<tr%s><th scope="row">%s%s</th><td class="num joined">%d</td>%s'
+                '<td class="num muted">&ndash;</td><td class="num muted">&ndash;</td></tr>'
+                % (dim, approx, pretty(r["date"]), r["joined"], cells))
+            continue
         pct = ("%d%%" % round(100 * r["entered"] / r["joined"])) if r["joined"] else "&ndash;"
         cells = []
         for i, c in enumerate(r["weeks"]):
@@ -224,14 +236,28 @@ def render_html(meta, totals, rows):
     itself &mdash; new data every day, no exports, no spreadsheets.</p>
   </section>"""
     else:
+        entry_signal = meta.get("entry_signal", False)
+        if entry_signal:
+            entered_tile = ('<div class="tile"><div class="k">Entered the community</div><div class="v">%s <span class="sub">%s</span></div></div>'
+                            '<div class="tile"><div class="k">Not yet entered</div><div class="v">%s</div></div>'
+                            % (totals["entered"], pct_total, totals["not_entered"]))
+            notice = ""
+        else:
+            entered_tile = ('<div class="tile"><div class="k">Entered the community</div>'
+                            '<div class="v">&ndash;</div><div class="k">no entry signal yet</div></div>'
+                            '<div class="tile"><div class="k">Not yet entered</div>'
+                            '<div class="v">&ndash;</div><div class="k">no entry signal yet</div></div>')
+            notice = ('<p class="note notice">The joined-per-day numbers are live from the Mighty Networks API. '
+                      'The <em>entered / week</em> columns are waiting on an entry signal: the Admin API does not '
+                      'expose a member&rsquo;s last visit yet (confirmed against the live member object). '
+                      'They will fill in automatically the day that signal is connected &mdash; see the README.</p>')
         body_main = """
   <section class="tiles">
     <div class="tile"><div class="k">New members &middot; last %(days)s days</div><div class="v">%(joined)s</div></div>
-    <div class="tile"><div class="k">Entered the community</div><div class="v">%(entered)s <span class="sub">%(pct)s</span></div></div>
-    <div class="tile"><div class="k">Not yet entered</div><div class="v">%(not_entered)s</div></div>
+    %(entered_tile)s
     <div class="tile"><div class="k">Daily snapshots</div><div class="v">%(snaps)s <span class="sub">since %(first)s</span></div></div>
   </section>
-
+  %(notice)s
   <section class="card">
     <div class="tablewrap">
       <table>
@@ -249,14 +275,7 @@ def render_html(meta, totals, rows):
         </tbody>
       </table>
     </div>
-    <div class="legend">
-      <span class="ramp" aria-hidden="true"></span>
-      <span>share of the day&rsquo;s cohort that has entered &mdash; 0&thinsp;&ndash;&thinsp;100%%</span>
-      <span class="sep"></span>
-      <span><span class="chip open-demo"></span> week still running</span>
-      <span class="sep"></span>
-      <span>&asymp; joined before tracking began &mdash; week timing approximate, totals exact</span>
-    </div>
+    %(legend)s
   </section>
 
   <p class="note">Week columns are cumulative: <em>W3</em> means &ldquo;had entered by the end of
@@ -264,13 +283,20 @@ def render_html(meta, totals, rows):
   so these columns get more precise every single day the tracker runs.</p>""" % {
             "days": meta["lookback_days"],
             "joined": totals["joined"],
-            "entered": totals["entered"],
-            "not_entered": totals["not_entered"],
-            "pct": pct_total,
+            "entered_tile": entered_tile,
+            "notice": notice,
             "snaps": meta["snapshot_count"],
             "first": pretty(meta["first_snapshot"]),
             "week_heads": week_heads,
-            "rows": render_rows(rows),
+            "rows": render_rows(rows, entry_signal),
+            "legend": ("""<div class="legend">
+      <span class="ramp" aria-hidden="true"></span>
+      <span>share of the day&rsquo;s cohort that has entered &mdash; 0&thinsp;&ndash;&thinsp;100%</span>
+      <span class="sep"></span>
+      <span><span class="chip open-demo"></span> week still running</span>
+      <span class="sep"></span>
+      <span>&asymp; joined before tracking began &mdash; week timing approximate, totals exact</span>
+    </div>""" if entry_signal else ""),
         }
 
     page = """<!doctype html>
@@ -348,6 +374,8 @@ td.open { outline: 1.5px dashed var(--ink-3); outline-offset: -1.5px; }
 .legend .chip.open-demo { display: inline-block; width: 14px; height: 14px; border-radius: 3px;
   outline: 1.5px dashed var(--ink-3); outline-offset: -1.5px; vertical-align: -2px; }
 .note { color: var(--ink-2); font-size: 13.5px; max-width: 760px; }
+.note.notice { background: var(--surface); border: 1px solid var(--ring); border-left: 3px solid var(--accent);
+  border-radius: 8px; padding: 10px 14px; max-width: none; margin: 0 0 8px; }
 footer { margin-top: 28px; color: var(--ink-3); font-size: 12.5px; }
 #tip { position: fixed; display: none; max-width: 280px; padding: 6px 10px; background: var(--ink); color: var(--page);
   border-radius: 6px; font-size: 12.5px; pointer-events: none; z-index: 10; }

@@ -39,7 +39,7 @@ NETWORK_HOST = "lesko-help-2.mn.co"
 
 EMAIL_RE = re.compile(r"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}")
 
-SNAPSHOT_FIELDS = ["member_id", "join_date", "last_visited", "checklist_completed"]
+SNAPSHOT_FIELDS = ["member_id", "join_date", "last_visited", "checklist_completed", "updated_at"]
 
 
 def token():
@@ -230,11 +230,15 @@ def extract_row(node, node_fields):
     if isinstance(member_id, str) and member_id.startswith("gid://"):
         member_id = member_id.rsplit("/", 1)[-1]
     checklist = row.get("checklist_completed")
+    updated = row.get("updated_at")
     return {
         "member_id": "" if member_id is None else str(member_id),
         "join_date": norm_date(row.get("join_date")),
         "last_visited": norm_date(row.get("last_visited")),
         "checklist_completed": "" if checklist is None else str(bool(checklist)).lower(),
+        # Kept as a full timestamp: day-over-day movement of updated_at is the
+        # candidate activity signal while the API lacks a last-visit field.
+        "updated_at": "" if updated is None else str(updated)[:19],
     }
 
 

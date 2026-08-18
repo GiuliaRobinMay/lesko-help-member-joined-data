@@ -9,9 +9,11 @@
   "page_delay": 0.4,
   "items_path": "items",
   "node_fields": {
-    "member_id": ["id", "user_id", "member_id"],
-    "join_date": ["joined_at", "join_date", "joined_on", "member_since", "joined_network_at", "created_at"],
+    "member_id": ["id"],
+    "join_date": ["created_at"],
     "last_visited": ["last_visited_at", "last_seen_at", "last_visited_network_at", "last_visited_network", "last_active_at", "last_sign_in_at"],
-    "checklist_completed": ["welcome_checklist_completed", "checklist_completed", "onboarding_completed"]
-  }
+    "checklist_completed": ["welcome_checklist_completed", "checklist_completed", "onboarding_completed"],
+    "updated_at": ["updated_at"]
+  },
+  "_fields_note": "Verified 2026-08-18 from the first live run: the member object exposes exactly [ambassador_level, avatar, bio, categories, created_at, email, first_name, id, last_name, location, member_type, permalink, referral_count, time_zone, updated_at]. created_at = joined the Network (per docs). There is NO last-visit field in Admin API v1 today - last_visited stays empty until Mighty exposes one (candidates kept so it lights up automatically); updated_at is captured to test empirically whether it tracks member activity."
 }
