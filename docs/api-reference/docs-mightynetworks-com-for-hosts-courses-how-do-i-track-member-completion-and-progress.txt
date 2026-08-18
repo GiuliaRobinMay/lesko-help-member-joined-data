@@ -1,5 +1,5 @@
 SOURCE: https://docs.mightynetworks.com/for-hosts/courses/how-do-i-track-member-completion-and-progress
-FETCHED: 2026-08-18 12:58 UTC
+FETCHED: 2026-08-18 13:17 UTC
 
 How Do I Track Member Completion and Progress? - Mighty Networks Developer
 Documentation Index

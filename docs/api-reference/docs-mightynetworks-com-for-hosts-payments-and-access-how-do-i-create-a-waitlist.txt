@@ -1,7 +1,7 @@
-SOURCE: https://docs.mightynetworks.com/for-hosts/payments-and-access/what-is-a-full-vs-limited-membership
+SOURCE: https://docs.mightynetworks.com/for-hosts/payments-and-access/how-do-i-create-a-waitlist
 FETCHED: 2026-08-18 13:18 UTC
 
-What is a Full vs. Limited Membership? - Mighty Networks Developer
+How Do I Create a Waitlist? - Mighty Networks Developer
 Documentation Index
 Fetch the complete documentation index at: /llms.txt
 Use this file to discover all available pages before exploring further.
@@ -12,7 +12,7 @@ Search...
 Search...
 Navigation
 Payments and Access
-What is a Full vs. Limited Membership?
+How Do I Create a Waitlist?
 For Hosts
 For Members
 API Guides
@@ -212,59 +212,150 @@ The UK Online Safety Act
 Is Mighty Networks GDPR and CCPA Compliant?
 The EU Consumer Rights Directive — Cancellation Rights
 On this page
-Why Use Limited Memberships
-How Limited Members Join Spaces
-What Limited Members See Check out this video on how to set up limited memberships:
-Below is a detailed guide to the features accessible to each member type: Available Network-Level Actions
-Network Navigation
-Profile Features & Personal Settings
-Inside a Space with Membership
+Create a Waitlist From a Landing Page
+From the Waitlists Page
+Customize Your Waitlist
+Waitlist Notifications Host notifications
+Waitlist confirmation emails
+Managing Waitlists
+Manage Leads
+Sync Waitlists with Kit
+Close a Waitlist
+Frequently Asked Questions Do people need a Mighty Networks account to join a waitlist?
+Can I invite people later?
+Can I automatically invite everyone when my waitlist closes?
+Can I add Leads to a Space, plan etc?
+Can people see where they are in line?
+Can I limit the number of people on a waitlist?
+Can I create a waitlist for an individual Space?
 Payments and Access
-What is a Full vs. Limited Membership?
+How Do I Create a Waitlist?
 Copy page Copy page
 Copy page Copy page
-Full memberships provide access to your entire Network , while limited memberships offer access to a specific set of Spaces and features.
-Whether someone becomes a full or limited member depends on what their plans give access to.​
-Limited memberships let you offer a standalone experience—such as a course, live event, or lead magnet—inside a single Space or a bundle of Spaces, without unlocking your full Network.​
+Waitlists let you collect interest before your Mighty Network, a new Plan, or an upcoming offering is ready to launch.
+Instead of sending members to an experience that isn’t available yet, you can create a waitlist, add it to a landing page, and start building your audience before launch.
+Note: Waitlists are currently available on web only.
 ​
-Why Use Limited Memberships
-By restricting access to Network-level Global Features —including private messaging, the Global Feed, or Global Members—you can:
-Keep your broader community gated, exclusive, or reserved for paying members.
-Use individual Spaces as entry points to introduce new people to your work.
-Sell standalone programs or experiences while keeping your full community experience separate for those on a higher-tier plan.​
+Create a Waitlist
+You can create a waitlist from a Landing Page or directly from the Waitlists page in Admin.
 ​
-How Limited Members Join Spaces
-Important: Limited members can only join Spaces through paid plans. This means:
-Invites do not grant access to limited members for Spaces
-“Anyone Can Join” settings do not apply to limited members for Spaces
-Limited members must have a valid payment for a plan that includes the Space in order to access it
-This restriction ensures that limited memberships remain properly gated and prevents unintended access escalation.
+From a Landing Page
+Go to Admin > Marketing > Landing Pages .
+Create a new landing page or edit an existing one.
+Add a Waitlist section.
+Choose Create New Waitlist (or you can choose an existing one)
+Complete your waitlist settings:
+Internal Name (for your reference)
+Customize the confirmation message -this is the message that people who join the waitlist will receive
+Close Date and Time (optional)
+If you would like to have a countdown timer, choose this option
+Auto-Invite on Close (optional)
+If you enable Auto-Invite on Close , choose whether people should be invited to:
+Your Mighty Network, or
+A specific Plan and where you would like them to land :
+Plan Landing Page
+Create Account Page
+Sign in Page
+Customize the invitation message that will be sent when the waitlist closes.
+Save your waitlist.
 ​
-What Limited Members See
-Here’s an example of what the limited member experience can look like:
+From the Waitlists Page
+Go to Admin > Marketing > Waitlists .
+Select Create Waitlist .
+Then follow the same steps as above to setup the waitlist.
 ​
-Check out this video on how to set up limited memberships:
-For more details on setting up plans, check out this article .
+Customize Your Waitlist
+Once your waitlist has been created, you can customize how it appears on your Landing Page.
+You can edit:
+Heading and description
+Call-to-action button text
+Background image
+Optional countdown timer
+The colors that it shows are from your Network branding colors .
+When you’re ready, click Save.
 ​
-Below is a detailed guide to the features accessible to each member type:
-Important notes:
-If you set your Network Privacy & Access settings to “anyone can view content inside the Network, ” these definitions may shift because a limited member can see what a visitor/non-member sees (e.g. Collections with Spaces that anyone in the Network can see, promoted Spaces, etc.).
-If you demote a full member to a limited member (by removing the Network from any of the Spaces they are on) they will lose access to their private chats and any of the Global Features. If you add the Network back and restore them to full membership, then they will be able to access their previous chat messages.
-Limited members cannot become Space Hosts or Space moderators.
+Waitlist Notifications
 ​
-Available Network-Level Actions
-Feature Limited Member Full Network Member Download and use the iOS or Android app ✅ ✅ Receive badges ✅ ✅ Track streaks ✅ ✅ See the Network logo or global header brand ✅ ✅ See the Network About Page ✅ ✅ Send and receive private messages (including those sent via automation) ❌ ✅ See and complete the Welcome Checklist ❌ ✅ Use global Network Search ❌ ✅ Receive Network-level notifications (for example, about a global livestream) ❌ ✅ Use the Ambassador Program to refer Network members ❌ ✅ Earn points ❌ ✅ Send and receive recognitions ❌ ✅
+Host notifications
+As a Host, you will receive a notification (email, in-app or push) whenever someone joins a waitlist.
+This notification is turned on by default and you can manage it by going to Personal Settings > Notifications
 ​
-Network Navigation
-Feature Limited Member Full Network Member See Spaces where they are a member ✅ ✅ See global navigation features ❌ ✅ See custom navigation links ❌ ✅ See Collections ❌ ✅
+Waitlist confirmation emails
+When someone joins your waitlist, they’ll automatically receive a confirmation email letting them know they’ve successfully signed up. The email also includes an unsubscribe link.
+If they are a full member, they will also get an in-app or push notification.
+Tip: We recommend joining your own waitlist with a test email address to confirm both the signup confirmation and confirmation email look the way you expect.
 ​
-Profile Features & Personal Settings
-Feature Limited Member Full Network Member Have a profile with photo ✅ ✅ Fill in the mini bio ✅ ✅ Fill in custom fields ✅ ✅ Add a location ✅ ✅ Earn badges ✅ ✅ See their people explorer ✅ ✅ See their list of Space memberships ✅ ✅ Manage account details, notification preferences, and streaks calendar in personal settings ✅ ✅ See the introduction (or About Me) field ❌ ✅ See their referrals ❌ ✅
+Managing Waitlists
+To manage your waitlists, go to:
+Admin > Marketing > Waitlists
+From here you can:
+View all waitlists
+Edit waitlists
+Sort waitlists
+View waitlist leads
+Manually close a waitlist
+Delete a waitlist
 ​
-Inside a Space with Membership
-Feature Limited Member Full Network Member See and interact with all features enabled in the Space ✅ ✅ Receive notifications related to activity in the Space ✅ ✅ Use search within the Space ✅ ✅ Attend livestreams in the Space ✅ ✅ Bookmark content in the Space ✅ ✅ See profiles of other members in the same Space ✅ ✅ See the activity of other members in the same Space ✅ ✅ Follow other members in the same Space ❌ ✅ Private message other members in the same Space ❌ ✅ See similarities with other members in the same Space ❌ ✅ See other people in the same Space with the same badge ❌ ✅ See other people in the same Space with the same custom field ❌ ✅
-How Do I Choose Where Plans Appear?
-Can I Set Up Required Questions and Approval for Access?
+Manage Leads
+All waitlist signups are available in:
+Admin > Members > Leads
+This page also includes Sent Invites and Requests to Join , making it the central place to manage prospective members.
+From the Leads page you can:
+Search by email address
+Filter by:
+Date
+Status
+Waitlist
+Source landing page
+On the Explore plan and above you will be able to
+See lead emails
+Invite individual leads
+Send bulk invitations
+Download leads as a CSV
+​
+Sync Waitlists with Kit
+If you use the Kit integration , you can automatically sync waitlist signups.
+To enable syncing:
+Go to Admin > Integrations > Kit .
+Turn on Sync Waitlist Emails .
+Note: syncing will not be on automatically and emails will not sync retroactively
+Waitlist signups are sent to Kit with the following tags:
+Waitlist Name
+Mighty Networks Integration
+Once someone creates an account, their Network tag will also be added.
+After enabling the integration, create a test signup to verify that new waitlist leads are syncing correctly.
+​
+Close a Waitlist
+You can manually close a waitlist at any time.
+Go to Admin > Marketing > Waitlists .
+Select your waitlist.
+Click Close Waitlist .
+If Auto-Invite on Close is enabled, everyone on the waitlist will automatically receive your invitation email.
+​
+Frequently Asked Questions
+​
+Do people need a Mighty Networks account to join a waitlist?
+No. Anyone can join a waitlist by submitting their email address on your landing page.
+​
+Can I invite people later?
+Yes. You can invite individual leads or send invitations in bulk from Admin > Members > Leads .
+​
+Can I automatically invite everyone when my waitlist closes?
+Yes. Enable Auto-Invite on Close when creating your waitlist.
+​
+Can I add Leads to a Space, plan etc?
+At this time, Leads haven’t created a full account yet, so they can’t be managed as full or limited members.
+​
+Can people see where they are in line?
+No. Waitlists do not display a person’s position.
+​
+Can I limit the number of people on a waitlist?
+Waitlists do not currently support capacity limits.
+​
+Can I create a waitlist for an individual Space?
+Waitlists are added to landing pages and can invite people to your Network or a specific Plan. They are not available for individual Spaces.
+How Do Members Move Between Plans?
+Can I Change My Prices?
 ⌘ I
 x linkedin instagram
 Powered by This documentation is built and hosted on Mintlify, a developer documentation platform

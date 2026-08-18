@@ -1,7 +1,7 @@
-SOURCE: https://docs.mightynetworks.com/for-hosts/payments-and-access/what-is-a-full-vs-limited-membership
+SOURCE: https://docs.mightynetworks.com/for-hosts/admin-and-moderation/can-i-use-my-own-web-domain-with-mighty-networks
 FETCHED: 2026-08-18 13:18 UTC
 
-What is a Full vs. Limited Membership? - Mighty Networks Developer
+Can I Use My Own Web Domain with Mighty Networks? - Mighty Networks Developer
 Documentation Index
 Fetch the complete documentation index at: /llms.txt
 Use this file to discover all available pages before exploring further.
@@ -11,8 +11,8 @@ Search...
 ⌘ K Ask Assistant
 Search...
 Navigation
-Payments and Access
-What is a Full vs. Limited Membership?
+Admin and Moderation
+Can I Use My Own Web Domain with Mighty Networks?
 For Hosts
 For Members
 API Guides
@@ -212,59 +212,101 @@ The UK Online Safety Act
 Is Mighty Networks GDPR and CCPA Compliant?
 The EU Consumer Rights Directive — Cancellation Rights
 On this page
-Why Use Limited Memberships
-How Limited Members Join Spaces
-What Limited Members See Check out this video on how to set up limited memberships:
-Below is a detailed guide to the features accessible to each member type: Available Network-Level Actions
-Network Navigation
-Profile Features & Personal Settings
-Inside a Space with Membership
-Payments and Access
-What is a Full vs. Limited Membership?
+Step 1: Buy Your Domain
+Step 2: Choose How You Want Members to Access Your Community
+Step 3: Add Your Record with Your Domain Provider
+Step 4: Activate Your Domain in Mighty Networks
+Step 5 (Optional): Set Up a Redirect
+FAQs
+How to Disconnect Your Custom Domain
+Admin and Moderation
+Can I Use My Own Web Domain with Mighty Networks?
 Copy page Copy page
 Copy page Copy page
-Full memberships provide access to your entire Network , while limited memberships offer access to a specific set of Spaces and features.
-Whether someone becomes a full or limited member depends on what their plans give access to.​
-Limited memberships let you offer a standalone experience—such as a course, live event, or lead magnet—inside a single Space or a bundle of Spaces, without unlocking your full Network.​
+One of our most popular features is Custom Domain Mapping . This lets you use your own web address instead of the default networkname.mn.co when people visit your Mighty Network on the web. It also helps your search rankings and SEO.
+👉 To use a custom domain, start a Free Trial or upgrade your Mighty Network to the Launch Plan or higher .
+👉 On the Growth Plan or higher , you can also set up a Custom Email Domain .
+If you run into issues with these steps, please contact support with your full subdomain from Step 1 and screenshots of your settings from Step 2.
 ​
-Why Use Limited Memberships
-By restricting access to Network-level Global Features —including private messaging, the Global Feed, or Global Members—you can:
-Keep your broader community gated, exclusive, or reserved for paying members.
-Use individual Spaces as entry points to introduce new people to your work.
-Sell standalone programs or experiences while keeping your full community experience separate for those on a higher-tier plan.​
+Step 1: Buy Your Domain
+Before you connect anything, you need to own a domain name .
+A domain name is the web address people type in (like mycommunity.com).
+If you don’t already have one, you’ll need to purchase a domain from a provider of your choice. These are some popular options:
+GoDaddy
+Namecheap
+Google Domains
+Hover
+DNSimple
+When you buy a domain, you choose both the name and the ending (for example: example.com, example.net, or example.org).
+This will be known as your root domain.
+Once you buy your domain, you’re ready to follow the steps below to connect it so that it points to your Mighty Network.
 ​
-How Limited Members Join Spaces
-Important: Limited members can only join Spaces through paid plans. This means:
-Invites do not grant access to limited members for Spaces
-“Anyone Can Join” settings do not apply to limited members for Spaces
-Limited members must have a valid payment for a plan that includes the Space in order to access it
-This restriction ensures that limited memberships remain properly gated and prevents unintended access escalation.
+Step 2: Choose How You Want Members to Access Your Community
+Now, decide what you want your members to type when they visit your Mighty Network on the web. This choice determines which record you’ll set up.
+👉 Important: You only set up one or the other (A Record or CNAME) of the below options. If you want both, you need to first choose one. Then, follow instructions with your domain provider to set up a redirect that points to the other.
+Members only need to type your root domain, like mycommunity.com.
+This is the simplest experience because no prefix is required.
+If someone types www.mycommunity.com , it will not work unless you add a redirect later.
+Members need to type your root domain with a prefix , like www.mycommunity.com or members.mycommunity.com.
+Only that specific subdomain will work.
+If someone types just mycommunity.com, it will not work unless you add a redirect later.
+Members can type either just your root domain (mycommunity.com) or your root domain with a prefix ( www.mycommunity.com ) and still reach your Network.
+To make this happen:
+Set up one option (root or subdomain).
+Add a redirect in your domain provider so the other version points to it.
+⚠️ Please note: Some providers, like Bluehost , don’t allow redirects. If you want both, you’ll need to use a different provider.
 ​
-What Limited Members See
-Here’s an example of what the limited member experience can look like:
+Step 3: Add Your Record with Your Domain Provider
+The exact steps vary depending on your provider (i.e. GoDaddy, Namecheap, Hover, DNSimple, etc.). Here’s what you’ll enter:
+Host/Name: @
+Points to/Target: Add two A Records, one for each IP:
+147.185.161.77
+147.185.161.78
+(Some providers let you enter both IPs into one record. If so, that works too.)
+The above screenshot is an example in GoDaddy.
+Host/Name: Just the prefix you chose (for example, www or members)
+Points to/Target: ssl.mn.co
+🔎 Example: members.mycommunity.com → CNAME → ssl.mn.co
+Note for Cloudflare users: Set Proxy Status to DNS Only .
+The above screenshot is an example in GoDaddy.
 ​
-Check out this video on how to set up limited memberships:
-For more details on setting up plans, check out this article .
+Step 4: Activate Your Domain in Mighty Networks
+Log into your Mighty Network.
+Go to Admin > Integrations > Custom Network Domain > Use Your Own Domain .
+Enter the domain you set up:
+If you used a CNAME (subdomain): type the full subdomain (e.g. members.mycommunity.com).
+If you used A Records (root domain): type only the root (e.g. mycommunity.com).
+Save and wait. DNS changes may take a few hours to update. The mapping will take some time to finish, but you don’t need to stay on the page. We’ll send you a notification once it’s complete.
+Once complete, return to the same page and click Activate Your Domain .
+Depending on the domain provider that you use (i.e., Namecheap), it may take a couple of hours for the domain to activate. If your domain hasn’t been accepted within 48 hours, please reach out to us directly and we’ll work with you to complete this process.
+Please note that subdirectories such as “example.com/subdirectory” are not currently supported.
 ​
-Below is a detailed guide to the features accessible to each member type:
-Important notes:
-If you set your Network Privacy & Access settings to “anyone can view content inside the Network, ” these definitions may shift because a limited member can see what a visitor/non-member sees (e.g. Collections with Spaces that anyone in the Network can see, promoted Spaces, etc.).
-If you demote a full member to a limited member (by removing the Network from any of the Spaces they are on) they will lose access to their private chats and any of the Global Features. If you add the Network back and restore them to full membership, then they will be able to access their previous chat messages.
-Limited members cannot become Space Hosts or Space moderators.
+Step 5 (Optional): Set Up a Redirect
+If you want both the root and subdomain versions of your domain to work — meaning that members can type either mycommunity.com or www.mycommunity.com (or another prefix you chose) and still be directed to your Mighty Network — you’ll need to set up a redirect with your domain provider.
+For example:
+If you set up an A Record (mycommunity.com), you can redirect www.mycommunity.com so both work.
+If you set up a CNAME Record ( www.mycommunity.com ), you can redirect mycommunity.com so both work.
+Redirect setup differs by provider. GoDaddy makes this easy in the Forwarding section (below the DNS settings).
+Change the dropdown to https://
+Paste the custom domain you set up (A Record or CNAME)
+Choose Permanent 301 Redirect
+Select Forward Only
+⚠️ Some providers (like Wix) don’t support redirects directly. In that case, you may need to use a third-party redirect service such as EasyRedir .
+⚠️ Bluehost does not support redirects. If you want both root + subdomain, you’ll need to change providers.
 ​
-Available Network-Level Actions
-Feature Limited Member Full Network Member Download and use the iOS or Android app ✅ ✅ Receive badges ✅ ✅ Track streaks ✅ ✅ See the Network logo or global header brand ✅ ✅ See the Network About Page ✅ ✅ Send and receive private messages (including those sent via automation) ❌ ✅ See and complete the Welcome Checklist ❌ ✅ Use global Network Search ❌ ✅ Receive Network-level notifications (for example, about a global livestream) ❌ ✅ Use the Ambassador Program to refer Network members ❌ ✅ Earn points ❌ ✅ Send and receive recognitions ❌ ✅
+FAQs
+Do I need both an A Record and a CNAME? No. You only set up one, depending on whether you want to use a root domain or a subdomain.
+Which option is easier? Most Hosts find using a subdomain (CNAME) easier, especially if they already use their root domain for a separate website.
+What happens to my default mn.co links? Any yourname.mn.co links will continue to work — they’ll automatically redirect to your custom domain.
+What happens to Invite Share Links I sent under the default mn.co domain once I set up a custom domain? Invite links created with your mn.co domain will still work after you switch to a custom domain. The original mn.co address will remain active and redirect to your new custom domain.
+What about bookmarks to my mn.co domain? Any bookmarks pointing to your mn.co domain will redirect to your new custom domain.
+What happens if I switch from one custom domain to another? Links and bookmarks from your old custom domain will not redirect to the new one. It’s best to send new invites and update any shared links after you make the switch.
 ​
-Network Navigation
-Feature Limited Member Full Network Member See Spaces where they are a member ✅ ✅ See global navigation features ❌ ✅ See custom navigation links ❌ ✅ See Collections ❌ ✅
-​
-Profile Features & Personal Settings
-Feature Limited Member Full Network Member Have a profile with photo ✅ ✅ Fill in the mini bio ✅ ✅ Fill in custom fields ✅ ✅ Add a location ✅ ✅ Earn badges ✅ ✅ See their people explorer ✅ ✅ See their list of Space memberships ✅ ✅ Manage account details, notification preferences, and streaks calendar in personal settings ✅ ✅ See the introduction (or About Me) field ❌ ✅ See their referrals ❌ ✅
-​
-Inside a Space with Membership
-Feature Limited Member Full Network Member See and interact with all features enabled in the Space ✅ ✅ Receive notifications related to activity in the Space ✅ ✅ Use search within the Space ✅ ✅ Attend livestreams in the Space ✅ ✅ Bookmark content in the Space ✅ ✅ See profiles of other members in the same Space ✅ ✅ See the activity of other members in the same Space ✅ ✅ Follow other members in the same Space ❌ ✅ Private message other members in the same Space ❌ ✅ See similarities with other members in the same Space ❌ ✅ See other people in the same Space with the same badge ❌ ✅ See other people in the same Space with the same custom field ❌ ✅
-How Do I Choose Where Plans Appear?
-Can I Set Up Required Questions and Approval for Access?
+How to Disconnect Your Custom Domain
+If you’d like to remove your custom domain and return to your default yourname.mn.co address, reach out to our team using the “Need Help?” button in the bottom right corner of your Mighty Network when you’re logged in on the web .
+If you can’t access your Mighty Network on the web, you can also email us at chat@mightynetworks.com and we’ll help you reset your domain.
+How Does Search Work?
+Can I Change the Default mn.co Domain?
 ⌘ I
 x linkedin instagram
 Powered by This documentation is built and hosted on Mintlify, a developer documentation platform

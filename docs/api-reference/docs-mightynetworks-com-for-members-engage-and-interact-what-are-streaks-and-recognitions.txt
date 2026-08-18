@@ -1,0 +1,121 @@
+SOURCE: https://docs.mightynetworks.com/for-members/engage-and-interact/what-are-streaks-and-recognitions
+FETCHED: 2026-08-18 13:18 UTC
+
+How Do Streaks, Recognitions and the Leaderboard Work? - Mighty Networks Developer
+Documentation Index
+Fetch the complete documentation index at: /llms.txt
+Use this file to discover all available pages before exploring further.
+Skip to main content
+Mighty Networks Developer home page
+Search...
+⌘ K Ask Assistant
+Search...
+Navigation
+Engage and Interact
+How Do Streaks, Recognitions and the Leaderboard Work?
+For Hosts
+For Members
+API Guides
+Headless API
+Admin API
+Explore Mighty
+What is a Mighty Network?
+How Do I Join a Mighty Network?
+Where Can I Get Help?
+Can I Access My Mighty Network from an App?
+I Want To Become a Host. How Do I Do That?
+Does Mighty Networks Sell My Data?
+Engage and Interact
+How Do I Post in a Mighty Network?
+How Do I Use Hashtags in My Mighty Network?
+How Do I RSVP and Attend Events as a Member?
+How Does the Feed Work?
+How Do I Create Events as a Member?
+My Host is Going Live—Where Do I Watch Them?
+How Do Streaks, Recognitions and the Leaderboard Work?
+How Do I Set My Preferred Language?
+How Do I Chat With Other Members?
+Can I Connect My AI Assistant to My Network?
+How Do I Join a Waitlist?
+Account and Purchases
+How Do I Manage My Personal Settings?
+How Do I Set or Reset My Password?
+How Do I Update My Billing Information?
+How Do I Manage My Membership or Space Purchases?
+How Do I Purchase a Token-Gated Plan?
+How Do I Leave a Mighty Network?
+Why Can't I Log In to My Mighty Network?
+What Notifications Will I Get as a Member?
+How Can I Get Technical Support as a Member?
+Browser and Device Support
+On this page
+Streaks and Streak Milestones
+Points, Recognitions and Community Values
+Leaderboard How the Leaderboard works
+When the Leaderboard updates
+Engage and Interact
+How Do Streaks, Recognitions and the Leaderboard Work?
+Copy page Copy page
+Copy page Copy page
+As a member, you may have noticed some fun gamification features in your Mighty Network!
+If you don’t see these, check with your Host about enabling them.
+​
+Streaks and Streak Milestones
+Streaks allow you to track your daily visits to your Mighty Network!
+On the web, streaks appear within the Gamification icon (next to the upper-right invite icon). On mobile, streaks appear within the profile area in the bottom tab.
+The two types of streak data shown are:
+Current Streak: the current number of days in a row you’ve signed in at least once
+Max Streak: your longest streak to date
+When you hit a streak milestone, an emoji will appear next to your name on posts, comments, chat, and your profile.
+The streak milestones are:
+3 day ⭐
+7 day 🔥
+14 day 🚀
+30 day ⚡
+45 day 🎉
+60 day 💎
+90 day 🏅
+180 day 🏆
+365 day 👑
+We also display a weekly calendar view showing members the days they recently visited your Mighty Network.
+Selecting “See More” will take you to your profile where you will see a full calendar of your streak milestones. This is public to you and everyone else in your Network.
+You can toggle the calendar off per profile by going to Personal Settings > Streaks and toggle off the “Public Streak Calendar”
+Streak Notifications
+If you have at least a 2-day streak and have not signed in by 2pm in your local timezone, you will receive a push notification on your mobile device reminding you to sign in and continue your streak.
+​
+Points, Recognitions and Community Values
+In addition to streaks you can earn 10 points every day you visit your Mighty Network. You can use points to recognize other people for embodying the 5 Community values that your Host has set up.
+You will see points available to you in the game icon in the upper right corner as well as any recognitions you have received.
+You can click “See All” to view all the Recognitions you have received and given.
+You can recognize a particular post, comment, chat, or person by hovering over their profile photo and selecting “Recognize”.
+After “Recognize” is selected there is a confirmation of “Sent Recognition” and the person that has been recognized is notified.
+Selecting that notification will take them to a page where they can say thanks or view the content where they were recognized. If there was an additional note added, it will appear here as well.
+“Say Thanks” will open a new direct message with the member.
+​
+Leaderboard
+The Leaderboard highlights members who receive the most recognition for each Community Value in your Mighty Network.
+It’s a simple way to see who’s showing up, contributing, and shaping the culture of the community.
+There’s also a Top Recognizers leaderboard, which highlights members who give the most recognition to others.
+​
+How the Leaderboard works
+The Leaderboard ranks members based on the recognitions they receive from others in the Network.
+Here’s what to expect:
+You’ll see the top 10 members for each Community Value
+Rankings are cumulative , based on total recognitions received
+In the case of a tie, the member who reached that total first ranks higher
+Rankings include members, moderators, and Hosts
+​
+When the Leaderboard updates
+The Leaderboard refreshes every Monday at 7am PT .
+At that time:
+Members on the Leaderboard receive a notification (based on their notification settings)
+Other members may receive a notification to check out the latest rankings
+You can manage these notifications in Personal Settings > Notifications .
+My Host is Going Live—Where Do I Watch Them?
+How Do I Set My Preferred Language?
+⌘ I
+x linkedin instagram
+Powered by This documentation is built and hosted on Mintlify, a developer documentation platform
+Assistant
+Responses are generated using AI and may contain mistakes.
+Contact support

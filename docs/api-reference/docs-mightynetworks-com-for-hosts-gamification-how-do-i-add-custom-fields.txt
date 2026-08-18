@@ -1,7 +1,7 @@
-SOURCE: https://docs.mightynetworks.com/for-hosts/payments-and-access/what-is-a-full-vs-limited-membership
+SOURCE: https://docs.mightynetworks.com/for-hosts/gamification/how-do-i-add-custom-fields
 FETCHED: 2026-08-18 13:18 UTC
 
-What is a Full vs. Limited Membership? - Mighty Networks Developer
+How Do I Add Custom Fields? - Mighty Networks Developer
 Documentation Index
 Fetch the complete documentation index at: /llms.txt
 Use this file to discover all available pages before exploring further.
@@ -11,8 +11,8 @@ Search...
 ⌘ K Ask Assistant
 Search...
 Navigation
-Payments and Access
-What is a Full vs. Limited Membership?
+Gamification
+How Do I Add Custom Fields?
 For Hosts
 For Members
 API Guides
@@ -212,59 +212,107 @@ The UK Online Safety Act
 Is Mighty Networks GDPR and CCPA Compliant?
 The EU Consumer Rights Directive — Cancellation Rights
 On this page
-Why Use Limited Memberships
-How Limited Members Join Spaces
-What Limited Members See Check out this video on how to set up limited memberships:
-Below is a detailed guide to the features accessible to each member type: Available Network-Level Actions
-Network Navigation
-Profile Features & Personal Settings
-Inside a Space with Membership
-Payments and Access
-What is a Full vs. Limited Membership?
+How to Create a Custom Field
+Configuring Dropdown Fields
+Configuring Text Fields
+Setting Privacy Options
+Making a Field Visible
+Managing Custom Fields
+Display Fields
+Merging and Reordering Fields
+Viewing Member Responses
+Member Experience
+Using Custom Fields in Automations
+Search and Insights
+Gamification
+How Do I Add Custom Fields?
 Copy page Copy page
 Copy page Copy page
-Full memberships provide access to your entire Network , while limited memberships offer access to a specific set of Spaces and features.
-Whether someone becomes a full or limited member depends on what their plans give access to.​
-Limited memberships let you offer a standalone experience—such as a course, live event, or lead magnet—inside a single Space or a bundle of Spaces, without unlocking your full Network.​
+Custom Fields are available on the Launch plan and up. They help you gather key details about your members so you can create better experiences and foster stronger connections in your Mighty Network.
+Custom Fields currently support dropdown , short text , and long text response types.
 ​
-Why Use Limited Memberships
-By restricting access to Network-level Global Features —including private messaging, the Global Feed, or Global Members—you can:
-Keep your broader community gated, exclusive, or reserved for paying members.
-Use individual Spaces as entry points to introduce new people to your work.
-Sell standalone programs or experiences while keeping your full community experience separate for those on a higher-tier plan.​
+How to Create a Custom Field
+To create a new Custom Field, go to Admin > Members > Custom Fields — the direct path is /admin/custom-fields — and select Create Field .
+Then follow these steps:
+Choose a response type Decide how members will respond: You can’t edit the response type after creating the field.
+Dropdown — single or multi-select
+Short text — up to 255 characters
+Long text — up to 2,000 characters
+Name and describe the field
+Enter a Field name , which will appear on the member profile if you set the field to be visible.
+Add a description that appears next to the input field.
+Add placeholder text that appears when the field is empty.
+Click Next: Configure to move to setup.
 ​
-How Limited Members Join Spaces
-Important: Limited members can only join Spaces through paid plans. This means:
-Invites do not grant access to limited members for Spaces
-“Anyone Can Join” settings do not apply to limited members for Spaces
-Limited members must have a valid payment for a plan that includes the Space in order to access it
-This restriction ensures that limited memberships remain properly gated and prevents unintended access escalation.
+Configuring Dropdown Fields
+If you select single or multi-select , you’ll see configuration options for dropdowns.
+Response limits: For multi-select fields, set a response limit between 2 and 40 options.
+Custom responses: Choose whether to allow members to add their own responses (up to 40 characters). Once added, custom responses appear as dropdown options for all members.
+Dropdown options: Add up to 20 options when you first create the field. You can add more later—there’s no limit.
 ​
-What Limited Members See
-Here’s an example of what the limited member experience can look like:
+Configuring Text Fields
+Short and long text fields don’t require additional configuration.Use short text for brief responses (1–255 characters) and long text for open-ended answers (1–2,000 characters).
 ​
-Check out this video on how to set up limited memberships:
-For more details on setting up plans, check out this article .
+Setting Privacy Options
+For every Custom Field, you’ll configure privacy settings that determine who can view responses.These settings cannot be changed later.
+Public: Everyone in the Network can see responses.
+Private: Only Hosts, moderators, and the responding member can see responses.
+Be mindful not to request sensitive information. All data collection must comply with Mighty Networks’ Terms and Conditions .
 ​
-Below is a detailed guide to the features accessible to each member type:
-Important notes:
-If you set your Network Privacy & Access settings to “anyone can view content inside the Network, ” these definitions may shift because a limited member can see what a visitor/non-member sees (e.g. Collections with Spaces that anyone in the Network can see, promoted Spaces, etc.).
-If you demote a full member to a limited member (by removing the Network from any of the Spaces they are on) they will lose access to their private chats and any of the Global Features. If you add the Network back and restore them to full membership, then they will be able to access their previous chat messages.
-Limited members cannot become Space Hosts or Space moderators.
+Making a Field Visible
+After you create a field, it’s hidden by default.To make it visible, toggle Visible in the upper right corner of the field.
+You’ll also have the option to notify all members . If enabled, members will receive an email and in-app notification letting them know a new field is available.
 ​
-Available Network-Level Actions
-Feature Limited Member Full Network Member Download and use the iOS or Android app ✅ ✅ Receive badges ✅ ✅ Track streaks ✅ ✅ See the Network logo or global header brand ✅ ✅ See the Network About Page ✅ ✅ Send and receive private messages (including those sent via automation) ❌ ✅ See and complete the Welcome Checklist ❌ ✅ Use global Network Search ❌ ✅ Receive Network-level notifications (for example, about a global livestream) ❌ ✅ Use the Ambassador Program to refer Network members ❌ ✅ Earn points ❌ ✅ Send and receive recognitions ❌ ✅
+Managing Custom Fields
+All of your fields appear in the Custom Fields list . From here, you can:
+Edit a field
+Change the Display Field
+Hide or make a field visible
+Delete a field
+You can filter and sort the list by type, visibility, privacy, field name, or number of respondents.
+And you can sort by the following:
+Field Name (A to Z)
+Field Name (Z to A)
+Newest
+Oldest
+Display Order
 ​
-Network Navigation
-Feature Limited Member Full Network Member See Spaces where they are a member ✅ ✅ See global navigation features ❌ ✅ See custom navigation links ❌ ✅ See Collections ❌ ✅
+Display Fields
+The Display Field is the primary field that appears on member profiles and under the Explore filter in Global and Space Members.A star icon appears next to the current Display Field.
+Only public single-select fields can be set as the Display Field.
+To change it:
+Open the three-dot menu next to the current Display Field and select Remove as Display Field .
+Choose another eligible field and set it as the Display Field.
 ​
-Profile Features & Personal Settings
-Feature Limited Member Full Network Member Have a profile with photo ✅ ✅ Fill in the mini bio ✅ ✅ Fill in custom fields ✅ ✅ Add a location ✅ ✅ Earn badges ✅ ✅ See their people explorer ✅ ✅ See their list of Space memberships ✅ ✅ Manage account details, notification preferences, and streaks calendar in personal settings ✅ ✅ See the introduction (or About Me) field ❌ ✅ See their referrals ❌ ✅
+Merging and Reordering Fields
+Merge options: If you allow custom responses for dropdowns, you can merge duplicate or similar responses. Go to Edit Custom Field > Merge Option Into… to combine them.
+Reorder fields: Change the order in which fields appear on member profiles by going to Members > Reorder Custom Fields .
 ​
-Inside a Space with Membership
-Feature Limited Member Full Network Member See and interact with all features enabled in the Space ✅ ✅ Receive notifications related to activity in the Space ✅ ✅ Use search within the Space ✅ ✅ Attend livestreams in the Space ✅ ✅ Bookmark content in the Space ✅ ✅ See profiles of other members in the same Space ✅ ✅ See the activity of other members in the same Space ✅ ✅ Follow other members in the same Space ❌ ✅ Private message other members in the same Space ❌ ✅ See similarities with other members in the same Space ❌ ✅ See other people in the same Space with the same badge ❌ ✅ See other people in the same Space with the same custom field ❌ ✅
-How Do I Choose Where Plans Appear?
-Can I Set Up Required Questions and Approval for Access?
+Viewing Member Responses
+To review responses:
+From the Custom Fields list , open the three-dot menu next to a field and select Edit Custom Field . Then click the Responses tab.
+You can also view and filter responses in the Member List under Admin > Members > Member List .
+​
+Member Experience
+Members will see Custom Fields when editing their profile or by going to Personal Settings > Account > Private Responses.
+You can also choose to notify them of new fields when they are created. The notifications will take them directly to their profile where they can fill out their answers.
+After they select their response and click “Save”, they will see the response on their profile.
+If they click on their response > See Members , they will see a list of the members who selected the same response.
+​
+Using Custom Fields in Automations
+Custom Fields can be used in Automations , which combine a Trigger and an Action .
+You can trigger actions when a member:
+Responds to a Custom Field , or
+Removes a response to a Custom Field.
+To learn more, check out this article How Can I Set Up Automations?
+​
+Search and Insights
+Search: Members can use the global search bar to find others who selected the same dropdown responses, including both predefined and custom ones.
+Mighty Insights™: Use the Custom Fields dashboard in Mighty Insights™ to see data such as total respondents, field types, visibility, and privacy settings. You can also open a Detail Dashboard for deeper insights.
+Looking for ideas? Check out our Guide to Custom Fields 101.
+Need a guide for your members on how to edit, access, and manage Custom Fields? Click here.
+How Do I Add Custom Badges and Tags for My Members?
+How Do I Manage My Admin Settings?
 ⌘ I
 x linkedin instagram
 Powered by This documentation is built and hosted on Mintlify, a developer documentation platform

@@ -1,7 +1,7 @@
-SOURCE: https://docs.mightynetworks.com/for-hosts/payments-and-access/what-is-a-full-vs-limited-membership
+SOURCE: https://docs.mightynetworks.com/for-hosts/meet-mighty/whats-included-in-the-mighty-networks-growth-plan
 FETCHED: 2026-08-18 13:18 UTC
 
-What is a Full vs. Limited Membership? - Mighty Networks Developer
+What’s Included in the Mighty Networks Growth Plan? - Mighty Networks Developer
 Documentation Index
 Fetch the complete documentation index at: /llms.txt
 Use this file to discover all available pages before exploring further.
@@ -11,8 +11,8 @@ Search...
 ⌘ K Ask Assistant
 Search...
 Navigation
-Payments and Access
-What is a Full vs. Limited Membership?
+Meet Mighty
+What’s Included in the Mighty Networks Growth Plan?
 For Hosts
 For Members
 API Guides
@@ -212,59 +212,64 @@ The UK Online Safety Act
 Is Mighty Networks GDPR and CCPA Compliant?
 The EU Consumer Rights Directive — Cancellation Rights
 On this page
-Why Use Limited Memberships
-How Limited Members Join Spaces
-What Limited Members See Check out this video on how to set up limited memberships:
-Below is a detailed guide to the features accessible to each member type: Available Network-Level Actions
-Network Navigation
-Profile Features & Personal Settings
-Inside a Space with Membership
-Payments and Access
-What is a Full vs. Limited Membership?
+What You Get with the Growth Plan
+Growth Plan Pricing
+Starting a Free Trial
+Add More with Engagement Boosts
+Want Your Own Branded Mobile Apps?
+Meet Mighty
+What’s Included in the Mighty Networks Growth Plan?
 Copy page Copy page
+Learn all about the Growth plan
 Copy page Copy page
-Full memberships provide access to your entire Network , while limited memberships offer access to a specific set of Spaces and features.
-Whether someone becomes a full or limited member depends on what their plans give access to.​
-Limited memberships let you offer a standalone experience—such as a course, live event, or lead magnet—inside a single Space or a bundle of Spaces, without unlocking your full Network.​
+Welcome! We’re so glad you’re exploring Mighty and learning more about the Growth Plan .
+The Growth Plan is designed for Hosts who are ready to add more programs, increase complexity, and grow at scale . It gives you significantly higher limits and flexibility while continuing to support sustainable, intentional growth.
+This plan is ideal if you’re running multiple offers, serving different member segments, or building toward Mighty Pro.
 ​
-Why Use Limited Memberships
-By restricting access to Network-level Global Features —including private messaging, the Global Feed, or Global Members—you can:
-Keep your broader community gated, exclusive, or reserved for paying members.
-Use individual Spaces as entry points to introduce new people to your work.
-Sell standalone programs or experiences while keeping your full community experience separate for those on a higher-tier plan.​
+What You Get with the Growth Plan
+The Growth Plan gives you everything you need to run a complex, high-performing Mighty Network, including:
+Your own Mighty Network website , 100% ad-free
+Free Mighty apps on iOS and Android for you and your members
+The ability to charge for membership in hundreds of local currencies
+Direct messaging between members
+Unlimited Spaces
+Chat inside each Space
+Posts, Articles, and hashtags for ongoing discussion and content
+On top of that, the Growth Plan includes:
+10 Hosts
+100 Moderators
+Native video uploads for Posts, Articles, and course lessons
+Polls & Questions for engagement, feedback, and insight
+Events you can host online or in person
+Course creation, including video lessons
+AI features powered by People Magic
+1 TB of storage, including course video
+Team Livestreaming — up to 40 hours/month with 1,000 attendees, with Space Hosts and Moderators able to go live
+Advanced Leaderboards
+AI Automations and AI Automation Filters
+Activity & Content Related Automations
+Optional SSO and White-label email
+Delphi Integration
+Access to Admin and Headless API
 ​
-How Limited Members Join Spaces
-Important: Limited members can only join Spaces through paid plans. This means:
-Invites do not grant access to limited members for Spaces
-“Anyone Can Join” settings do not apply to limited members for Spaces
-Limited members must have a valid payment for a plan that includes the Space in order to access it
-This restriction ensures that limited memberships remain properly gated and prevents unintended access escalation.
+Growth Plan Pricing
+The Growth Plan is available at:
+$354 per month when paid annually
 ​
-What Limited Members See
-Here’s an example of what the limited member experience can look like:
+Starting a Free Trial
+If you’re new to Mighty, you’ll start with a free 14-day trial of the Growth Plan .
+This gives you access to the highest limits available outside of Mighty Pro, so you can fully explore what’s possible before choosing a plan.
 ​
-Check out this video on how to set up limited memberships:
-For more details on setting up plans, check out this article .
+Add More with Engagement Boosts
+Need additional storage, livestreaming hours, or participant capacity?
+You can add a monthly Engagement Boost directly from your Mighty Network:
+Profile Picture > Billing Plans > Storage and Usage
 ​
-Below is a detailed guide to the features accessible to each member type:
-Important notes:
-If you set your Network Privacy & Access settings to “anyone can view content inside the Network, ” these definitions may shift because a limited member can see what a visitor/non-member sees (e.g. Collections with Spaces that anyone in the Network can see, promoted Spaces, etc.).
-If you demote a full member to a limited member (by removing the Network from any of the Spaces they are on) they will lose access to their private chats and any of the Global Features. If you add the Network back and restore them to full membership, then they will be able to access their previous chat messages.
-Limited members cannot become Space Hosts or Space moderators.
-​
-Available Network-Level Actions
-Feature Limited Member Full Network Member Download and use the iOS or Android app ✅ ✅ Receive badges ✅ ✅ Track streaks ✅ ✅ See the Network logo or global header brand ✅ ✅ See the Network About Page ✅ ✅ Send and receive private messages (including those sent via automation) ❌ ✅ See and complete the Welcome Checklist ❌ ✅ Use global Network Search ❌ ✅ Receive Network-level notifications (for example, about a global livestream) ❌ ✅ Use the Ambassador Program to refer Network members ❌ ✅ Earn points ❌ ✅ Send and receive recognitions ❌ ✅
-​
-Network Navigation
-Feature Limited Member Full Network Member See Spaces where they are a member ✅ ✅ See global navigation features ❌ ✅ See custom navigation links ❌ ✅ See Collections ❌ ✅
-​
-Profile Features & Personal Settings
-Feature Limited Member Full Network Member Have a profile with photo ✅ ✅ Fill in the mini bio ✅ ✅ Fill in custom fields ✅ ✅ Add a location ✅ ✅ Earn badges ✅ ✅ See their people explorer ✅ ✅ See their list of Space memberships ✅ ✅ Manage account details, notification preferences, and streaks calendar in personal settings ✅ ✅ See the introduction (or About Me) field ❌ ✅ See their referrals ❌ ✅
-​
-Inside a Space with Membership
-Feature Limited Member Full Network Member See and interact with all features enabled in the Space ✅ ✅ Receive notifications related to activity in the Space ✅ ✅ Use search within the Space ✅ ✅ Attend livestreams in the Space ✅ ✅ Bookmark content in the Space ✅ ✅ See profiles of other members in the same Space ✅ ✅ See the activity of other members in the same Space ✅ ✅ Follow other members in the same Space ❌ ✅ Private message other members in the same Space ❌ ✅ See similarities with other members in the same Space ❌ ✅ See other people in the same Space with the same badge ❌ ✅ See other people in the same Space with the same custom field ❌ ✅
-How Do I Choose Where Plans Appear?
-Can I Set Up Required Questions and Approval for Access?
+Want Your Own Branded Mobile Apps?
+With Mighty Pro , you can launch your Mighty Network as your own branded app—available in the Apple App Store and Google Play Store under your name and logo.
+Explore Mighty Pro →
+What's Included in the Mighty Networks Scale Plan?
+What is Mighty Pro?
 ⌘ I
 x linkedin instagram
 Powered by This documentation is built and hosted on Mintlify, a developer documentation platform

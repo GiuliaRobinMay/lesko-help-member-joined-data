@@ -1,7 +1,7 @@
-SOURCE: https://docs.mightynetworks.com/for-hosts/payments-and-access/what-is-a-full-vs-limited-membership
-FETCHED: 2026-08-18 13:18 UTC
+SOURCE: https://docs.mightynetworks.com/for-hosts/courses/how-do-i-add-a-quiz-to-my-course
+FETCHED: 2026-08-18 13:17 UTC
 
-What is a Full vs. Limited Membership? - Mighty Networks Developer
+How Do I Add a Quiz to My Course? - Mighty Networks Developer
 Documentation Index
 Fetch the complete documentation index at: /llms.txt
 Use this file to discover all available pages before exploring further.
@@ -11,8 +11,8 @@ Search...
 ⌘ K Ask Assistant
 Search...
 Navigation
-Payments and Access
-What is a Full vs. Limited Membership?
+Courses
+How Do I Add a Quiz to My Course?
 For Hosts
 For Members
 API Guides
@@ -212,59 +212,109 @@ The UK Online Safety Act
 Is Mighty Networks GDPR and CCPA Compliant?
 The EU Consumer Rights Directive — Cancellation Rights
 On this page
-Why Use Limited Memberships
-How Limited Members Join Spaces
-What Limited Members See Check out this video on how to set up limited memberships:
-Below is a detailed guide to the features accessible to each member type: Available Network-Level Actions
-Network Navigation
-Profile Features & Personal Settings
-Inside a Space with Membership
-Payments and Access
-What is a Full vs. Limited Membership?
+Creating a Quiz
+Adding Questions
+Building and organizing your Quiz
+Managing Your Quiz
+Visibility
+Unlock Settings
+Showing Correct Answers
+Completion Options
+Additional Settings
+Member Experience
+Additional Notes
+Courses
+How Do I Add a Quiz to My Course?
 Copy page Copy page
 Copy page Copy page
-Full memberships provide access to your entire Network , while limited memberships offer access to a specific set of Spaces and features.
-Whether someone becomes a full or limited member depends on what their plans give access to.​
-Limited memberships let you offer a standalone experience—such as a course, live event, or lead magnet—inside a single Space or a bundle of Spaces, without unlocking your full Network.​
+On the Launch Plan and above, you’ll see the option to Create Quiz inside the Course feature.
+Creating and viewing a Quiz as a Host is available on web and mobile web only.Once you publish a Quiz, your members can view and complete it on web , iOS , and Android .
 ​
-Why Use Limited Memberships
-By restricting access to Network-level Global Features —including private messaging, the Global Feed, or Global Members—you can:
-Keep your broader community gated, exclusive, or reserved for paying members.
-Use individual Spaces as entry points to introduce new people to your work.
-Sell standalone programs or experiences while keeping your full community experience separate for those on a higher-tier plan.​
+Creating a Quiz
+To create a Quiz, go to the “Create” button in a Course.
+A Quiz always starts with an introduction page .
+You can add a header image, native video, and text to introduce the Quiz and provide instructions. If Course Preview is turned on, this introduction will also appear there.
 ​
-How Limited Members Join Spaces
-Important: Limited members can only join Spaces through paid plans. This means:
-Invites do not grant access to limited members for Spaces
-“Anyone Can Join” settings do not apply to limited members for Spaces
-Limited members must have a valid payment for a plan that includes the Space in order to access it
-This restriction ensures that limited memberships remain properly gated and prevents unintended access escalation.
+Adding Questions
+From the introduction page, you can start adding your questions.
+When creating a question, you can attach:
+Images
+Native video (up to 2GB per file)
+GIFs
+Emoji
+Embedded video (YouTube, Vimeo, etc.) is not supported in Quiz questions.
+After adding your question text and any media, add up to five responses and select the one correct answer.
 ​
-What Limited Members See
-Here’s an example of what the limited member experience can look like:
+Building and organizing your Quiz
+Use the “+” icon to add a question above or below the current one.
+Or click Add a Question in the upper right corner.
+Delete individual responses using the “x” next to each answer.
+Delete full questions using the trash icon .
+Reorder questions using the three-line drag handle .
+You can add up to 100 questions per Quiz.
 ​
-Check out this video on how to set up limited memberships:
-For more details on setting up plans, check out this article .
+Managing Your Quiz
+Under Manage Quiz Settings , you’ll find visibility, unlock, and completion settings—similar to the Course feature.
 ​
-Below is a detailed guide to the features accessible to each member type:
-Important notes:
-If you set your Network Privacy & Access settings to “anyone can view content inside the Network, ” these definitions may shift because a limited member can see what a visitor/non-member sees (e.g. Collections with Spaces that anyone in the Network can see, promoted Spaces, etc.).
-If you demote a full member to a limited member (by removing the Network from any of the Spaces they are on) they will lose access to their private chats and any of the Global Features. If you add the Network back and restore them to full membership, then they will be able to access their previous chat messages.
-Limited members cannot become Space Hosts or Space moderators.
+Visibility
+Toggle the Quiz on or off to control when members can see it.
 ​
-Available Network-Level Actions
-Feature Limited Member Full Network Member Download and use the iOS or Android app ✅ ✅ Receive badges ✅ ✅ Track streaks ✅ ✅ See the Network logo or global header brand ✅ ✅ See the Network About Page ✅ ✅ Send and receive private messages (including those sent via automation) ❌ ✅ See and complete the Welcome Checklist ❌ ✅ Use global Network Search ❌ ✅ Receive Network-level notifications (for example, about a global livestream) ❌ ✅ Use the Ambassador Program to refer Network members ❌ ✅ Earn points ❌ ✅ Send and receive recognitions ❌ ✅
+Unlock Settings
+Choose how the Quiz becomes available:
+None (unlocked)
+Sequential
+Timed
+Scheduled
 ​
-Network Navigation
-Feature Limited Member Full Network Member See Spaces where they are a member ✅ ✅ See global navigation features ❌ ✅ See custom navigation links ❌ ✅ See Collections ❌ ✅
+Showing Correct Answers
+You can choose whether members see the correct responses on their results page.
+Show correct answers ON : Members can view which answers were correct after they submit.
+Show correct answers OFF : Useful if members need to pass before moving on—this prevents them from seeing correct answers before a retake.
 ​
-Profile Features & Personal Settings
-Feature Limited Member Full Network Member Have a profile with photo ✅ ✅ Fill in the mini bio ✅ ✅ Fill in custom fields ✅ ✅ Add a location ✅ ✅ Earn badges ✅ ✅ See their people explorer ✅ ✅ See their list of Space memberships ✅ ✅ Manage account details, notification preferences, and streaks calendar in personal settings ✅ ✅ See the introduction (or About Me) field ❌ ✅ See their referrals ❌ ✅
+Completion Options
+None : Completion isn’t tracked.
+Space Hosts and moderators can see all member responses.
+Members see only their own responses.
+Completed : Members must complete the Quiz to continue.
+Completed and Pass : Members must complete and pass the Quiz to continue.
+You can set a Pass Score as a percentage.
 ​
-Inside a Space with Membership
-Feature Limited Member Full Network Member See and interact with all features enabled in the Space ✅ ✅ Receive notifications related to activity in the Space ✅ ✅ Use search within the Space ✅ ✅ Attend livestreams in the Space ✅ ✅ Bookmark content in the Space ✅ ✅ See profiles of other members in the same Space ✅ ✅ See the activity of other members in the same Space ✅ ✅ Follow other members in the same Space ❌ ✅ Private message other members in the same Space ❌ ✅ See similarities with other members in the same Space ❌ ✅ See other people in the same Space with the same badge ❌ ✅ See other people in the same Space with the same custom field ❌ ✅
-How Do I Choose Where Plans Appear?
-Can I Set Up Required Questions and Approval for Access?
+Additional Settings
+You can change the Quiz owner , who must be a Space Host or Space moderator.
+You can edit questions or content anytime without affecting previous scores.
+Edits only apply to new attempts .
+The three-dot menu lets you:
+Adjust visibility
+Download a CSV of Quiz results
+Delete the Quiz
+Note: Quiz results currently appear only in the CSV export. They do not appear in Mighty Insights™ or other completion dashboards—this is planned for the future.
+​
+Member Experience
+Members can take Quizzes on web , iOS , and Android .
+To preview your Quiz as a member on mobile, use mobile web or temporarily demote your role to Space member.
+Members will see a “Ready to take the Quiz?” prompt and a Start button.
+During the Quiz:
+Members can see their progress.
+They can go back and change answers before submitting.
+They cannot skip questions.
+They must answer questions in order.
+Responses are automatically saved , so they can leave and return anytime.
+After submitting:
+Members see their results, including any completion requirements.
+Members can retake the Quiz immediately or anytime after—there is no limit on attempts.
+If you edit a Quiz while a member is taking it, they’ll receive a pop-up letting them know they need to restart.
+Once added to a Course, members can bookmark the Quiz for quick access.
+​
+Additional Notes
+Only one Instructor can be assigned per Quiz at a time.
+Commenting is not supported on Quizzes.
+You can edit or add questions even after members have started taking the Quiz.
+If you make edits while someone is taking it, they’ll be prompted to restart .
+You’ll see how many members will be affected before confirming changes.
+Quizzes cannot be duplicated yet.
+If you duplicate a Space, the Quizzes inside it will not be duplicated (coming soon).
+How Do I Organize My Course With Overviews, Sections, and Lessons?
+What Kind of Media Can I Upload Into a Course?
 ⌘ I
 x linkedin instagram
 Powered by This documentation is built and hosted on Mintlify, a developer documentation platform

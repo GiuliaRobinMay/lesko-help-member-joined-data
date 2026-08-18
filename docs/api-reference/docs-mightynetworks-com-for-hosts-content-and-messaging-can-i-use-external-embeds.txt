@@ -1,0 +1,377 @@
+SOURCE: https://docs.mightynetworks.com/for-hosts/content-and-messaging/can-i-use-external-embeds
+FETCHED: 2026-08-18 13:17 UTC
+
+Can I Use External Embeds? - Mighty Networks Developer
+Documentation Index
+Fetch the complete documentation index at: /llms.txt
+Use this file to discover all available pages before exploring further.
+Skip to main content
+Mighty Networks Developer home page
+Search...
+⌘ K Ask Assistant
+Search...
+Navigation
+Content and Messaging
+Can I Use External Embeds?
+For Hosts
+For Members
+API Guides
+Headless API
+Admin API
+Meet Mighty
+Watch a Full Tour of a Mighty Network
+What is Mighty Community?
+Who Founded Mighty Networks?
+Which Mighty Network Plan is Right For You?
+What’s Included in the Mighty Networks Explore Plan?
+What’s Included in the Mighty Networks Launch Plan?
+What's Included in the Mighty Networks Scale Plan?
+What’s Included in the Mighty Networks Growth Plan?
+What is Mighty Pro?
+Does Mighty Networks Offer a Free Trial?
+What Kind of Support Does Mighty Networks Offer?
+Latest Product Updates
+Product Updates Archive
+Legacy Plans
+Setting Up Your Network
+How Do I Set Up My Mighty Network?
+How Do I Get Help?
+How Do I Chat with Cohost?
+What is the People Magic GPT?
+What is Community Design™?
+How Do I Set Up the Basics for My Network?
+How Do I Edit My Mighty Profile?
+How Do I Set Up My Network Branding?
+How Do I Set Up My Space Branding?
+How Do I Create and Manage My Collections?
+How Do I Create and Manage My Spaces?
+What Kinds of Space Templates are Available?
+How Do I Add and Manage Features in a Space?
+How Do I Set the Privacy Settings for My Network?
+How Do I Set the Privacy Settings for a Space?
+What is the Feed and How Does It Work?
+What are Global Features?
+Can I Customize the Navigation in My Mighty Network?
+Can I Customize the Landing Space for My Members?
+Does Mighty Networks Have an App?
+What Are Promoted Spaces?
+How Do I Set Up a Welcome Checklist?
+How Do I Find the About Page for My Space or Mighty Network?
+What's The Discovery Feature?
+What Do Member Profiles Include in My Mighty Network?
+Marketing Features
+How Can I Customize My Mighty Networks Landing Page?
+What AI Features Does Mighty Networks Have?
+How Do I Segment My Members with Audiences?
+How Do I Set Up Promotional Banners in My Network?
+What is the People Explorer?
+Does Mighty Networks Have Built-In Affiliates?
+Can I Integrate My Mighty Network with Rootabl?
+Can I Integrate My Mighty Network With Rewardful?
+How Do I Create an Email Newsletter?
+Can I Add Marketing Pixels to My Mighty Network?
+How Can I Easily Re Engage My Members?
+How Do I Use the Mighty Networks Ambassador Program?
+How Does SEO Work for My Mighty Network?
+Does Mighty Networks Have an Affiliate Program?
+Payments and Access
+How Do I Create a Plan?
+How Do I Choose Where Plans Appear?
+What is a Full vs. Limited Membership?
+Can I Set Up Required Questions and Approval for Access?
+How Do I Manage My Plans?
+How Do I Manage Spaces in a Plan?
+How Do I Set Up Promo Codes?
+How Do I Set Up Installment Plans and Subscription Intervals?
+How Do I Create a Subscription Group?
+Can I Have a Plan with No Payment Gate?
+Can I Take Payments Off Platform?
+Can I Charge in Multiple Currencies?
+What Currencies Can I Charge in On Mighty Networks?
+Can I Offer a Free Trial on a Mighty Network?
+How Do Members Purchase Access?
+How Do Members Move Between Plans?
+How Do I Create a Waitlist?
+Can I Change My Prices?
+How Do I Gate Access to All or Parts of My Mighty Network?
+How Much Do People Charge, on Average, on Mighty Networks?
+How Do I Connect and Disconnect Stripe to My Mighty Network?
+How Do I Get Paid?
+How Do Taxes Work With My Mighty Network?
+What Happens When a Member Cancels or Requests a Refund
+What Happens When Members Are Past Due on Their Payments?
+How Can I Move Paying Members from Another Platform to Mighty Networks?
+(Pro) How to Remove a Plan From Sale on App Store Connect
+How Do I Switch My Space Between Plans, Invite-Only, and Anyone Can Join?
+How Do I Switch My Network Between Plans, Invite-Only, and Anyone Can Join?
+How Do I Set a Default Plan for Invites? [Beta]
+How Do I Invite People to My Mighty Network?
+How Do I Invite Directly to a Plan?
+How Do I Invite Members to a Space?
+How Do I Give Access to Spaces and Not the Network?
+How Do I Directly Add Existing Members to My Network or Spaces?
+How Do I Manage My Leads?
+Does Mighty Networks Charge a Transaction Fee?
+Can I Set Up Age Verification In my Mighty Network?
+How Do I Create a Token-Gated Plan?
+How Do I Manage Members’ Access to Spaces and the Network?
+How Do I Set Up a Space That Full Members Can Join but Limited Members Must Pay For?
+Courses
+How Do I Build a Course in My Mighty Network?
+How Do I Organize My Course With Overviews, Sections, and Lessons?
+How Do I Add a Quiz to My Course?
+What Kind of Media Can I Upload Into a Course?
+How Do I Track Member Completion and Progress?
+How Do I Generate Completion Certificates?
+How Do I Make a Habit Tracker for My Members?
+Events and Livestream
+How Do I Create Events in My Mighty Network?
+How Do I Create Zoom Events on Mighty Networks?
+Can I Create Recurring Events in My Mighty Network?
+How Do I Livestream in My Network?
+How Do I Post a Livestream Replay?
+Can I Have Multiple Speakers During a Livestream?
+How Do I Schedule a Livestream Event?
+How Do I Add Special Effects to My Livestream?
+How Do I Manage RSVPs and Event Attendees?
+Can I Charge for Events on a Mighty Network?
+Is There a Calendar View for Events?
+How Do I Create a Text Chat Event?
+How Do I Upload Native Videos to My Mighty Network?
+How Do I Troubleshoot Video Upload Issues in a Mighty Network?
+Automations
+What Automations Do I Get on My Plan?
+How Can I Set Up Automations in My Mighty Network?
+Gamification
+How Does Gamification Work in My Mighty Network?
+How Do I Add Custom Badges and Tags for My Members?
+How Do I Add Custom Fields?
+Admin and Moderation
+How Do I Manage My Admin Settings?
+How Do I View and Manage My Members?
+How Do I View As A Member?
+What is the Member Detail Page?
+What Permissions Do Network Hosts and Network Moderators Have?
+What Permissions Do Space Hosts and Space Moderators Have?
+What Content and Moderation Tools Do I Have in My Mighty Network?
+How Do Members Block or Report Others?
+How Does Search Work?
+Can I Use My Own Web Domain with Mighty Networks?
+Can I Change the Default mn.co Domain?
+Can I Customize My Email Domain?
+Can I Customize the Names of Hosts, Moderators and Members?
+How Do I Customize My Member Support?
+How Do I Reset My Password?
+How Do I Downgrade or Cancel My Plan?
+Analytics and Integrations
+What is Mighty Insights™?
+Can I Download Reports From My Mighty Insights™?
+Does Mighty Networks Integrate with Google Analytics?
+Does Mighty Networks have an API?
+Does Mighty Networks Support MCP Connections?
+Can I Use Zapier with Mighty Networks?
+How Do I Enable SSO for My Mighty Network?
+Can I Download My Member Data?
+Do I Own My Data and Members on My Mighty Network?
+Does Mighty Networks have Language Localization?
+Vibe Coding on Mighty
+How Do I Embed a Shopify Buy Button in My Mighty Network?
+Content and Messaging
+How Do I Create an Article in My Mighty Network?
+How Do I Create a Post in My Mighty Network?
+Can I Use External Embeds?
+Can I Use GIFs in My Mighty Network?
+How Do I Create Polls & Questions In My Mighty Network?
+How Do I Create and Manage Featured and Welcome Sections?
+What's An Icebreaker Question and How Do I Set One Up in My Mighty Network?
+How Do Introductions Posts Work?
+How Do I Use the Infinite Question Engine?
+How Does Chat Work in a Mighty Network?
+How Do I Manage My Chat Messages?
+How Do I Welcome New Members?
+How Do I Message Members in a Space?
+How Do I Message Members in My Network?
+How Do Hashtags Work in My Mighty Network?
+What Notifications Do My Members Get?
+How Do I Move Content Between Spaces?
+What Notifications Will I Get as a Host?
+What's the Daily Digest?
+Can I View My Mighty Network in Dark Mode?
+How Do Storage, Engagement Boosts and Livestreaming Limits Work?
+Additional Embeds
+How Can I Make My Mighty Network More Accessible to the Visually Impaired?
+How Do I Enable Desktop Notifications?
+How Does the Delphi Embed Work?
+Privacy, Security & Accessibility
+Can I Add My Own Custom Terms of Use to My Mighty Network?
+How Do I Enable Multi-Factor Authentication and Email Verification?
+What's Mighty Networks' Privacy Policy?
+How Does Mighty Networks Approach Accessibility?
+Data Security at Mighty Networks
+The UK Online Safety Act
+Is Mighty Networks GDPR and CCPA Compliant?
+The EU Consumer Rights Directive — Cancellation Rights
+On this page
+How to Embed
+Authenticated iFrames
+Specific Embed Provider Instructions
+Canva
+Calendly
+Notion
+Instagram
+Video
+YouTube Forcing Closed Captions On
+About multiple caption tracks
+Vimeo
+Searchie (Membership.io)
+Wistia, Loom, Dailymotion, and Rutube
+Grain
+Music Playlists
+SoundCloud
+MP3 Audio Files
+Google Maps In Google Maps
+In your Mighty Network
+Typeform
+Google Slides, Google Docs, and More
+Content and Messaging
+Can I Use External Embeds?
+Copy page Copy page
+Copy page Copy page
+Radically expand what your Mighty Network can do by embedding over 2,000 services that look great on web, iOS, and Android.
+Our embeds support a wide range of providers, including video, audio, images, slideshows, playlists, podcasts, maps, 3D content, forms, documents, puzzles, quizzes, graphs, infographics, and more
+You can search for embeds that we support on our website here .
+For additional embeds we support, check out this article .
+​
+How to Embed
+Embeds can be added to Articles , Posts , Events , Courses , and the Page feature to bring additional functionality into your Mighty Network.
+To embed content, open the service you want to use and look for a Share or Embed option. Copy the link, then paste it into the embed field in Mighty Networks.
+Each service handles embeds a little differently, so you may need to try a few link formats to find the one that works.
+A quick note: In addition to digital goods sales being required to adhere to mobile platform policies, most 3rd-party e-commerce services don’t offer a full purchase experience within iframes, for cross-domain security reasons. We suggest either utilizing our built-in payment features or exploring our support for external payment systems .
+​
+Authenticated iFrames
+For Hosts on the Scale Plan and above who are building custom applications with Mighty’s Headless API , authenticated embeds allow members to access embedded experiences using their existing Mighty account.
+Examples include:
+AI-powered tools and assistants
+Custom member dashboards and portals
+Calculators, assessments, and interactive applications
+Applications built with Mighty’s Headless API
+When creating an embed, eligible Hosts may see an option to require authentication.
+If the checkbox is selected, members who aren’t signed in will be prompted to sign in or join the Mighty Network before accessing the experience.
+Because authentication is handled through Mighty and your application’s OAuth integration, members don’t need a separate login. This creates a seamless experience where members can connect your application, review the requested permissions, and get started right away.
+Things to know:
+Your application must be integrated with Mighty’s Headless API and OAuth infrastructure.
+Signing out of Mighty does not automatically sign members out of the embedded application.
+This feature is available on web and mobile.
+On Free Plans, iFrame embeds continue to follow the existing approval process and allow-list requirements.
+You can learn more in our Headless API and OAuth documentation.
+​
+Specific Embed Provider Instructions
+We connect with thousands of well known apps today! Check out the specific embed instructions for your favorites:
+​
+Canva
+Use the “Smart embed link” not the “HTML embed code”
+​
+Calendly
+Use “Share Link” not “Add times to email” or “Add to website”
+​
+Notion
+Due to limitations on the Notion side, Notion embeds only display a link card instead of a fully-interactive embed. If embedding Notion is important to you, you can consider using a third-party option like Embed Notion
+​
+Instagram
+The copy embed code from Instagram is not an iframe and won’t work. It will only work via a share link. If the account is private then the embed will not show.
+​
+Video
+For Posts, simply paste the video’s URL into the text area, then press Enter to automatically display the embedded version.
+For an Article , an Event , or the materials inside of the Table of Contents, you can embed video directly by using the “Add Video” option when you open up the + button.
+Copy the full URL where the video is hosted (not the full embed code or the Share Links for other Platforms), paste it into the field where you see “Video URL,” and add an optional thumbnail. The video will then be embedded directly into your content, and members can watch it without leaving your Mighty Network.
+​
+YouTube
+You can embed YouTube videos that are set to Unlisted , but not Private .
+Vertically filmed videos may display a zoomed-in horizontal thumbnail.
+Grainy or incorrect thumbnails will not be recognized. If your thumbnail isn’t displaying correctly, check your YouTube video settings and make sure it meets YouTube’s recommended specs (1280 × 720).
+​
+Forcing Closed Captions On
+To force closed captioning to play automatically on an embedded YouTube video:
+Log in to your YouTube account and open YouTube Studio .
+In the left menu, go to Content and select your video.
+Click the pencil icon to open video details.
+Scroll to Show More .
+In the Tags section, add:​ yt:cc=on
+Click Save .
+Please note that closed captioning does not work on iOS for YouTube videos due to restrictions with Apple.
+​
+About multiple caption tracks
+If your video includes multiple caption languages, switching between them won’t be available in the embedded player. The embed will display only the first caption track.
+​
+Vimeo
+If you’re embedding private videos from Vimeo, there’s one additional step required to ensure the videos play on the web and in the Mighty Networks iOS and Android apps .
+When adjusting the privacy settings for each video on Vimeo.com :
+Set the privacy option to Hide from Vimeo .
+Under Where can this video be embedded? , choose Specific domains .
+Add both of the following approved domains:
+Your Mighty Network’s custom domain
+mn.co ​*(The video will not play in the mobile apps if “mn.co” is not included.)*
+Set the embed sizing to Fixed , not Responsive .
+Showcases (playlists) cannot be embedded at this time.
+Here is an example of how this was configured for a video embedded in Mighty Community:
+​
+Searchie (Membership.io)
+Searchie does not offer an API for course progress tracking. If you want to track progress within a Course, use native video uploads or YouTube instead.
+We also do not currently support embedding Searchie widgets.
+​
+Wistia, Loom, Dailymotion, and Rutube
+You can embed videos from Wistia , Loom , Dailymotion , and Rutube by using Insert Embed when creating or editing an Article , an Event , or any material inside a Table of Contents .
+Copy the video URL (not the full embed code).
+Paste it into the embed field.
+The video will appear directly in your content.
+** Closed captioning does not work on iOS for Loom videos due to Apple restrictions.
+​
+Grain
+You can embed videos from Grain by using Insert Embed when creating or editing an Article , an Event , or any material inside a Table of Contents .
+Copy the video URL from Grain (either a recording URL like grain.com/share/recording/... or a highlight URL like grain.co/highlight/... ).
+Paste it into the embed field.
+The video will appear directly in your content.
+Grain uses iframe embeds and supports both recording URLs and highlight URLs.
+​
+Music Playlists
+​
+SoundCloud
+Use the full embed code , not just the link, to ensure the playlist or track embeds correctly.
+​
+MP3 Audio Files
+Copy the full .mp3 file URL from its host, paste it into the embed field, and it will embed directly in your content.
+​
+Google Maps
+​
+In Google Maps
+Search for the location.
+Click the location you want to embed.
+Select the Share icon.
+Choose Embed a map .
+Select a size and click Copy HTML .
+​
+In your Mighty Network
+Open the Article where you want to embed the map.
+Click inside the body of the Article.
+Select the + icon.
+Choose Embed .
+Paste the HTML code from Google Maps.
+Note: Maps created using Google’s Custom Maps feature cannot be embedded.
+​
+Typeform
+To embed a Typeform, paste the default form URL into the embed field.Do not use the full embed code or a customized Typeform link—only the default link from the Typeform Share page is supported.
+​
+Google Slides, Google Docs, and More
+To embed a Google Slides presentation:
+Open the presentation.
+Go to File > Share > Publish to Web .
+Select Embed and copy the embed code.
+Use Insert Embed in an Article, Event, or Lesson to add it.
+How Do I Create a Post in My Mighty Network?
+Can I Use GIFs in My Mighty Network?
+⌘ I
+x linkedin instagram
+Powered by This documentation is built and hosted on Mintlify, a developer documentation platform
+Assistant
+Responses are generated using AI and may contain mistakes.
+Contact support

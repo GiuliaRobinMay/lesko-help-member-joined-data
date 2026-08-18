@@ -1,7 +1,7 @@
-SOURCE: https://docs.mightynetworks.com/for-hosts/payments-and-access/what-is-a-full-vs-limited-membership
-FETCHED: 2026-08-18 13:18 UTC
+SOURCE: https://docs.mightynetworks.com/for-hosts/courses/what-kind-of-media-can-i-upload-into-a-course
+FETCHED: 2026-08-18 13:17 UTC
 
-What is a Full vs. Limited Membership? - Mighty Networks Developer
+What Kind of Media Can I Upload Into a Course? - Mighty Networks Developer
 Documentation Index
 Fetch the complete documentation index at: /llms.txt
 Use this file to discover all available pages before exploring further.
@@ -11,8 +11,8 @@ Search...
 ⌘ K Ask Assistant
 Search...
 Navigation
-Payments and Access
-What is a Full vs. Limited Membership?
+Courses
+What Kind of Media Can I Upload Into a Course?
 For Hosts
 For Members
 API Guides
@@ -212,59 +212,89 @@ The UK Online Safety Act
 Is Mighty Networks GDPR and CCPA Compliant?
 The EU Consumer Rights Directive — Cancellation Rights
 On this page
-Why Use Limited Memberships
-How Limited Members Join Spaces
-What Limited Members See Check out this video on how to set up limited memberships:
-Below is a detailed guide to the features accessible to each member type: Available Network-Level Actions
-Network Navigation
-Profile Features & Personal Settings
-Inside a Space with Membership
-Payments and Access
-What is a Full vs. Limited Membership?
+Adding a Primary Image or Video
+Formatting Text
+Adding Rich Media
+How to Upload a Video
+Video Tracking
+Upload Limitations
+Additional Notes
+Supported File Types
+Using Hashtags in Courses
+Courses
+What Kind of Media Can I Upload Into a Course?
 Copy page Copy page
 Copy page Copy page
-Full memberships provide access to your entire Network , while limited memberships offer access to a specific set of Spaces and features.
-Whether someone becomes a full or limited member depends on what their plans give access to.​
-Limited memberships let you offer a standalone experience—such as a course, live event, or lead magnet—inside a single Space or a bundle of Spaces, without unlocking your full Network.​
+You can add several types of content to your Course, including images, videos, media, and file attachments. These can appear in your Overview , Sections, and Lessons .
 ​
-Why Use Limited Memberships
-By restricting access to Network-level Global Features —including private messaging, the Global Feed, or Global Members—you can:
-Keep your broader community gated, exclusive, or reserved for paying members.
-Use individual Spaces as entry points to introduce new people to your work.
-Sell standalone programs or experiences while keeping your full community experience separate for those on a higher-tier plan.​
+Adding a Primary Image or Video
+First, you will add a hero image or video URL at the top of your content.
+Recommended image size: 2560 x 1440 pixels (16:9 ratio)
+Supported video platforms: YouTube, Vimeo, Loom, and more
+To delete or change media, select the media and use the trash icon.
 ​
-How Limited Members Join Spaces
-Important: Limited members can only join Spaces through paid plans. This means:
-Invites do not grant access to limited members for Spaces
-“Anyone Can Join” settings do not apply to limited members for Spaces
-Limited members must have a valid payment for a plan that includes the Space in order to access it
-This restriction ensures that limited memberships remain properly gated and prevents unintended access escalation.
+Formatting Text
+Highlight any text in the editor to:
+Add headers (five levels available)
+Apply bold , italic , strikethrough, or underline
+Add quotes or change text color and highlight color
+Insert hyperlinks
 ​
-What Limited Members See
-Here’s an example of what the limited member experience can look like:
+Adding Rich Media
+To upload media within your Course:
+Press Enter to create a new line.
+Select the + button on the left side of the editor.
+Choose to add a photo , video , media embed , file attachment , or section divider .
+To add a line of text below a media item, hover under it and click the arrow that appears.
 ​
-Check out this video on how to set up limited memberships:
-For more details on setting up plans, check out this article .
+How to Upload a Video
+Open the Overview , a Section , or a Lesson .
+Click the + icon to open the quick insert toolbar.
+Select Video.
+Choose your video file. You’ll see a progress bar during upload, and the file will appear greyed out while it processes.
+Once processing is complete, you can update the preview thumbnail, enable video tracking, and save.
 ​
-Below is a detailed guide to the features accessible to each member type:
-Important notes:
-If you set your Network Privacy & Access settings to “anyone can view content inside the Network, ” these definitions may shift because a limited member can see what a visitor/non-member sees (e.g. Collections with Spaces that anyone in the Network can see, promoted Spaces, etc.).
-If you demote a full member to a limited member (by removing the Network from any of the Spaces they are on) they will lose access to their private chats and any of the Global Features. If you add the Network back and restore them to full membership, then they will be able to access their previous chat messages.
-Limited members cannot become Space Hosts or Space moderators.
+Video Tracking
+Video Tracking allows you to require members to watch an entire video before they can move to the next Lesson.​ Learn more about completion features in Courses.
 ​
-Available Network-Level Actions
-Feature Limited Member Full Network Member Download and use the iOS or Android app ✅ ✅ Receive badges ✅ ✅ Track streaks ✅ ✅ See the Network logo or global header brand ✅ ✅ See the Network About Page ✅ ✅ Send and receive private messages (including those sent via automation) ❌ ✅ See and complete the Welcome Checklist ❌ ✅ Use global Network Search ❌ ✅ Receive Network-level notifications (for example, about a global livestream) ❌ ✅ Use the Ambassador Program to refer Network members ❌ ✅ Earn points ❌ ✅ Send and receive recognitions ❌ ✅
+Upload Limitations
+Files larger than 250 MB cannot be uploaded.
+As a Host, you can decide if you want your members to upload 250MB or keep them at a smaller file upload limit: 25MB. You can make this decision in Admin > Member Settings
+Videos larger than 4 GB cannot be uploaded.
 ​
-Network Navigation
-Feature Limited Member Full Network Member See Spaces where they are a member ✅ ✅ See global navigation features ❌ ✅ See custom navigation links ❌ ✅ See Collections ❌ ✅
+Additional Notes
+• The max video upload size of 4 GB applies to: Network Hosts
+• The max file upload size of 25 MB applies to: Network Hosts, Space Hosts or Space moderators.
+Storage limits: On newer plans (Explore, Launch, Scale, Growth), course videos count toward your Network’s storage limit. Legacy plans with unlimited course videos are not affected by this change.
+Videos cannot be downloaded from a Course.
+Supported file types include .mp4 , .mov , .m4v , and many others (full list below).
+You can’t save or close content while a video is uploading. You can save during processing and navigate elsewhere in your Mighty Network. You’ll receive a notification when processing finishes.
+You can continue embedding video from other platforms. Previously embedded videos don’t need to be changed unless you prefer to upload them natively.
+Members must watch the entire tracked video to unlock the next Lesson or resource.
+Playback speed controls are available for both natively uploaded videos and YouTube embeds on web and mobile web.
+If a video is paused, it resumes where the member left off— Video Tracking must be turned on for this to work.
 ​
-Profile Features & Personal Settings
-Feature Limited Member Full Network Member Have a profile with photo ✅ ✅ Fill in the mini bio ✅ ✅ Fill in custom fields ✅ ✅ Add a location ✅ ✅ Earn badges ✅ ✅ See their people explorer ✅ ✅ See their list of Space memberships ✅ ✅ Manage account details, notification preferences, and streaks calendar in personal settings ✅ ✅ See the introduction (or About Me) field ❌ ✅ See their referrals ❌ ✅
+Supported File Types
+video/mp4: mp4, mpg4, f4v, f4p, mp4v
+video/webm: webm
+video/avi: avi
+video/ogg: ogg, ogv
+application/ogg: ogx
+video/mpeg: mp2, mp3g, mpe, mpeg, mpg, m1v, m2v
+video/3gpp: 3gp, 3gpp
+video/x-ms-asf: asf, asx
+video/x-ms-wmv: wmv
+video/quicktime: qt, mov
+video/mp2t: ts, mts, m2ts, cpi, clpi, mpl, mpls, bdm
+video/x-flv: flv
+video/x-matroska: mk3d, mks, mkv
+application/mxf: mxf
 ​
-Inside a Space with Membership
-Feature Limited Member Full Network Member See and interact with all features enabled in the Space ✅ ✅ Receive notifications related to activity in the Space ✅ ✅ Use search within the Space ✅ ✅ Attend livestreams in the Space ✅ ✅ Bookmark content in the Space ✅ ✅ See profiles of other members in the same Space ✅ ✅ See the activity of other members in the same Space ✅ ✅ Follow other members in the same Space ❌ ✅ Private message other members in the same Space ❌ ✅ See similarities with other members in the same Space ❌ ✅ See other people in the same Space with the same badge ❌ ✅ See other people in the same Space with the same custom field ❌ ✅
-How Do I Choose Where Plans Appear?
-Can I Set Up Required Questions and Approval for Access?
+Using Hashtags in Courses
+You can add hashtags (#) to connect related Course content.Start typing a hashtag, and a list of existing hashtags or highlighted ones in your Space will appear.
+To learn how to Build a Course, check out this article .
+How Do I Add a Quiz to My Course?
+How Do I Track Member Completion and Progress?
 ⌘ I
 x linkedin instagram
 Powered by This documentation is built and hosted on Mintlify, a developer documentation platform

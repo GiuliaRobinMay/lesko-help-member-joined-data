@@ -1,7 +1,7 @@
-SOURCE: https://docs.mightynetworks.com/for-hosts/payments-and-access/what-is-a-full-vs-limited-membership
+SOURCE: https://docs.mightynetworks.com/for-hosts/events-and-livestream/how-do-i-create-events-in-my-mighty-network
 FETCHED: 2026-08-18 13:18 UTC
 
-What is a Full vs. Limited Membership? - Mighty Networks Developer
+How Do I Create Events in My Mighty Network? - Mighty Networks Developer
 Documentation Index
 Fetch the complete documentation index at: /llms.txt
 Use this file to discover all available pages before exploring further.
@@ -11,8 +11,8 @@ Search...
 ⌘ K Ask Assistant
 Search...
 Navigation
-Payments and Access
-What is a Full vs. Limited Membership?
+Events and Livestream
+How Do I Create Events in My Mighty Network?
 For Hosts
 For Members
 API Guides
@@ -212,59 +212,120 @@ The UK Online Safety Act
 Is Mighty Networks GDPR and CCPA Compliant?
 The EU Consumer Rights Directive — Cancellation Rights
 On this page
-Why Use Limited Memberships
-How Limited Members Join Spaces
-What Limited Members See Check out this video on how to set up limited memberships:
-Below is a detailed guide to the features accessible to each member type: Available Network-Level Actions
-Network Navigation
-Profile Features & Personal Settings
-Inside a Space with Membership
-Payments and Access
-What is a Full vs. Limited Membership?
+How to Enable Events
+How to Create an Event
+Single Events
+Managing Events Duplicating Events
+Where Events Appear
+Event Reminders
+Event Ticketing
+Events and Livestream
+How Do I Create Events in My Mighty Network?
 Copy page Copy page
 Copy page Copy page
-Full memberships provide access to your entire Network , while limited memberships offer access to a specific set of Spaces and features.
-Whether someone becomes a full or limited member depends on what their plans give access to.​
-Limited memberships let you offer a standalone experience—such as a course, live event, or lead magnet—inside a single Space or a bundle of Spaces, without unlocking your full Network.​
+The Events feature (available on the Launch Plan and up) lets you create standalone or ongoing events. The Single Event feature (available on the Launch Plan and above) is for one-time events.
+Both can be used for virtual or in-person events and can be enabled in any Space.
 ​
-Why Use Limited Memberships
-By restricting access to Network-level Global Features —including private messaging, the Global Feed, or Global Members—you can:
-Keep your broader community gated, exclusive, or reserved for paying members.
-Use individual Spaces as entry points to introduce new people to your work.
-Sell standalone programs or experiences while keeping your full community experience separate for those on a higher-tier plan.​
+How to Enable Events
+Go to the gear icon in your Space.
+Select Space Features > Events .
+You can:
+Rename the “Events” tab to something custom (this name will appear in the Space at the top)
+Choose whether only Hosts and Moderators or all Members can create events.
 ​
-How Limited Members Join Spaces
-Important: Limited members can only join Spaces through paid plans. This means:
-Invites do not grant access to limited members for Spaces
-“Anyone Can Join” settings do not apply to limited members for Spaces
-Limited members must have a valid payment for a plan that includes the Space in order to access it
-This restriction ensures that limited memberships remain properly gated and prevents unintended access escalation.
+How to Create an Event
+Once Events are enabled, click the Create to make one.
+You can customize:
+Title of the Event
+Start and end time (with time zone)
+Online Events show in each member’s local time.
+For Local Events, you can note if the event’s time zone differs.
+Whether it’s a Repeat Event
+Images or thumbnails
+Description (can include text, media, files, and embeds—just like an Article )
+If you have the AI “Make it Better” feature, just highlight your text to use it.
+Event Type:
+[Network Name] Livestream
+Zoom
+External Livestream: use this for any other meeting type
+Text Chat
+Manage RSVP options
+Live indicator (on or off — applies to all events in a series)
+If you want the Event to immediately show in the Feed when it’s posted
+When publishing, you can:
+Notify members immediately , or
+Schedule it for later (Single Events can’t be scheduled, but you can hide the tab until ready).
+Note: Once an Event is created, the Event Host cannot be changed.
 ​
-What Limited Members See
-Here’s an example of what the limited member experience can look like:
+Single Events
+To enable the Single Event feature:
+Go to Space Admin (gear icon) > Features and toggle it on.
+You can:
+Edit the Event
+Change the Display Name of the tab
+Toggle visibility on or off
+When editing, you can customize
+Title of the Event
+Start and end time (with time zone)
+Online Events show in each member’s local time.
+For Local Events, you can note if the event’s time zone differs.
+Images or thumbnails
+Description (can include text, media, files, and embeds—just like an Article )
+If you have the AI “Make it Better” feature, just highlight your text to use it.
+Event Type:
+[Network Name] Livestream
+Zoom
+External Livestream: use this for any other meeting type
+Text Chat
+Manage RSVP options
+Live indicator (on or off — applies to all events in a series)
+When publishing, you can:
+Notify members immediately , or
+Schedule it for later (Single Events can’t be scheduled, but you can hide the tab until ready).
+Here’s what the event looks like when finished. It is similar to the Page Feature.
 ​
-Check out this video on how to set up limited memberships:
-For more details on setting up plans, check out this article .
+Managing Events
+In the three-dot menu of any type of published Event, you can:
+Mute – Stop receiving notifications for the Event.
+Share – Copy a direct link to the Event.
+Enable Comments – Turn comments on or off.
+Feature In – Highlight the Event in the Welcome/Featured Section or Welcome Checklist .
+Recommend – Pin the Event to the top of the Feed.
+Send a Message – Message Event attendees.
+Download RSVPs – Export the attendee list (you will get an email with the list)
+Event Settings – Adjust details like RSVPs, live indicator, or Feed visibility.
+Edit – Update the Event’s content or visuals.
+Duplicate Event
+Move to Another Space – Transfer the Event to a different Space with Events enabled.
 ​
-Below is a detailed guide to the features accessible to each member type:
-Important notes:
-If you set your Network Privacy & Access settings to “anyone can view content inside the Network, ” these definitions may shift because a limited member can see what a visitor/non-member sees (e.g. Collections with Spaces that anyone in the Network can see, promoted Spaces, etc.).
-If you demote a full member to a limited member (by removing the Network from any of the Spaces they are on) they will lose access to their private chats and any of the Global Features. If you add the Network back and restore them to full membership, then they will be able to access their previous chat messages.
-Limited members cannot become Space Hosts or Space moderators.
+Duplicating Events
+You can duplicate an Event to reuse its:
+Title
+Description
+Imagery
+Settings
+Then edit details and publish it in the same Space or another one that also has Events enabled.
 ​
-Available Network-Level Actions
-Feature Limited Member Full Network Member Download and use the iOS or Android app ✅ ✅ Receive badges ✅ ✅ Track streaks ✅ ✅ See the Network logo or global header brand ✅ ✅ See the Network About Page ✅ ✅ Send and receive private messages (including those sent via automation) ❌ ✅ See and complete the Welcome Checklist ❌ ✅ Use global Network Search ❌ ✅ Receive Network-level notifications (for example, about a global livestream) ❌ ✅ Use the Ambassador Program to refer Network members ❌ ✅ Earn points ❌ ✅ Send and receive recognitions ❌ ✅
+Where Events Appear
+Published Events show up in the Events tab of the Space (except Single Events).
+You can expand a calendar view to see all Events in that Space.
+If the Global Events feature is enabled, members see all Events across Spaces in one list, in date order.
+Tabs let you filter:
+Nearby Events (based on your profile location)
+Past Events
+Your Events (you’ve RSVP’d to)
+In the calendar view, Events are color-coded by Space .
 ​
-Network Navigation
-Feature Limited Member Full Network Member See Spaces where they are a member ✅ ✅ See global navigation features ❌ ✅ See custom navigation links ❌ ✅ See Collections ❌ ✅
+Event Reminders
+Members who RSVP will automatically get reminders:
+Online Events: 10 minutes before start time
+Local Events: 24 hours and 2 hours before
+Virtual event reminders link to the event in Mighty Networks (not directly to Zoom or other platforms)
 ​
-Profile Features & Personal Settings
-Feature Limited Member Full Network Member Have a profile with photo ✅ ✅ Fill in the mini bio ✅ ✅ Fill in custom fields ✅ ✅ Add a location ✅ ✅ Earn badges ✅ ✅ See their people explorer ✅ ✅ See their list of Space memberships ✅ ✅ Manage account details, notification preferences, and streaks calendar in personal settings ✅ ✅ See the introduction (or About Me) field ❌ ✅ See their referrals ❌ ✅
-​
-Inside a Space with Membership
-Feature Limited Member Full Network Member See and interact with all features enabled in the Space ✅ ✅ Receive notifications related to activity in the Space ✅ ✅ Use search within the Space ✅ ✅ Attend livestreams in the Space ✅ ✅ Bookmark content in the Space ✅ ✅ See profiles of other members in the same Space ✅ ✅ See the activity of other members in the same Space ✅ ✅ Follow other members in the same Space ❌ ✅ Private message other members in the same Space ❌ ✅ See similarities with other members in the same Space ❌ ✅ See other people in the same Space with the same badge ❌ ✅ See other people in the same Space with the same custom field ❌ ✅
-How Do I Choose Where Plans Appear?
-Can I Set Up Required Questions and Approval for Access?
+Event Ticketing
+On the Launch Plan or higher, you can create a Single Event and charge for that Space by creating a plan!
+How Do I Make a Habit Tracker for My Members?
+How Do I Create Zoom Events on Mighty Networks?
 ⌘ I
 x linkedin instagram
 Powered by This documentation is built and hosted on Mintlify, a developer documentation platform

@@ -1,7 +1,7 @@
-SOURCE: https://docs.mightynetworks.com/for-hosts/payments-and-access/what-is-a-full-vs-limited-membership
-FETCHED: 2026-08-18 13:18 UTC
+SOURCE: https://docs.mightynetworks.com/for-hosts/payments-and-access/can-i-take-payments-off-platform
+FETCHED: 2026-08-18 13:17 UTC
 
-What is a Full vs. Limited Membership? - Mighty Networks Developer
+Can I Take Payments Off Platform? - Mighty Networks Developer
 Documentation Index
 Fetch the complete documentation index at: /llms.txt
 Use this file to discover all available pages before exploring further.
@@ -12,7 +12,7 @@ Search...
 Search...
 Navigation
 Payments and Access
-What is a Full vs. Limited Membership?
+Can I Take Payments Off Platform?
 For Hosts
 For Members
 API Guides
@@ -212,59 +212,134 @@ The UK Online Safety Act
 Is Mighty Networks GDPR and CCPA Compliant?
 The EU Consumer Rights Directive — Cancellation Rights
 On this page
-Why Use Limited Memberships
-How Limited Members Join Spaces
-What Limited Members See Check out this video on how to set up limited memberships:
-Below is a detailed guide to the features accessible to each member type: Available Network-Level Actions
-Network Navigation
-Profile Features & Personal Settings
-Inside a Space with Membership
+Set Up Your Plans
+Invite People to Your New Plans
+Send Invites to a Plan
+Choose How People Join Plan Landing Page
+Skip the Landing Page
+Add Invitees
+What Members Receive
+Use a Share Link for a Plan Plan Landing Page vs. Skip Landing Page
+Managing Share Links
+How to Set Up a Zap That Automatically Invites Someone to Your Plan
+Set Up Your Trigger Choose App
+Select Trigger Event
+Set Up Your Action Choose App & Event
+Add Email Addresses
+Add Invite Text
+Choose the Landing Flow
+Test and Turn On Your Zap
+How to Set Up a Zap to Remove a Member from a Plan
+Set Up Your Trigger
+Set Up Your Action
+Important Notes
+Additional Resources and Support
 Payments and Access
-What is a Full vs. Limited Membership?
+Can I Take Payments Off Platform?
 Copy page Copy page
 Copy page Copy page
-Full memberships provide access to your entire Network , while limited memberships offer access to a specific set of Spaces and features.
-Whether someone becomes a full or limited member depends on what their plans give access to.​
-Limited memberships let you offer a standalone experience—such as a course, live event, or lead magnet—inside a single Space or a bundle of Spaces, without unlocking your full Network.​
+Mighty’s integrated payment features make it easy to set up one-time purchases , subscriptions with flexible intervals, and installment plans —all with a smooth checkout flow. Members on the web can also use Apple Pay or Google Pay , and they can manage their payment information and subscriptions securely in one place.
+If you need to take payments off-platform and then grant access to your Mighty Network, you can do that using plans .
+Plans offer the most flexibility for gating access to your Mighty Network , individual Spaces , or both. They also let you bundle multiple Spaces with Network access, making it simple to give someone the right access after they make a purchase off-platform.
 ​
-Why Use Limited Memberships
-By restricting access to Network-level Global Features —including private messaging, the Global Feed, or Global Members—you can:
-Keep your broader community gated, exclusive, or reserved for paying members.
-Use individual Spaces as entry points to introduce new people to your work.
-Sell standalone programs or experiences while keeping your full community experience separate for those on a higher-tier plan.​
+Set Up Your Plans
+Follow the steps in this article ** **to create a plan.
+Your first step is deciding what members should access on Mighty after they’ve completed their purchase off-platform.
+Add access to your Network and/or specific Spaces to the plan you create.
+If you exclude Network access from a plan, anyone who joins that plan will become a limited member —unless they already have Network access through another plan.
+When you reach the Choose Your Gates step, keep all gating options turned off .
+This allows people to join the plan in a single, simple flow with no payment , screening questions , or approval required.
+Once you’ve finished setting up your plan, decide how you want to invite people to join it so they can access everything you’ve included.
 ​
-How Limited Members Join Spaces
-Important: Limited members can only join Spaces through paid plans. This means:
-Invites do not grant access to limited members for Spaces
-“Anyone Can Join” settings do not apply to limited members for Spaces
-Limited members must have a valid payment for a plan that includes the Space in order to access it
-This restriction ensures that limited memberships remain properly gated and prevents unintended access escalation.
+Invite People to Your New Plans
+Once you’ve created a plan without gates—and included everything someone should access in your Mighty Network after their off-platform purchase—you can choose how you want people to join. You can send direct invites or share a link to the plan.
 ​
-What Limited Members See
-Here’s an example of what the limited member experience can look like:
+Send Invites to a Plan
+Under Send Invites for This Plan , you’ll see the option to send one-time use links for joining the plan. Select the Invite Form link to open a page with the plan preselected and the option to send direct email invitations.
 ​
-Check out this video on how to set up limited memberships:
-For more details on setting up plans, check out this article .
+Choose How People Join
+You can decide whether people should:
+Land on the Plan Landing Page , or
+Skip the Landing Page and go straight to creating an account or signing in
 ​
-Below is a detailed guide to the features accessible to each member type:
-Important notes:
-If you set your Network Privacy & Access settings to “anyone can view content inside the Network, ” these definitions may shift because a limited member can see what a visitor/non-member sees (e.g. Collections with Spaces that anyone in the Network can see, promoted Spaces, etc.).
-If you demote a full member to a limited member (by removing the Network from any of the Spaces they are on) they will lose access to their private chats and any of the Global Features. If you add the Network back and restore them to full membership, then they will be able to access their previous chat messages.
-Limited members cannot become Space Hosts or Space moderators.
+Plan Landing Page
+If you send people to the Plan Landing Page, they’ll see the plan’s image, description, and a call to action to Access the plan. From there, they’ll create an account or sign in (if needed) and will be instantly added to everything included in the plan—such as your Network and any bundled Spaces.
 ​
-Available Network-Level Actions
-Feature Limited Member Full Network Member Download and use the iOS or Android app ✅ ✅ Receive badges ✅ ✅ Track streaks ✅ ✅ See the Network logo or global header brand ✅ ✅ See the Network About Page ✅ ✅ Send and receive private messages (including those sent via automation) ❌ ✅ See and complete the Welcome Checklist ❌ ✅ Use global Network Search ❌ ✅ Receive Network-level notifications (for example, about a global livestream) ❌ ✅ Use the Ambassador Program to refer Network members ❌ ✅ Earn points ❌ ✅ Send and receive recognitions ❌ ✅
+Skip the Landing Page
+If you skip the Landing Page, people will go directly to the create-account or sign-in flow and will then be added immediately to everything included in the plan.
 ​
-Network Navigation
-Feature Limited Member Full Network Member See Spaces where they are a member ✅ ✅ See global navigation features ❌ ✅ See custom navigation links ❌ ✅ See Collections ❌ ✅
+Add Invitees
+You can add individual email addresses for people who purchased off-platform or upload a CSV file. We recommend adding custom invite text so members understand how to access what they purchased.
 ​
-Profile Features & Personal Settings
-Feature Limited Member Full Network Member Have a profile with photo ✅ ✅ Fill in the mini bio ✅ ✅ Fill in custom fields ✅ ✅ Add a location ✅ ✅ Earn badges ✅ ✅ See their people explorer ✅ ✅ See their list of Space memberships ✅ ✅ Manage account details, notification preferences, and streaks calendar in personal settings ✅ ✅ See the introduction (or About Me) field ❌ ✅ See their referrals ❌ ✅
+What Members Receive
+Members will receive an email with your invite text and a button to Access Now , which walks them through joining the plan.
+After you send an invite, invitees also receive three automatic reminder emails —sent after 3, 10, and 30 days —if they haven’t joined yet.
 ​
-Inside a Space with Membership
-Feature Limited Member Full Network Member See and interact with all features enabled in the Space ✅ ✅ Receive notifications related to activity in the Space ✅ ✅ Use search within the Space ✅ ✅ Attend livestreams in the Space ✅ ✅ Bookmark content in the Space ✅ ✅ See profiles of other members in the same Space ✅ ✅ See the activity of other members in the same Space ✅ ✅ Follow other members in the same Space ❌ ✅ Private message other members in the same Space ❌ ✅ See similarities with other members in the same Space ❌ ✅ See other people in the same Space with the same badge ❌ ✅ See other people in the same Space with the same custom field ❌ ✅
-How Do I Choose Where Plans Appear?
-Can I Set Up Required Questions and Approval for Access?
+Use a Share Link for a Plan
+In the Visibility & Sharing tab, you can also generate a Share Link for This Plan . Share links can be used multiple times.
+We strongly recommend using share links only when you’re embedding them inside a button or hyperlink in your post-purchase pages or emails. This helps keep the experience clean and avoids making the share link visible to members.
+​
+Plan Landing Page vs. Skip Landing Page
+Share links follow the same two options:
+Plan Landing Page: Takes people to a simple landing page with the plan image, description, and Access button. After creating an account or signing in, they are instantly added to everything included in the plan.
+Skip Landing Page: Takes people directly to the create-account or sign-in flow, then adds them immediately to the plan’s included access.
+​
+Managing Share Links
+You can delete and regenerate share links at any time by selecting Delete All Links at the bottom of the Visibility & Sharing tab.
+​
+How to Set Up a Zap That Automatically Invites Someone to Your Plan
+In this example, we’ll walk through setting up a Zap that automatically invites someone to your Mighty Network when they make a payment in Stripe.
+​
+Set Up Your Trigger
+​
+Choose App
+Select Stripe as your Trigger app. You’ll need to sign in to your Stripe account so Zapier can connect to it.
+​
+Select Trigger Event
+Next, choose the specific Stripe Trigger you want to use. For this example, select New Subscription , which activates whenever a subscription is purchased.
+​
+Set Up Your Action
+After your Trigger is configured, you’ll set up the Action.
+​
+Choose App & Event
+Select Mighty Networks as your Action app. Then choose the Action Plan Action .
+The Action type will be “Invite to Plan”
+And search for the plan name to invite them to.
+​
+Add Email Addresses
+Under Email Addresses , select Enter text and map the Email Address field that comes in from your Stripe Trigger.
+​
+Add Invite Text
+Customize the invite text that will appear in the email notification sent to members.
+​
+Choose the Landing Flow
+Finally, decide whether you want the member to land on the Plan Landing Page or Skip the Landing Page and go directly into the create-account or sign-in flow before being added to the plan.
+​
+Test and Turn On Your Zap
+After you’ve finished setting up the Action, Zapier may prompt you to run a test to confirm that the data is transferring correctly. Once the test succeeds, Zapier will let you know that your Zap is ready to turn on.
+​
+How to Set Up a Zap to Remove a Member from a Plan
+If you want to automate canceling a member’s access when their external subscription ends, you can create a Zap that removes them from a plan.
+In this example, we’ll use Stripe .
+​
+Set Up Your Trigger
+Select Stripe as your Trigger app, then choose the Trigger Canceled Subscription . This activates the Zap whenever a subscription is canceled in Stripe.
+​
+Set Up Your Action
+Select Mighty Networks as your Action app. Choose Plan Action , then set the Action Type to Remove from Plan .
+From there:
+Search for and select the plan you want to remove the member from.
+Under Email Addresses , map the email sent from Stripe so Zapier knows which member to remove.
+Run a test to make sure the Zap is working properly.
+​
+Important Notes
+If a member has access to multiple plans that include overlapping Spaces, removing them from one plan does not remove their access to any overlapping Spaces.
+If a member joined your Mighty Network with a different email address than the one used for their off-platform purchase—or if they changed their email before canceling—the Zap will fail. Zapier will notify you, and you’ll need to remove the member manually.
+​
+Additional Resources and Support
+Zapier offers a comprehensive Help Center with guidance on creating Zaps, managing your workflows, and troubleshooting issues. It’s a great place to get extra help as you set up or refine your automations.
+Can I Have a Plan with No Payment Gate?
+Can I Charge in Multiple Currencies?
 ⌘ I
 x linkedin instagram
 Powered by This documentation is built and hosted on Mintlify, a developer documentation platform

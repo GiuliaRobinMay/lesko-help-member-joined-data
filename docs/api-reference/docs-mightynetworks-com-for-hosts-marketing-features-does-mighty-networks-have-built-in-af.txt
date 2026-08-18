@@ -1,7 +1,7 @@
-SOURCE: https://docs.mightynetworks.com/for-hosts/payments-and-access/what-is-a-full-vs-limited-membership
+SOURCE: https://docs.mightynetworks.com/for-hosts/marketing-features/does-mighty-networks-have-built-in-affiliates
 FETCHED: 2026-08-18 13:18 UTC
 
-What is a Full vs. Limited Membership? - Mighty Networks Developer
+Does Mighty Networks Have Built-In Affiliates? - Mighty Networks Developer
 Documentation Index
 Fetch the complete documentation index at: /llms.txt
 Use this file to discover all available pages before exploring further.
@@ -11,8 +11,8 @@ Search...
 ⌘ K Ask Assistant
 Search...
 Navigation
-Payments and Access
-What is a Full vs. Limited Membership?
+Marketing Features
+Does Mighty Networks Have Built-In Affiliates?
 For Hosts
 For Members
 API Guides
@@ -212,59 +212,99 @@ The UK Online Safety Act
 Is Mighty Networks GDPR and CCPA Compliant?
 The EU Consumer Rights Directive — Cancellation Rights
 On this page
-Why Use Limited Memberships
-How Limited Members Join Spaces
-What Limited Members See Check out this video on how to set up limited memberships:
-Below is a detailed guide to the features accessible to each member type: Available Network-Level Actions
-Network Navigation
-Profile Features & Personal Settings
-Inside a Space with Membership
-Payments and Access
-What is a Full vs. Limited Membership?
+How to Set Up Affiliate Integrations on Mighty
+How to Set Up Your Integration
+How It Works
+Using Affiliate Programs with Off-Platform Payments
+Frequently Asked Questions
+Marketing Features
+Does Mighty Networks Have Built-In Affiliates?
 Copy page Copy page
 Copy page Copy page
-Full memberships provide access to your entire Network , while limited memberships offer access to a specific set of Spaces and features.
-Whether someone becomes a full or limited member depends on what their plans give access to.​
-Limited memberships let you offer a standalone experience—such as a course, live event, or lead magnet—inside a single Space or a bundle of Spaces, without unlocking your full Network.​
 ​
-Why Use Limited Memberships
-By restricting access to Network-level Global Features —including private messaging, the Global Feed, or Global Members—you can:
-Keep your broader community gated, exclusive, or reserved for paying members.
-Use individual Spaces as entry points to introduce new people to your work.
-Sell standalone programs or experiences while keeping your full community experience separate for those on a higher-tier plan.​
+How to Set Up Affiliate Integrations on Mighty
+On the Scale Plan ** and up**, you can set up a paid affiliate integration for your Mighty Network.
+Go to Admin > Integrations > Affiliate Programs to get started.
+Mighty integrates directly with Rootabl and Rewardful , two affiliate platforms that make it easy to track and reward referrals for your paid plans.
+Both integrations work if you’re taking payments on Mighty through a Stripe account , and they only track purchases made on the web (purchases made via iOS or Android will not be credited).
+If a member upgrades, downgrades, or changes plans, both integrations continue to track the revenue associated with that member.
+Commissions automatically update based on the new subscription price, following your rules in Rootabl or Rewardful.
+If a member pays in installments, the payout schedule is managed through your settings on the affiliate platform.
+[ Note: if you take payments off-platform and are interested in using a paid affiliate program, check out the options below. ]( https://docs.mightynetworks.com/for-hosts/payments-and-access/can-i-take-payments-off-platform )
 ​
-How Limited Members Join Spaces
-Important: Limited members can only join Spaces through paid plans. This means:
-Invites do not grant access to limited members for Spaces
-“Anyone Can Join” settings do not apply to limited members for Spaces
-Limited members must have a valid payment for a plan that includes the Space in order to access it
-This restriction ensures that limited memberships remain properly gated and prevents unintended access escalation.
+How to Set Up Your Integration
+Setup is quick:
+Go to Admin > Integrations > Affiliate Programs .
+Paste your personalized Rootabl or Rewardful ID into Mighty.
+Share your plan links with affiliates.
+You can manage affiliate payouts, rules, and campaigns directly within Rootabl or Rewardful.
+Learn how to connect and use Rootabl , check out this article .
+Learn how to connect and use Rewardful , check out this article .
+The campaigns you set up in either Rootabl or Rewardful will allow you to specify the affiliate payouts that you’d like to offer for each specific plan.
 ​
-What Limited Members See
-Here’s an example of what the limited member experience can look like:
+How It Works
+You define affiliate payouts in Rootabl or Rewardful for each plan.
+Mighty’s plan share links can be visible or hidden (External or Internal).
+Only new members to your Mighty Network are credited as eligible referrals.
+You can use one paid affiliate integration at a time, but you can also use it alongside Mighty’s free Ambassador Program .
 ​
-Check out this video on how to set up limited memberships:
-For more details on setting up plans, check out this article .
+Using Affiliate Programs with Off-Platform Payments
+If you take payments outside Mighty, you can connect your preferred affiliate service directly to that payment platform.
+Options to explore:
+Rootabl (also supports off-platform payments)
+Rewardful(also supports off-platform payments)
+ThriveCart
+Affiliatly
+After a member purchases externally, send them a hidden plan invite to your Mighty Network.​ Learn more about setting up plans for off-platform payments.
 ​
-Below is a detailed guide to the features accessible to each member type:
-Important notes:
-If you set your Network Privacy & Access settings to “anyone can view content inside the Network, ” these definitions may shift because a limited member can see what a visitor/non-member sees (e.g. Collections with Spaces that anyone in the Network can see, promoted Spaces, etc.).
-If you demote a full member to a limited member (by removing the Network from any of the Spaces they are on) they will lose access to their private chats and any of the Global Features. If you add the Network back and restore them to full membership, then they will be able to access their previous chat messages.
-Limited members cannot become Space Hosts or Space moderators.
+Frequently Asked Questions
+Which Mighty Plans can use the new Affiliate integrations?
+The Rootabl and Rewardful integrations are available for Hosts on the Scale plan and up.
+Do my affiliates have to be my members?
+Nope! You can build an affiliate network that goes beyond your members on Mighty. They don’t have to be members IN your Mighty Network to refer people TO your Mighty Network.
+Can I use these programs if I run payments off-platform?
+No, you need to run web payments through Mighty in order for these integrations to work.
+Are affiliate programs part of my Mighty subscription or are they an additional fee?
+These are integrations, so you’ll need to subscribe to additional software to use them. Rootabl offers a special discount for Mighty Hosts , and Rewardful’s pricing can be explored here .
+Can I use both Mighty’s Ambassador program and one of the affiliate partners?
+Launch Plans and up can enable the Ambassador program to provide members with their own unique links to earn Bronze, Silver and Gold badges as they invite more members.
+The paid affiliate integrations can be used in parallel with the Ambassador program if desired—but the two things use different links for referring members, so your affiliates’ Rootabl links won’t count towards Ambassador levels and vice versa.
 ​
-Available Network-Level Actions
-Feature Limited Member Full Network Member Download and use the iOS or Android app ✅ ✅ Receive badges ✅ ✅ Track streaks ✅ ✅ See the Network logo or global header brand ✅ ✅ See the Network About Page ✅ ✅ Send and receive private messages (including those sent via automation) ❌ ✅ See and complete the Welcome Checklist ❌ ✅ Use global Network Search ❌ ✅ Receive Network-level notifications (for example, about a global livestream) ❌ ✅ Use the Ambassador Program to refer Network members ❌ ✅ Earn points ❌ ✅ Send and receive recognitions ❌ ✅
-​
-Network Navigation
-Feature Limited Member Full Network Member See Spaces where they are a member ✅ ✅ See global navigation features ❌ ✅ See custom navigation links ❌ ✅ See Collections ❌ ✅
-​
-Profile Features & Personal Settings
-Feature Limited Member Full Network Member Have a profile with photo ✅ ✅ Fill in the mini bio ✅ ✅ Fill in custom fields ✅ ✅ Add a location ✅ ✅ Earn badges ✅ ✅ See their people explorer ✅ ✅ See their list of Space memberships ✅ ✅ Manage account details, notification preferences, and streaks calendar in personal settings ✅ ✅ See the introduction (or About Me) field ❌ ✅ See their referrals ❌ ✅
-​
-Inside a Space with Membership
-Feature Limited Member Full Network Member See and interact with all features enabled in the Space ✅ ✅ Receive notifications related to activity in the Space ✅ ✅ Use search within the Space ✅ ✅ Attend livestreams in the Space ✅ ✅ Bookmark content in the Space ✅ ✅ See profiles of other members in the same Space ✅ ✅ See the activity of other members in the same Space ✅ ✅ Follow other members in the same Space ❌ ✅ Private message other members in the same Space ❌ ✅ See similarities with other members in the same Space ❌ ✅ See other people in the same Space with the same badge ❌ ✅ See other people in the same Space with the same custom field ❌ ✅
-How Do I Choose Where Plans Appear?
-Can I Set Up Required Questions and Approval for Access?
+One idea: Your top Ambassadors can then be invited into a paid affiliate program as a reward, to keep their momentum going.
+What if someone has cookies disabled?
+To adhere to privacy regulations, referrals are not tracked/applied for prospective members with cookies disabled.
+What if someone changes their email address?
+Both Rootabl and Rewardful affiliate links remain functional even if Host or member emails are changed.
+Are multiple currencies supported?
+Rootabl currently only shows charges and commissions in USD. Affiliates can be paid out commissions in their preferred currency (any currency supported by Stripe).
+Learn more about currencies on Rewardful.
+Can I share free plan links with these affiliate integrations?
+Affiliates can share free plans and they will be able to see who they have referred.
+On Rootabl, they will only receive commission rewards upon purchase.
+What if a prospective member is referred by multiple affiliates?
+Rootabl allows Hosts to determine if they’d prefer first or last-click attribution for prospective members.
+Rewardful credits the last affiliate link followed by the prospective members.
+How do affiliate payouts work with plan trials?
+Hosts can specify a duration on Rootabl for extended trial lengths (before crediting the referrer), however on Mighty, this length is limited to 90 days maximum (after which the referral will no longer be credited).
+On Rewardful, they will only receive commission rewards upon purchase.
+How do refunds work with affiliates?
+On Rootabl, refunds within 29 days are automatically tracked through Stripe and do not earn a commission.
+If the refund window is 30 days or longer, Mighty Hosts need to reach out to Rootabl to extend the payout settings, as commissions are frozen and withdrawn 30 days after purchase to pay out affiliates.
+Please refer to Rewardful’s refund policies .
+How are taxes handled?
+Rootabl takes care of your entire payout system, including reporting, tax document collection, and paying out affiliates in their preferred currency and location. This is done with a small fee on top of commissions. Learn more here.
+Please refer to Rewardful’s tax policy .
+Can I use both Mighty’s Ambassador program and one of the affiliate programs?
+Yes! Launch plans and up can enable the Ambassador program to provide members with their own unique links to earn Bronze, Silver and Gold badges as they invite more members.
+Paid affiliate programs can be used in parallel with the Ambassador program if a Host would like to do so.
+Can I use multiple affiliate programs at once?
+Only one paid affiliate integration at a time can be active on a Mighty Network.
+I use a different affiliate program, will you be adding support for it?
+We’ll be evaluating Host feedback as we consider adding support for additional affiliate programs.
+Do plan links shared with integrated affiliate programs work if I use SSO (Single Sign-On) on my Mighty Network?
+Yes!
+What is the People Explorer?
+Can I Integrate My Mighty Network with Rootabl?
 ⌘ I
 x linkedin instagram
 Powered by This documentation is built and hosted on Mintlify, a developer documentation platform

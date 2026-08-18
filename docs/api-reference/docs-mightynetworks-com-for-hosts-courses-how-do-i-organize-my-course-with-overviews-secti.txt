@@ -1,7 +1,7 @@
-SOURCE: https://docs.mightynetworks.com/for-hosts/payments-and-access/what-is-a-full-vs-limited-membership
-FETCHED: 2026-08-18 13:18 UTC
+SOURCE: https://docs.mightynetworks.com/for-hosts/courses/how-do-i-organize-my-course-with-overviews-sections-and-lessons
+FETCHED: 2026-08-18 13:17 UTC
 
-What is a Full vs. Limited Membership? - Mighty Networks Developer
+How Do I Organize My Course With Overviews, Sections, and Lessons? - Mighty Networks Developer
 Documentation Index
 Fetch the complete documentation index at: /llms.txt
 Use this file to discover all available pages before exploring further.
@@ -11,8 +11,8 @@ Search...
 ⌘ K Ask Assistant
 Search...
 Navigation
-Payments and Access
-What is a Full vs. Limited Membership?
+Courses
+How Do I Organize My Course With Overviews, Sections, and Lessons?
 For Hosts
 For Members
 API Guides
@@ -212,59 +212,133 @@ The UK Online Safety Act
 Is Mighty Networks GDPR and CCPA Compliant?
 The EU Consumer Rights Directive — Cancellation Rights
 On this page
-Why Use Limited Memberships
-How Limited Members Join Spaces
-What Limited Members See Check out this video on how to set up limited memberships:
-Below is a detailed guide to the features accessible to each member type: Available Network-Level Actions
-Network Navigation
-Profile Features & Personal Settings
-Inside a Space with Membership
-Payments and Access
-What is a Full vs. Limited Membership?
+Overview
+Add an Overview
+Overview Settings
+Sections
+Add a Section
+Add Sections to an Existing Course
+Lessons
+Add a Lesson
+Managing Course Content
+Course Settings
+Previewing Sections and Lessons
+Bookmarking Sections and Lessons
+Featuring or Pinning Sections and Lessons
+Bulk Actions Overview and Sections:
+Lessons:
+Duplicate, Reorder, and Move Content
+Courses
+How Do I Organize My Course With Overviews, Sections, and Lessons?
 Copy page Copy page
 Copy page Copy page
-Full memberships provide access to your entire Network , while limited memberships offer access to a specific set of Spaces and features.
-Whether someone becomes a full or limited member depends on what their plans give access to.​
-Limited memberships let you offer a standalone experience—such as a course, live event, or lead magnet—inside a single Space or a bundle of Spaces, without unlocking your full Network.​
+On the Launch plan , and up you can create Courses with four content types:
+Overview
+Sections
+Lessons
+Quizzes
+You can use these in many ways—whether you’re building a Course, organizing a resource library, or designing a step-by-step learning path. All Course content is created and edited on web.
+With each of the content types, you can format, add images, videos, pdfs, embeds and more. Check out this article to learn more.
+You can create up to 500 total Sections and Lessons in each Course feature you add to your Mighty Network.
 ​
-Why Use Limited Memberships
-By restricting access to Network-level Global Features —including private messaging, the Global Feed, or Global Members—you can:
-Keep your broader community gated, exclusive, or reserved for paying members.
-Use individual Spaces as entry points to introduce new people to your work.
-Sell standalone programs or experiences while keeping your full community experience separate for those on a higher-tier plan.​
+Overview
+Your Overview is the introduction to your Course. It’s where you add the description, expectations, and guidelines members will need before getting started.
 ​
-How Limited Members Join Spaces
-Important: Limited members can only join Spaces through paid plans. This means:
-Invites do not grant access to limited members for Spaces
-“Anyone Can Join” settings do not apply to limited members for Spaces
-Limited members must have a valid payment for a plan that includes the Space in order to access it
-This restriction ensures that limited memberships remain properly gated and prevents unintended access escalation.
+Add an Overview
+When you enable the Course feature for the first time, you’ll see an example Overview.
+You can edit this example provided to add your own image and text.
 ​
-What Limited Members See
-Here’s an example of what the limited member experience can look like:
+Overview Settings
+At the bottom of your Overview, select Manage Overview Settings to:
+Make the Overview Visible or Hidden
+Use the default thumbnail or upload a custom thumbnail
+Enable Previewing for visitors
+When you’re done, continue building out your Sections and Lessons.
 ​
-Check out this video on how to set up limited memberships:
-For more details on setting up plans, check out this article .
+Sections
+Sections help you organize related material. Think of each Section as a mini-overview for a specific topic or module. Each Section contains Lessons.
 ​
-Below is a detailed guide to the features accessible to each member type:
-Important notes:
-If you set your Network Privacy & Access settings to “anyone can view content inside the Network, ” these definitions may shift because a limited member can see what a visitor/non-member sees (e.g. Collections with Spaces that anyone in the Network can see, promoted Spaces, etc.).
-If you demote a full member to a limited member (by removing the Network from any of the Spaces they are on) they will lose access to their private chats and any of the Global Features. If you add the Network back and restore them to full membership, then they will be able to access their previous chat messages.
-Limited members cannot become Space Hosts or Space moderators.
+Add a Section
+To add a Section:
+Go to Course > Create > Add Section .
+Add your title and content.
+Save your Section.
+After saving, open Manage Section Settings to:
+Add or reorder Lessons
+Make the Section Hidden or Visible
+Add an Unlock Rule (for example, completing the Overview or another Lesson)
+Add a Completion button
+Edit the thumbnail
+Enable Previewing for visitors
+Section instructors update automatically based on the Lessons inside that Section.
 ​
-Available Network-Level Actions
-Feature Limited Member Full Network Member Download and use the iOS or Android app ✅ ✅ Receive badges ✅ ✅ Track streaks ✅ ✅ See the Network logo or global header brand ✅ ✅ See the Network About Page ✅ ✅ Send and receive private messages (including those sent via automation) ❌ ✅ See and complete the Welcome Checklist ❌ ✅ Use global Network Search ❌ ✅ Receive Network-level notifications (for example, about a global livestream) ❌ ✅ Use the Ambassador Program to refer Network members ❌ ✅ Earn points ❌ ✅ Send and receive recognitions ❌ ✅
+Add Sections to an Existing Course
+Scroll to the bottom of your Course and select Create to add a new Section.
 ​
-Network Navigation
-Feature Limited Member Full Network Member See Spaces where they are a member ✅ ✅ See global navigation features ❌ ✅ See custom navigation links ❌ ✅ See Collections ❌ ✅
+Lessons
+Lessons can stand alone or be placed inside Sections.
 ​
-Profile Features & Personal Settings
-Feature Limited Member Full Network Member Have a profile with photo ✅ ✅ Fill in the mini bio ✅ ✅ Fill in custom fields ✅ ✅ Add a location ✅ ✅ Earn badges ✅ ✅ See their people explorer ✅ ✅ See their list of Space memberships ✅ ✅ Manage account details, notification preferences, and streaks calendar in personal settings ✅ ✅ See the introduction (or About Me) field ❌ ✅ See their referrals ❌ ✅
+Add a Lesson
+To add a Lesson:
+Go to Course > Create > Add Lesson .
+Add your content.
+Save your Lesson.
+Then use Manage Lesson Settings to:
+Make the Lesson Hidden or Visible
+Add an Unlock Rule
+Add a Completion button
+Change the Instructor
+Edit the thumbnail
+Enable Previewing
 ​
-Inside a Space with Membership
-Feature Limited Member Full Network Member See and interact with all features enabled in the Space ✅ ✅ Receive notifications related to activity in the Space ✅ ✅ Use search within the Space ✅ ✅ Attend livestreams in the Space ✅ ✅ Bookmark content in the Space ✅ ✅ See profiles of other members in the same Space ✅ ✅ See the activity of other members in the same Space ✅ ✅ Follow other members in the same Space ❌ ✅ Private message other members in the same Space ❌ ✅ See similarities with other members in the same Space ❌ ✅ See other people in the same Space with the same badge ❌ ✅ See other people in the same Space with the same custom field ❌ ✅
-How Do I Choose Where Plans Appear?
-Can I Set Up Required Questions and Approval for Access?
+Managing Course Content
+​
+Course Settings
+For overall Course settings like naming, section behavior and display style, check out this article.
+​
+Previewing Sections and Lessons
+You can preview specific Sections or Lessons to people who haven’t joined the Space.
+Inside a Lesson or Section, open Settings and enable Preview .
+Visitors will see a Preview icon next to any content you’ve made available. Content with a lock icon remains hidden.
+​
+Bookmarking Sections and Lessons
+Members can bookmark Sections and Lessons on web:
+Hover over the Section or Lesson.
+Open the three-dot menu .
+Select Bookmark .
+Bookmarked content appears in Bookmarks on both web and mobile.
+​
+Featuring or Pinning Sections and Lessons
+You can feature Sections and Lessons in the Space’s Featured or Welcome Section.
+Hidden coursework won’t appear in Featured.
+Once visible, it will reappear.
+What’s shown depends on the Space’s visibility settings.
+Pinning and unpinning must be done on web.
+​
+Bulk Actions
+You have some bulk action options with your content.
+At the top of, you will see the option to “Bulk Select” You can select all content or just some.
+Once you select the content, go to the three dot menu in the right corner.
+You will see options depending on the content that you selected.
+​
+Overview and Sections:
+Edit Thumbnail
+Turn on/off preview
+​
+Lessons:
+Turn on/off comments
+Assign Owner
+Completion Settings
+Edit Thumbnail
+Turn on/off preview
+​
+Duplicate, Reorder, and Move Content
+You can duplicate, reorder and move content at any time by selecting the three dot menu.
+When you duplicate a Section, it will duplicate all the content inside as well
+To reorder content, click on Reorder at the top of the content and drag and drop whatever you would like to move.
+Select “Finish Reordering” when you are done.
+How Do I Build a Course in My Mighty Network?
+How Do I Add a Quiz to My Course?
 ⌘ I
 x linkedin instagram
 Powered by This documentation is built and hosted on Mintlify, a developer documentation platform

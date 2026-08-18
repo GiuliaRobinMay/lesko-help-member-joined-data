@@ -1,0 +1,81 @@
+SOURCE: https://docs.mightynetworks.com/headless-api/graphql-explorer.md
+FETCHED: 2026-08-18 13:17 UTC
+
+> ## Documentation Index
+> Fetch the complete documentation index at: https://docs.mightynetworks.com/llms.txt
+> Use this file to discover all available pages before exploring further.
+
+# GraphQL Schema Explorer
+
+> Browse the public Headless API schema and run queries against generated sample data, with no tokens used and no Mighty Network of your own required
+
+<div
+  style={{
+display: 'flex',
+flexDirection: 'column',
+height: 'calc(100dvh - 112px)',
+minHeight: '32rem',
+}}
+>
+  <div
+    id="graphiql-explorer-header"
+    style={{
+  flex: 'none',
+  display: 'flex',
+  flexWrap: 'wrap',
+  alignItems: 'baseline',
+  gap: '0.25rem 1.5rem',
+  padding: '0.7rem 1.25rem',
+  borderBottom: '1px solid rgb(128 128 128 / 0.3)',
+  fontSize: '0.8125rem',
+  lineHeight: 1.45,
+}}
+  >
+    <span style={{ fontSize: '0.9375rem', fontWeight: 600 }}>GraphQL Schema Explorer</span>
+
+    <span style={{ flex: '1 1 24rem', opacity: 0.8 }}>
+      Every response is generated sample data — no tokens will be used, no Mighty Network of your
+      own is required, and mutations change nothing.
+    </span>
+
+    <a href="/headless-api">Headless API overview</a>
+  </div>
+
+  <div id="graphiql-container" data-schema-url="https://api.mn.co/graphql/schema" data-schema-fallback-url="/schema.public.graphql.json" style={{ flex: '1 1 auto', minHeight: 0 }}>
+    <p className="explorer-status" style={{ padding: '0.75rem 1.25rem', fontSize: '0.875rem' }}>
+      Loading the GraphQL schema…
+    </p>
+  </div>
+</div>
+
+<div style={{ maxWidth: '52rem', margin: '0 auto', padding: '2.5rem 1.5rem 4rem' }}>
+  ## What you can do here
+
+  * **Read the schema.** Open the **Docs** panel to walk every type, field, argument, and description, the same way you would against a live endpoint.
+  * **Write a query with autocomplete.** The editor knows the whole schema, so <kbd>Ctrl</kbd> + <kbd>Space</kbd> suggests valid fields and arguments as you type, and invalid selections are flagged before you run anything.
+  * **See the shape of a response.** Running an operation returns a well-formed result with placeholder values, which is enough to write and type-check the client code that consumes it.
+
+  What you cannot do here is get real answers. Values are invented per field, so IDs, counts, and relationships are not consistent with one another and mean nothing outside this page.
+
+  ## About the schema shown
+
+  The explorer reads the schema live from `https://api.mn.co/graphql/schema`, an unauthenticated endpoint that prints it from the code currently running, with every feature flag off. So what you see here is the public shape of the deployed graph, and no flag-gated field can appear in it. If that endpoint cannot be reached, the page quietly falls back to a copy bundled with the documentation, which may lag slightly behind.
+
+  A specific Mighty Network can expose more than the public schema, depending on the features enabled on it. Fetching the schema is the only request this page makes — no tokens are involved and there is no live Network behind it, so mutations return sample data and change nothing.
+
+  To fetch the exact schema for your own Network, use the unauthenticated SDL endpoint described in [Fetching the schema](/headless-api#fetching-the-schema).
+
+  ## Running real queries
+
+  When you are ready to query real data, you have two options:
+
+  <CardGroup cols={2}>
+    <Card title="Hosted GraphiQL" icon="terminal" href="/headless-api#graphiql-explorer">
+      Network hosts get an authenticated explorer inside Network Admin, with no token to paste in.
+    </Card>
+
+    <Card title="Authentication" icon="key" href="/headless-authentication">
+      Generate a token and point any GraphQL client at your Network's endpoint.
+    </Card>
+  </CardGroup>
+</div>

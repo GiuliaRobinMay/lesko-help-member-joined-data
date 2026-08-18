@@ -1,7 +1,7 @@
-SOURCE: https://docs.mightynetworks.com/for-hosts/payments-and-access/what-is-a-full-vs-limited-membership
+SOURCE: https://docs.mightynetworks.com/for-hosts/analytics-and-integrations/can-i-download-my-member-data
 FETCHED: 2026-08-18 13:18 UTC
 
-What is a Full vs. Limited Membership? - Mighty Networks Developer
+Can I Download My Member Data? - Mighty Networks Developer
 Documentation Index
 Fetch the complete documentation index at: /llms.txt
 Use this file to discover all available pages before exploring further.
@@ -11,8 +11,8 @@ Search...
 ⌘ K Ask Assistant
 Search...
 Navigation
-Payments and Access
-What is a Full vs. Limited Membership?
+Analytics and Integrations
+Can I Download My Member Data?
 For Hosts
 For Members
 API Guides
@@ -212,59 +212,169 @@ The UK Online Safety Act
 Is Mighty Networks GDPR and CCPA Compliant?
 The EU Consumer Rights Directive — Cancellation Rights
 On this page
-Why Use Limited Memberships
-How Limited Members Join Spaces
-What Limited Members See Check out this video on how to set up limited memberships:
-Below is a detailed guide to the features accessible to each member type: Available Network-Level Actions
-Network Navigation
-Profile Features & Personal Settings
-Inside a Space with Membership
-Payments and Access
-What is a Full vs. Limited Membership?
+What You Can Do with Member Data
+How to Download Your Member List
+What’s Included in Your Member List
+What’s in the Space Member List
+What’s in the Plan Member List
+Why Member Lists Matter
+Analytics and Integrations
+Can I Download My Member Data?
 Copy page Copy page
 Copy page Copy page
-Full memberships provide access to your entire Network , while limited memberships offer access to a specific set of Spaces and features.
-Whether someone becomes a full or limited member depends on what their plans give access to.​
-Limited memberships let you offer a standalone experience—such as a course, live event, or lead magnet—inside a single Space or a bundle of Spaces, without unlocking your full Network.​
+When you upgrade to The Launch Plan or higher, you unlock full access to data about your members—like their email addresses, profiles, Space memberships, Ambassador status, and more.
+You can download this data anytime as an Excel (.xlsx) file for:
+Your entire Mighty Network
+An individual Space you host
+Each paid Plan , if you’ve enabled payments
+This data helps you better understand your members and grow your community.
 ​
-Why Use Limited Memberships
-By restricting access to Network-level Global Features —including private messaging, the Global Feed, or Global Members—you can:
-Keep your broader community gated, exclusive, or reserved for paying members.
-Use individual Spaces as entry points to introduce new people to your work.
-Sell standalone programs or experiences while keeping your full community experience separate for those on a higher-tier plan.​
+What You Can Do with Member Data
+Import it into an external CRM system
+Add members to your email newsletter list
+Measure engagement or track course completion rates
+Understand who your members are and how they interact
 ​
-How Limited Members Join Spaces
-Important: Limited members can only join Spaces through paid plans. This means:
-Invites do not grant access to limited members for Spaces
-“Anyone Can Join” settings do not apply to limited members for Spaces
-Limited members must have a valid payment for a plan that includes the Space in order to access it
-This restriction ensures that limited memberships remain properly gated and prevents unintended access escalation.
+How to Download Your Member List
+Go to Admin > Members > Member List .
+Click Download .
+Confirm you’ll follow Mighty Networks’ Terms of Use (no selling or sharing member data).
+You’ll get an email with a download link for your up-to-date member list.
+To learn how to view and manage your Member List, check out this article .
 ​
-What Limited Members See
-Here’s an example of what the limited member experience can look like:
+What’s Included in Your Member List
+Here are the columns:
+Member ID
+First Name
+Last Name
+Email address
+Email Verified
+Yes
+No
+Membership Type
+Full
+Limited
+Member Type
+Network Host
+Moderator
+Full Member
+Limited Member
+Opted out of commercial emails: If this column has a “Yes” in it then that means that the member has opted out of receiving commercial emails.
+Notification Method:
+Email: email notifications toggled on
+Push: mobile push notifications toggled on
+All: both email and mobile push notifications are toggled on
+None: neither mobile push or email notifications are toggled on
+Email Frequency:
+Daily: they have the “daily digest: toggled on
+All: they have the “as activity happens” toggled on
+Network Role
+Host
+Contributor (Member)
+City
+State
+Country
+Time Zone
+Full Location
+One-Time Purchase Plans
+Active Subscription Plans- this will show the interval (Free, Monthly, Annual) and not the name of the Plan.
+Short Bio
+Account Created
+Join Date (this is recorded based on UTC Time Zone)
+Last Visited Network (this is recorded based on UTC Time Zone)
+Signed In with Facebook
+Signed In with LinkedIn
+Signed In with Apple
+Signed In with Password
+Has iOS App
+Has Android App
+Welcome Checklist Completed
+Space Memberships
+Ambassador Level
+Members Referred
+Referrer Email
+Referrer Name
+Referrer ID
+Avatar URL
+Tags
+Badges
+Custom Field Answers
 ​
-Check out this video on how to set up limited memberships:
-For more details on setting up plans, check out this article .
+What’s in the Space Member List
+You can download a Space-specific list if you’re both a Network Host and a Space Host .
+Important note: You will need to be a Network Host and a Space Host to be able to download the member list. For example, if you are a Space Host and a Network member, then you will not be able to download the member list for the Space.
+To download: Go to the Space → Settings > Member List > Download Member List .
+Columns include:
+Member ID
+First Name
+Last Name
+Email Address
+Membership Type
+Full
+Limited
+Space Access
+Account Created
+Joined Space (this is recorded based on UTC Time Zone)
+Last Active (this is recorded based on UTC Time Zone)
+If the Course feature is enabled
+Date Joined Course (this is recorded based on UTC Time Zone)
+Last Visited Course (this is recorded based on UTC Time Zone)
+Course Completion %
+Last Completed Lesson
+Last Viewed Lesson
+For Spaces that have approvals , you’ll see these fields in the second tab of your Space Member List:
+Member ID
+First Name
+Last Name
+Email
+Date Requested
+Status
 ​
-Below is a detailed guide to the features accessible to each member type:
-Important notes:
-If you set your Network Privacy & Access settings to “anyone can view content inside the Network, ” these definitions may shift because a limited member can see what a visitor/non-member sees (e.g. Collections with Spaces that anyone in the Network can see, promoted Spaces, etc.).
-If you demote a full member to a limited member (by removing the Network from any of the Spaces they are on) they will lose access to their private chats and any of the Global Features. If you add the Network back and restore them to full membership, then they will be able to access their previous chat messages.
-Limited members cannot become Space Hosts or Space moderators.
+What’s in the Plan Member List
+If you are a Network Host of a Network with Plans , you can also download a Plan-specific list to see who joined or purchased a plan.
+To download:
+Go to Admin > Plans & Access > Plan List > (three-dot menu next to a Plan) > Download Member List.
+You’ll get two tabs:
+Plan Members Tab:
+Member ID
+First Name
+Last Name
+Email Address
+Membership Type
+Full
+Limited
+Date Paid (this is recorded based on UTC Time Zone)
+Last Visited Network (this is recorded based on UTC Time Zone)
+Platform Purchased
+Payment Status (If a member is currently on a Free Trial, it will be indicated here.)
+Plan Interval
+End of Billing Period
+Date Canceled (this is recorded based on UTC Time Zone)
+Wallet information, if using Token-Gated Plans .
+Screening Questions Responses:
+First Name
+Last Name
+Email
+Date Requested - the date they request to be approved for plans
+Payment Status- this shows what step the member is in the process
+Pending - Approval
+Pending - Payment
+Pending - Answers
+Free Trial
+Active
+Pending Move
+Past Due
+Canceled
+Question 1
+Answer 1
+Question 2
+Answer 2
+… and we’ll add additional columns with answers here to cover each of the questions you set up!
 ​
-Available Network-Level Actions
-Feature Limited Member Full Network Member Download and use the iOS or Android app ✅ ✅ Receive badges ✅ ✅ Track streaks ✅ ✅ See the Network logo or global header brand ✅ ✅ See the Network About Page ✅ ✅ Send and receive private messages (including those sent via automation) ❌ ✅ See and complete the Welcome Checklist ❌ ✅ Use global Network Search ❌ ✅ Receive Network-level notifications (for example, about a global livestream) ❌ ✅ Use the Ambassador Program to refer Network members ❌ ✅ Earn points ❌ ✅ Send and receive recognitions ❌ ✅
-​
-Network Navigation
-Feature Limited Member Full Network Member See Spaces where they are a member ✅ ✅ See global navigation features ❌ ✅ See custom navigation links ❌ ✅ See Collections ❌ ✅
-​
-Profile Features & Personal Settings
-Feature Limited Member Full Network Member Have a profile with photo ✅ ✅ Fill in the mini bio ✅ ✅ Fill in custom fields ✅ ✅ Add a location ✅ ✅ Earn badges ✅ ✅ See their people explorer ✅ ✅ See their list of Space memberships ✅ ✅ Manage account details, notification preferences, and streaks calendar in personal settings ✅ ✅ See the introduction (or About Me) field ❌ ✅ See their referrals ❌ ✅
-​
-Inside a Space with Membership
-Feature Limited Member Full Network Member See and interact with all features enabled in the Space ✅ ✅ Receive notifications related to activity in the Space ✅ ✅ Use search within the Space ✅ ✅ Attend livestreams in the Space ✅ ✅ Bookmark content in the Space ✅ ✅ See profiles of other members in the same Space ✅ ✅ See the activity of other members in the same Space ✅ ✅ Follow other members in the same Space ❌ ✅ Private message other members in the same Space ❌ ✅ See similarities with other members in the same Space ❌ ✅ See other people in the same Space with the same badge ❌ ✅ See other people in the same Space with the same custom field ❌ ✅
-How Do I Choose Where Plans Appear?
-Can I Set Up Required Questions and Approval for Access?
+Why Member Lists Matter
+These member lists seek to reinforce that your members are yours, and we encourage you to back up your member data in the best ways and systems for you.
+How Do I Enable SSO for My Mighty Network?
+Do I Own My Data and Members on My Mighty Network?
 ⌘ I
 x linkedin instagram
 Powered by This documentation is built and hosted on Mintlify, a developer documentation platform

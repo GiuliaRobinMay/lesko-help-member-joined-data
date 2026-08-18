@@ -1,0 +1,27 @@
+SOURCE: https://docs.mightynetworks.com/headless-api-changelog.md
+FETCHED: 2026-08-18 13:17 UTC
+
+> ## Documentation Index
+> Fetch the complete documentation index at: https://docs.mightynetworks.com/llms.txt
+> Use this file to discover all available pages before exploring further.
+
+# Changelog
+
+> Headless API updates and changes
+
+<Update label="August 2026">
+  **General availability**
+
+  The [Headless API](/headless-api) is generally available on the Scale plan and above. OAuth scopes are now enforced on every token, so a token's access is the user's product permissions intersected with the scopes they approved — request the narrowest set your app needs.
+
+  Breaking changes — removals, renames, and arguments that become required — are deprecated and announced on this page before they take effect, so check it before you upgrade an integration.
+
+  **Documentation launch**
+
+  The Headless API documentation is live. Its GraphQL reference is generated from the schema we currently serve, so it always shows what is deployed today but not what changed or why. This changelog is where you find that. It starts here, so it does not cover changes made before this entry.
+
+  From now on, every change to the published schema is recorded on this page:
+
+  * **Additions** are collected into one entry per month, covering new queries, mutations, fields, optional arguments, and enum values. Your existing queries keep working, so you can review a month of additions together.
+  * **Changes to what already exists** get their own dated entry, covering renames, removals, deprecations, arguments that become required, and changes to permissions, pagination, or error codes.
+</Update>

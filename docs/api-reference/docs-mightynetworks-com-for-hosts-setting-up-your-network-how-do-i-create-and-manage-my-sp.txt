@@ -1,0 +1,412 @@
+SOURCE: https://docs.mightynetworks.com/for-hosts/setting-up-your-network/how-do-i-create-and-manage-my-spaces
+FETCHED: 2026-08-18 13:17 UTC
+
+How Do I Create and Manage My Spaces? - Mighty Networks Developer
+Documentation Index
+Fetch the complete documentation index at: /llms.txt
+Use this file to discover all available pages before exploring further.
+Skip to main content
+Mighty Networks Developer home page
+Search...
+⌘ K Ask Assistant
+Search...
+Navigation
+Setting Up Your Network
+How Do I Create and Manage My Spaces?
+For Hosts
+For Members
+API Guides
+Headless API
+Admin API
+Meet Mighty
+Watch a Full Tour of a Mighty Network
+What is Mighty Community?
+Who Founded Mighty Networks?
+Which Mighty Network Plan is Right For You?
+What’s Included in the Mighty Networks Explore Plan?
+What’s Included in the Mighty Networks Launch Plan?
+What's Included in the Mighty Networks Scale Plan?
+What’s Included in the Mighty Networks Growth Plan?
+What is Mighty Pro?
+Does Mighty Networks Offer a Free Trial?
+What Kind of Support Does Mighty Networks Offer?
+Latest Product Updates
+Product Updates Archive
+Legacy Plans
+Setting Up Your Network
+How Do I Set Up My Mighty Network?
+How Do I Get Help?
+How Do I Chat with Cohost?
+What is the People Magic GPT?
+What is Community Design™?
+How Do I Set Up the Basics for My Network?
+How Do I Edit My Mighty Profile?
+How Do I Set Up My Network Branding?
+How Do I Set Up My Space Branding?
+How Do I Create and Manage My Collections?
+How Do I Create and Manage My Spaces?
+What Kinds of Space Templates are Available?
+How Do I Add and Manage Features in a Space?
+How Do I Set the Privacy Settings for My Network?
+How Do I Set the Privacy Settings for a Space?
+What is the Feed and How Does It Work?
+What are Global Features?
+Can I Customize the Navigation in My Mighty Network?
+Can I Customize the Landing Space for My Members?
+Does Mighty Networks Have an App?
+What Are Promoted Spaces?
+How Do I Set Up a Welcome Checklist?
+How Do I Find the About Page for My Space or Mighty Network?
+What's The Discovery Feature?
+What Do Member Profiles Include in My Mighty Network?
+Marketing Features
+How Can I Customize My Mighty Networks Landing Page?
+What AI Features Does Mighty Networks Have?
+How Do I Segment My Members with Audiences?
+How Do I Set Up Promotional Banners in My Network?
+What is the People Explorer?
+Does Mighty Networks Have Built-In Affiliates?
+Can I Integrate My Mighty Network with Rootabl?
+Can I Integrate My Mighty Network With Rewardful?
+How Do I Create an Email Newsletter?
+Can I Add Marketing Pixels to My Mighty Network?
+How Can I Easily Re Engage My Members?
+How Do I Use the Mighty Networks Ambassador Program?
+How Does SEO Work for My Mighty Network?
+Does Mighty Networks Have an Affiliate Program?
+Payments and Access
+How Do I Create a Plan?
+How Do I Choose Where Plans Appear?
+What is a Full vs. Limited Membership?
+Can I Set Up Required Questions and Approval for Access?
+How Do I Manage My Plans?
+How Do I Manage Spaces in a Plan?
+How Do I Set Up Promo Codes?
+How Do I Set Up Installment Plans and Subscription Intervals?
+How Do I Create a Subscription Group?
+Can I Have a Plan with No Payment Gate?
+Can I Take Payments Off Platform?
+Can I Charge in Multiple Currencies?
+What Currencies Can I Charge in On Mighty Networks?
+Can I Offer a Free Trial on a Mighty Network?
+How Do Members Purchase Access?
+How Do Members Move Between Plans?
+How Do I Create a Waitlist?
+Can I Change My Prices?
+How Do I Gate Access to All or Parts of My Mighty Network?
+How Much Do People Charge, on Average, on Mighty Networks?
+How Do I Connect and Disconnect Stripe to My Mighty Network?
+How Do I Get Paid?
+How Do Taxes Work With My Mighty Network?
+What Happens When a Member Cancels or Requests a Refund
+What Happens When Members Are Past Due on Their Payments?
+How Can I Move Paying Members from Another Platform to Mighty Networks?
+(Pro) How to Remove a Plan From Sale on App Store Connect
+How Do I Switch My Space Between Plans, Invite-Only, and Anyone Can Join?
+How Do I Switch My Network Between Plans, Invite-Only, and Anyone Can Join?
+How Do I Set a Default Plan for Invites? [Beta]
+How Do I Invite People to My Mighty Network?
+How Do I Invite Directly to a Plan?
+How Do I Invite Members to a Space?
+How Do I Give Access to Spaces and Not the Network?
+How Do I Directly Add Existing Members to My Network or Spaces?
+How Do I Manage My Leads?
+Does Mighty Networks Charge a Transaction Fee?
+Can I Set Up Age Verification In my Mighty Network?
+How Do I Create a Token-Gated Plan?
+How Do I Manage Members’ Access to Spaces and the Network?
+How Do I Set Up a Space That Full Members Can Join but Limited Members Must Pay For?
+Courses
+How Do I Build a Course in My Mighty Network?
+How Do I Organize My Course With Overviews, Sections, and Lessons?
+How Do I Add a Quiz to My Course?
+What Kind of Media Can I Upload Into a Course?
+How Do I Track Member Completion and Progress?
+How Do I Generate Completion Certificates?
+How Do I Make a Habit Tracker for My Members?
+Events and Livestream
+How Do I Create Events in My Mighty Network?
+How Do I Create Zoom Events on Mighty Networks?
+Can I Create Recurring Events in My Mighty Network?
+How Do I Livestream in My Network?
+How Do I Post a Livestream Replay?
+Can I Have Multiple Speakers During a Livestream?
+How Do I Schedule a Livestream Event?
+How Do I Add Special Effects to My Livestream?
+How Do I Manage RSVPs and Event Attendees?
+Can I Charge for Events on a Mighty Network?
+Is There a Calendar View for Events?
+How Do I Create a Text Chat Event?
+How Do I Upload Native Videos to My Mighty Network?
+How Do I Troubleshoot Video Upload Issues in a Mighty Network?
+Automations
+What Automations Do I Get on My Plan?
+How Can I Set Up Automations in My Mighty Network?
+Gamification
+How Does Gamification Work in My Mighty Network?
+How Do I Add Custom Badges and Tags for My Members?
+How Do I Add Custom Fields?
+Admin and Moderation
+How Do I Manage My Admin Settings?
+How Do I View and Manage My Members?
+How Do I View As A Member?
+What is the Member Detail Page?
+What Permissions Do Network Hosts and Network Moderators Have?
+What Permissions Do Space Hosts and Space Moderators Have?
+What Content and Moderation Tools Do I Have in My Mighty Network?
+How Do Members Block or Report Others?
+How Does Search Work?
+Can I Use My Own Web Domain with Mighty Networks?
+Can I Change the Default mn.co Domain?
+Can I Customize My Email Domain?
+Can I Customize the Names of Hosts, Moderators and Members?
+How Do I Customize My Member Support?
+How Do I Reset My Password?
+How Do I Downgrade or Cancel My Plan?
+Analytics and Integrations
+What is Mighty Insights™?
+Can I Download Reports From My Mighty Insights™?
+Does Mighty Networks Integrate with Google Analytics?
+Does Mighty Networks have an API?
+Does Mighty Networks Support MCP Connections?
+Can I Use Zapier with Mighty Networks?
+How Do I Enable SSO for My Mighty Network?
+Can I Download My Member Data?
+Do I Own My Data and Members on My Mighty Network?
+Does Mighty Networks have Language Localization?
+Vibe Coding on Mighty
+How Do I Embed a Shopify Buy Button in My Mighty Network?
+Content and Messaging
+How Do I Create an Article in My Mighty Network?
+How Do I Create a Post in My Mighty Network?
+Can I Use External Embeds?
+Can I Use GIFs in My Mighty Network?
+How Do I Create Polls & Questions In My Mighty Network?
+How Do I Create and Manage Featured and Welcome Sections?
+What's An Icebreaker Question and How Do I Set One Up in My Mighty Network?
+How Do Introductions Posts Work?
+How Do I Use the Infinite Question Engine?
+How Does Chat Work in a Mighty Network?
+How Do I Manage My Chat Messages?
+How Do I Welcome New Members?
+How Do I Message Members in a Space?
+How Do I Message Members in My Network?
+How Do Hashtags Work in My Mighty Network?
+What Notifications Do My Members Get?
+How Do I Move Content Between Spaces?
+What Notifications Will I Get as a Host?
+What's the Daily Digest?
+Can I View My Mighty Network in Dark Mode?
+How Do Storage, Engagement Boosts and Livestreaming Limits Work?
+Additional Embeds
+How Can I Make My Mighty Network More Accessible to the Visually Impaired?
+How Do I Enable Desktop Notifications?
+How Does the Delphi Embed Work?
+Privacy, Security & Accessibility
+Can I Add My Own Custom Terms of Use to My Mighty Network?
+How Do I Enable Multi-Factor Authentication and Email Verification?
+What's Mighty Networks' Privacy Policy?
+How Does Mighty Networks Approach Accessibility?
+Data Security at Mighty Networks
+The UK Online Safety Act
+Is Mighty Networks GDPR and CCPA Compliant?
+The EU Consumer Rights Directive — Cancellation Rights
+On this page
+Looking for guidance? Chat with Cohost!
+Create a Space
+Space Settings
+Setup
+Basics
+Privacy
+Space Branding
+Space Features
+Content Highlights
+Members
+Invites
+Moderation
+Plans
+Managing Spaces Duplicating a Space
+Choose What to Duplicate
+Reorder and Move Spaces
+Deleting Spaces
+Archiving Spaces Bulk Archiving
+Bulk Unarchiving
+Activity Indicators
+Setting Up Your Network
+How Do I Create and Manage My Spaces?
+Copy page Copy page
+Copy page Copy page
+You can create a Space that’s a course, group, resource library, chat Space, event , or something completely custom.
+​
+Looking for guidance? Chat with Cohost!
+It will help you name and even create your new Space.
+​
+Create a Space
+You can create a new Space in a few ways:
+Select the “Create a Space” icon at the bottom of the left-hand navigation.
+Go to a Collection where you’d like to add a Space and select three-dot menu > Create a Space .
+From Admin: Go to Admin > Spaces & Navigation > Spaces > Create Space .
+Each option will take you to the Choose a Space Template page. To learn more, check out What Kinds of Space Templates Are Available? .
+Space creation happens in the background, so you can continue working while your Space is being set up. You’ll receive a push notification and an email when the Space is ready.
+By default, new Spaces are visible only to logged-in members until you choose a privacy setting or add a payment option for access.
+​
+Space Settings
+After creating a Space, you can manage its settings in two ways:
+From inside a Space:
+Go to the Space you want to manage.
+Click the manage button in the top-right corner.
+From the left navigation panel:
+Hover over the Space name.
+Click the three-dot menu next to it.
+​
+Setup
+​
+Basics
+In Basics , you can update your Space name, tagline, description, and the Collection where the Space lives.
+Space Name: up to 40 characters
+Space Tagline: up to 100 characters
+Space Description: up to 10,000 characters
+You can also delete the Space from this section.
+​
+Privacy
+Each new Space starts as Invite-Only . You can adjust this in Privacy & Access .
+To learn more, see How Do I Set the Privacy Settings for a Space?
+To charge for access, see How Do I Create a Plan?
+To invite members, see How Do I Invite Members to a Space?
+​
+Space Branding
+Space Hosts and Space moderators can customize the design of a Space with a custom color, logo, image, or video. Learn more.
+​
+Space Features
+You can add, remove, rename, and reorder Space features such as Course , Feed , and Chat
+Learn more
+​
+Content Highlights
+As a Space Host, you can set up a Welcome Section or Featured Section that appears to the right of the Space Feed (if the Feed feature is enabled).
+You can also display a Highlighted Hashtag List in this same area.
+These sections can include pinned posts such as polls, articles, questions, and events.
+To add or reorder posts:
+Go to your Space on web.
+Use the three-dot menu next to a post or event to pin it to feature it.
+To reorder posts, go to Space Admin > Content Highlights and drag and drop posts into your preferred order.
+​
+Members
+In Member Space Admin , you can:
+View and manage the member list .
+Download the list (available on the Scale Plan or higher).
+Use Bulk Actions to send messages , add or remove badges , and manage tags .
+As a Space Host, you can also:
+View member email addresses.
+Click the eyeball icon to view privacy reminders or unhide emails.
+​
+Invites
+From here, you can invite members , manage your sent invites , and approve any requests to join your Space.
+​
+Moderation
+You can manage your reported content from here.
+​
+Plans
+Create and manage Plans from here. For more details, see How Do I Create a Plan?
+​
+Managing Spaces
+​
+Duplicating a Space
+You can duplicate a Space to quickly create a copy of its setup and structure.
+Hover over the Space in the left navigation panel.
+Click the three-dot menu > Manage > More > Duplicate .
+You’ll see a summary of what will be duplicated:
+Space Settings:
+All Space details (like branding and taglines) will be copied except for the Space’s name and privacy settings.
+The duplicate will be renamed [Copy] Space Name .
+Only logged-in members can view or search for it.
+Plans connected to the original Space will not be duplicated.
+Feed: All Feed display settings will copy. You’ll choose how to handle posts in the next step.
+Course: The Overview, Lessons, and Sections will be duplicated and set to hidden . Comments and reactions will not be copied.
+Members: Hosts and moderators will be added automatically, but members will not.
+Page: All page settings and content will copy, but comments and reactions will not.
+Events: All event settings will copy. You’ll choose which events to duplicate. Duplicated events become drafts .
+Chat: All chat settings will copy, but chat messages will not.
+Discovery: All Discovery settings will copy, but Featured and Welcome Sections may not include content that wasn’t duplicated.
+​
+Choose What to Duplicate
+On the next page, you’ll decide how to handle posts in your duplicated Space, including Quick Posts, Polls and Questions, Articles, and Events.
+You can choose to:
+Not duplicate any posts
+Duplicate all Host and Moderator posts
+Duplicate all posts
+Comments, reactions, event RSVPs, poll answers, drafts, and scheduled posts will not be duplicated.
+After you make your selections, you’ll see an indicator showing that the Space is duplicating.
+Once finished, you’ll receive both a push notification and an email confirming the duplication is complete.
+​
+Reorder and Move Spaces
+You can reorder how Spaces appear to members in the left-hand navigation.
+Go to Admin > Spaces & Navigation > Collection List .
+Hover over a Collection > three-dot menu > Manage Collection > Space Order > Reorder Spaces .
+Drag and drop Spaces into your preferred order.
+You can also use the three-dot menu next to a Space to move it to the Top or Bottom of the list.
+To move a Space to a Different Collection
+Select the three dot menu next to the Space: Move Space > Change Collection
+When you move a Space to a different Collection, all of its content — including feed posts, events, and chat messages — moves with it. The Space may take a few moments to fully appear in the new Collection as the system updates.
+For managing Collections, check out How Do I Create and Manage My Collections? .
+​
+Deleting Spaces
+To delete a Space:
+Open the three-dot menu > More > Delete .
+Confirm when prompted.
+Important:
+Deletion cannot be undone. If you prefer to hide the Space instead, consider archiving it.
+If the Space is part of a plan, you’ll see a pop-up confirming that deletion will remove access for all members.
+If it’s the only Space in a plan (and the plan doesn’t include the Network), you must deactivate the plan before deleting the Space.
+​
+Archiving Spaces
+Archiving hides a Space from view without deleting its content.
+To archive a Space:
+Click the three-dot menu > Archive .
+Confirm when prompted.
+Archived Spaces appear greyed out in Admin > Spaces & Navigation > Space List .
+You can unarchive in the three dot menu to restore it.
+Archived Spaces can’t be deleted until they’re unarchived.
+Collections with archived Spaces can’t be deleted.
+When a Space is archived:
+All content, including posts and interactions, becomes inaccessible to all current members.
+Spaces that are part of a plan are removed from it and plan members lose access.
+The last Space in a Bundle will be skipped from archiving.
+The Space is still visible in your Admin.
+You can unarchive the Space at any time.
+Auto-join settings remain active for archived Spaces. However, if a Space’s privacy is changed to a non-joinable setting (such as Invite-Only), auto-join is automatically turned off to maintain consistency.
+Notifications are cleared and won’t return when unarchived.
+Infinite Question Engine Auto-Post is disabled and scheduled IQE posts are canceled. You will need to re-enable Auto-Post manually after unarchiving.
+​
+Bulk Archiving
+You can archive multiple Spaces at once:
+Go to Admin > Spaces & Navigation > Space List .
+Select the Spaces you want to archive using the checkboxes.
+Choose Bulk Actions > Archive .
+Confirm when prompted.
+Spaces that are part of a plan will be removed from it and plan members will lose access. The last Space in a Bundle will be skipped from the bulk archive
+You will receive an email and in-app notification when the bulk archive finishes. If any Spaces could not be archived, you will receive a failure notification.
+​
+Bulk Unarchiving
+You can unarchive multiple Spaces at once:
+Go to Admin > Spaces & Navigation > Space List .
+Filter for Archived Spaces.
+Select the Spaces you would like to unarchive using the checkboxes.
+Choose Bulk Actions > Unarchive .
+You will receive an email and in-app notification when the bulk unarchive finishes. If any Spaces could not be unarchived, you will receive a failure notification.
+​
+Activity Indicators
+Each Space includes activity indicators to help you and your members stay up to date:
+Pulsing circle (“hint”): Appears on Auto Join Spaces when a member is added.
+Number badge: Shows new chat messages.
+Bold or half circle: Indicates new posts or interactions.
+Square with a dot (iOS): Indicates unseen chat messages.
+White circle on menu (iOS): Indicates unseen Space activity.
+Tip: Viewing content in the Global Feed won’t clear the activity indicator until you also view it inside the Space.
+How Do I Create and Manage My Collections?
+What Kinds of Space Templates are Available?
+⌘ I
+x linkedin instagram
+Powered by This documentation is built and hosted on Mintlify, a developer documentation platform
+Assistant
+Responses are generated using AI and may contain mistakes.
+Contact support

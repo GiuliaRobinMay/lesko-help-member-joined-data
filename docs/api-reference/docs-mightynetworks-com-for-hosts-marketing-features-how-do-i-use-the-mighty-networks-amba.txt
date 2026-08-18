@@ -1,7 +1,7 @@
-SOURCE: https://docs.mightynetworks.com/for-hosts/payments-and-access/what-is-a-full-vs-limited-membership
+SOURCE: https://docs.mightynetworks.com/for-hosts/marketing-features/how-do-i-use-the-mighty-networks-ambassador-program
 FETCHED: 2026-08-18 13:18 UTC
 
-What is a Full vs. Limited Membership? - Mighty Networks Developer
+How Do I Use the Mighty Networks Ambassador Program? - Mighty Networks Developer
 Documentation Index
 Fetch the complete documentation index at: /llms.txt
 Use this file to discover all available pages before exploring further.
@@ -11,8 +11,8 @@ Search...
 ⌘ K Ask Assistant
 Search...
 Navigation
-Payments and Access
-What is a Full vs. Limited Membership?
+Marketing Features
+How Do I Use the Mighty Networks Ambassador Program?
 For Hosts
 For Members
 API Guides
@@ -212,59 +212,82 @@ The UK Online Safety Act
 Is Mighty Networks GDPR and CCPA Compliant?
 The EU Consumer Rights Directive — Cancellation Rights
 On this page
-Why Use Limited Memberships
-How Limited Members Join Spaces
-What Limited Members See Check out this video on how to set up limited memberships:
-Below is a detailed guide to the features accessible to each member type: Available Network-Level Actions
-Network Navigation
-Profile Features & Personal Settings
-Inside a Space with Membership
-Payments and Access
-What is a Full vs. Limited Membership?
+How to Enable the Ambassador Program When you enable your Ambassador Program:
+How the Ambassador Program Works If Your Mighty Network Is Accessible Through Plans
+If Your Mighty Network Is Invite-Only
+Adding Custom Rewards
+Turning Off the Ambassador Program
+Tracking Ambassador Data
+Marketing Features
+How Do I Use the Mighty Networks Ambassador Program?
 Copy page Copy page
 Copy page Copy page
-Full memberships provide access to your entire Network , while limited memberships offer access to a specific set of Spaces and features.
-Whether someone becomes a full or limited member depends on what their plans give access to.​
-Limited memberships let you offer a standalone experience—such as a course, live event, or lead magnet—inside a single Space or a bundle of Spaces, without unlocking your full Network.​
+Your Ambassador Program is a built-in member referral system that encourages and rewards members for inviting others to join your Mighty Network.
+The Ambassador Program becomes available when your Mighty Network is on the Launch Plan or higher. It’s designed to motivate members to share your Network based on its value and impact—not through paid commissions.
+If you’re looking for a paid affiliate model, you can connect an affiliate integration alongside the Ambassador Program.
+Learn more about affiliates in this article .
 ​
-Why Use Limited Memberships
-By restricting access to Network-level Global Features —including private messaging, the Global Feed, or Global Members—you can:
-Keep your broader community gated, exclusive, or reserved for paying members.
-Use individual Spaces as entry points to introduce new people to your work.
-Sell standalone programs or experiences while keeping your full community experience separate for those on a higher-tier plan.​
+How to Enable the Ambassador Program
+By default, the Ambassador Program is turned off.
+To enable it:
+Go to Admin > Members > Ambassador Program.
+Toggle the feature on.
 ​
-How Limited Members Join Spaces
-Important: Limited members can only join Spaces through paid plans. This means:
-Invites do not grant access to limited members for Spaces
-“Anyone Can Join” settings do not apply to limited members for Spaces
-Limited members must have a valid payment for a plan that includes the Space in order to access it
-This restriction ensures that limited memberships remain properly gated and prevents unintended access escalation.
+When you enable your Ambassador Program:
+You can send an announcement to your current members by going to Manage > Send an Announcement.
+New members automatically receive an in-app notification and email encouraging them to refer others.
+Each member gets a personalized referral link , available anytime from the Invite page or their profile in the mobile app.
+Note: If a member shares their referral link directly, it won’t appear in the Invites Sent list. That list only tracks invitations sent through the built-in email feature.
+You can track your Ambassadors and their referrals from your Members page.
+Hosts on the Launch Plan and up can download the Member List to see detailed referral data.
+Members can view their referral count and Ambassador level on the Invite page.
+To send an announcement, your Mighty Network must have at least one member. If you’ve already sent one, you’ll need to disable and re-enable the Ambassador Program to send another.
 ​
-What Limited Members See
-Here’s an example of what the limited member experience can look like:
+How the Ambassador Program Works
+When members refer new people who join your Mighty Network, they automatically earn an Ambassador level:
+Bronze Ambassador: 2+ referrals
+Silver Ambassador: 10+ referrals
+Gold Ambassador: 25+ referrals
+As members level up, they receive a notification and can see their status on their profile.
+Once enabled, Ambassador levels can’t be renamed or reset.
 ​
-Check out this video on how to set up limited memberships:
-For more details on setting up plans, check out this article .
+If Your Mighty Network Is Accessible Through Plans
+Members can share invites from the Invite page , Invite icon (on web), or their referral link .
+Invitees skip the landing page and go straight to sign-up, where they select a Plan.
+Once the invitee joins a Plan (or completes a free trial, if offered), the referring member earns credit.
+Invitees aren’t automatically granted free access to paid Plans. To let them join for free, you can send them an invite link for a hidden Free Plan .
 ​
-Below is a detailed guide to the features accessible to each member type:
-Important notes:
-If you set your Network Privacy & Access settings to “anyone can view content inside the Network, ” these definitions may shift because a limited member can see what a visitor/non-member sees (e.g. Collections with Spaces that anyone in the Network can see, promoted Spaces, etc.).
-If you demote a full member to a limited member (by removing the Network from any of the Spaces they are on) they will lose access to their private chats and any of the Global Features. If you add the Network back and restore them to full membership, then they will be able to access their previous chat messages.
-Limited members cannot become Space Hosts or Space moderators.
+If Your Mighty Network Is Invite-Only
+Members can invite others from the Invite page , Invite icon (on web), or their referral link .
+Invitees can join your Mighty Network without approval.
+When they sign up, the referring member automatically receives credit.
 ​
-Available Network-Level Actions
-Feature Limited Member Full Network Member Download and use the iOS or Android app ✅ ✅ Receive badges ✅ ✅ Track streaks ✅ ✅ See the Network logo or global header brand ✅ ✅ See the Network About Page ✅ ✅ Send and receive private messages (including those sent via automation) ❌ ✅ See and complete the Welcome Checklist ❌ ✅ Use global Network Search ❌ ✅ Receive Network-level notifications (for example, about a global livestream) ❌ ✅ Use the Ambassador Program to refer Network members ❌ ✅ Earn points ❌ ✅ Send and receive recognitions ❌ ✅
+Adding Custom Rewards
+You can add your own rewards to recognize Ambassadors as they reach new levels.
+To do this:
+Go to Admin > Members > Ambassador Program > Manage Additional Ambassador Rewards.
+Add rewards and instructions for each level.
+Examples of rewards Hosts often use:
+10% off a community shop
+A free tote bag or t-shirt
+A featured “Member of the Month” spotlight
+A complimentary event ticket
+Example messages to share when a member levels up:
+“You’re now a Silver Ambassador! Enjoy 10% off in our online store using this code: XYZ .”
+“Congrats on referring 10 new members! Here’s your early access code for our next event: XYZ .”
+“You rock! A Host will reach out soon to feature you as our Member of the Month.”
+You can also automate these rewards using our Automations or with Zapier when members reach a new level.
+You can update or disable rewards anytime.
 ​
-Network Navigation
-Feature Limited Member Full Network Member See Spaces where they are a member ✅ ✅ See global navigation features ❌ ✅ See custom navigation links ❌ ✅ See Collections ❌ ✅
+Turning Off the Ambassador Program
+To turn off the Ambassador Program:
+Go to Admin > Members > Ambassador Program.
+Toggle the feature off.
 ​
-Profile Features & Personal Settings
-Feature Limited Member Full Network Member Have a profile with photo ✅ ✅ Fill in the mini bio ✅ ✅ Fill in custom fields ✅ ✅ Add a location ✅ ✅ Earn badges ✅ ✅ See their people explorer ✅ ✅ See their list of Space memberships ✅ ✅ Manage account details, notification preferences, and streaks calendar in personal settings ✅ ✅ See the introduction (or About Me) field ❌ ✅ See their referrals ❌ ✅
-​
-Inside a Space with Membership
-Feature Limited Member Full Network Member See and interact with all features enabled in the Space ✅ ✅ Receive notifications related to activity in the Space ✅ ✅ Use search within the Space ✅ ✅ Attend livestreams in the Space ✅ ✅ Bookmark content in the Space ✅ ✅ See profiles of other members in the same Space ✅ ✅ See the activity of other members in the same Space ✅ ✅ Follow other members in the same Space ❌ ✅ Private message other members in the same Space ❌ ✅ See similarities with other members in the same Space ❌ ✅ See other people in the same Space with the same badge ❌ ✅ See other people in the same Space with the same custom field ❌ ✅
-How Do I Choose Where Plans Appear?
-Can I Set Up Required Questions and Approval for Access?
+Tracking Ambassador Data
+To view referral data and Ambassador activity, visit your Ambassadors Dashboard in Mighty Insights™ .
+How Can I Easily Re Engage My Members?
+How Does SEO Work for My Mighty Network?
 ⌘ I
 x linkedin instagram
 Powered by This documentation is built and hosted on Mintlify, a developer documentation platform

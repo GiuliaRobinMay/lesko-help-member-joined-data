@@ -1,7 +1,7 @@
-SOURCE: https://docs.mightynetworks.com/for-hosts/payments-and-access/what-is-a-full-vs-limited-membership
+SOURCE: https://docs.mightynetworks.com/for-hosts/setting-up-your-network/how-do-i-chat-with-cohost
 FETCHED: 2026-08-18 13:18 UTC
 
-What is a Full vs. Limited Membership? - Mighty Networks Developer
+How Do I Chat with Cohost? - Mighty Networks Developer
 Documentation Index
 Fetch the complete documentation index at: /llms.txt
 Use this file to discover all available pages before exploring further.
@@ -11,8 +11,8 @@ Search...
 ⌘ K Ask Assistant
 Search...
 Navigation
-Payments and Access
-What is a Full vs. Limited Membership?
+Setting Up Your Network
+How Do I Chat with Cohost?
 For Hosts
 For Members
 API Guides
@@ -212,59 +212,98 @@ The UK Online Safety Act
 Is Mighty Networks GDPR and CCPA Compliant?
 The EU Consumer Rights Directive — Cancellation Rights
 On this page
-Why Use Limited Memberships
-How Limited Members Join Spaces
-What Limited Members See Check out this video on how to set up limited memberships:
-Below is a detailed guide to the features accessible to each member type: Available Network-Level Actions
-Network Navigation
-Profile Features & Personal Settings
-Inside a Space with Membership
-Payments and Access
-What is a Full vs. Limited Membership?
+Chat with Cohost
+What you can do with Cohost Create and set up
+Customize your Network
+Get guidance and support
+Take action, with your approval
+Find your way faster
+Approve important actions before they happen Actions Cohost can take with your approval
+Setting Up Your Network
+How Do I Chat with Cohost?
 Copy page Copy page
 Copy page Copy page
-Full memberships provide access to your entire Network , while limited memberships offer access to a specific set of Spaces and features.
-Whether someone becomes a full or limited member depends on what their plans give access to.​
-Limited memberships let you offer a standalone experience—such as a course, live event, or lead magnet—inside a single Space or a bundle of Spaces, without unlocking your full Network.​
+Mighty Cohost is your all-in-one assistant for building and running your community.
+Available on the Explore Plan and above, Cohost is trained on our Community Design ™ framework, help center and more!
+It’s designed to help you design, launch, and grow a thriving Mighty Network—while answering your questions 24/7.
 ​
-Why Use Limited Memberships
-By restricting access to Network-level Global Features —including private messaging, the Global Feed, or Global Members—you can:
-Keep your broader community gated, exclusive, or reserved for paying members.
-Use individual Spaces as entry points to introduce new people to your work.
-Sell standalone programs or experiences while keeping your full community experience separate for those on a higher-tier plan.​
+Chat with Cohost
+In the upper right corner of your Mighty Network on web, you’ll find the Cohost icon next to your personal settings.
+On mobile, you’ll see it on your bottom navigation
+All Network Hosts can view and participate in Cohost conversations, however you will only see your messages with Cohost. You can rate a response with a thumbs-up or thumbs-down to help improve future results.
+The two icons next to the Cohost name will show you:
+Clock icon — Your conversation history and updates from the Mighty team
+Close icon — Closes the Cohost panel
 ​
-How Limited Members Join Spaces
-Important: Limited members can only join Spaces through paid plans. This means:
-Invites do not grant access to limited members for Spaces
-“Anyone Can Join” settings do not apply to limited members for Spaces
-Limited members must have a valid payment for a plan that includes the Space in order to access it
-This restriction ensures that limited memberships remain properly gated and prevents unintended access escalation.
+What you can do with Cohost
+Cohost helps you take action and move faster. Here’s what it can do today. For actions that need confirmation, you’ll see an approval card first — more on that below .
 ​
-What Limited Members See
-Here’s an example of what the limited member experience can look like:
+Create and set up
+Spaces — Create new Spaces using available templates
+Collections — Create Collections and add new Spaces to them
+Rename — rename existing Spaces and Collections, your Network name
+Reorder — Spaces in existing Collections
+Web address — change your Network’s mn.co subdomain after confirming the exact new address
+Plans — Set up pricing and monetization for your Network, including:
+Naming
+Pricing
+Gates
+Sales pitch
+Benefits list
+Descriptions
 ​
-Check out this video on how to set up limited memberships:
-For more details on setting up plans, check out this article .
+Customize your Network
+Update your Big Purpose
+Store and refine your community design (Ideal Member, goals, themes, and more) to personalize guidance
 ​
-Below is a detailed guide to the features accessible to each member type:
-Important notes:
-If you set your Network Privacy & Access settings to “anyone can view content inside the Network, ” these definitions may shift because a limited member can see what a visitor/non-member sees (e.g. Collections with Spaces that anyone in the Network can see, promoted Spaces, etc.).
-If you demote a full member to a limited member (by removing the Network from any of the Spaces they are on) they will lose access to their private chats and any of the Global Features. If you add the Network back and restore them to full membership, then they will be able to access their previous chat messages.
-Limited members cannot become Space Hosts or Space moderators.
+Get guidance and support
+Search the Help Center for step-by-step articles
+Get direct links to the right settings pages
+Help with strategies for community building, growth, and engagement
 ​
-Available Network-Level Actions
-Feature Limited Member Full Network Member Download and use the iOS or Android app ✅ ✅ Receive badges ✅ ✅ Track streaks ✅ ✅ See the Network logo or global header brand ✅ ✅ See the Network About Page ✅ ✅ Send and receive private messages (including those sent via automation) ❌ ✅ See and complete the Welcome Checklist ❌ ✅ Use global Network Search ❌ ✅ Receive Network-level notifications (for example, about a global livestream) ❌ ✅ Use the Ambassador Program to refer Network members ❌ ✅ Earn points ❌ ✅ Send and receive recognitions ❌ ✅
+Take action, with your approval
+Send announcements and manage invite requests
+Manage members, Badges, Tags, and Profile Fields
+Manage Course Spaces, Events, and Landing Pages
+Manage plans and subscriptions
+Manage Marketing Banners
 ​
-Network Navigation
-Feature Limited Member Full Network Member See Spaces where they are a member ✅ ✅ See global navigation features ❌ ✅ See custom navigation links ❌ ✅ See Collections ❌ ✅
+Find your way faster
+For actions like renaming, reordering, or deleting, Cohost will guide you to the exact place in your settings so you can complete it in just a few clicks.
 ​
-Profile Features & Personal Settings
-Feature Limited Member Full Network Member Have a profile with photo ✅ ✅ Fill in the mini bio ✅ ✅ Fill in custom fields ✅ ✅ Add a location ✅ ✅ Earn badges ✅ ✅ See their people explorer ✅ ✅ See their list of Space memberships ✅ ✅ Manage account details, notification preferences, and streaks calendar in personal settings ✅ ✅ See the introduction (or About Me) field ❌ ✅ See their referrals ❌ ✅
+Approve important actions before they happen
+Cohost can now take on more of the work, and you always keep the final say. When you ask Cohost to do something that needs confirmation, it pauses and shows you an approval card in chat first. Nothing happens until you tap Approve.
+If you’d rather not move forward, just leave the card alone. Cohost won’t take the action without your approval.
 ​
-Inside a Space with Membership
-Feature Limited Member Full Network Member See and interact with all features enabled in the Space ✅ ✅ Receive notifications related to activity in the Space ✅ ✅ Use search within the Space ✅ ✅ Attend livestreams in the Space ✅ ✅ Bookmark content in the Space ✅ ✅ See profiles of other members in the same Space ✅ ✅ See the activity of other members in the same Space ✅ ✅ Follow other members in the same Space ❌ ✅ Private message other members in the same Space ❌ ✅ See similarities with other members in the same Space ❌ ✅ See other people in the same Space with the same badge ❌ ✅ See other people in the same Space with the same custom field ❌ ✅
-How Do I Choose Where Plans Appear?
-Can I Set Up Required Questions and Approval for Access?
+Actions Cohost can take with your approval
+Ask Cohost to handle any of the following, and it’ll show you an approval card first:
+Announcements and invites
+Send an announcement to members
+Approve or reject a join request, individually or in bulk
+Members
+Remove a member from your Network (they can rejoin later)
+Delete a Badge
+Delete a Tag
+Delete a Profile Field
+Delete an option from a Profile Field
+Spaces and events
+Delete a Course Space and its contents
+Cancel a single occurrence of a recurring Event
+Unpublish a Landing Page
+Payments and plans
+Cancel a member’s subscription (takes effect at the end of their current billing period)
+Remove a member’s access to a plan
+Delete a plan group (the plans inside it stay intact)
+Archive a plan (archived plans can’t be reactivated)
+Marketing
+Delete a Marketing Banner
+Cohost conversations work independently of your Network’s private chat settings . Even if private chat is turned off for members, you can still chat with Cohost.
+Message limits by plan:
+Explore Plan: 25 messages/day
+Launch Plan: 100 messages/day
+Scale Plan and above: Unlimited messages
+How Do I Get Help?
+What is the People Magic GPT?
 ⌘ I
 x linkedin instagram
 Powered by This documentation is built and hosted on Mintlify, a developer documentation platform

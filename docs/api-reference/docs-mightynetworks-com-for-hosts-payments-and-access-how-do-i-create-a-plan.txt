@@ -1,7 +1,7 @@
-SOURCE: https://docs.mightynetworks.com/for-hosts/payments-and-access/what-is-a-full-vs-limited-membership
-FETCHED: 2026-08-18 13:18 UTC
+SOURCE: https://docs.mightynetworks.com/for-hosts/payments-and-access/how-do-i-create-a-plan
+FETCHED: 2026-08-18 13:17 UTC
 
-What is a Full vs. Limited Membership? - Mighty Networks Developer
+How Do I Create a Plan? - Mighty Networks Developer
 Documentation Index
 Fetch the complete documentation index at: /llms.txt
 Use this file to discover all available pages before exploring further.
@@ -12,7 +12,7 @@ Search...
 Search...
 Navigation
 Payments and Access
-What is a Full vs. Limited Membership?
+How Do I Create a Plan?
 For Hosts
 For Members
 API Guides
@@ -212,59 +212,152 @@ The UK Online Safety Act
 Is Mighty Networks GDPR and CCPA Compliant?
 The EU Consumer Rights Directive — Cancellation Rights
 On this page
-Why Use Limited Memberships
-How Limited Members Join Spaces
-What Limited Members See Check out this video on how to set up limited memberships:
-Below is a detailed guide to the features accessible to each member type: Available Network-Level Actions
-Network Navigation
-Profile Features & Personal Settings
-Inside a Space with Membership
+Before You Start Looking for guidance? Chat with Cohost!
+Create a New Plan
+Step 1: Choose What’s Included
+Step 2: Fill in the Details
+Step 3: Choose Your Gates
+Step 4: Set Pricing
+Step 5: Choose Platforms You can also add:
+Step 6: Taxes and Payouts
+Step 7: Finish and Share
+Visibility
+Sharing Invite to Plan
+Share Link
+Plan Landing Page
+Skip the Landing Page
+Redirect to Sign In
+Redirect to Create Account
+Have Questions?
 Payments and Access
-What is a Full vs. Limited Membership?
+How Do I Create a Plan?
 Copy page Copy page
 Copy page Copy page
-Full memberships provide access to your entire Network , while limited memberships offer access to a specific set of Spaces and features.
-Whether someone becomes a full or limited member depends on what their plans give access to.​
-Limited memberships let you offer a standalone experience—such as a course, live event, or lead magnet—inside a single Space or a bundle of Spaces, without unlocking your full Network.​
+Plans offer the most options and flexibility for gating access to your Mighty Network, Spaces, or both.
+Use plans if you want to require people to do one or more of the following when joining:
+Pay (Payments gate)
+Answer questions (Screening Questions gate)
+Request approval (Approval gate)
+Or a set of Spaces in a Collection
+You can set where plans appear for people to join , or choose to make them accessible by a link only and share that link with specific groups of people.
 ​
-Why Use Limited Memberships
-By restricting access to Network-level Global Features —including private messaging, the Global Feed, or Global Members—you can:
-Keep your broader community gated, exclusive, or reserved for paying members.
-Use individual Spaces as entry points to introduce new people to your work.
-Sell standalone programs or experiences while keeping your full community experience separate for those on a higher-tier plan.​
+Before You Start
+Decide how you want to sell access to your courses, events, or experiences. Check out Mighty Networks’ recommendations before creating your first plan.
 ​
-How Limited Members Join Spaces
-Important: Limited members can only join Spaces through paid plans. This means:
-Invites do not grant access to limited members for Spaces
-“Anyone Can Join” settings do not apply to limited members for Spaces
-Limited members must have a valid payment for a plan that includes the Space in order to access it
-This restriction ensures that limited memberships remain properly gated and prevents unintended access escalation.
+Looking for guidance? Chat with Cohost!
+Cohost can help you with:
+Naming
+Pricing
+Gates
+Sales Pitch
+Benefits List
+Descriptions
+It will even create the Plan for you!
 ​
-What Limited Members See
-Here’s an example of what the limited member experience can look like:
+Create a New Plan
+Go to Admin > Plans & Access > Plan List .
+Click the Create Plan button in the top-right corner to create a new plan.
+This is the first screen you will see:
 ​
-Check out this video on how to set up limited memberships:
-For more details on setting up plans, check out this article .
+Step 1: Choose What’s Included
+Network Access:
+Members get full access to your entire Network, including private messaging and all Spaces.
+Space Access
+Members get access to just one Space or a bundle of Spaces —perfect for courses, paid communities, or special events.
+Finally, decide where members will land after they join the plan.
 ​
-Below is a detailed guide to the features accessible to each member type:
-Important notes:
-If you set your Network Privacy & Access settings to “anyone can view content inside the Network, ” these definitions may shift because a limited member can see what a visitor/non-member sees (e.g. Collections with Spaces that anyone in the Network can see, promoted Spaces, etc.).
-If you demote a full member to a limited member (by removing the Network from any of the Spaces they are on) they will lose access to their private chats and any of the Global Features. If you add the Network back and restore them to full membership, then they will be able to access their previous chat messages.
-Limited members cannot become Space Hosts or Space moderators.
+Step 2: Fill in the Details
+Plan Name: The name people will see when joining.
+Internal Note: Only visible to Hosts and helpful for tracking similar plans. This is also useful when filtering plan data in Mighty Insights™ .
+Image or Video: Adding an image or video makes your plan look dynamic and appealing, and this image will appear in any prompts to join the plan as well as the top of the plan page
+Sales Pitch: A short tagline that appears alongside the plan name to explain why people should join this plan. (120 characters max).
+Benefits List: This list highlights the benefits your members receive or the access they will get when they join or purchase this plan. We recommend adding at least three!
+Description: Explain what’s included, who it’s for, and why it’s valuable. You can add text, links, or images.
+If you don’t add a custom description, the plan will automatically use the existing description from your Network or Space.
 ​
-Available Network-Level Actions
-Feature Limited Member Full Network Member Download and use the iOS or Android app ✅ ✅ Receive badges ✅ ✅ Track streaks ✅ ✅ See the Network logo or global header brand ✅ ✅ See the Network About Page ✅ ✅ Send and receive private messages (including those sent via automation) ❌ ✅ See and complete the Welcome Checklist ❌ ✅ Use global Network Search ❌ ✅ Receive Network-level notifications (for example, about a global livestream) ❌ ✅ Use the Ambassador Program to refer Network members ❌ ✅ Earn points ❌ ✅ Send and receive recognitions ❌ ✅
+Step 3: Choose Your Gates
+On the next screen, you’ll see the ability to add gates.
+Enabling any of the options listed will take you through a flow to customize and set up those gates.
+Screening Questions: Ask up to 5 questions before someone can join.
+Approval: Require Host approval before joining.
+Payments: Charge for access using Stripe .
+Web3 Token Gating: Require a specific crypto token for access.
+If you leave all gates off, anyone can join your plan in one simple step—no payment, questions, or approval needed.
 ​
-Network Navigation
-Feature Limited Member Full Network Member See Spaces where they are a member ✅ ✅ See global navigation features ❌ ✅ See custom navigation links ❌ ✅ See Collections ❌ ✅
+Step 4: Set Pricing
+If you add a payment gate, choose one of these options:
+Free: Open to everyone (shows “Free” label). If you don’t want “Free” to appear and you don’t want to charge for access, we recommend going back one step and turning off the Payments gate.
+One-Time Payment: Members pay once for lifetime access.
+Subscription: Charge on a recurring basis (daily, monthly, annually, etc.).
+You have the option to offer members a recurring subscription they can cancel anytime (daily, weekly, monthly, annually, etc…). You can have two subscription interval options set up per plan. Learn more .
+Members retain access to what’s included in the plan as long as they continue paying for the subscription.
+When you offer both a monthly and annual subscription, we recommend giving members a discount for choosing the annual option, and the savings will be clearly shown.
+All interval options are available on web and mobile web. Only monthly and annually are available on iOS.
+Installments: Split a one-time payment into multiple charges.
+This setup allows a one-time purchase plan to be split into multiple payments. Learn more .
+Combine Offers: Show two options side by side (for example, monthly vs. annual). Learn more .
 ​
-Profile Features & Personal Settings
-Feature Limited Member Full Network Member Have a profile with photo ✅ ✅ Fill in the mini bio ✅ ✅ Fill in custom fields ✅ ✅ Add a location ✅ ✅ Earn badges ✅ ✅ See their people explorer ✅ ✅ See their list of Space memberships ✅ ✅ Manage account details, notification preferences, and streaks calendar in personal settings ✅ ✅ See the introduction (or About Me) field ❌ ✅ See their referrals ❌ ✅
+Step 5: Choose Platforms
+Decide where your plan will be available:
+Web:
+Charge up to $10,000 per plan (or more if processed off-platform ).
+iOS:
+iOS plan prices must be chosen from Apple’s preset list, which ends in 999 . Apple charges a 15% fee on all in-app purchases made through the Mighty Networks iOS app .
+All payments are processed and managed through the App Store —Mighty Networks does not charge any extra transaction fees.
+Each plan goes through Apple’s review process before it’s approved; you’ll get an email notification once approved.
+You can increase your iOS price to offset Apple’s required fees if desired.
+If you’re on Mighty Pro with your own branded app, our team will guide you through a different setup process for iOS purchases.
+Note: Apple automatically converts currency based on the buyer’s location. Choose from preset prices (up to $999).
+Android
+Paid plans can be promoted, but purchases happen on the web.
 ​
-Inside a Space with Membership
-Feature Limited Member Full Network Member See and interact with all features enabled in the Space ✅ ✅ Receive notifications related to activity in the Space ✅ ✅ Use search within the Space ✅ ✅ Attend livestreams in the Space ✅ ✅ Bookmark content in the Space ✅ ✅ See profiles of other members in the same Space ✅ ✅ See the activity of other members in the same Space ✅ ✅ Follow other members in the same Space ❌ ✅ Private message other members in the same Space ❌ ✅ See similarities with other members in the same Space ❌ ✅ See other people in the same Space with the same badge ❌ ✅ See other people in the same Space with the same custom field ❌ ✅
+You can also add:
+Free Trials:
+Offer a 3-day to 1-year trial. Learn more .
+Subscription Groups: Connect related subscription plans so members can easily switch between them.
+Within a group, members can browse a carousel of available plans and, if you’ve offered multiple billing intervals, choose the one that works best for them. Learn more .
+​
+Step 6: Taxes and Payouts
+Payments from the web go straight to your Stripe account .
+Payments from iOS are handled by Apple, and Mighty Networks sends payouts monthly.
+If using Quaderno , you can set a tax category for automatic tax handling. Learn more .
+If you are on Mighty Pro with your own branded apps , the Apple payout process will be different, and iOS purchases will flow directly into the bank account you have connected to your Apple Developer Account. Learn more
+​
+Step 7: Finish and Share
+Once you’ve created your plan, you’ll see a preview of how it will look to your members.
+Click Create Plan .
+Then, go to Admin > Plans & Access > Plan List > (select your plan) > Visibility & Sharing to choose where your plan appears and how you want to share it.
+​
+Visibility
+If the plan includes access to the Network , you’ll see the option to make it visible in places like the Network About Page.
+If the plan includes access to a Space or bundle of Spaces , you’ll see the option to make it visible on the Collection where the Space lives, or on the Space About Page.
+To learn more, check out this article .
+​
+Sharing
+​
+Invite to Plan
+These invites are one-time use, and cannot be used again once an account has been created. Learn more
+​
+Share Link
+Creating a share link gives you a direct way to share your plan. You’ll see two or three link options, depending on what’s included or if the plan combines multiple offers.
+​
+Plan Landing Page
+Takes people to a detailed page showing the plan’s name, image, benefits, description, and a call to action depending on whether payment is required.
+​
+Skip the Landing Page
+Takes people straight to a flow where they can either Sign In (if they already have an account) or Create an Account (if they’re new).
+​
+Redirect to Sign In
+This link will skip the landing page and go directly to the Sign In page before someone joins the plan:
+​
+Redirect to Create Account
+This link will skip the landing page and go direct to the Create Account page before someone joins the plan:
+To learn more about how members purchase plans, check out this article .
+​
+Have Questions?
+Reach out to our team in the “Need Help” button in the lower right corner of your Mighty Network.
+Does Mighty Networks Have an Affiliate Program?
 How Do I Choose Where Plans Appear?
-Can I Set Up Required Questions and Approval for Access?
 ⌘ I
 x linkedin instagram
 Powered by This documentation is built and hosted on Mintlify, a developer documentation platform

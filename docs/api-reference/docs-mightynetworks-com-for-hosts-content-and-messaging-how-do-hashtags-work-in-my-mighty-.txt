@@ -1,7 +1,7 @@
-SOURCE: https://docs.mightynetworks.com/for-hosts/payments-and-access/what-is-a-full-vs-limited-membership
-FETCHED: 2026-08-18 13:18 UTC
+SOURCE: https://docs.mightynetworks.com/for-hosts/content-and-messaging/how-do-hashtags-work-in-my-mighty-network
+FETCHED: 2026-08-18 13:17 UTC
 
-What is a Full vs. Limited Membership? - Mighty Networks Developer
+How Do Hashtags Work in My Mighty Network? - Mighty Networks Developer
 Documentation Index
 Fetch the complete documentation index at: /llms.txt
 Use this file to discover all available pages before exploring further.
@@ -11,8 +11,8 @@ Search...
 ⌘ K Ask Assistant
 Search...
 Navigation
-Payments and Access
-What is a Full vs. Limited Membership?
+Content and Messaging
+How Do Hashtags Work in My Mighty Network?
 For Hosts
 For Members
 API Guides
@@ -212,59 +212,71 @@ The UK Online Safety Act
 Is Mighty Networks GDPR and CCPA Compliant?
 The EU Consumer Rights Directive — Cancellation Rights
 On this page
-Why Use Limited Memberships
-How Limited Members Join Spaces
-What Limited Members See Check out this video on how to set up limited memberships:
-Below is a detailed guide to the features accessible to each member type: Available Network-Level Actions
-Network Navigation
-Profile Features & Personal Settings
-Inside a Space with Membership
-Payments and Access
-What is a Full vs. Limited Membership?
+Hashtag Basics
+Highlighted Hashtags
+Visibility and Access
+Hashtag Prompt
+Hashtag List
+Suggested Hashtags (AI Feature)
+Content and Messaging
+How Do Hashtags Work in My Mighty Network?
 Copy page Copy page
 Copy page Copy page
-Full memberships provide access to your entire Network , while limited memberships offer access to a specific set of Spaces and features.
-Whether someone becomes a full or limited member depends on what their plans give access to.​
-Limited memberships let you offer a standalone experience—such as a course, live event, or lead magnet—inside a single Space or a bundle of Spaces, without unlocking your full Network.​
+You can add hashtags to Posts , Chat messages , Articles , comments, Lessons and Sections , Events , and Questions & Polls on web or mobile.
+To add one, type a # followed by text—just like on other platforms. You can include multiple hashtags in the same piece of content.
 ​
-Why Use Limited Memberships
-By restricting access to Network-level Global Features —including private messaging, the Global Feed, or Global Members—you can:
-Keep your broader community gated, exclusive, or reserved for paying members.
-Use individual Spaces as entry points to introduce new people to your work.
-Sell standalone programs or experiences while keeping your full community experience separate for those on a higher-tier plan.​
+Hashtag Basics
+Hashtags can include letters, numbers, or underscores. They can’t include other special characters (like & or $ ) or extra spaces.
+As you type, you’ll see a dropdown showing existing hashtags. Continue typing to create a new one.
+The color of your hashtag will match your Space branding .
 ​
-How Limited Members Join Spaces
-Important: Limited members can only join Spaces through paid plans. This means:
-Invites do not grant access to limited members for Spaces
-“Anyone Can Join” settings do not apply to limited members for Spaces
-Limited members must have a valid payment for a plan that includes the Space in order to access it
-This restriction ensures that limited memberships remain properly gated and prevents unintended access escalation.
+Highlighted Hashtags
+Hosts can highlight up to 100 hashtags in each Space.
+The first 10 appear in the search dropdown; the rest appear under See All .
+When someone searches or types a hashtag in a Space, the list of highlighted hashtags will appear automatically.
+To highlight a hashtag:
+Click the hashtag to view its search results.
+Select Highlight .
+Choose one or more Spaces where you want it highlighted.
+Highlighted hashtags appear:
+In the dropdown when you click the search bar at the top of a Space
+In the right-hand column of the Feed (if the Feed is enabled)
+Note: The right-hand column view is web only. On iOS and Android, highlighted hashtags don’t render inline in the Feed—members access them through the Hashtag List tab instead, which you enable per Space (see Hashtag List below).
+To turn this off, go to Space Admin > Space Features > Feed , then toggle off Display Highlighted Hashtags .
 ​
-What Limited Members See
-Here’s an example of what the limited member experience can look like:
+Visibility and Access
+If a member has access to the Space where content lives, that hashtag will appear in their dropdown as an option.
+If they don’t have access, it won’t appear.
+When someone clicks a hashtag, they’ll see search results for all content across the Mighty Network that includes it, sorted by relevance.
+If a member doesn’t have access to a Space where tagged content appears, that content will not show in their results.
+Members can see hashtagged content in Spaces that are visible to anyone .
+To view all results for a hashtag across every Space:
+Click Search in a Space.
+Click the highlighted hashtag.
+At the top of the results, de-select the Space filter to Search All Spaces .
+Note: Search results include Posts and Articles with hashtags. They don’t include messages in Chat Spaces or Private Chats .
+You can’t edit hashtags yet, but deleting a hashtag from a piece of content removes it from the system.
+You can also sort hashtag results by Top , Newest , or Oldest .
 ​
-Check out this video on how to set up limited memberships:
-For more details on setting up plans, check out this article .
+Hashtag Prompt
+When creating Posts , Articles , or comments on web (and on iOS or Android for Posts), you’ll see a prompt to add a hashtag.
+Click the prompt to insert a # where your cursor is. As you type, a dropdown will appear showing hashtags— including any highlighted hashtags in that Space.
 ​
-Below is a detailed guide to the features accessible to each member type:
-Important notes:
-If you set your Network Privacy & Access settings to “anyone can view content inside the Network, ” these definitions may shift because a limited member can see what a visitor/non-member sees (e.g. Collections with Spaces that anyone in the Network can see, promoted Spaces, etc.).
-If you demote a full member to a limited member (by removing the Network from any of the Spaces they are on) they will lose access to their private chats and any of the Global Features. If you add the Network back and restore them to full membership, then they will be able to access their previous chat messages.
-Limited members cannot become Space Hosts or Space moderators.
+Hashtag List
+On web, highlighted hashtags show up directly in the Feed’s right-hand column. On iOS and Android , there’s no right-hand column, so the Hashtag List tab is the only way members can browse a Space’s highlighted hashtags on mobile—it doesn’t turn on by default, so enable it if your members use the mobile app.
+To display a list of highlighted hashtags in a Space:
+Go to the gear icon > Space Features > Hashtag List .
+Toggle the feature on.
+Rename it to anything you like—your custom name appears in the right-hand column (for example, “Hashtabs”).
+This feature appears on web and mobile alongside other Space features like Chat and Discovery .
+Clicking it shows a full list of highlighted hashtags in that Space.
+Important: The Feed feature must be enabled for the Hashtag List to display.
+To manage your highlighted hashtags, go to gear icon > Content Highlights > Highlighted Hashtags . From there, you can drag and drop to reorder or create a new highlighted hashtag.
 ​
-Available Network-Level Actions
-Feature Limited Member Full Network Member Download and use the iOS or Android app ✅ ✅ Receive badges ✅ ✅ Track streaks ✅ ✅ See the Network logo or global header brand ✅ ✅ See the Network About Page ✅ ✅ Send and receive private messages (including those sent via automation) ❌ ✅ See and complete the Welcome Checklist ❌ ✅ Use global Network Search ❌ ✅ Receive Network-level notifications (for example, about a global livestream) ❌ ✅ Use the Ambassador Program to refer Network members ❌ ✅ Earn points ❌ ✅ Send and receive recognitions ❌ ✅
-​
-Network Navigation
-Feature Limited Member Full Network Member See Spaces where they are a member ✅ ✅ See global navigation features ❌ ✅ See custom navigation links ❌ ✅ See Collections ❌ ✅
-​
-Profile Features & Personal Settings
-Feature Limited Member Full Network Member Have a profile with photo ✅ ✅ Fill in the mini bio ✅ ✅ Fill in custom fields ✅ ✅ Add a location ✅ ✅ Earn badges ✅ ✅ See their people explorer ✅ ✅ See their list of Space memberships ✅ ✅ Manage account details, notification preferences, and streaks calendar in personal settings ✅ ✅ See the introduction (or About Me) field ❌ ✅ See their referrals ❌ ✅
-​
-Inside a Space with Membership
-Feature Limited Member Full Network Member See and interact with all features enabled in the Space ✅ ✅ Receive notifications related to activity in the Space ✅ ✅ Use search within the Space ✅ ✅ Attend livestreams in the Space ✅ ✅ Bookmark content in the Space ✅ ✅ See profiles of other members in the same Space ✅ ✅ See the activity of other members in the same Space ✅ ✅ Follow other members in the same Space ❌ ✅ Private message other members in the same Space ❌ ✅ See similarities with other members in the same Space ❌ ✅ See other people in the same Space with the same badge ❌ ✅ See other people in the same Space with the same custom field ❌ ✅
-How Do I Choose Where Plans Appear?
-Can I Set Up Required Questions and Approval for Access?
+Suggested Hashtags (AI Feature)
+Suggested Hashtags is an AI-powered feature available on Launch plans and up. Suggestions appear in Posts , Articles , and more—especially in Spaces without highlighted hashtags.Suggested hashtags appear with a sparkle icon .
+How Do I Message Members in My Network?
+What Notifications Do My Members Get?
 ⌘ I
 x linkedin instagram
 Powered by This documentation is built and hosted on Mintlify, a developer documentation platform

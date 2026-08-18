@@ -1,0 +1,437 @@
+SOURCE: https://docs.mightynetworks.com/for-hosts/analytics-and-integrations/can-i-use-zapier-with-mighty-networks
+FETCHED: 2026-08-18 13:17 UTC
+
+Can I Use Zapier with Mighty Networks? - Mighty Networks Developer
+Documentation Index
+Fetch the complete documentation index at: /llms.txt
+Use this file to discover all available pages before exploring further.
+Skip to main content
+Mighty Networks Developer home page
+Search...
+⌘ K Ask Assistant
+Search...
+Navigation
+Analytics and Integrations
+Can I Use Zapier with Mighty Networks?
+For Hosts
+For Members
+API Guides
+Headless API
+Admin API
+Meet Mighty
+Watch a Full Tour of a Mighty Network
+What is Mighty Community?
+Who Founded Mighty Networks?
+Which Mighty Network Plan is Right For You?
+What’s Included in the Mighty Networks Explore Plan?
+What’s Included in the Mighty Networks Launch Plan?
+What's Included in the Mighty Networks Scale Plan?
+What’s Included in the Mighty Networks Growth Plan?
+What is Mighty Pro?
+Does Mighty Networks Offer a Free Trial?
+What Kind of Support Does Mighty Networks Offer?
+Latest Product Updates
+Product Updates Archive
+Legacy Plans
+Setting Up Your Network
+How Do I Set Up My Mighty Network?
+How Do I Get Help?
+How Do I Chat with Cohost?
+What is the People Magic GPT?
+What is Community Design™?
+How Do I Set Up the Basics for My Network?
+How Do I Edit My Mighty Profile?
+How Do I Set Up My Network Branding?
+How Do I Set Up My Space Branding?
+How Do I Create and Manage My Collections?
+How Do I Create and Manage My Spaces?
+What Kinds of Space Templates are Available?
+How Do I Add and Manage Features in a Space?
+How Do I Set the Privacy Settings for My Network?
+How Do I Set the Privacy Settings for a Space?
+What is the Feed and How Does It Work?
+What are Global Features?
+Can I Customize the Navigation in My Mighty Network?
+Can I Customize the Landing Space for My Members?
+Does Mighty Networks Have an App?
+What Are Promoted Spaces?
+How Do I Set Up a Welcome Checklist?
+How Do I Find the About Page for My Space or Mighty Network?
+What's The Discovery Feature?
+What Do Member Profiles Include in My Mighty Network?
+Marketing Features
+How Can I Customize My Mighty Networks Landing Page?
+What AI Features Does Mighty Networks Have?
+How Do I Segment My Members with Audiences?
+How Do I Set Up Promotional Banners in My Network?
+What is the People Explorer?
+Does Mighty Networks Have Built-In Affiliates?
+Can I Integrate My Mighty Network with Rootabl?
+Can I Integrate My Mighty Network With Rewardful?
+How Do I Create an Email Newsletter?
+Can I Add Marketing Pixels to My Mighty Network?
+How Can I Easily Re Engage My Members?
+How Do I Use the Mighty Networks Ambassador Program?
+How Does SEO Work for My Mighty Network?
+Does Mighty Networks Have an Affiliate Program?
+Payments and Access
+How Do I Create a Plan?
+How Do I Choose Where Plans Appear?
+What is a Full vs. Limited Membership?
+Can I Set Up Required Questions and Approval for Access?
+How Do I Manage My Plans?
+How Do I Manage Spaces in a Plan?
+How Do I Set Up Promo Codes?
+How Do I Set Up Installment Plans and Subscription Intervals?
+How Do I Create a Subscription Group?
+Can I Have a Plan with No Payment Gate?
+Can I Take Payments Off Platform?
+Can I Charge in Multiple Currencies?
+What Currencies Can I Charge in On Mighty Networks?
+Can I Offer a Free Trial on a Mighty Network?
+How Do Members Purchase Access?
+How Do Members Move Between Plans?
+How Do I Create a Waitlist?
+Can I Change My Prices?
+How Do I Gate Access to All or Parts of My Mighty Network?
+How Much Do People Charge, on Average, on Mighty Networks?
+How Do I Connect and Disconnect Stripe to My Mighty Network?
+How Do I Get Paid?
+How Do Taxes Work With My Mighty Network?
+What Happens When a Member Cancels or Requests a Refund
+What Happens When Members Are Past Due on Their Payments?
+How Can I Move Paying Members from Another Platform to Mighty Networks?
+(Pro) How to Remove a Plan From Sale on App Store Connect
+How Do I Switch My Space Between Plans, Invite-Only, and Anyone Can Join?
+How Do I Switch My Network Between Plans, Invite-Only, and Anyone Can Join?
+How Do I Set a Default Plan for Invites? [Beta]
+How Do I Invite People to My Mighty Network?
+How Do I Invite Directly to a Plan?
+How Do I Invite Members to a Space?
+How Do I Give Access to Spaces and Not the Network?
+How Do I Directly Add Existing Members to My Network or Spaces?
+How Do I Manage My Leads?
+Does Mighty Networks Charge a Transaction Fee?
+Can I Set Up Age Verification In my Mighty Network?
+How Do I Create a Token-Gated Plan?
+How Do I Manage Members’ Access to Spaces and the Network?
+How Do I Set Up a Space That Full Members Can Join but Limited Members Must Pay For?
+Courses
+How Do I Build a Course in My Mighty Network?
+How Do I Organize My Course With Overviews, Sections, and Lessons?
+How Do I Add a Quiz to My Course?
+What Kind of Media Can I Upload Into a Course?
+How Do I Track Member Completion and Progress?
+How Do I Generate Completion Certificates?
+How Do I Make a Habit Tracker for My Members?
+Events and Livestream
+How Do I Create Events in My Mighty Network?
+How Do I Create Zoom Events on Mighty Networks?
+Can I Create Recurring Events in My Mighty Network?
+How Do I Livestream in My Network?
+How Do I Post a Livestream Replay?
+Can I Have Multiple Speakers During a Livestream?
+How Do I Schedule a Livestream Event?
+How Do I Add Special Effects to My Livestream?
+How Do I Manage RSVPs and Event Attendees?
+Can I Charge for Events on a Mighty Network?
+Is There a Calendar View for Events?
+How Do I Create a Text Chat Event?
+How Do I Upload Native Videos to My Mighty Network?
+How Do I Troubleshoot Video Upload Issues in a Mighty Network?
+Automations
+What Automations Do I Get on My Plan?
+How Can I Set Up Automations in My Mighty Network?
+Gamification
+How Does Gamification Work in My Mighty Network?
+How Do I Add Custom Badges and Tags for My Members?
+How Do I Add Custom Fields?
+Admin and Moderation
+How Do I Manage My Admin Settings?
+How Do I View and Manage My Members?
+How Do I View As A Member?
+What is the Member Detail Page?
+What Permissions Do Network Hosts and Network Moderators Have?
+What Permissions Do Space Hosts and Space Moderators Have?
+What Content and Moderation Tools Do I Have in My Mighty Network?
+How Do Members Block or Report Others?
+How Does Search Work?
+Can I Use My Own Web Domain with Mighty Networks?
+Can I Change the Default mn.co Domain?
+Can I Customize My Email Domain?
+Can I Customize the Names of Hosts, Moderators and Members?
+How Do I Customize My Member Support?
+How Do I Reset My Password?
+How Do I Downgrade or Cancel My Plan?
+Analytics and Integrations
+What is Mighty Insights™?
+Can I Download Reports From My Mighty Insights™?
+Does Mighty Networks Integrate with Google Analytics?
+Does Mighty Networks have an API?
+Does Mighty Networks Support MCP Connections?
+Can I Use Zapier with Mighty Networks?
+How Do I Enable SSO for My Mighty Network?
+Can I Download My Member Data?
+Do I Own My Data and Members on My Mighty Network?
+Does Mighty Networks have Language Localization?
+Vibe Coding on Mighty
+How Do I Embed a Shopify Buy Button in My Mighty Network?
+Content and Messaging
+How Do I Create an Article in My Mighty Network?
+How Do I Create a Post in My Mighty Network?
+Can I Use External Embeds?
+Can I Use GIFs in My Mighty Network?
+How Do I Create Polls & Questions In My Mighty Network?
+How Do I Create and Manage Featured and Welcome Sections?
+What's An Icebreaker Question and How Do I Set One Up in My Mighty Network?
+How Do Introductions Posts Work?
+How Do I Use the Infinite Question Engine?
+How Does Chat Work in a Mighty Network?
+How Do I Manage My Chat Messages?
+How Do I Welcome New Members?
+How Do I Message Members in a Space?
+How Do I Message Members in My Network?
+How Do Hashtags Work in My Mighty Network?
+What Notifications Do My Members Get?
+How Do I Move Content Between Spaces?
+What Notifications Will I Get as a Host?
+What's the Daily Digest?
+Can I View My Mighty Network in Dark Mode?
+How Do Storage, Engagement Boosts and Livestreaming Limits Work?
+Additional Embeds
+How Can I Make My Mighty Network More Accessible to the Visually Impaired?
+How Do I Enable Desktop Notifications?
+How Does the Delphi Embed Work?
+Privacy, Security & Accessibility
+Can I Add My Own Custom Terms of Use to My Mighty Network?
+How Do I Enable Multi-Factor Authentication and Email Verification?
+What's Mighty Networks' Privacy Policy?
+How Does Mighty Networks Approach Accessibility?
+Data Security at Mighty Networks
+The UK Online Safety Act
+Is Mighty Networks GDPR and CCPA Compliant?
+The EU Consumer Rights Directive — Cancellation Rights
+On this page
+How Zaps Work in Mighty Networks
+Types of Zaps:
+Zapier Plans and Features:
+Understanding Zapier Triggers for Mighty Networks Member Activity Triggers
+Content and Engagement Triggers
+Progress and Activity Triggers
+Tag and Badge Management Triggers
+Setting Up Triggers
+Understanding Zapier Actions for Mighty Networks
+Available Actions
+Setting Up Actions
+Additional Tabs
+Integrating Zapier with Your Mighty Network
+How to Set Up a Zap with Mighty Networks
+How to Set Up a Zap with Mighty Networks in the Trigger Step 1: Set Up Your Trigger
+Step 2: Set Up Your Action
+How to Set Up a Zap with Mighty Networks in the Action Step 1: Set Up Your Trigger
+Step 2: Set Up Your Action
+FAQs: Using Zapier with Mighty Networks
+Analytics and Integrations
+Can I Use Zapier with Mighty Networks?
+Copy page Copy page
+Copy page Copy page
+Zapier lets you connect your Mighty Network with more than 2,000 other apps—including popular tools like Mailchimp , ActiveCampaign , and Salesforce —so you can automate tasks and streamline your workflow.
+This integration is **available on the Scale Plan and up and uses APIs to connect Mighty Networks to other systems, helping you save time and reduce manual work.
+Want to automate payments? Learn how to use Zapier to manage payments with an external payment system in your Mighty Network here .
+​
+How Zaps Work in Mighty Networks
+Zapier is a powerful tool that automates tasks between your Mighty Network and other applications. For example, you can automatically add new members to your Mailchimp list when they join your Network.
+Each automation in Zapier is called a Zap , and every Zap has two parts:
+Trigger: The event that starts the workflow (for example, a new member joins your Mighty Network).
+Action: The task that follows the trigger (for example, adding that member to your Mailchimp list).
+Together, a trigger and an action create a simple, automated workflow that runs in the background—saving you time and helping you keep your tools in sync.
+​
+Types of Zaps:
+Mighty Trigger → Mighty Action: An event in Mighty Networks triggers an action within Mighty Networks (e.g., a member joins and a Post is created).
+Third-Party Trigger → Mighty Action: An event in another app triggers an action in Mighty Networks (e.g., a contact is added in HubSpot and a member is tagged in Mighty Networks).
+**Mighty Trigger → Third-Party Action:**An event in Mighty Networks triggers an action in another app (e.g., a member joins a Special Space and they are tagged in your CRM).
+**Third-Party Trigger → Third-Party Action:**An event in one app triggers an action in another app (e.g., a new record in Salesforce triggers an action in Mailchimp).
+​
+Zapier Plans and Features:
+Free Plan: Supports single Trigger → single Action Zaps.
+**Paid Plan:**Allows for Multi-step Zaps, which can include multiple Actions. For advanced needs, you may use ‘sub-zaps’ or duplicate Zaps to handle different Triggers and Actions.
+**Note:**Only Network Hosts can set up Zapier integrations. To start using Zapier, create an account and set up your Zaps according to your needs.
+​
+Understanding Zapier Triggers for Mighty Networks
+Zapier triggers are events that start your Zaps, automating actions based on activities in your Mighty Network. Here’s a comprehensive guide to the triggers we support:
+​
+Member Activity Triggers
+Joined: Activates when a member joins your Network or a Space. You can choose to trigger this for the entire Network or specific Spaces.
+Updated Profile: Activates when a member updates their profile.
+**Left:**Activates when a member leaves your Network or a Space. You can specify whether it applies to the whole Network or selected Spaces.
+**Requested to Join:**This trigger activates when a member requests to join your Network or a specific Space. You can activate it for the entire Network or select specific Spaces.
+Requested to Join Plan: Activates when a member requests to join a plan. Select specific plans or leave blank to apply to all plans.
+**Purchased Plan:**Activates when a member purchases a plan for the first time. Choose specific plans (and indicate if there is a free trial) or apply to all.
+**Removed from Plan:**Activates when a member is removed from a plan under the following conditions:
+At the End of the Billing Period:
+A member cancels their subscription plan and completes the remainder of their billing period.
+A Host removes a member from a subscription plan and selects the “end of billing period” option.
+Immediately:
+A Host removes a member from a subscription plan and selects the “immediately” option.
+A Host removes a member from a Free, Non-Paid, or One-Time Purchase Plan.​ Note: Members cannot remove themselves from Free, Non-Paid, or One-Time Purchase Plans.
+Canceled Subscription to Plan: Activates immediately when a member cancels their plan, allowing time for retention actions. You can select specific plans or leave it blank to apply to any plan.
+​
+Content and Engagement Triggers
+**New Content:**Activates when a new content type is posted. Includes:
+Post
+Articles
+Events
+Questions
+Hot/Cold Polls
+Percentage Polls
+Multiple Choice Polls
+RSVPd to an Event: Activates when a member RSVPs (yes, no or maybe) to any event, either at the Network or Space level. Use a filter if you need to specify specific Spaces.
+​
+Progress and Activity Triggers
+**Course Progress Update:**Activates when a member’s Course progress changes, including the specific progress percentage. Note: Updates have a delay of up to one hour to prevent notification overload if a member is progressing quickly. No Space filtering options are available; use a filter to specify Spaces if needed.
+Ambassador Level-Up: Activates when a member advances to a new Ambassador level (e.g., Bronze to Silver). The trigger only activates when a member reaches a new level based on their referrals.
+​
+Tag and Badge Management Triggers
+Manage Tag:
+Tag Added: Activates when a tag is added to a member.
+Tag Removed: Activates when a tag is removed from a member.
+Manage Badge:
+Badge Added: Activates when a badge is awarded to a member.
+Badge Removed: Activates when a badge is taken away from a member.​
+​
+Setting Up Triggers
+App & Event Tab: Choose the main trigger event. This is required and will set the base for your Zap.
+Account Tab: Select the Mighty Network/Host Account associated with your Zap. If connecting for the first time, you’ll need an API key.
+Trigger Tab (if applicable): Choose specific child triggers or options related to the main event.
+Test Tab: Test the connection and pull test records to use in your Zap setup.
+​
+Understanding Zapier Actions for Mighty Networks
+Zapier Actions are the tasks that occur in Mighty Networks as a result of a Trigger event. Here’s a clear guide to the Actions we support:
+​
+Available Actions
+Create Article: Post a new article in your Network.
+Create Poll or Question:
+Question: Post a new question.
+Hot/Cold Poll: Create a hot/cold poll.
+Percentage Poll: Create a percentage poll.
+Multiple Choice Poll: Create a multiple choice poll.
+Create Post: Post a quick update in your Network.
+Invite Members: Send invitations to join your Network or a Space.
+Plan Action:
+Invite to Plan (single-use link): Add a member to a plan.
+Remove from Plan: Remove a member from a plan.
+Remove Member: Remove a member from your Network or a Space. Only use this option to remove members who are not on plans.
+Schedule Event: Set up a new event.
+Manage Tags:
+Add Tag: Add a tag to a member. Select one or multiple tags.
+Remove Tag: Remove a tag from a member. Select one or multiple tags.
+Manage Badges:
+Add Badge: Adds a badge to a member. Select one or multiple badges
+Remove Badge: Removes a badge from a member. Select one or multiple badges
+Add a full member to a Space or Spaces
+Add a limited member to the Network
+​
+Setting Up Actions
+Action Tab:
+This is where you set up what the Action will do. Unlike Triggers, Actions have more options and conditional dropdowns for customizing the task.
+For example, when creating a Post, you’ll specify the article title, content, and target Space.
+Test Tab:
+Test: Executes the Action so you can see it in action (e.g., posting an article).
+Skip Test: Only tests the connection without performing the Action (e.g., verifying setup without posting a test article).
+Publish Zap:
+Once you’ve tested or skipped the test, you need to publish your Zap for it to activate. Without publishing, the Zap will not run.
+​
+Additional Tabs
+App & Event Tab: Same as with Triggers, where you choose the app and event.
+Account Tab: Select your Mighty Network/Host Account for the Action.
+​
+Integrating Zapier with Your Mighty Network
+Setting up your Zapier integration is quick and easy. Just follow these steps:
+Start by signing up for Zapier or logging into your existing account.
+Get Your API Key:
+Go to your Mighty Network.
+Navigate to Admin > Integrations > Zapier — the direct path is /admin/zapier .
+Copy your API key from this section.
+Connect to Zapier:
+In Zapier, go to My Apps and search for “Mighty Networks.”
+Paste your copied API key into the prompt that appears.​
+Understand API Key Access:
+Your API key is specific to your Host account. This means you’ll only see options based on your Host permissions in Zapier.
+To set up a Trigger or Action related to a Space, ensure you are a Host of that Space.
+Once connected, you’re all set to create your Zaps and automate your workflows!
+​
+How to Set Up a Zap with Mighty Networks
+Setting up a Zap with Mighty Networks involves creating both a Trigger and an Action. Here’s a clear, step-by-step guide to help you through the process.
+​
+How to Set Up a Zap with Mighty Networks in the Trigger
+For this example, let’s set up a Zap that automatically subscribes new members to your Mailchimp list .
+​
+Step 1: Set Up Your Trigger
+Choose App & Event:
+Select Mighty Networks as the app.
+Choose the Trigger you want to use, such as “Member Action.”​
+Choose Account:
+Select the Mighty Network you’re using from the dropdown menu. Ensure you’ve connected your Mighty Network to Zapier.​
+Set Up Trigger:
+Choose the specific type of Member Action that will start the Zap. For this example, select “Member Joined” to trigger when a new member joins your Network or Space.​
+Network or Space: Specify where the Trigger should occur. Choose the entire Network or a specific Space.​
+Test the Connection:
+You may be asked to test the connection to confirm that the Zap is pulling data correctly from your Mighty Network.
+Note: During setup, you might see sample data. This is just for demonstration and may not match your actual data.
+​
+Step 2: Set Up Your Action
+Choose App & Event:
+Select Mailchimp (or another app where you want the action to happen).
+Choose the Action such as “Add/Update Subscriber.”​
+Choose Account:
+Sign in to your Mailchimp account if you haven’t already.​
+Customize Subscriber:
+Specify the Audience in Mailchimp where new members will be added.
+Select the fields (e.g., First Name, Last Name, Email Address) that will be transferred to Mailchimp.​
+Test the Connection:
+Test the connection to ensure data is correctly transferred to Mailchimp.
+​
+How to Set Up a Zap with Mighty Networks in the Action
+For this example, let’s set up a Zap that automatically invites someone into your Mighty Network when they are added as a contact in Salesforce.
+​
+Step 1: Set Up Your Trigger
+Choose App & Event:
+Select Salesforce as the app.
+Choose the Trigger, such as “New Record.”
+Choose Account:
+Connect your Salesforce account to Zapier if you haven’t already.
+Customize Record:
+Define the specific record in Salesforce that will start the Zap.
+Test the Connection:
+Test to ensure that Zapier can pull data from Salesforce to trigger the Zap.
+​
+Step 2: Set Up Your Action
+Choose App & Event:
+Select Mighty Networks as the app.
+Choose the Action such as “Invite Members.”
+Choose Account:
+Select the Mighty Network you’re using from the dropdown menu.
+Customize Member:
+Choose where to invite the member:
+Specific Space: Select the Space if you want the invite to go there.
+Main Network: Leave the field blank to invite to the main Network.
+Test the Connection:
+Test to make sure the invitation is properly set up.
+​
+FAQs: Using Zapier with Mighty Networks
+1. What are some popular Zaps for Mighty Networks?
+To find popular Zaps that other Mighty Networks Hosts are using, search for “Mighty Networks” on Zapier or click here to explore all available integrations. You’ll find ideas and setups that can help automate various tasks and improve your workflow.
+2. Can I create custom Zaps with Mighty Networks?
+Absolutely! You can create your own custom Zaps to fit your unique needs. Start by selecting Mighty Networks and any other apps you want to connect. Follow the examples provided and adjust the apps, Triggers, and Actions based on your specific workflow.
+3. Are there any limitations with transferring content to other apps?
+Yes, currently, we only support sending a short excerpt of a post when transferring content to other apps (e.g., posting articles from Mighty Networks to LinkedIn). Full text and images are not included at this time.
+4. How can I use Zapier to make off-platform payments easier?
+Yes, you can use Zapier to streamline off-platform payments! By connecting Mighty Networks with payment platforms like Stripe, PayPal, or ThriveCart, you can automate tasks such as inviting members to your plans or removing them based on their payment activity. For example, you can set up a Zap to automatically invite a new subscriber to a plan when they make a payment, or remove them from a plan if their subscription is canceled. Check out this article for detailed setup instructions.
+Does Mighty Networks Support MCP Connections?
+How Do I Enable SSO for My Mighty Network?
+⌘ I
+x linkedin instagram
+Powered by This documentation is built and hosted on Mintlify, a developer documentation platform
+Assistant
+Responses are generated using AI and may contain mistakes.
+Contact support

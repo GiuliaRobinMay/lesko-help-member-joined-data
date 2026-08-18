@@ -1,0 +1,4 @@
+SOURCE: https://affiliate.mightynetworks.com/terms?utm_source=zendesk\&utm_medium=getting_started\&utm_campaign=affiliate_program\&utm_content=
+FETCHED: 2026-08-18 13:17 UTC
+
+FETCH ERROR: <urlopen error [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1000)>

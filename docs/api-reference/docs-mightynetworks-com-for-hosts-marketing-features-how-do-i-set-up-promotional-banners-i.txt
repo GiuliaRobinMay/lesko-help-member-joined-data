@@ -1,7 +1,7 @@
-SOURCE: https://docs.mightynetworks.com/for-hosts/payments-and-access/what-is-a-full-vs-limited-membership
+SOURCE: https://docs.mightynetworks.com/for-hosts/marketing-features/how-do-i-set-up-promotional-banners-in-my-network
 FETCHED: 2026-08-18 13:18 UTC
 
-What is a Full vs. Limited Membership? - Mighty Networks Developer
+How Do I Set Up Promotional Banners in My Network? - Mighty Networks Developer
 Documentation Index
 Fetch the complete documentation index at: /llms.txt
 Use this file to discover all available pages before exploring further.
@@ -11,8 +11,8 @@ Search...
 ⌘ K Ask Assistant
 Search...
 Navigation
-Payments and Access
-What is a Full vs. Limited Membership?
+Marketing Features
+How Do I Set Up Promotional Banners in My Network?
 For Hosts
 For Members
 API Guides
@@ -212,59 +212,116 @@ The UK Online Safety Act
 Is Mighty Networks GDPR and CCPA Compliant?
 The EU Consumer Rights Directive — Cancellation Rights
 On this page
-Why Use Limited Memberships
-How Limited Members Join Spaces
-What Limited Members See Check out this video on how to set up limited memberships:
-Below is a detailed guide to the features accessible to each member type: Available Network-Level Actions
-Network Navigation
-Profile Features & Personal Settings
-Inside a Space with Membership
-Payments and Access
-What is a Full vs. Limited Membership?
+Step 1: Create an Audience
+Step 2: Create the Banner Add a Button (Optional)
+Step 3: Choose the Audience
+Step 4: Set a Schedule
+Step 5: Allow or Prevent Dismissal
+Step 6: Review and Create
+Frequently Asked Questions Who can use Promotional Banners?
+How does scheduling work?
+What if a member qualifies for more than one banner?
+Can I Customize Banners?
+Where can I link the CTA button?
+Does the Audience Builder work outside of banners?
+Marketing Features
+How Do I Set Up Promotional Banners in My Network?
 Copy page Copy page
+Learn how to target audiences with promotional banners
 Copy page Copy page
-Full memberships provide access to your entire Network , while limited memberships offer access to a specific set of Spaces and features.
-Whether someone becomes a full or limited member depends on what their plans give access to.​
-Limited memberships let you offer a standalone experience—such as a course, live event, or lead magnet—inside a single Space or a bundle of Spaces, without unlocking your full Network.​
+Promotional Banners let you display custom messages to specific member audiences for a set period of time. Use them to highlight a new offer, share a discount, or drive action—right where your members already are.
+You can target banners to different member segments using attributes like plan membership, tags , or badges .
 ​
-Why Use Limited Memberships
-By restricting access to Network-level Global Features —including private messaging, the Global Feed, or Global Members—you can:
-Keep your broader community gated, exclusive, or reserved for paying members.
-Use individual Spaces as entry points to introduce new people to your work.
-Sell standalone programs or experiences while keeping your full community experience separate for those on a higher-tier plan.​
+Step 1: Create an Audience
+Before creating a banner, define the audience you want to target.
+Go to Admin > Marketing > Audiences.
+Click Create Audience.
+Give your audience a name (for example, “Plan Members”).
+Choose one or more Attributes , such as:
+Network
+Plan membership
+Space access
+Tags
+Custom fields
+Badges
+(Optional) Exclude members based on specific criteria.
+This lets you narrow down exactly who sees your message.For example, target “Members on a paid plan excluding those tagged ‘Founding Member.’”
+For more information on Audiences, check out this article .
 ​
-How Limited Members Join Spaces
-Important: Limited members can only join Spaces through paid plans. This means:
-Invites do not grant access to limited members for Spaces
-“Anyone Can Join” settings do not apply to limited members for Spaces
-Limited members must have a valid payment for a plan that includes the Space in order to access it
-This restriction ensures that limited memberships remain properly gated and prevents unintended access escalation.
+Step 2: Create the Banner
+Once your audience is ready:
+Go to Admin > Marketing > Promotional Banners.
+Click Create New Banner.
+Then fill out the banner details:
+Internal Title: For your reference.
+Headline: The main message (for example, “Enjoy 50% Off Our New Offering”).
+Description: (Optional) Supporting text (for example, “Half off for a limited time”).
 ​
-What Limited Members See
-Here’s an example of what the limited member experience can look like:
+Add a Button (Optional)
+You can include a call-to-action button:
+Label: Choose the text (for example, “Redeem”).
+Link: Direct it to a Plan, an internal URL, or any external link.
 ​
-Check out this video on how to set up limited memberships:
-For more details on setting up plans, check out this article .
+Step 3: Choose the Audience
+Select the audience you created in Step 1. Only members who meet that audience’s criteria will see the banner—and only in areas of the Network they have access to.
 ​
-Below is a detailed guide to the features accessible to each member type:
-Important notes:
-If you set your Network Privacy & Access settings to “anyone can view content inside the Network, ” these definitions may shift because a limited member can see what a visitor/non-member sees (e.g. Collections with Spaces that anyone in the Network can see, promoted Spaces, etc.).
-If you demote a full member to a limited member (by removing the Network from any of the Spaces they are on) they will lose access to their private chats and any of the Global Features. If you add the Network back and restore them to full membership, then they will be able to access their previous chat messages.
-Limited members cannot become Space Hosts or Space moderators.
+Step 4: Set a Schedule
+You can control when your banner appears and disappears.
+Start Date & Time: Leave blank to publish immediately.
+End Date & Time: Leave blank to keep the banner running until manually turned off.
+For example, schedule a banner from Sept 8 at 12 PM to Sept 15 at 5 PM.
 ​
-Available Network-Level Actions
-Feature Limited Member Full Network Member Download and use the iOS or Android app ✅ ✅ Receive badges ✅ ✅ Track streaks ✅ ✅ See the Network logo or global header brand ✅ ✅ See the Network About Page ✅ ✅ Send and receive private messages (including those sent via automation) ❌ ✅ See and complete the Welcome Checklist ❌ ✅ Use global Network Search ❌ ✅ Receive Network-level notifications (for example, about a global livestream) ❌ ✅ Use the Ambassador Program to refer Network members ❌ ✅ Earn points ❌ ✅ Send and receive recognitions ❌ ✅
+Step 5: Allow or Prevent Dismissal
+You can let members permanently dismiss the banner. If you leave this unchecked, the banner remains visible until it expires or you manually deactivate it.
 ​
-Network Navigation
-Feature Limited Member Full Network Member See Spaces where they are a member ✅ ✅ See global navigation features ❌ ✅ See custom navigation links ❌ ✅ See Collections ❌ ✅
+Step 6: Review and Create
+Once everything looks good, click Create.
+If your start time is in the future, the banner will appear as **Scheduled.** You can view, edit, duplicate, or deactivate banners anytime from Admin > Marketing > Promotional Banners.
+Here’s what a banner looks like on web:
+And on mobile:
 ​
-Profile Features & Personal Settings
-Feature Limited Member Full Network Member Have a profile with photo ✅ ✅ Fill in the mini bio ✅ ✅ Fill in custom fields ✅ ✅ Add a location ✅ ✅ Earn badges ✅ ✅ See their people explorer ✅ ✅ See their list of Space memberships ✅ ✅ Manage account details, notification preferences, and streaks calendar in personal settings ✅ ✅ See the introduction (or About Me) field ❌ ✅ See their referrals ❌ ✅
+Frequently Asked Questions
 ​
-Inside a Space with Membership
-Feature Limited Member Full Network Member See and interact with all features enabled in the Space ✅ ✅ Receive notifications related to activity in the Space ✅ ✅ Use search within the Space ✅ ✅ Attend livestreams in the Space ✅ ✅ Bookmark content in the Space ✅ ✅ See profiles of other members in the same Space ✅ ✅ See the activity of other members in the same Space ✅ ✅ Follow other members in the same Space ❌ ✅ Private message other members in the same Space ❌ ✅ See similarities with other members in the same Space ❌ ✅ See other people in the same Space with the same badge ❌ ✅ See other people in the same Space with the same custom field ❌ ✅
-How Do I Choose Where Plans Appear?
-Can I Set Up Required Questions and Approval for Access?
+Who can use Promotional Banners?
+Promotional Banners are available on the Launch Plan and up.
+Launch Plan: Up to 2 total (live or scheduled)
+Scale Plan: Up to 5
+Growth Plan: Up to 10
+Mighty Pro: Up to 15
+If you’ve reached your limit, you can still create new banners, but they’ll remain inactive until you deactivate an existing one.
+​
+How does scheduling work?
+If the Start Time is blank, the banner goes live immediately (as long as you’re under your banner limit).
+If the Start Time is set, it activates automatically at that time.
+If the End Time is set, it deactivates automatically when that time is reached.
+If the End Time is blank, it stays live until manually turned off.
+Once scheduled, a banner counts toward your total limit (for example, 1 live + 1 scheduled = 2 total on the Launch Plan).
+​
+What if a member qualifies for more than one banner?
+If a member qualifies for multiple active banners, they’ll see the most recently created live one.
+​
+Can I Customize Banners?
+Yes. You can customize:
+The headline
+The description
+The CTA button label and link (Plan or URL)
+At this time, banners don’t support images. They’re designed to display consistently across all devices.
+The color of your banner matches your Network’s theme color :
+If you’re using basic colors , it uses your theme color.
+If you’re using advanced colors , it matches your advanced button color.
+You can adjust colors under Admin > Branding > Colors.
+​
+Where can I link the CTA button?
+You can link the button to:
+A Plan (ideal for promotions)
+An internal URL (like an event or Space)
+An external link (like a sponsor site or form)
+​
+Does the Audience Builder work outside of banners?
+Yes! You can use Audiences inside of Automations.
+Check out this article to learn more .
+How Do I Segment My Members with Audiences?
+What is the People Explorer?
 ⌘ I
 x linkedin instagram
 Powered by This documentation is built and hosted on Mintlify, a developer documentation platform

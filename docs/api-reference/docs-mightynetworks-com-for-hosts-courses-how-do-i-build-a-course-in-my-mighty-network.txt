@@ -1,7 +1,7 @@
-SOURCE: https://docs.mightynetworks.com/for-hosts/payments-and-access/what-is-a-full-vs-limited-membership
-FETCHED: 2026-08-18 13:18 UTC
+SOURCE: https://docs.mightynetworks.com/for-hosts/courses/how-do-i-build-a-course-in-my-mighty-network
+FETCHED: 2026-08-18 13:17 UTC
 
-What is a Full vs. Limited Membership? - Mighty Networks Developer
+How Do I Build a Course in My Mighty Network? - Mighty Networks Developer
 Documentation Index
 Fetch the complete documentation index at: /llms.txt
 Use this file to discover all available pages before exploring further.
@@ -11,8 +11,8 @@ Search...
 ⌘ K Ask Assistant
 Search...
 Navigation
-Payments and Access
-What is a Full vs. Limited Membership?
+Courses
+How Do I Build a Course in My Mighty Network?
 For Hosts
 For Members
 API Guides
@@ -212,59 +212,127 @@ The UK Online Safety Act
 Is Mighty Networks GDPR and CCPA Compliant?
 The EU Consumer Rights Directive — Cancellation Rights
 On this page
-Why Use Limited Memberships
-How Limited Members Join Spaces
-What Limited Members See Check out this video on how to set up limited memberships:
-Below is a detailed guide to the features accessible to each member type: Available Network-Level Actions
-Network Navigation
-Profile Features & Personal Settings
-Inside a Space with Membership
-Payments and Access
-What is a Full vs. Limited Membership?
+3 Quick Steps to Get Started
+1. Create a Space Using a Course Template
+2. Add Your Course Materials Instant Course Outline(AI Feature)
+3. Adjust Your Course Settings Section Naming
+Display Style
+Section Preferences
+Preview the Course
+Privacy
+Invite and Manage Course Members
+Making Your Course Visible
+Make Your Entire Course Visible
+Make Individual Lessons or Sections Visible
+If You’re Starting From Scratch: Use a Live Course
+Courses
+How Do I Build a Course in My Mighty Network?
 Copy page Copy page
 Copy page Copy page
-Full memberships provide access to your entire Network , while limited memberships offer access to a specific set of Spaces and features.
-Whether someone becomes a full or limited member depends on what their plans give access to.​
-Limited memberships let you offer a standalone experience—such as a course, live event, or lead magnet—inside a single Space or a bundle of Spaces, without unlocking your full Network.​
 ​
-Why Use Limited Memberships
-By restricting access to Network-level Global Features —including private messaging, the Global Feed, or Global Members—you can:
-Keep your broader community gated, exclusive, or reserved for paying members.
-Use individual Spaces as entry points to introduce new people to your work.
-Sell standalone programs or experiences while keeping your full community experience separate for those on a higher-tier plan.​
+3 Quick Steps to Get Started
+On the Launch Plan and up, you can create a Course inside a Space using one of our Course templates.
 ​
-How Limited Members Join Spaces
-Important: Limited members can only join Spaces through paid plans. This means:
-Invites do not grant access to limited members for Spaces
-“Anyone Can Join” settings do not apply to limited members for Spaces
-Limited members must have a valid payment for a plan that includes the Space in order to access it
-This restriction ensures that limited memberships remain properly gated and prevents unintended access escalation.
+1. Create a Space Using a Course Template
+When you create a new Space , select either a Cohort Course Template or Content Course Template .
+Cohort Course Template includes:
+Course Community ( Feed )
+Course Materials ( Course )
+Discovery
+Members
+Content Course Template includes:
+Course Materials ( Course )
+Members
+By default, a new Space is set to “Only Logged in Members” can see the Space. This lets you create your Course privately and share it when you’re ready.
+When creating your Space, you’ll choose:
+Space Name
+Tagline
+Collection
+Privacy Level
+After you select Create Space , you’ll see three options:
+Charge for Access
+Invite People to Join
+View the Course
+Select View this Space to start adding Course Materials and adjusting Course Settings.
 ​
-What Limited Members See
-Here’s an example of what the limited member experience can look like:
+2. Add Your Course Materials
+A Course includes four content types:
+Overview
+Lessons
+Sections
+Quizzes
 ​
-Check out this video on how to set up limited memberships:
-For more details on setting up plans, check out this article .
+Instant Course Outline(AI Feature)
+Use the Instant Course Outline to generate a first draft of your Course structure. This gives you Sections and Lessons you can refine as you go.
+You can add several types of content to your Course, including images, videos, media, and file attachments.
+To learn more, check out this article .
 ​
-Below is a detailed guide to the features accessible to each member type:
-Important notes:
-If you set your Network Privacy & Access settings to “anyone can view content inside the Network, ” these definitions may shift because a limited member can see what a visitor/non-member sees (e.g. Collections with Spaces that anyone in the Network can see, promoted Spaces, etc.).
-If you demote a full member to a limited member (by removing the Network from any of the Spaces they are on) they will lose access to their private chats and any of the Global Features. If you add the Network back and restore them to full membership, then they will be able to access their previous chat messages.
-Limited members cannot become Space Hosts or Space moderators.
+3. Adjust Your Course Settings
+You can update Course Settings at any time by going to the gear icon in the Space > Space Features > Course.
 ​
-Available Network-Level Actions
-Feature Limited Member Full Network Member Download and use the iOS or Android app ✅ ✅ Receive badges ✅ ✅ Track streaks ✅ ✅ See the Network logo or global header brand ✅ ✅ See the Network About Page ✅ ✅ Send and receive private messages (including those sent via automation) ❌ ✅ See and complete the Welcome Checklist ❌ ✅ Use global Network Search ❌ ✅ Receive Network-level notifications (for example, about a global livestream) ❌ ✅ Use the Ambassador Program to refer Network members ❌ ✅ Earn points ❌ ✅ Send and receive recognitions ❌ ✅
+Section Naming
+Customize the name of the Course, Sections, Lessons and Quizzes.
 ​
-Network Navigation
-Feature Limited Member Full Network Member See Spaces where they are a member ✅ ✅ See global navigation features ❌ ✅ See custom navigation links ❌ ✅ See Collections ❌ ✅
+Display Style
+On web and mobile, choose how your Course appears: Thumbnail View , Simple View , or Grid View .
+Uses each Lesson’s default image. You can upload a custom thumbnail in each Lesson’s settings.
+Displays Lessons and Sections in a simplified list. Videos show a play icon; Quizzes show a quiz icon.
+Shows a more visual, dynamic layout. This view works best when you have multiple Lessons organized into Sections.
 ​
-Profile Features & Personal Settings
-Feature Limited Member Full Network Member Have a profile with photo ✅ ✅ Fill in the mini bio ✅ ✅ Fill in custom fields ✅ ✅ Add a location ✅ ✅ Earn badges ✅ ✅ See their people explorer ✅ ✅ See their list of Space memberships ✅ ✅ Manage account details, notification preferences, and streaks calendar in personal settings ✅ ✅ See the introduction (or About Me) field ❌ ✅ See their referrals ❌ ✅
+Section Preferences
+Choose where you would like all Sections expanded when a member first opens the Course or just a single Section.
+Expand All Sections:
+With this option, all Sections are expanded when a member opens the Course. As the member progresses through the Course, completed Sections will collapse.
+Expand Single Section:
+This option is helpful if your Course has many Sections and you don’t want to overwhelm members by showing all Lessons and Quizzes at once. Here’s how this option works:
+When a member first opens the Course, if the first Lesson or Quiz is in a Section, only that Section will be expanded. If the first Lesson or Quiz is not within a Section, all Sections will be collapsed.
+Sections will expand based on a member’s progress through the Course, with only one Section expanded at a time, unless the member chooses to expand other Sections as well.
+If the member is in-progress on a Quiz or Lesson that is not inside of a Section, then all Sections are collapsed, unless the member chooses to expand other Sections as well.
 ​
-Inside a Space with Membership
-Feature Limited Member Full Network Member See and interact with all features enabled in the Space ✅ ✅ Receive notifications related to activity in the Space ✅ ✅ Use search within the Space ✅ ✅ Attend livestreams in the Space ✅ ✅ Bookmark content in the Space ✅ ✅ See profiles of other members in the same Space ✅ ✅ See the activity of other members in the same Space ✅ ✅ Follow other members in the same Space ❌ ✅ Private message other members in the same Space ❌ ✅ See similarities with other members in the same Space ❌ ✅ See other people in the same Space with the same badge ❌ ✅ See other people in the same Space with the same custom field ❌ ✅
-How Do I Choose Where Plans Appear?
-Can I Set Up Required Questions and Approval for Access?
+Preview the Course
+You can allow people outside the Course to preview Lessons or Sections, regardless of your Space’s privacy.
+To enable this, go to each Lesson Settings or Section Settings page.
+​
+Privacy
+When your Course is ready, you can update privacy or add a paid plan .Your Mighty Network’s overall privacy also affects who can see a Space.
+​
+Invite and Manage Course Members
+You can decide whether only Hosts and moderators can invite people to the Course, or whether all members can invite. By default, all members can invite.
+To manage Course members, go to Members . You can:
+View all members
+Welcome and message members
+Download your Course member list
+See our inviting article for more details.
+​
+Making Your Course Visible
+By default, a new Course and its contents (Overview, Lessons, and Sections) are set to Hidden .
+This allows you to create content privately before making it visible to members.
+​
+Make Your Entire Course Visible
+Go to your Course.
+Click the small Select All box in the upper-left corner.
+Choose to make all—or any—Lessons or Sections Visible or Hidden .
+​
+Make Individual Lessons or Sections Visible
+You can also make specific items visible anytime:
+Go to Manage Overview Settings , Manage Lesson Settings , or Manage Section Settings.
+When you make a Lesson, Section, or Overview visible, the following will appear to students:
+The title
+The first few lines of the body text
+The thumbnail image
+Students will always be able to open and view the Overview .The Space privacy level also determines who can see any visible content.
+​
+If You’re Starting From Scratch: Use a Live Course
+If you don’t yet have Course content, you can run your first Course live.
+Turn on the Feed feature as your main Course page, invite a small group of students, and follow a simple weekly rhythm:
+Topic: Share it live (Zoom or Crowdcast).
+Case Study: Show the Topic in action.
+Challenge: Give members an action for the week.
+Result: Help members achieve one win each week.
+You can run a Live Course with as few as 5–10 people.
+At the end of each week, add a Lesson or Section using video replays from your sessions.
+How Do I Set Up a Space That Full Members Can Join but Limited Members Must Pay For?
+How Do I Organize My Course With Overviews, Sections, and Lessons?
 ⌘ I
 x linkedin instagram
 Powered by This documentation is built and hosted on Mintlify, a developer documentation platform
