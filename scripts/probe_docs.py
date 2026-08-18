@@ -19,17 +19,22 @@ REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT_DIR = os.path.join(REPO_ROOT, "docs", "api-reference")
 
 START_URLS = [
-    "https://docs.mightynetworks.com/llms-full.txt",
-    "https://docs.mightynetworks.com/llms.txt",
-    "https://docs.mightynetworks.com/admin-api",
-    "https://docs.mightynetworks.com/admin-api/authentication",
-    "https://docs.mightynetworks.com/admin-api/pagination",
+    "https://docs.mightynetworks.com/openapi.json",
+    "https://docs.mightynetworks.com/openapi.yaml",
+    "https://docs.mightynetworks.com/api-reference/openapi.json",
+    "https://docs.mightynetworks.com/admin-api/openapi.json",
+    "https://docs.mightynetworks.com/authentication.md",
+    "https://docs.mightynetworks.com/graphql-reference/types/Member.md",
+    "https://docs.mightynetworks.com/graphql-reference/types/MemberSort.md",
+    "https://docs.mightynetworks.com/graphql-reference/types/MemberFilter.md",
+    "https://docs.mightynetworks.com/graphql-reference/queries/network.md",
+    "https://docs.mightynetworks.com/oauth-applications.md",
 ]
-KEYWORDS = ("admin-api", "api", "graphql", "headless", "developer", "token",
-            "authentication", "member", "export", "webhook", "network")
+KEYWORDS = ("openapi", "api-reference", "admin-api", "graphql-reference",
+            "authentication", "member", "token")
 ALLOWED_HOSTS = ("mightynetworks.com", "mn.co")
-MAX_PAGES = 60
-MAX_SAVE = 1_500_000  # bytes per saved page
+MAX_PAGES = 40
+MAX_SAVE = 3_000_000  # bytes per saved page
 MD_LINK_RE = re.compile(r"\((https?://[^)\s]+)\)")
 UA = "Mozilla/5.0 (compatible; lesko-help-cohort-setup/1.0)"
 
@@ -82,7 +87,7 @@ def main():
             continue
         seen.add(url)
         final_url, body = fetch(url)
-        is_plain = final_url.endswith((".txt", ".md")) or "<html" not in body[:2000].lower()
+        is_plain = final_url.endswith((".txt", ".md", ".json", ".yaml")) or "<html" not in body[:2000].lower()
         if body.startswith("FETCH ERROR"):
             text = body
         elif is_plain:

@@ -38,10 +38,14 @@ their entered/not-entered status is exact either way).
 
 ## The one manual step: the API token
 
-The Headless API was enabled for lesko-help-2 by Mighty Networks in July 2026.
-To switch the pipeline on:
+Mighty's API program was enabled for lesko-help-2 in July 2026. The Admin API
+needs a Network on the Scale, Growth, or Mighty Pro plan, and (per Mighty's
+quick-start) "an API access token from your Network's admin panel". To switch
+the pipeline on:
 
-1. Create an API token in the Mighty Networks admin.
+1. Create the API access token in the Mighty Networks admin panel (if you
+   can't find the API section there, ask your Mighty contact — they enabled
+   the API program for this Network).
 2. In this repository: **Settings → Secrets and variables → Actions →
    New repository secret**, name it **`MIGHTY_API_TOKEN`**, paste the token.
 3. Run the **daily-snapshot** workflow once by hand (Actions tab → daily-snapshot

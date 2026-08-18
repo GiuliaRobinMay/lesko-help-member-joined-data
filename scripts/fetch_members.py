@@ -112,6 +112,23 @@ def fetch_configured(cfg, tok):
     max_pages = int(cfg.get("max_pages", 500))
     rows = []
 
+    if cfg.get("preflight_url"):
+        status, _, text = http(cfg["preflight_url"], "GET", headers)
+        if status == 200:
+            try:
+                me = json.loads(text)
+                safe = {k: me.get(k) for k in ("network_id", "role") if k in me}
+            except Exception:
+                safe = {}
+            print("Preflight OK: token accepted%s" %
+                  (" (%s)" % json.dumps(safe) if safe else ""))
+        else:
+            print("ERROR: preflight %s returned HTTP %s: %s\n"
+                  "Check that the API token is valid and the network id in "
+                  "scripts/api_config.json is correct."
+                  % (cfg["preflight_url"], status, text[:300]), file=sys.stderr)
+            sys.exit(1)
+
     if kind == "graphql":
         cursor = None
         for _ in range(max_pages):

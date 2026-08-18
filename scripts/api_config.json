@@ -2,11 +2,12 @@
   "_comment": "Mighty Networks Admin API (https://docs.mightynetworks.com/admin-api). Base https://api.mn.co/admin, Bearer token auth, page/per_page pagination (max 100). Network id 4022250 = lesko-help-2. node_fields lists candidate source field names - the first present in the API response wins; the daily run logs the real member object keys so this mapping can be tightened after the first snapshot.",
   "kind": "rest",
   "url": "https://api.mn.co/admin/v1/networks/4022250/members?page={page}&per_page={per_page}",
+  "preflight_url": "https://api.mn.co/admin/v1/networks/4022250/me",
   "auth_header": ["Authorization", "Bearer {token}"],
   "page_size": 100,
   "max_pages": 500,
   "page_delay": 0.4,
-  "items_path": "",
+  "items_path": "items",
   "node_fields": {
     "member_id": ["id", "user_id", "member_id"],
     "join_date": ["joined_at", "join_date", "joined_on", "member_since", "joined_network_at", "created_at"],
