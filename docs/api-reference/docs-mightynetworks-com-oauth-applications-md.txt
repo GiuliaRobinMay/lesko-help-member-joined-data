@@ -1,0 +1,268 @@
+SOURCE: https://docs.mightynetworks.com/oauth-applications.md
+FETCHED: 2026-08-18 13:39 UTC
+
+> ## Documentation Index
+> Fetch the complete documentation index at: https://docs.mightynetworks.com/llms.txt
+> Use this file to discover all available pages before exploring further.
+
+# OAuth Applications
+
+> Create and manage OAuth applications to issue Headless API access tokens
+
+## Overview
+
+An **OAuth application** is the credential a third-party app uses to ask members, hosts, and admins of a Mighty Network for permission to act on their behalf. It is the entry point to the [Headless API](/headless-api): every access token the Headless API issues comes from a user authorizing one of your OAuth applications.
+
+You create an OAuth application once per integration, in the Network it should operate against. The application owns:
+
+* A **Client ID** that identifies the app on every authorization request.
+* A **Client Secret** (for confidential clients) that authenticates the app when exchanging an authorization code for a token.
+* One or more **Redirect URIs** the authorization server is allowed to redirect back to after a user approves access.
+* A set of **Scopes** the application is permitted to request — the upper bound on what an issued token can do.
+
+<Note>
+  Creating OAuth applications is available on **Scale plans and above** (Scale, Growth and Mighty Pro). If you don't see **Integrations > OAuth Applications** in Network Admin, check your Network's plan.
+</Note>
+
+## Create an OAuth application
+
+OAuth applications are created and managed from Network Admin.
+
+<Steps>
+  <Step title="Open Integrations settings">
+    Sign in to your Network as a host or admin. Open **Network Admin**, then go to **Integrations** > **OAuth Applications**.
+  </Step>
+
+  <Step title="Start a new application">
+    Click **New OAuth Application**.
+  </Step>
+
+  <Step title="Name the application">
+    Enter a **Name** for the application. The name is shown to users on the consent screen — pick something a member would recognize as the integration they're authorizing (for example, the product or company name).
+  </Step>
+
+  <Step title="Choose a client type">
+    Select **Confidential** if the application runs on a server you control and can keep a secret (a web backend, a back-office job, a server-to-server integration).
+
+    Select **Public** if the application runs on a device you don't control (a native mobile app, a desktop app, a single-page web app). Public clients do not receive a Client Secret and must use the Authorization Code flow with [PKCE](https://datatracker.ietf.org/doc/html/rfc7636).
+  </Step>
+
+  <Step title="Add redirect URIs">
+    Enter the URL the authorization server is allowed to redirect users back to after they approve or deny the request. To register multiple URIs (one per environment — production, staging, local development), enter them in a single field separated by newlines. Redirect URIs are matched exactly — including scheme, host, port, and path.
+
+    Local development URLs (`http://localhost:3000/oauth/callback`) are accepted. All other redirect URIs must use `https`.
+  </Step>
+
+  <Step title="Select member scopes">
+    Choose the [member scopes](#scopes) the application is allowed to request — these govern access to the authorized user's own content (their posts, comments, courses, profile).
+  </Step>
+
+  <Step title="Select host scopes">
+    Choose the [host scopes](#scopes) the application is allowed to request — these grant network-wide reads and only take effect when the authorized user is a host of the Network. Leave empty if your integration doesn't act on behalf of hosts.
+
+    Across both scope fields, request the narrowest set that lets the feature work. The application can request any subset of the configured scopes per authorization, but never more — and users see the full list on the consent screen, so broader scopes drive higher abandonment.
+  </Step>
+
+  <Step title="Decide whether to skip the consent screen">
+    Leave **Skip consent screen** unchecked for any third-party integration. Check it only for a first-party, trusted app you build and run against your own Network — it bypasses the approve/deny screen so an authorized user who signs in is redirected straight back with a code. See [Consent screen](#consent-screen) for what the screen does and the trade-offs of suppressing it.
+  </Step>
+
+  <Step title="Copy your credentials">
+    Mighty issues a **Client ID** and (for confidential clients) a **Client Secret**.
+
+    The Client Secret is shown **once** and cannot be recovered. Copy it into your secret store before leaving the page. If you lose it, delete the application and create a new one — programmatic secret rotation is not currently available.
+  </Step>
+</Steps>
+
+<Warning>
+  The Client Secret is bearer credential material. Never embed it in mobile apps, single-page apps, browser bundles, or anywhere it could be read by a user agent. For public clients, use the **Authorization Code flow with PKCE** and skip the secret entirely.
+</Warning>
+
+## Configuration
+
+### Redirect URIs
+
+The authorization server only redirects back to URIs registered on the application. The match is exact — `https://example.com/cb` will not match `https://example.com/cb/`, `https://example.com/cb?x=1`, or `https://www.example.com/cb`. Register every variant your app uses.
+
+Multiple URIs are registered as a single newline-separated value.
+
+Guidelines:
+
+* One URI per environment (production, staging, dev, local), separated by newlines.
+* Use `https` for everything except `http://localhost` and `http://127.0.0.1`.
+* Avoid open redirectors. The registered URI should point at an endpoint your app controls and that validates the `state` parameter before issuing the token exchange.
+
+### Scopes
+
+Scopes are coarse permissions an application can ask a user to grant. The token the Headless API issues is the **intersection** of the scopes the user approves and what that user can do in the product. A `read:posts` scope granted to a member only exposes what the member could already see; a `host:read:network_posts` scope is only effective when the authorized user is a host of the Network.
+
+Scopes split into two families: **member scopes** that govern access to the authorized user's own content, and **host scopes** (prefixed `host:`) that grant network-wide reads and only take effect when the authorized user is a host of the Network.
+
+<Note>
+  If a host scope is requested on an authorization request, only hosts of the Network will be able to complete the flow — non-host users (members, moderators) are blocked at the consent screen and cannot sign in to your application. Configure host scopes only on applications meant for host-facing integrations, and request them only on authorization requests where the user is expected to be a host.
+</Note>
+
+Member scopes:
+
+| Scope            | Description                                             |
+| ---------------- | ------------------------------------------------------- |
+| `read:userinfo`  | View the user's basic profile information.              |
+| `read:posts`     | View posts the user has created.                        |
+| `read:courses`   | View the user's courses and course progress.            |
+| `read:search`    | Search Network content on the user's behalf.            |
+| `write:posts`    | Create, edit, and delete posts on the user's behalf.    |
+| `write:comments` | Create, edit, and delete comments on the user's behalf. |
+
+Host scopes (effective only for hosts):
+
+| Scope                       | Description                  |
+| --------------------------- | ---------------------------- |
+| `host:read:network_events`  | View events in the Network.  |
+| `host:read:network_spaces`  | View spaces in the Network.  |
+| `host:read:network_members` | View members in the Network. |
+| `host:read:network_plans`   | View plans in the Network.   |
+| `host:read:network_posts`   | View posts in the Network.   |
+
+The catalog above will continue to grow. The **Scopes** panel in the OAuth application form is the source of truth for what's currently selectable and shows the per-scope descriptions users see on the consent screen.
+
+### Consent screen
+
+The **consent screen** is the Mighty-hosted page a user sees at `/oauth/authorize` after they sign in and before any token is issued. It lists your application's **Name** and the **scopes** being requested (using the per-scope descriptions), and asks the user to **Approve** or **Deny**. Mighty — not your application — renders this page and collects the user's credentials, so your app never sees a password and can never obtain a token for scopes the user didn't approve. If the user denies, Mighty redirects back to your `redirect_uri` with `error=access_denied` and no authorization code.
+
+#### Skip the consent screen
+
+The OAuth application form includes a **Skip consent screen** checkbox. When it's enabled, an authorized user who signs in is redirected straight back to your `redirect_uri` with an authorization code — without the approve/deny step.
+
+Enable this **only for first-party, trusted applications** — integrations you build and operate against your own Network, where you control both the application and the Network it runs in. For a host's own integration, prompting their own members to approve the host's own app adds friction with no security benefit, and skipping it makes the sign-in flow feel native rather than like granting access to a third party.
+
+<Warning>
+  Suppressing the consent screen means tokens are issued without the user explicitly reviewing or approving the requested scopes. Only enable it on applications you fully control, and never on one whose Client Secret or redirect URIs could be exposed — a leaked credential on a consent-free app can mint tokens against your members silently. Suppression skips only the **approval** step, not authentication: users must still sign in, and host scopes still require the authorized user to be a host of the Network.
+</Warning>
+
+### Client type
+
+| Client type      | Receives secret | Auth method                              | Use it for                                                       |
+| ---------------- | --------------- | ---------------------------------------- | ---------------------------------------------------------------- |
+| **Confidential** | Yes             | `client_secret` on `/oauth/token`        | Server-side web apps, back-office jobs, machine-to-machine flows |
+| **Public**       | No              | PKCE (`code_verifier`) on `/oauth/token` | Native mobile apps, desktop apps, single-page web apps, CLIs     |
+
+If you're unsure, choose **Public + PKCE**. PKCE is also recommended for confidential clients — Mighty's authorization server accepts `code_verifier` alongside `client_secret` for defense in depth.
+
+## Using your credentials
+
+Once the application is created, use the Client ID (and Secret, if confidential) to drive the Authorization Code flow against your Network's OAuth endpoints. OAuth endpoints are served from the Network's community host (not `api.mn.co`):
+
+```
+https://:network_subdomain.mn.co/oauth/authorize
+https://:network_subdomain.mn.co/oauth/token
+```
+
+The canonical endpoint URLs are also advertised at `https://:network_subdomain.mn.co/.well-known/oauth-authorization-server` (RFC 8414).
+
+For the complete request/response shapes — including PKCE, state, refresh tokens, and error handling — see [Authentication](/headless-authentication) and the OAuth flow walkthrough in [Headless API](/headless-api#authentication).
+
+<CodeGroup>
+  ```bash Authorize URL theme={null}
+  https://my-community.mn.co/oauth/authorize\
+  ?response_type=code\
+  &client_id=YOUR_CLIENT_ID\
+  &redirect_uri=https://app.example.com/oauth/callback\
+  &scope=read:userinfo+read:posts\
+  &state=RANDOM_OPAQUE_STRING\
+  &code_challenge=PKCE_CHALLENGE\
+  &code_challenge_method=S256
+  ```
+
+  ```bash Token exchange (confidential) theme={null}
+  curl https://my-community.mn.co/oauth/token \
+    -H "Content-Type: application/x-www-form-urlencoded" \
+    -d "grant_type=authorization_code" \
+    -d "code=AUTH_CODE_FROM_REDIRECT" \
+    -d "redirect_uri=https://app.example.com/oauth/callback" \
+    -d "client_id=YOUR_CLIENT_ID" \
+    -d "client_secret=YOUR_CLIENT_SECRET" \
+    -d "code_verifier=PKCE_VERIFIER"
+  ```
+
+  ```bash Token exchange (public + PKCE) theme={null}
+  curl https://my-community.mn.co/oauth/token \
+    -H "Content-Type: application/x-www-form-urlencoded" \
+    -d "grant_type=authorization_code" \
+    -d "code=AUTH_CODE_FROM_REDIRECT" \
+    -d "redirect_uri=com.example.app:/oauth/callback" \
+    -d "client_id=YOUR_CLIENT_ID" \
+    -d "code_verifier=PKCE_VERIFIER"
+  ```
+</CodeGroup>
+
+A successful token exchange returns an `access_token`, `refresh_token`, `expires_in`, and the granted `scope`. Pass the `access_token` as a Bearer token on every Headless API request.
+
+## Manage an existing application
+
+### Edit configuration
+
+From **Network Admin** > **Integrations** > **OAuth Applications**, open an application to update its name, redirect URIs, or allowed scopes. Configuration changes take effect on the next authorization request — existing access tokens are unaffected until they expire.
+
+Tightening scopes does **not** retroactively narrow tokens that have already been issued. To revoke broad access immediately, [delete the application](#delete-the-application).
+
+### Delete the application
+
+To permanently retire an OAuth application:
+
+1. Open the application from **Network Admin** > **Integrations** > **OAuth Applications**.
+2. Click **Delete application**.
+3. Confirm.
+
+Deleting the application invalidates the Client ID, the Client Secret, and **every** access and refresh token ever issued under it. This action cannot be undone.
+
+<Note>
+  Programmatic **client-secret rotation** and **per-token revocation** are not currently exposed. Until they ship, the supported way to invalidate a leaked secret or kill an outstanding token is to delete the application (which revokes every token under it) and create a replacement.
+</Note>
+
+## Security best practices
+
+* **Treat the Client Secret like a password.** Store it in a secret manager (1Password, AWS Secrets Manager, GCP Secret Manager, Vault). Never check it into source control or ship it in a client bundle.
+* **Use PKCE everywhere.** Public clients must use PKCE; confidential clients should too.
+* **Always send and validate `state`.** It's a required parameter on `/oauth/authorize`. Generate a cryptographically random, single-use nonce per authorization request, bind it to the user's session, and reject any callback whose `state` is missing or doesn't match. This is your CSRF defense.
+* **Pin redirect URIs.** Register the exact URIs your app uses. Never register a wildcard, a path you don't control, or an open redirector.
+* **Request least privilege.** Ask for the narrowest scopes that let the feature work. Broader scopes increase consent abandonment and expand the blast radius if a token leaks.
+* **Replace applications on suspicion of secret leak.** Programmatic secret rotation is not currently available. If a secret may have leaked — a former contributor with access, a misconfigured log, a compromised build — delete the application (which revokes every token under it) and create a replacement.
+
+## Troubleshooting
+
+### `invalid_client` on token exchange
+
+* Check that the Client ID matches the application exactly.
+* For confidential clients, verify the Client Secret hasn't been rotated out from under the deployment.
+* For public clients, make sure you're sending `code_verifier` and not `client_secret`.
+
+### `invalid_grant` on token exchange
+
+* The authorization code is single-use and expires within a minute or two — make sure you're not retrying with a code that's already been redeemed.
+* The `redirect_uri` sent to `/oauth/token` must exactly match the one used to obtain the code.
+* For PKCE, the `code_verifier` must match the `code_challenge` originally sent.
+
+### `redirect_uri_mismatch` on authorize
+
+* The `redirect_uri` query parameter must exactly match one of the URIs registered on the application — scheme, host, port, and path all included.
+
+### Consent screen shows the wrong app name
+
+* The consent screen reflects the application's **Name** field. Update it in **Network Admin** > **Integrations** > **OAuth Applications** > *your app*.
+
+### Consent screen never appears (or appears unexpectedly)
+
+* If the screen is skipped, the application has **Skip consent screen** enabled — see [Skip the consent screen](#skip-the-consent-screen). Disable it to require explicit approval.
+* If you expected it to be skipped but it still appears, confirm the checkbox is enabled on the same application whose Client ID you're authorizing against.
+
+## Next steps
+
+<CardGroup cols={2}>
+  <Card title="Headless API" icon="diagram-project" href="/headless-api">
+    Use your access token against the GraphQL API.
+  </Card>
+
+  <Card title="Authentication" icon="key" href="/headless-authentication">
+    OAuth flows, scopes, and token lifecycle in detail.
+  </Card>
+</CardGroup>

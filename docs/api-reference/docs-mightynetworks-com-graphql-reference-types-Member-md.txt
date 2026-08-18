@@ -1,0 +1,4 @@
+SOURCE: https://docs.mightynetworks.com/graphql-reference/types/Member.md
+FETCHED: 2026-08-18 13:39 UTC
+
+FETCH ERROR: HTTP Error 404: Not Found

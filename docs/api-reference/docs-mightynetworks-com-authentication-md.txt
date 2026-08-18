@@ -1,0 +1,292 @@
+SOURCE: https://docs.mightynetworks.com/authentication.md
+FETCHED: 2026-08-18 13:39 UTC
+
+> ## Documentation Index
+> Fetch the complete documentation index at: https://docs.mightynetworks.com/llms.txt
+> Use this file to discover all available pages before exploring further.
+
+# Authentication
+
+> Learn how to authenticate and secure your API requests
+
+## Overview
+
+The Mighty Networks Admin API uses **Bearer token authentication** to secure all API requests. Each request must include a valid API token in the `Authorization` header.
+
+## Getting Your API Token
+
+### Step 1: Access Your Network Admin Panel
+
+Navigate to your Network and access the admin settings:
+
+1. Log in to your Mighty Network
+2. Go to **Admin** from the main navigation
+3. Navigate to **Settings** > **API Keys**
+
+### Step 2: Generate a New API Token
+
+<Steps>
+  <Step title="Create API Key">
+    Click the **"Generate New API Key"** button in the API Keys section.
+  </Step>
+
+  <Step title="Name Your Token">
+    Give your API token a descriptive name (e.g., "Production Integration", "Development", "Analytics Script").
+  </Step>
+
+  <Step title="Set Permissions">
+    Configure the permissions and scopes for your API token based on your use case.
+  </Step>
+
+  <Step title="Copy and Store">
+    Copy the generated token immediately and store it securely. You won't be able to see it again.
+  </Step>
+</Steps>
+
+<Warning>
+  **Important**: API tokens are shown only once during creation. Store them securely and never share them publicly.
+</Warning>
+
+## Making Authenticated Requests
+
+Include your API token in the `Authorization` header of every request:
+
+<CodeGroup>
+  ```bash cURL theme={null}
+  curl https://api.mn.co/admin/v1/networks/{network_id}/members \
+    -H "Authorization: Bearer YOUR_API_TOKEN"
+  ```
+
+  ```javascript Node.js theme={null}
+  const fetch = require('node-fetch');
+
+  const API_TOKEN = 'your_api_token';
+  const NETWORK_ID = 'your_network_id';
+
+  const response = await fetch(
+    `https://api.mn.co/admin/v1/networks/${NETWORK_ID}/members`,
+    {
+      headers: {
+        'Authorization': `Bearer ${API_TOKEN}`,
+        'Content-Type': 'application/json'
+      }
+    }
+  );
+
+  const data = await response.json();
+  ```
+
+  ```python Python theme={null}
+  import requests
+
+  API_TOKEN = "your_api_token"
+  NETWORK_ID = "your_network_id"
+
+  headers = {
+      "Authorization": f"Bearer {API_TOKEN}",
+      "Content-Type": "application/json"
+  }
+
+  response = requests.get(
+      f"https://api.mn.co/admin/v1/networks/{NETWORK_ID}/members",
+      headers=headers
+  )
+
+  data = response.json()
+  ```
+
+  ```ruby Ruby theme={null}
+  require 'net/http'
+  require 'json'
+
+  api_token = 'your_api_token'
+  network_id = 'your_network_id'
+
+  uri = URI("https://api.mn.co/admin/v1/networks/#{network_id}/members")
+  request = Net::HTTP::Get.new(uri)
+  request['Authorization'] = "Bearer #{api_token}"
+  request['Content-Type'] = 'application/json'
+
+  response = Net::HTTP.start(uri.hostname, uri.port, use_ssl: true) do |http|
+    http.request(request)
+  end
+
+  data = JSON.parse(response.body)
+  ```
+</CodeGroup>
+
+## Authentication Errors
+
+The API returns specific error codes for authentication issues:
+
+| Status Code | Error           | Description                              |
+| ----------- | --------------- | ---------------------------------------- |
+| 401         | `unauthorized`  | Missing or invalid API token             |
+| 403         | `forbidden`     | Valid token but insufficient permissions |
+| 401         | `token_expired` | API token has been revoked or expired    |
+
+### Example Error Response
+
+```json theme={null}
+{
+  "error": "unauthorized",
+  "message": "Invalid API token provided",
+  "status": 401
+}
+```
+
+## Security Best Practices
+
+### 1. Store Tokens Securely
+
+<Warning>
+  **Never** commit API tokens to version control or expose them in client-side code.
+</Warning>
+
+Use environment variables to store your tokens:
+
+```bash .env theme={null}
+MIGHTY_API_TOKEN=your_api_token_here
+MIGHTY_NETWORK_ID=your_network_id_here
+```
+
+```javascript theme={null}
+// Load from environment
+const API_TOKEN = process.env.MIGHTY_API_TOKEN;
+const NETWORK_ID = process.env.MIGHTY_NETWORK_ID;
+```
+
+### 2. Use HTTPS Only
+
+All API requests must use HTTPS. HTTP requests will be rejected.
+
+### 3. Monitor Token Usage
+
+* Log all API requests for audit trails
+* Monitor for unusual patterns or unauthorized access
+* Set up alerts for authentication failures
+
+## Managing API Tokens
+
+### Viewing API Keys
+
+Navigate to **Admin** > **Settings** > **API Keys** to see all API keys for your Network, including both active and revoked keys. The API Keys table displays:
+
+* **Name**: The descriptive name you gave the key
+* **Key**: The redacted token value
+* **Created**: When the key was created
+* **Last Used**: When the key was last used (or "Never")
+* **Status**: A badge showing whether the key is **Active** (green) or **Revoked** (red)
+
+### Revoking Tokens
+
+To revoke a token:
+
+1. Go to **Admin** > **Settings** > **API Keys**
+2. Find the token you want to revoke
+3. Click the actions menu (⋮) next to the token
+4. Select **"Revoke API Key"**
+5. Confirm the revocation
+
+<Warning>
+  Revoking a token immediately invalidates it. Any services using that token will lose access.
+</Warning>
+
+After revoking a key, it remains visible in the API Keys list with:
+
+* A **Revoked** status badge (red)
+* Reduced opacity to indicate it's no longer active
+* No actions menu (revoked keys cannot be edited or re-revoked)
+* A tooltip on the status badge showing when it was revoked
+
+## Rate Limiting
+
+API tokens are subject to rate limits based on your plan:
+
+* **Standard**: Custom
+* **Premium**: Custom
+
+See the [Rate Limits](/admin-api#rate-limit-and-quota) for more details on rate limiting.
+
+## Testing Your Authentication
+
+Use this simple test to verify your token is working:
+
+<CodeGroup>
+  ```bash cURL theme={null}
+  curl https://api.mn.co/admin/v1/networks/{network_id}/me \
+    -H "Authorization: Bearer YOUR_API_TOKEN"
+  ```
+
+  ```javascript Node.js theme={null}
+  const response = await fetch(
+    `https://api.mn.co/admin/v1/networks/${NETWORK_ID}/me`,
+    {
+      headers: {
+        'Authorization': `Bearer ${API_TOKEN}`
+      }
+    }
+  );
+
+  const data = await response.json();
+  console.log('Authenticated as:', data);
+  ```
+</CodeGroup>
+
+**Expected Response:**
+
+```json theme={null}
+{
+  "id": "12345",
+  "name": "John Doe",
+  "email": "john@example.com",
+  "network_id": "67890",
+  "role": "admin",
+  "created_at": "2024-01-15T10:30:00Z"
+}
+```
+
+## Troubleshooting
+
+### "Invalid API token" Error
+
+**Problem**: Getting 401 unauthorized errors
+
+**Solutions**:
+
+* Verify the token is copied correctly (no extra spaces or characters)
+* Check that the token hasn't been revoked
+* Ensure you're using the correct `Authorization: Bearer` format
+* Verify the token has not expired
+
+### "Forbidden" Error
+
+**Problem**: Getting 403 forbidden errors
+
+**Solutions**:
+
+* Check that your token has the required permissions/scopes
+* Verify you have admin access to the Network
+* Ensure you're using the correct Network ID
+
+### Token Not Working After Creation
+
+**Problem**: Newly created token returns errors
+
+**Solutions**:
+
+* Wait a few seconds - tokens may take a moment to propagate
+* Verify you're using the full token string
+* Check that you copied the token immediately after creation
+
+## Next Steps
+
+<CardGroup cols={2}>
+  <Card title="Quickstart Guide" icon="rocket" href="/quickstart">
+    Make your first authenticated API call.
+  </Card>
+
+  <Card title="API Reference" icon="book" href="/admin-api">
+    Explore available API endpoints.
+  </Card>
+</CardGroup>

@@ -1,0 +1,11 @@
+SOURCE: https://docs.mightynetworks.com/graphql-reference/types/MemberSort.md
+FETCHED: 2026-08-18 13:39 UTC
+
+> ## Documentation Index
+> Fetch the complete documentation index at: https://docs.mightynetworks.com/llms.txt
+> Use this file to discover all available pages before exploring further.
+
+# MemberSort
+
+> Sort key for member roster queries.
+
