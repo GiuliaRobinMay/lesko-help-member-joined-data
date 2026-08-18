@@ -1,0 +1,32 @@
+name: probe-api-docs
+
+# One-off helper: fetches the public Mighty Networks documentation into
+# docs/api-reference/ so the exact member query for scripts/api_config.json
+# can be written from real docs. Safe to re-run; it only touches that folder.
+
+on:
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch Mighty Networks documentation
+        run: python3 scripts/probe_docs.py
+
+      - name: Commit the fetched docs
+        run: |
+          git config user.name "lesko-cohort-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A docs/api-reference
+          if git diff --cached --quiet; then
+            echo "Nothing new to commit."
+          else
+            git commit -m "Fetch Mighty Networks API documentation"
+            git push
+          fi

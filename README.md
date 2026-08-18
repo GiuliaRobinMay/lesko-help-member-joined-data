@@ -1,0 +1,72 @@
+# Lesko Help — member cohort tracker
+
+A small self-updating pipeline that answers one question every day:
+
+> **How many members were added to the Lesko Help community each day — and how
+> quickly do they actually enter it?**
+
+Members are added by an automation, but they still have to sign in for the
+first time themselves. Mighty Networks shows this as an empty *last visit*.
+This repository takes a snapshot of the member list **every morning**, works
+out per daily cohort who has entered, and rebuilds the overview page:
+
+* **`docs/index.html`** — the overview: one row per join-day (last 70 days),
+  the number of members added, and cumulative week 1 → week 10 columns showing
+  how many of them had entered the community by then.
+* **`docs/data.json`** — the same numbers as data, for anything downstream.
+
+## How it works
+
+```
+every morning (05:30 UTC)
+  GitHub Action  ──►  Mighty Networks member API
+        │                    (join date + last visit per member)
+        ▼
+  data/snapshots/YYYY-MM-DD.csv        one file per day
+        ▼
+  scripts/build_overview.py            cohort math
+        ▼
+  docs/index.html + docs/data.json     the always-current overview
+```
+
+Mighty Networks only stores each member's **last** visit, not their first.
+The daily snapshots are what make the week columns truthful: the day a
+member's *last visit* first appears pins down when they entered. Members who
+had already entered before the very first snapshot are attributed to the week
+of their last visit at that moment (marked ≈ on the page — an upper bound;
+their entered/not-entered status is exact either way).
+
+## The one manual step: the API token
+
+The Headless API was enabled for lesko-help-2 by Mighty Networks in July 2026.
+To switch the pipeline on:
+
+1. Create an API token in the Mighty Networks admin.
+2. In this repository: **Settings → Secrets and variables → Actions →
+   New repository secret**, name it **`MIGHTY_API_TOKEN`**, paste the token.
+3. Run the **daily-snapshot** workflow once by hand (Actions tab → daily-snapshot
+   → Run workflow) — or simply wait for the next morning.
+
+The first run with a token performs *API discovery*: it probes the known
+endpoints and commits a sanitized report to `data/api_discovery/report.json`
+(no token, no e-mail addresses). The exact member query is then pinned in
+`scripts/api_config.json`, and every run after that takes real snapshots.
+
+## What is stored here (privacy)
+
+Snapshots contain **only** the numeric member id, join date, last-visit date,
+and the welcome-checklist flag. **No names and no e-mail addresses, ever** —
+the overview needs only counts. If this repository is ever made public-facing
+beyond the team, consider switching it to private anyway (Settings → General →
+Change visibility).
+
+## Workflows
+
+| Workflow | When | What it does |
+|---|---|---|
+| `daily-snapshot` | every morning + manual | fetch snapshot → rebuild overview → commit |
+| `probe-api-docs` | manual only | fetches Mighty's public API docs into `docs/api-reference/` (setup aid) |
+
+To publish the overview at a URL, enable GitHub Pages: **Settings → Pages →
+Deploy from a branch → `main` / `docs`**. The page also opens fine straight
+from the repository.

@@ -1,0 +1,52 @@
+name: daily-snapshot
+
+on:
+  schedule:
+    - cron: "30 5 * * *"   # every morning, 05:30 UTC
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: snapshot
+  cancel-in-progress: false
+
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - id: token
+        name: Check for the Mighty API token
+        env:
+          MIGHTY_API_TOKEN: ${{ secrets.MIGHTY_API_TOKEN }}
+        run: |
+          if [ -n "$MIGHTY_API_TOKEN" ]; then
+            echo "present=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "present=false" >> "$GITHUB_OUTPUT"
+            echo "::notice::MIGHTY_API_TOKEN is not set yet, so no snapshot was taken. Add it under Settings -> Secrets and variables -> Actions."
+          fi
+
+      - name: Fetch today's member snapshot from Mighty Networks
+        if: steps.token.outputs.present == 'true'
+        env:
+          MIGHTY_API_TOKEN: ${{ secrets.MIGHTY_API_TOKEN }}
+        run: python3 scripts/fetch_members.py
+
+      - name: Rebuild the overview page
+        run: python3 scripts/build_overview.py
+
+      - name: Commit and push changes
+        run: |
+          git config user.name "lesko-cohort-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A data docs
+          if git diff --cached --quiet; then
+            echo "Nothing new to commit."
+          else
+            git commit -m "Snapshot $(date -u +%Y-%m-%d)"
+            git push
+          fi

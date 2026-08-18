@@ -1,0 +1,17 @@
+{
+ "meta": {
+  "generated_at": "2026-08-18T12:57:37+00:00",
+  "as_of": null,
+  "first_snapshot": null,
+  "snapshot_count": 0,
+  "members_tracked": 0,
+  "lookback_days": 70,
+  "weeks": 10
+ },
+ "totals": {
+  "joined": 0,
+  "entered": 0,
+  "not_entered": 0
+ },
+ "rows": []
+}

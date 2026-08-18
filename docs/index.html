@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lesko Help &mdash; Member Cohorts</title>
+<style>
+:root {
+  color-scheme: light;
+  --page: #f9f9f7; --surface: #fcfcfb;
+  --ink: #0b0b0b; --ink-2: #52514e; --ink-3: #898781;
+  --grid: #e1e0d9; --ring: rgba(11,11,11,0.10);
+  --accent: #2a78d6;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --page: #0d0d0d; --surface: #1a1a19;
+    --ink: #ffffff; --ink-2: #c3c2b7; --ink-3: #898781;
+    --grid: #2c2c2a; --ring: rgba(255,255,255,0.10);
+    --accent: #3987e5;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; background: var(--page); color: var(--ink);
+  font: 15px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+main { max-width: 1080px; margin: 0 auto; padding: 32px 20px 48px; }
+header h1 { font-size: 24px; margin: 0 0 4px; }
+header p { margin: 0; color: var(--ink-2); }
+.asof { display: inline-block; margin-top: 10px; padding: 2px 10px; border: 1px solid var(--ring);
+        border-radius: 999px; color: var(--ink-2); font-size: 13px; background: var(--surface); }
+.tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 12px; margin: 24px 0 16px; }
+.tile { background: var(--surface); border: 1px solid var(--ring); border-radius: 10px; padding: 14px 16px; }
+.tile .k { font-size: 13px; color: var(--ink-2); }
+.tile .v { font-size: 28px; font-weight: 650; margin-top: 2px; }
+.tile .sub { font-size: 14px; font-weight: 400; color: var(--ink-2); }
+.card { background: var(--surface); border: 1px solid var(--ring); border-radius: 10px; padding: 8px; margin-top: 8px; }
+.card.setup { padding: 20px 24px; max-width: 640px; }
+.card.setup h2 { margin-top: 0; }
+.card.setup code { background: var(--page); border: 1px solid var(--grid); border-radius: 4px; padding: 1px 5px; }
+.tablewrap { overflow-x: auto; }
+table { border-collapse: separate; border-spacing: 2px; width: 100%; font-variant-numeric: tabular-nums; }
+thead th { font-size: 12px; font-weight: 600; color: var(--ink-3); text-align: center; padding: 6px 8px; white-space: nowrap; }
+thead th:first-child { text-align: left; }
+tbody th { font-weight: 500; text-align: left; padding: 4px 10px 4px 8px; white-space: nowrap; color: var(--ink); font-size: 13.5px; }
+tbody td { text-align: center; padding: 4px 6px; border-radius: 4px; min-width: 40px; font-size: 13.5px; }
+td.num { color: var(--ink); }
+td.joined { font-weight: 650; }
+td.muted { color: var(--ink-2); }
+tr.empty th, tr.empty td { opacity: 0.45; }
+td.c0 { color: var(--ink-3); }
+td.c1{background:#cde2fb}td.c2{background:#b7d3f6}td.c3{background:#9ec5f4}td.c4{background:#86b6ef}td.c5{background:#6da7ec}
+td.c6{background:#5598e7}td.c7{background:#3987e5}td.c8{background:#2a78d6}td.c9{background:#256abf}td.c10{background:#1c5cab}
+td.c1,td.c2,td.c3,td.c4,td.c5,td.c6{color:#0b0b0b}
+td.c7,td.c8,td.c9,td.c10{color:#ffffff}
+@media (prefers-color-scheme: dark) {
+  td.c1{background:#0d366b}td.c2{background:#104281}td.c3{background:#184f95}td.c4{background:#1c5cab}td.c5{background:#256abf}
+  td.c6{background:#2a78d6}td.c7{background:#3987e5}td.c8{background:#5598e7}td.c9{background:#6da7ec}td.c10{background:#86b6ef}
+  td.c1,td.c2,td.c3,td.c4,td.c5,td.c6,td.c7{color:#ffffff}
+  td.c8,td.c9,td.c10{color:#0b0b0b}
+}
+td.open { outline: 1.5px dashed var(--ink-3); outline-offset: -1.5px; }
+.approx { color: var(--ink-3); }
+.legend { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; padding: 10px 8px 6px; color: var(--ink-2); font-size: 12.5px; }
+.legend .ramp { width: 120px; height: 10px; border-radius: 5px; border: 1px solid var(--ring);
+  background: linear-gradient(to right,#cde2fb,#6da7ec,#2a78d6,#1c5cab); }
+@media (prefers-color-scheme: dark) {
+  .legend .ramp { background: linear-gradient(to right,#0d366b,#256abf,#5598e7,#86b6ef); }
+}
+.legend .sep { width: 1px; height: 14px; background: var(--grid); }
+.legend .chip.open-demo { display: inline-block; width: 14px; height: 14px; border-radius: 3px;
+  outline: 1.5px dashed var(--ink-3); outline-offset: -1.5px; vertical-align: -2px; }
+.note { color: var(--ink-2); font-size: 13.5px; max-width: 760px; }
+footer { margin-top: 28px; color: var(--ink-3); font-size: 12.5px; }
+#tip { position: fixed; display: none; max-width: 280px; padding: 6px 10px; background: var(--ink); color: var(--page);
+  border-radius: 6px; font-size: 12.5px; pointer-events: none; z-index: 10; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>Lesko Help &mdash; member cohort overview</h1>
+    <p>How many members were added each day, and how quickly they actually enter the community.</p>
+    <span class="asof">Not connected yet</span>
+  </header>
+
+  <section class="card setup">
+    <h2>Waiting for the first snapshot</h2>
+    <p>This page fills itself in automatically once the daily connection to
+    Mighty Networks is switched on. One thing is needed for that:</p>
+    <ol>
+      <li>Create an API token in the Mighty Networks admin (the Headless API is already enabled for this community).</li>
+      <li>Add it to this repository as a secret named <code>MIGHTY_API_TOKEN</code> &mdash; Settings &rarr; Secrets and variables &rarr; Actions.</li>
+    </ol>
+    <p>From then on a snapshot is taken every morning and this overview rebuilds
+    itself &mdash; new data every day, no exports, no spreadsheets.</p>
+  </section>
+  <footer>Data straight from the Mighty Networks member API &middot; rebuilt daily &middot; generated 2026-08-18 12:57 UTC</footer>
+</main>
+<div id="tip" role="tooltip"></div>
+<script>
+(function () {
+  var tip = document.getElementById('tip');
+  document.addEventListener('mouseover', function (e) {
+    var el = e.target.closest('[data-tip]');
+    if (!el) { tip.style.display = 'none'; return; }
+    tip.innerHTML = el.getAttribute('data-tip');
+    tip.style.display = 'block';
+  });
+  document.addEventListener('mousemove', function (e) {
+    if (tip.style.display !== 'block') return;
+    var x = Math.min(e.clientX + 14, window.innerWidth - tip.offsetWidth - 8);
+    var y = e.clientY + 16;
+    if (y + tip.offsetHeight > window.innerHeight - 8) y = e.clientY - tip.offsetHeight - 10;
+    tip.style.left = x + 'px'; tip.style.top = y + 'px';
+  });
+})();
+</script>
+</body>
+</html>
