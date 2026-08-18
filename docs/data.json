@@ -1,25 +1,25 @@
 {
  "meta": {
-  "generated_at": "2026-08-18T16:04:10+00:00",
+  "generated_at": "2026-08-18T16:15:05+00:00",
   "as_of": "2026-08-18",
   "first_snapshot": "2026-08-18",
   "snapshot_count": 1,
-  "members_tracked": 23884,
+  "members_tracked": 23885,
   "lookback_days": 70,
   "weeks": 10,
   "entry_signal": false
  },
  "totals": {
-  "joined": 1640,
+  "joined": 1641,
   "entered": 0,
-  "not_entered": 1640
+  "not_entered": 1641
  },
  "rows": [
   {
    "date": "2026-08-18",
-   "joined": 17,
+   "joined": 18,
    "entered": 0,
-   "not_entered": 17,
+   "not_entered": 18,
    "approx": false,
    "weeks": [
     {
