@@ -67,6 +67,11 @@ Change visibility).
 | `daily-snapshot` | every morning + manual | fetch snapshot → rebuild overview → commit |
 | `probe-api-docs` | manual only | fetches Mighty's public API docs into `docs/api-reference/` (setup aid) |
 
+The connection details live in `scripts/api_config.json` (Mighty **Admin API**,
+`https://api.mn.co/admin`, Bearer token). One daily snapshot of ~30k members at
+100 per page is roughly 300 API requests per day (~9k/month) — check what your
+Mighty plan includes so the volume is no surprise.
+
 To publish the overview at a URL, enable GitHub Pages: **Settings → Pages →
 Deploy from a branch → `main` / `docs`**. The page also opens fine straight
 from the repository.

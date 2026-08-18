@@ -27,6 +27,7 @@ import re
 import sys
 import time
 import urllib.error
+import urllib.parse
 import urllib.request
 
 REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -140,20 +141,39 @@ def fetch_configured(cfg, tok):
             else:
                 break
     elif kind == "rest":
+        url = cfg["url"].replace("{page}", "1").replace("{per_page}", str(page_size))
+        logged_keys = False
         for page_no in range(1, max_pages + 1):
-            url = cfg["url"].replace("{page}", str(page_no)).replace("{per_page}", str(page_size))
             status, _, text = http(url, "GET", headers)
             if status != 200:
                 print("ERROR: %s returned HTTP %s: %s" % (url, status, text[:300]), file=sys.stderr)
                 sys.exit(1)
             payload = json.loads(text)
-            items = dig(payload, cfg["items_path"]) if cfg.get("items_path") else payload
+            items = rest_items(payload, cfg.get("items_path"))
+            if items is None:
+                print("ERROR: could not locate the member list in the response. "
+                      "Top-level keys: %s" % sorted(payload.keys() if isinstance(payload, dict) else []),
+                      file=sys.stderr)
+                sys.exit(1)
             if not items:
                 break
+            if not logged_keys and isinstance(items[0], dict):
+                print("Member object keys: %s" % sorted(items[0].keys()))
+                logged_keys = True
             for node in items:
                 rows.append(extract_row(node, cfg["node_fields"]))
-            if len(items) < page_size:
+            next_url = dig(payload, "links.next") if isinstance(payload, dict) else None
+            meta = payload.get("meta") if isinstance(payload, dict) else None
+            if next_url:
+                if not str(next_url).startswith("http"):
+                    next_url = urllib.parse.urljoin(cfg["url"], str(next_url))
+                url = next_url
+            elif meta and meta.get("total_pages") and page_no >= int(meta["total_pages"]):
                 break
+            elif len(items) < page_size:
+                break
+            else:
+                url = cfg["url"].replace("{page}", str(page_no + 1)).replace("{per_page}", str(page_size))
             time.sleep(float(cfg.get("page_delay", 0.3)))
     else:
         print("ERROR: unknown kind %r in api_config.json" % kind, file=sys.stderr)
@@ -162,10 +182,33 @@ def fetch_configured(cfg, tok):
     return rows
 
 
+def rest_items(payload, items_path):
+    """Find the list of member objects in a REST response, tolerantly."""
+    if items_path:
+        found = dig(payload, items_path)
+        if isinstance(found, list):
+            return found
+    if isinstance(payload, list):
+        return payload
+    if isinstance(payload, dict):
+        for key in ("items", "data", "members", "results"):
+            if isinstance(payload.get(key), list):
+                return payload[key]
+    return None
+
+
 def extract_row(node, node_fields):
+    """node_fields values may be a single source path or a list of candidate
+    paths - the first one present in the node wins."""
     row = {}
-    for out_name, src_path in node_fields.items():
-        row[out_name] = dig(node, src_path) if "." in src_path else node.get(src_path)
+    for out_name, src in node_fields.items():
+        candidates = src if isinstance(src, list) else [src]
+        value = None
+        for path in candidates:
+            value = dig(node, path) if "." in path else node.get(path)
+            if value is not None:
+                break
+        row[out_name] = value
     member_id = row.get("member_id")
     if isinstance(member_id, str) and member_id.startswith("gid://"):
         member_id = member_id.rsplit("/", 1)[-1]

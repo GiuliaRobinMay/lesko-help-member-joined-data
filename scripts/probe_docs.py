@@ -19,13 +19,18 @@ REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT_DIR = os.path.join(REPO_ROOT, "docs", "api-reference")
 
 START_URLS = [
-    "https://docs.mightynetworks.com/",
-    "https://faq.mightynetworks.com/hc/en-us",
+    "https://docs.mightynetworks.com/llms-full.txt",
+    "https://docs.mightynetworks.com/llms.txt",
+    "https://docs.mightynetworks.com/admin-api",
+    "https://docs.mightynetworks.com/admin-api/authentication",
+    "https://docs.mightynetworks.com/admin-api/pagination",
 ]
-KEYWORDS = ("api", "graphql", "headless", "developer", "token", "authentication",
-            "member", "export", "webhook", "zapier")
+KEYWORDS = ("admin-api", "api", "graphql", "headless", "developer", "token",
+            "authentication", "member", "export", "webhook", "network")
 ALLOWED_HOSTS = ("mightynetworks.com", "mn.co")
-MAX_PAGES = 30
+MAX_PAGES = 60
+MAX_SAVE = 1_500_000  # bytes per saved page
+MD_LINK_RE = re.compile(r"\((https?://[^)\s]+)\)")
 UA = "Mozilla/5.0 (compatible; lesko-help-cohort-setup/1.0)"
 
 LINK_RE = re.compile(r'<a[^>]+href="([^"#]+)"[^>]*>(.*?)</a>', re.I | re.S)
@@ -77,7 +82,14 @@ def main():
             continue
         seen.add(url)
         final_url, body = fetch(url)
-        text = to_text(body) if not body.startswith("FETCH ERROR") else body
+        is_plain = final_url.endswith((".txt", ".md")) or "<html" not in body[:2000].lower()
+        if body.startswith("FETCH ERROR"):
+            text = body
+        elif is_plain:
+            text = body
+        else:
+            text = to_text(body)
+        text = text[:MAX_SAVE]
         fname = slug(final_url) + ".txt"
         with open(os.path.join(OUT_DIR, fname), "w") as fh:
             fh.write("SOURCE: %s\nFETCHED: %s\n\n%s" % (final_url, time.strftime("%Y-%m-%d %H:%M UTC", time.gmtime()), text))
@@ -85,11 +97,20 @@ def main():
         print("saved %s <- %s" % (fname, final_url))
 
         if not body.startswith("FETCH ERROR"):
+            candidates = []
             for href, label in LINK_RE.findall(body):
-                target = urllib.parse.urljoin(final_url, html.unescape(href))
-                blob = (target + " " + ANYTAG_RE.sub("", label)).lower()
+                candidates.append((urllib.parse.urljoin(final_url, html.unescape(href)),
+                                   ANYTAG_RE.sub("", label)))
+            for href in MD_LINK_RE.findall(body):
+                candidates.append((urllib.parse.urljoin(final_url, href), ""))
+            for target, label in candidates:
+                blob = (target + " " + label).lower()
                 if allowed(target) and any(k in blob for k in KEYWORDS) and target not in seen:
-                    queue.append(target)
+                    # API reference pages first, help-center articles after.
+                    if "/admin-api" in target or "/headless-api" in target or "llms" in target:
+                        queue.insert(0, target)
+                    else:
+                        queue.append(target)
         time.sleep(0.5)
 
     with open(os.path.join(OUT_DIR, "INDEX.md"), "w") as fh:
