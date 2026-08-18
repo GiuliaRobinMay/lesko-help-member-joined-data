@@ -1,0 +1,364 @@
+SOURCE: https://docs.mightynetworks.com/for-hosts/admin-and-moderation/How-Do-I-View-as-a-Member
+FETCHED: 2026-08-18 12:58 UTC
+
+How Do I View As A Member? - Mighty Networks Developer
+Documentation Index
+Fetch the complete documentation index at: /llms.txt
+Use this file to discover all available pages before exploring further.
+Skip to main content
+Mighty Networks Developer home page
+Search...
+⌘ K Ask Assistant
+Search...
+Navigation
+Admin and Moderation
+How Do I View As A Member?
+For Hosts
+For Members
+API Guides
+Headless API
+Admin API
+Meet Mighty
+Watch a Full Tour of a Mighty Network
+What is Mighty Community?
+Who Founded Mighty Networks?
+Which Mighty Network Plan is Right For You?
+What’s Included in the Mighty Networks Explore Plan?
+What’s Included in the Mighty Networks Launch Plan?
+What's Included in the Mighty Networks Scale Plan?
+What’s Included in the Mighty Networks Growth Plan?
+What is Mighty Pro?
+Does Mighty Networks Offer a Free Trial?
+What Kind of Support Does Mighty Networks Offer?
+Latest Product Updates
+Product Updates Archive
+Legacy Plans
+Setting Up Your Network
+How Do I Set Up My Mighty Network?
+How Do I Get Help?
+How Do I Chat with Cohost?
+What is the People Magic GPT?
+What is Community Design™?
+How Do I Set Up the Basics for My Network?
+How Do I Edit My Mighty Profile?
+How Do I Set Up My Network Branding?
+How Do I Set Up My Space Branding?
+How Do I Create and Manage My Collections?
+How Do I Create and Manage My Spaces?
+What Kinds of Space Templates are Available?
+How Do I Add and Manage Features in a Space?
+How Do I Set the Privacy Settings for My Network?
+How Do I Set the Privacy Settings for a Space?
+What is the Feed and How Does It Work?
+What are Global Features?
+Can I Customize the Navigation in My Mighty Network?
+Can I Customize the Landing Space for My Members?
+Does Mighty Networks Have an App?
+What Are Promoted Spaces?
+How Do I Set Up a Welcome Checklist?
+How Do I Find the About Page for My Space or Mighty Network?
+What's The Discovery Feature?
+What Do Member Profiles Include in My Mighty Network?
+Marketing Features
+How Can I Customize My Mighty Networks Landing Page?
+What AI Features Does Mighty Networks Have?
+How Do I Segment My Members with Audiences?
+How Do I Set Up Promotional Banners in My Network?
+What is the People Explorer?
+Does Mighty Networks Have Built-In Affiliates?
+Can I Integrate My Mighty Network with Rootabl?
+Can I Integrate My Mighty Network With Rewardful?
+How Do I Create an Email Newsletter?
+Can I Add Marketing Pixels to My Mighty Network?
+How Can I Easily Re Engage My Members?
+How Do I Use the Mighty Networks Ambassador Program?
+How Does SEO Work for My Mighty Network?
+Does Mighty Networks Have an Affiliate Program?
+Payments and Access
+How Do I Create a Plan?
+How Do I Choose Where Plans Appear?
+What is a Full vs. Limited Membership?
+Can I Set Up Required Questions and Approval for Access?
+How Do I Manage My Plans?
+How Do I Manage Spaces in a Plan?
+How Do I Set Up Promo Codes?
+How Do I Set Up Installment Plans and Subscription Intervals?
+How Do I Create a Subscription Group?
+Can I Have a Plan with No Payment Gate?
+Can I Take Payments Off Platform?
+Can I Charge in Multiple Currencies?
+What Currencies Can I Charge in On Mighty Networks?
+Can I Offer a Free Trial on a Mighty Network?
+How Do Members Purchase Access?
+How Do Members Move Between Plans?
+How Do I Create a Waitlist?
+Can I Change My Prices?
+How Do I Gate Access to All or Parts of My Mighty Network?
+How Much Do People Charge, on Average, on Mighty Networks?
+How Do I Connect and Disconnect Stripe to My Mighty Network?
+How Do I Get Paid?
+How Do Taxes Work With My Mighty Network?
+What Happens When a Member Cancels or Requests a Refund
+What Happens When Members Are Past Due on Their Payments?
+How Can I Move Paying Members from Another Platform to Mighty Networks?
+(Pro) How to Remove a Plan From Sale on App Store Connect
+How Do I Switch My Space Between Plans, Invite-Only, and Anyone Can Join?
+How Do I Switch My Network Between Plans, Invite-Only, and Anyone Can Join?
+How Do I Set a Default Plan for Invites? [Beta]
+How Do I Invite People to My Mighty Network?
+How Do I Invite Directly to a Plan?
+How Do I Invite Members to a Space?
+How Do I Give Access to Spaces and Not the Network?
+How Do I Directly Add Existing Members to My Network or Spaces?
+How Do I Manage My Leads?
+Does Mighty Networks Charge a Transaction Fee?
+Can I Set Up Age Verification In my Mighty Network?
+How Do I Create a Token-Gated Plan?
+How Do I Manage Members’ Access to Spaces and the Network?
+How Do I Set Up a Space That Full Members Can Join but Limited Members Must Pay For?
+Courses
+How Do I Build a Course in My Mighty Network?
+How Do I Organize My Course With Overviews, Sections, and Lessons?
+How Do I Add a Quiz to My Course?
+What Kind of Media Can I Upload Into a Course?
+How Do I Track Member Completion and Progress?
+How Do I Generate Completion Certificates?
+How Do I Make a Habit Tracker for My Members?
+Events and Livestream
+How Do I Create Events in My Mighty Network?
+How Do I Create Zoom Events on Mighty Networks?
+Can I Create Recurring Events in My Mighty Network?
+How Do I Livestream in My Network?
+How Do I Post a Livestream Replay?
+Can I Have Multiple Speakers During a Livestream?
+How Do I Schedule a Livestream Event?
+How Do I Add Special Effects to My Livestream?
+How Do I Manage RSVPs and Event Attendees?
+Can I Charge for Events on a Mighty Network?
+Is There a Calendar View for Events?
+How Do I Create a Text Chat Event?
+How Do I Upload Native Videos to My Mighty Network?
+How Do I Troubleshoot Video Upload Issues in a Mighty Network?
+Automations
+What Automations Do I Get on My Plan?
+How Can I Set Up Automations in My Mighty Network?
+Gamification
+How Does Gamification Work in My Mighty Network?
+How Do I Add Custom Badges and Tags for My Members?
+How Do I Add Custom Fields?
+Admin and Moderation
+How Do I Manage My Admin Settings?
+How Do I View and Manage My Members?
+How Do I View As A Member?
+What is the Member Detail Page?
+What Permissions Do Network Hosts and Network Moderators Have?
+What Permissions Do Space Hosts and Space Moderators Have?
+What Content and Moderation Tools Do I Have in My Mighty Network?
+How Do Members Block or Report Others?
+How Does Search Work?
+Can I Use My Own Web Domain with Mighty Networks?
+Can I Change the Default mn.co Domain?
+Can I Customize My Email Domain?
+Can I Customize the Names of Hosts, Moderators and Members?
+How Do I Customize My Member Support?
+How Do I Reset My Password?
+How Do I Downgrade or Cancel My Plan?
+Analytics and Integrations
+What is Mighty Insights™?
+Can I Download Reports From My Mighty Insights™?
+Does Mighty Networks Integrate with Google Analytics?
+Does Mighty Networks have an API?
+Does Mighty Networks Support MCP Connections?
+Can I Use Zapier with Mighty Networks?
+How Do I Enable SSO for My Mighty Network?
+Can I Download My Member Data?
+Do I Own My Data and Members on My Mighty Network?
+Does Mighty Networks have Language Localization?
+Vibe Coding on Mighty
+How Do I Embed a Shopify Buy Button in My Mighty Network?
+Content and Messaging
+How Do I Create an Article in My Mighty Network?
+How Do I Create a Post in My Mighty Network?
+Can I Use External Embeds?
+Can I Use GIFs in My Mighty Network?
+How Do I Create Polls & Questions In My Mighty Network?
+How Do I Create and Manage Featured and Welcome Sections?
+What's An Icebreaker Question and How Do I Set One Up in My Mighty Network?
+How Do Introductions Posts Work?
+How Do I Use the Infinite Question Engine?
+How Does Chat Work in a Mighty Network?
+How Do I Manage My Chat Messages?
+How Do I Welcome New Members?
+How Do I Message Members in a Space?
+How Do I Message Members in My Network?
+How Do Hashtags Work in My Mighty Network?
+What Notifications Do My Members Get?
+How Do I Move Content Between Spaces?
+What Notifications Will I Get as a Host?
+What's the Daily Digest?
+Can I View My Mighty Network in Dark Mode?
+How Do Storage, Engagement Boosts and Livestreaming Limits Work?
+Additional Embeds
+How Can I Make My Mighty Network More Accessible to the Visually Impaired?
+How Do I Enable Desktop Notifications?
+How Does the Delphi Embed Work?
+Privacy, Security & Accessibility
+Can I Add My Own Custom Terms of Use to My Mighty Network?
+How Do I Enable Multi-Factor Authentication and Email Verification?
+What's Mighty Networks' Privacy Policy?
+How Does Mighty Networks Approach Accessibility?
+Data Security at Mighty Networks
+The UK Online Safety Act
+Is Mighty Networks GDPR and CCPA Compliant?
+The EU Consumer Rights Directive — Cancellation Rights
+On this page
+Why Use Member View?
+View as a Specific Member
+What You Can and Can’t Do in the Specific Member View You can:
+You can’t:
+View as a Plan Member Simulated plan members:
+How to View as a Plan Member
+View a Plan Join Flow How to View as Plan Join Flow
+Configure Your Join Flow Preview Member type
+Join Flow Starting point
+Known Limitations
+Admin and Moderation
+How Do I View As A Member?
+Copy page Copy page
+Copy page Copy page
+Member view (available on the Launch plan and up ) lets you preview your Mighty Network from different member perspectives so you can confirm what people see and access.
+Member view consists of three preview experiences:
+View as a specific member
+View as a plan member
+View a plan join flow
+These tools help you understand how access, plans, and onboarding appear to members across your Network.
+Member view is available on web and is designed for Network Hosts .
+​
+Why Use Member View?
+Member view helps you verify that your Network experience works exactly as intended.
+You can use it to:
+Confirm what members can access based on their plan
+Troubleshoot questions about gated content
+Check visibility across Spaces and Collections
+Preview promotional banners or targeted content
+Validate plan setup before sharing a plan
+Resolve member support questions faster
+View as specific member and view as plan member are read-only , which protects member privacy while letting you explore the Network from their perspective.
+​
+View as a Specific Member
+To preview your Network as a member:
+Go to Admin > Members
+Select the member you want to view as.
+Click the **three dot menu > **“View as [Member Name, e.g., Bob]”.
+You can also find this three dot menu on:
+The member detail page
+Member profiles
+When you view as the member, you will see a bar at the top of your screen.
+Selecting the dropdown will allow you to switch between available members:
+When you’re finished, click “Exit” in the upper right corner to return to your account.
+Important note: If you are logged into a different account on the same browser (but a different tab), it will disrupt the member view experience. We recommend opening up a new browser window before viewing as a member.
+​
+What You Can and Can’t Do in the Specific Member View
+​
+You can:
+Navigate your Network as that member
+View Spaces, Collections, and content available to them
+Confirm plan-based access and visibility
+Confirm notification settings
+​
+You can’t:
+Send messages or access direct messages
+Post, comment, react, or edit content
+Make purchases or join spaces
+Change account settings
+View sensitive information such as payment details
+View as Network moderators
+View as members who haven’t accepted our terms of use (see screenshot)
+​
+View as a Plan Member
+This option lets you preview your Network as a member who has joined a specific plan .
+Mighty generates a simulated plan member , which shows exactly what someone on that plan would experience after joining.
+This is useful when you want to confirm:
+which Spaces the plan unlocks
+how gated content appears
+what members can access after purchase
+Like the specific member view, this experience is read-only .
+​
+Simulated plan members:
+Do not appear in your Network
+Do not trigger automations
+Do not appear in analytics or queries
+Are automatically removed after use
+​
+How to View as a Plan Member
+Go to Admin > Plans and Access > Plans .
+Find the plan you want to preview.
+Select the three-dot menu .
+Select View as Plan Member .
+You can also access this option from the plan detail page .
+While viewing the preview, use the dropdown at the top of the screen to:
+switch between plans
+switch to viewing your Network as a specific member
+​
+View a Plan Join Flow
+This option lets you preview the full join experience for a plan.
+You can simulate how someone joins a plan, including:
+free plans
+paid plans
+gated plans
+plans that grant access to Spaces or the Network.
+​
+How to View as Plan Join Flow
+Go to Admin > Plans and Access > Plans .
+Select the three-dot menu next to the plan.
+Select View as Plan Join Flow .
+You can also access this option from the plan detail page .
+Note: You must first generate a share link for the plan.
+​
+Configure Your Join Flow Preview
+When starting the preview, select:
+​
+Member type
+New member
+Start as a Visitor and experience the full sign-up flow
+Full member
+Start as an existing member of your Network and experience purchasing this plan.
+Note: Viewing as a full member includes Network access, even if the plan only includes a Space.
+To test a limited member experience , select:
+Go to a plan that grants access only to a Space or Spaces
+View As Plan Member
+Select:
+New member
+Whatever checkout starting point you would like
+​
+Join Flow Starting point
+You can preview the flow from different steps:
+Plan Landing Page
+Create Account (Full members go directly to gates: screening questions, approvals or payment)
+Sign In (Full members go directly to gates: screening questions, approvals or payment)
+During the preview, you can select Skip this Step to move forward in the flow.
+Additionally, in the plan detail page you will see quick links beneath each of your share links so you can view the join flow as a new or a Full Member.
+​
+Known Limitations
+Some actions aren’t available during join flow preview.
+These include:
+Entering promo codes
+Payment form interaction
+Signing out
+Switching plans mid-flow
+Email verification
+Multi-Factor Authentication
+Logging in with Social Sign On (google, facebook, etc.)
+Signing in
+Logging in with single sign-on (SSO)*
+Exiting the plan flow\
+For Networks using SSO , you’ll see a screen indicating where SSO login appears during account creation.
+For Networks with GDPR requirements , you’ll see the Terms of Use screen that members must accept during signup
+How Do I View and Manage My Members?
+What is the Member Detail Page?
+⌘ I
+x linkedin instagram
+Powered by This documentation is built and hosted on Mintlify, a developer documentation platform
+Assistant
+Responses are generated using AI and may contain mistakes.
+Contact support

@@ -1,0 +1,71 @@
+SOURCE: https://docs.mightynetworks.com/for-members/explore-mighty/what-is-a-mighty-network
+FETCHED: 2026-08-18 12:58 UTC
+
+What is a Mighty Network? - Mighty Networks Developer
+Documentation Index
+Fetch the complete documentation index at: /llms.txt
+Use this file to discover all available pages before exploring further.
+Skip to main content
+Mighty Networks Developer home page
+Search...
+⌘ K Ask Assistant
+Search...
+Navigation
+Explore Mighty
+What is a Mighty Network?
+For Hosts
+For Members
+API Guides
+Headless API
+Admin API
+Explore Mighty
+What is a Mighty Network?
+How Do I Join a Mighty Network?
+Where Can I Get Help?
+Can I Access My Mighty Network from an App?
+I Want To Become a Host. How Do I Do That?
+Does Mighty Networks Sell My Data?
+Engage and Interact
+How Do I Post in a Mighty Network?
+How Do I Use Hashtags in My Mighty Network?
+How Do I RSVP and Attend Events as a Member?
+How Does the Feed Work?
+How Do I Create Events as a Member?
+My Host is Going Live—Where Do I Watch Them?
+How Do Streaks, Recognitions and the Leaderboard Work?
+How Do I Set My Preferred Language?
+How Do I Chat With Other Members?
+Can I Connect My AI Assistant to My Network?
+How Do I Join a Waitlist?
+Account and Purchases
+How Do I Manage My Personal Settings?
+How Do I Set or Reset My Password?
+How Do I Update My Billing Information?
+How Do I Manage My Membership or Space Purchases?
+How Do I Purchase a Token-Gated Plan?
+How Do I Leave a Mighty Network?
+Why Can't I Log In to My Mighty Network?
+What Notifications Will I Get as a Member?
+How Can I Get Technical Support as a Member?
+Browser and Device Support
+On this page
+Ready to build your own community?
+Explore Mighty
+What is a Mighty Network?
+Copy page Copy page
+Copy page Copy page
+A Mighty Network is a community first. You can add courses, chat, memberships, Spaces, events, and livestreaming—it all depends on the world your Host wants to build with you.
+One of the best examples (we’re biased) is our own Mighty Network, Mighty Community .
+Mighty Community is the world’s largest free community for people building communities, memberships, and courses. It’s also a teaching community where we model how to build a thriving community and how to use key Mighty features like Livestreams , Courses , Spaces , and Events .
+It’s free to join and explore. And it’s just one example—there are hundreds of thousands of successful Mighty Networks.
+You can explore more stories on our website to see how others are building with Mighty. You’re in great company as a member and joining millions of others. If you want the story behind our philosophy and what we’re building, visit our website .
+​
+Ready to build your own community?
+Take a look at “ I Want to Become a Host. How Do I Do That?”
+How Do I Join a Mighty Network?
+⌘ I
+x linkedin instagram
+Powered by This documentation is built and hosted on Mintlify, a developer documentation platform
+Assistant
+Responses are generated using AI and may contain mistakes.
+Contact support

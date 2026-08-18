@@ -1,0 +1,278 @@
+SOURCE: https://docs.mightynetworks.com/for-hosts/payments-and-access/how-do-i-create-a-token-gated-plan
+FETCHED: 2026-08-18 12:58 UTC
+
+How Do I Create a Token-Gated Plan? - Mighty Networks Developer
+Documentation Index
+Fetch the complete documentation index at: /llms.txt
+Use this file to discover all available pages before exploring further.
+Skip to main content
+Mighty Networks Developer home page
+Search...
+⌘ K Ask Assistant
+Search...
+Navigation
+Payments and Access
+How Do I Create a Token-Gated Plan?
+For Hosts
+For Members
+API Guides
+Headless API
+Admin API
+Meet Mighty
+Watch a Full Tour of a Mighty Network
+What is Mighty Community?
+Who Founded Mighty Networks?
+Which Mighty Network Plan is Right For You?
+What’s Included in the Mighty Networks Explore Plan?
+What’s Included in the Mighty Networks Launch Plan?
+What's Included in the Mighty Networks Scale Plan?
+What’s Included in the Mighty Networks Growth Plan?
+What is Mighty Pro?
+Does Mighty Networks Offer a Free Trial?
+What Kind of Support Does Mighty Networks Offer?
+Latest Product Updates
+Product Updates Archive
+Legacy Plans
+Setting Up Your Network
+How Do I Set Up My Mighty Network?
+How Do I Get Help?
+How Do I Chat with Cohost?
+What is the People Magic GPT?
+What is Community Design™?
+How Do I Set Up the Basics for My Network?
+How Do I Edit My Mighty Profile?
+How Do I Set Up My Network Branding?
+How Do I Set Up My Space Branding?
+How Do I Create and Manage My Collections?
+How Do I Create and Manage My Spaces?
+What Kinds of Space Templates are Available?
+How Do I Add and Manage Features in a Space?
+How Do I Set the Privacy Settings for My Network?
+How Do I Set the Privacy Settings for a Space?
+What is the Feed and How Does It Work?
+What are Global Features?
+Can I Customize the Navigation in My Mighty Network?
+Can I Customize the Landing Space for My Members?
+Does Mighty Networks Have an App?
+What Are Promoted Spaces?
+How Do I Set Up a Welcome Checklist?
+How Do I Find the About Page for My Space or Mighty Network?
+What's The Discovery Feature?
+What Do Member Profiles Include in My Mighty Network?
+Marketing Features
+How Can I Customize My Mighty Networks Landing Page?
+What AI Features Does Mighty Networks Have?
+How Do I Segment My Members with Audiences?
+How Do I Set Up Promotional Banners in My Network?
+What is the People Explorer?
+Does Mighty Networks Have Built-In Affiliates?
+Can I Integrate My Mighty Network with Rootabl?
+Can I Integrate My Mighty Network With Rewardful?
+How Do I Create an Email Newsletter?
+Can I Add Marketing Pixels to My Mighty Network?
+How Can I Easily Re Engage My Members?
+How Do I Use the Mighty Networks Ambassador Program?
+How Does SEO Work for My Mighty Network?
+Does Mighty Networks Have an Affiliate Program?
+Payments and Access
+How Do I Create a Plan?
+How Do I Choose Where Plans Appear?
+What is a Full vs. Limited Membership?
+Can I Set Up Required Questions and Approval for Access?
+How Do I Manage My Plans?
+How Do I Manage Spaces in a Plan?
+How Do I Set Up Promo Codes?
+How Do I Set Up Installment Plans and Subscription Intervals?
+How Do I Create a Subscription Group?
+Can I Have a Plan with No Payment Gate?
+Can I Take Payments Off Platform?
+Can I Charge in Multiple Currencies?
+What Currencies Can I Charge in On Mighty Networks?
+Can I Offer a Free Trial on a Mighty Network?
+How Do Members Purchase Access?
+How Do Members Move Between Plans?
+How Do I Create a Waitlist?
+Can I Change My Prices?
+How Do I Gate Access to All or Parts of My Mighty Network?
+How Much Do People Charge, on Average, on Mighty Networks?
+How Do I Connect and Disconnect Stripe to My Mighty Network?
+How Do I Get Paid?
+How Do Taxes Work With My Mighty Network?
+What Happens When a Member Cancels or Requests a Refund
+What Happens When Members Are Past Due on Their Payments?
+How Can I Move Paying Members from Another Platform to Mighty Networks?
+(Pro) How to Remove a Plan From Sale on App Store Connect
+How Do I Switch My Space Between Plans, Invite-Only, and Anyone Can Join?
+How Do I Switch My Network Between Plans, Invite-Only, and Anyone Can Join?
+How Do I Set a Default Plan for Invites? [Beta]
+How Do I Invite People to My Mighty Network?
+How Do I Invite Directly to a Plan?
+How Do I Invite Members to a Space?
+How Do I Give Access to Spaces and Not the Network?
+How Do I Directly Add Existing Members to My Network or Spaces?
+How Do I Manage My Leads?
+Does Mighty Networks Charge a Transaction Fee?
+Can I Set Up Age Verification In my Mighty Network?
+How Do I Create a Token-Gated Plan?
+How Do I Manage Members’ Access to Spaces and the Network?
+How Do I Set Up a Space That Full Members Can Join but Limited Members Must Pay For?
+Courses
+How Do I Build a Course in My Mighty Network?
+How Do I Organize My Course With Overviews, Sections, and Lessons?
+How Do I Add a Quiz to My Course?
+What Kind of Media Can I Upload Into a Course?
+How Do I Track Member Completion and Progress?
+How Do I Generate Completion Certificates?
+How Do I Make a Habit Tracker for My Members?
+Events and Livestream
+How Do I Create Events in My Mighty Network?
+How Do I Create Zoom Events on Mighty Networks?
+Can I Create Recurring Events in My Mighty Network?
+How Do I Livestream in My Network?
+How Do I Post a Livestream Replay?
+Can I Have Multiple Speakers During a Livestream?
+How Do I Schedule a Livestream Event?
+How Do I Add Special Effects to My Livestream?
+How Do I Manage RSVPs and Event Attendees?
+Can I Charge for Events on a Mighty Network?
+Is There a Calendar View for Events?
+How Do I Create a Text Chat Event?
+How Do I Upload Native Videos to My Mighty Network?
+How Do I Troubleshoot Video Upload Issues in a Mighty Network?
+Automations
+What Automations Do I Get on My Plan?
+How Can I Set Up Automations in My Mighty Network?
+Gamification
+How Does Gamification Work in My Mighty Network?
+How Do I Add Custom Badges and Tags for My Members?
+How Do I Add Custom Fields?
+Admin and Moderation
+How Do I Manage My Admin Settings?
+How Do I View and Manage My Members?
+How Do I View As A Member?
+What is the Member Detail Page?
+What Permissions Do Network Hosts and Network Moderators Have?
+What Permissions Do Space Hosts and Space Moderators Have?
+What Content and Moderation Tools Do I Have in My Mighty Network?
+How Do Members Block or Report Others?
+How Does Search Work?
+Can I Use My Own Web Domain with Mighty Networks?
+Can I Change the Default mn.co Domain?
+Can I Customize My Email Domain?
+Can I Customize the Names of Hosts, Moderators and Members?
+How Do I Customize My Member Support?
+How Do I Reset My Password?
+How Do I Downgrade or Cancel My Plan?
+Analytics and Integrations
+What is Mighty Insights™?
+Can I Download Reports From My Mighty Insights™?
+Does Mighty Networks Integrate with Google Analytics?
+Does Mighty Networks have an API?
+Does Mighty Networks Support MCP Connections?
+Can I Use Zapier with Mighty Networks?
+How Do I Enable SSO for My Mighty Network?
+Can I Download My Member Data?
+Do I Own My Data and Members on My Mighty Network?
+Does Mighty Networks have Language Localization?
+Vibe Coding on Mighty
+How Do I Embed a Shopify Buy Button in My Mighty Network?
+Content and Messaging
+How Do I Create an Article in My Mighty Network?
+How Do I Create a Post in My Mighty Network?
+Can I Use External Embeds?
+Can I Use GIFs in My Mighty Network?
+How Do I Create Polls & Questions In My Mighty Network?
+How Do I Create and Manage Featured and Welcome Sections?
+What's An Icebreaker Question and How Do I Set One Up in My Mighty Network?
+How Do Introductions Posts Work?
+How Do I Use the Infinite Question Engine?
+How Does Chat Work in a Mighty Network?
+How Do I Manage My Chat Messages?
+How Do I Welcome New Members?
+How Do I Message Members in a Space?
+How Do I Message Members in My Network?
+How Do Hashtags Work in My Mighty Network?
+What Notifications Do My Members Get?
+How Do I Move Content Between Spaces?
+What Notifications Will I Get as a Host?
+What's the Daily Digest?
+Can I View My Mighty Network in Dark Mode?
+How Do Storage, Engagement Boosts and Livestreaming Limits Work?
+Additional Embeds
+How Can I Make My Mighty Network More Accessible to the Visually Impaired?
+How Do I Enable Desktop Notifications?
+How Does the Delphi Embed Work?
+Privacy, Security & Accessibility
+Can I Add My Own Custom Terms of Use to My Mighty Network?
+How Do I Enable Multi-Factor Authentication and Email Verification?
+What's Mighty Networks' Privacy Policy?
+How Does Mighty Networks Approach Accessibility?
+Data Security at Mighty Networks
+The UK Online Safety Act
+Is Mighty Networks GDPR and CCPA Compliant?
+The EU Consumer Rights Directive — Cancellation Rights
+On this page
+Why You’d Use Token-Gated Plans
+How to Create a Token-Gated Plan Token Type
+Chain
+Token
+Minimum Amount
+Token ID (NFTs only)
+Previewing Your Token-Gated Plan
+Managing Token-Gated Plans and Members
+Payments and Access
+How Do I Create a Token-Gated Plan?
+Copy page Copy page
+Copy page Copy page
+Token-Gated plans let you gate access to your Mighty Network, a Space, or a bundle using a Web3 token instead of a traditional payment.
+A plan can use Stripe payments or token-gating , but not both at the same time.
+If you want to offer both options, you can create two separate plans that unlock the same Network, Space, or bundle.
+​
+Why You’d Use Token-Gated Plans
+Token-gating lets you verify whether someone holds a specific token, NFT, or minimum token amount before joining. This is useful if you’re running an NFT community, offering exclusive access to token holders, or validating identity or ownership via blockchain.
+​
+How to Create a Token-Gated Plan
+Go to Admin > Plans > Plan List .
+Select Create Plan .
+When you reach the Gate section, select Token-Gating .
+Continue to the Configure panel to set up your requirements.
+From the Configure panel, you can set the following:
+​
+Token Type
+Select the token type you want to use. We currently support:
+ERC-20 (cryptocurrency)
+ERC-721 (NFTs)
+ERC-1155 (NFTs)
+​
+Chain
+Choose the blockchain network. Today we support Ethereum Mainnet . Additional chains will be added in the future.
+If needed, you can also select an optional Layer 2 protocol (currently Immutable X ).
+​
+Token
+Choose an existing token from the dropdown, or paste the token’s Contract Address directly into the field.
+​
+Minimum Amount
+Set the minimum amount required in a member’s wallet.
+For an NFT, enter 1 to confirm ownership of a specific asset.
+For ERC-20 tokens, enter the required token amount.
+​
+Token ID (NFTs only)
+If you selected ERC-721 or ERC-1155 , you can optionally enter a Token ID when you want to require a specific NFT.
+If an NFT has multiple copies (each with its own Token ID) and you want to allow all copies, leave this field blank and enter only the contract address above.
+If you are configuring based on an NFT listed on OpenSea, you’ll find the Contract Address and Token ID in the Details section of the NFT’s OpenSea listing.
+​
+Previewing Your Token-Gated Plan
+After configuring your settings, you’ll move to the Preview step. Here you can view what members will see before joining and return to earlier steps to make changes.
+​
+Managing Token-Gated Plans and Members
+Token-Gated plans appear alongside all other plans in your Plan Details page.
+Important: Members on Token-Gated plans cannot currently be moved to another plan.
+To learn how members purchase Token-Gated plans, review our related article .
+Can I Set Up Age Verification In my Mighty Network?
+How Do I Manage Members’ Access to Spaces and the Network?
+⌘ I
+x linkedin instagram
+Powered by This documentation is built and hosted on Mintlify, a developer documentation platform
+Assistant
+Responses are generated using AI and may contain mistakes.
+Contact support

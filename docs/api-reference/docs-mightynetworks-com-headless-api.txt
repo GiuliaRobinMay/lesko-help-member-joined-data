@@ -1,0 +1,1398 @@
+SOURCE: https://docs.mightynetworks.com/headless-api
+FETCHED: 2026-08-18 12:58 UTC
+
+Headless API - Mighty Networks Developer
+Documentation Index
+Fetch the complete documentation index at: /llms.txt
+Use this file to discover all available pages before exploring further.
+Skip to main content
+Mighty Networks Developer home page
+Search...
+⌘ K Ask Assistant
+Search...
+Navigation
+Overview
+Headless API
+For Hosts
+For Members
+API Guides
+Headless API
+Admin API
+Overview
+Headless API
+GraphQL Schema Explorer
+Changelog
+Authentication
+OAuth Applications
+Queries
+QRY
+billingPlan
+QRY
+me
+QRY
+network
+QRY
+node
+QRY
+nodes
+Mutations
+MUT
+abortUploadSession
+MUT
+archiveConversation
+MUT
+archivePaymentPlan
+MUT
+banMember
+MUT
+cancelPaymentSubscription
+MUT
+completeQuizAttempt
+MUT
+completeUploadSession
+MUT
+createAmbassadorAnnouncement
+MUT
+createAnnouncement
+MUT
+createAnswerCheer
+MUT
+createAutomationRule
+MUT
+createBadge
+MUT
+createBadgeMemberships
+MUT
+createBlocklistEntry
+MUT
+createChatReport
+MUT
+createComment
+MUT
+createCommentReport
+MUT
+createConversation
+MUT
+createConversationBookmark
+MUT
+createConversationMemberships
+MUT
+createCourse
+MUT
+createCoursework
+MUT
+createCustomDomain
+MUT
+createCustomField
+MUT
+createCustomFieldOption
+MUT
+createCustomOnboardingPointer
+MUT
+createDefaultGiftDefinitions
+MUT
+createDirectMessage
+MUT
+createDirectMessageReaction
+MUT
+createEvent
+MUT
+createEventAnnouncement
+MUT
+createGift
+MUT
+createGiftDefinition
+MUT
+createInviteRequest
+MUT
+createInvites
+MUT
+createMarketingBanner
+MUT
+createMemberBlock
+MUT
+createMemberFollow
+MUT
+createMemberReport
+MUT
+createMessage
+MUT
+createMessageReaction
+MUT
+createPaymentCoupon
+MUT
+createPaymentPlan
+MUT
+createPaymentPlanAnnouncement
+MUT
+createPaymentSubscriptionGroup
+MUT
+createPin
+MUT
+createPoll
+MUT
+createPollAnswer
+MUT
+createPost
+MUT
+createPostMute
+MUT
+createPostReport
+MUT
+createProfileQuestionAnswers
+MUT
+createPromptMute
+MUT
+createQuizAnswer
+MUT
+createReaction
+MUT
+createRsvp
+MUT
+createSavedPost
+MUT
+createSpace
+MUT
+createSpaceBlacklist
+MUT
+createSpaceLink
+MUT
+createSpaceMemberships
+MUT
+createSpacesCollection
+MUT
+createTag
+MUT
+createTagMemberships
+MUT
+createUploadSession
+MUT
+createWaitlist
+MUT
+createWebhookCallback
+MUT
+deleteAnswerCheer
+MUT
+deleteAutomationRule
+MUT
+deleteBadge
+MUT
+deleteBadgeMemberships
+MUT
+deleteBlocklistEntry
+MUT
+deleteChatReport
+MUT
+deleteComment
+MUT
+deleteCommentReport
+MUT
+deleteConversationBookmark
+MUT
+deleteConversationMemberships
+MUT
+deleteCourse
+MUT
+deleteCoursework
+MUT
+deleteCustomDomain
+MUT
+deleteCustomField
+MUT
+deleteCustomFieldAnswer
+MUT
+deleteCustomFieldOption
+MUT
+deleteCustomOnboardingPointer
+MUT
+deleteDirectMessage
+MUT
+deleteDirectMessageReaction
+MUT
+deleteEvent
+MUT
+deleteEventInstance
+MUT
+deleteEventRecurrenceException
+MUT
+deleteGiftDefinition
+MUT
+deleteMarketingBanner
+MUT
+deleteMember
+MUT
+deleteMemberBlock
+MUT
+deleteMemberFollow
+MUT
+deleteMessage
+MUT
+deleteMessageReaction
+MUT
+deleteNetworkMembership
+MUT
+deletePaymentSubscriptionGroup
+MUT
+deletePin
+MUT
+deletePost
+MUT
+deletePostMute
+MUT
+deletePostReport
+MUT
+deletePromptMute
+MUT
+deleteReaction
+MUT
+deleteRsvp
+MUT
+deleteSavedPost
+MUT
+deleteSpace
+MUT
+deleteSpaceBlacklist
+MUT
+deleteSpaceLink
+MUT
+deleteSpaceMembership
+MUT
+deleteSpacesCollection
+MUT
+deleteTag
+MUT
+deleteTagMemberships
+MUT
+deleteWaitlist
+MUT
+deleteWebhookCallback
+MUT
+leaveConversation
+MUT
+markAllConversationsRead
+MUT
+markConversationRead
+MUT
+markDirectMessageRead
+MUT
+moveSpaceToCollection
+MUT
+publishCoursework
+MUT
+publishCustomDomain
+MUT
+publishPaymentPlan
+MUT
+reorderCoursework
+MUT
+reorderGalleryGroup
+MUT
+reorderGiftDefinition
+MUT
+reorderPin
+MUT
+reorderSpace
+MUT
+reorderSpacesCollection
+MUT
+resendInvite
+MUT
+revokeInvite
+MUT
+unpublishCoursework
+MUT
+unpublishPaymentPlan
+MUT
+updateAutomationRule
+MUT
+updateBadge
+MUT
+updateComment
+MUT
+updateConversation
+MUT
+updateCoursework
+MUT
+updateCourseworkProgress
+MUT
+updateCustomField
+MUT
+updateCustomFieldAnswer
+MUT
+updateCustomFieldOption
+MUT
+updateCustomOnboardingPointer
+MUT
+updateEvent
+MUT
+updateEventInstance
+MUT
+updateGalleryGroup
+MUT
+updateGalleryGroups
+MUT
+updateGiftDefinition
+MUT
+updateInviteRequest
+MUT
+updateInviteRequests
+MUT
+updateMarketingBanner
+MUT
+updateMember
+MUT
+updateMemberReports
+MUT
+updateMembership
+MUT
+updateNetwork
+MUT
+updateNetworkImage
+MUT
+updateNetworkLandingSpace
+MUT
+updateNetworkSubdomain
+MUT
+updateNetworkTheme
+MUT
+updateNotification
+MUT
+updateNotificationSetting
+MUT
+updatePaymentCoupon
+MUT
+updatePaymentPlan
+MUT
+updatePaymentPlanProfileQuestions
+MUT
+updatePaymentSubscriptionGroup
+MUT
+updatePoll
+MUT
+updatePost
+MUT
+updateRsvp
+MUT
+updateSpace
+MUT
+updateSpaceImage
+MUT
+updateSpaceLink
+MUT
+updateSpaceProfileQuestions
+MUT
+updateSpacesCollection
+MUT
+updateTag
+MUT
+updateVideoProgress
+MUT
+updateWaitlist
+MUT
+updateWebhookCallback
+MUT
+voidPurchase
+Types
+AbortUploadSessionInput INPUT
+AbortUploadSessionPayload OBJECT
+AbuseReport OBJECT
+AbuseReportConnection OBJECT
+AbuseReportContext UNION
+AbuseReportContextType ENUM
+AbuseReportEdge OBJECT
+AbuseReportType ENUM
+AmbassadorLevelCount OBJECT
+AmbassadorStats OBJECT
+Announcement OBJECT
+AnnouncementConnection OBJECT
+AnnouncementEdge OBJECT
+AnnouncementPreview OBJECT
+ArchiveConversationInput INPUT
+ArchiveConversationPayload OBJECT
+ArchivePaymentPlanInput INPUT
+ArchivePaymentPlanPayload OBJECT
+Artifact OBJECT
+Asset OBJECT
+AssetConnection OBJECT
+AssetEdge OBJECT
+AutomationRule OBJECT
+AutomationRuleAction OBJECT
+AutomationRuleActionInput INPUT
+AutomationRuleActionType ENUM
+AutomationRuleConnection OBJECT
+AutomationRuleEdge OBJECT
+AutomationRuleFilter OBJECT
+AutomationRuleFilterInput INPUT
+AutomationRuleLogEntry OBJECT
+AutomationRuleScheduleKind ENUM
+AutomationRuleSortField ENUM
+AutomationRuleStatus ENUM
+AutomationRuleTarget UNION
+AutomationRuleTargetType ENUM
+AutomationRuleTrigger ENUM
+Badge OBJECT
+BadgeConnection OBJECT
+BadgeEdge OBJECT
+BadgeSort ENUM
+BanMemberInput INPUT
+BanMemberPayload OBJECT
+BillingFeature OBJECT
+BillingFeatureStateEnum ENUM
+BillingPlan OBJECT
+BlacklistType ENUM
+BlocklistEntry OBJECT
+BlocklistEntryConnection OBJECT
+BlocklistEntryEdge OBJECT
+BrandingImage OBJECT
+CancelPaymentSubscriptionInput INPUT
+CancelPaymentSubscriptionPayload OBJECT
+ChatActorType ENUM
+ChatMessage OBJECT
+ChatMessageConnection OBJECT
+ChatMessageEdge OBJECT
+ClientTransferStatsInput INPUT
+Comment OBJECT
+CommentConnection OBJECT
+CommentEdge OBJECT
+CompleteQuizAttemptInput INPUT
+CompleteQuizAttemptPayload OBJECT
+CompleteUploadSessionInput INPUT
+CompleteUploadSessionPayload OBJECT
+Conversation INTERFACE
+ConversationThread OBJECT
+Coupon OBJECT
+Course OBJECT
+CourseConnection OBJECT
+CourseEdge OBJECT
+CourseFormat ENUM
+CourseProgress OBJECT
+CourseProgressState ENUM
+CourseProgressStatus ENUM
+Coursework OBJECT
+CourseworkCompletionCriteria ENUM
+CourseworkConnection OBJECT
+CourseworkEdge OBJECT
+CourseworkProgress OBJECT
+CourseworkProgressConnection OBJECT
+CourseworkProgressEdge OBJECT
+CourseworkStatus ENUM
+CourseworkType ENUM
+CourseworkUnlockingCriteria ENUM
+CreateAmbassadorAnnouncementInput INPUT
+CreateAmbassadorAnnouncementPayload OBJECT
+CreateAnnouncementInput INPUT
+CreateAnnouncementPayload OBJECT
+CreateAnswerCheerInput INPUT
+CreateAnswerCheerPayload OBJECT
+CreateAutomationRuleInput INPUT
+CreateAutomationRulePayload OBJECT
+CreateBadgeInput INPUT
+CreateBadgeMembershipsInput INPUT
+CreateBadgeMembershipsPayload OBJECT
+CreateBadgePayload OBJECT
+CreateBlocklistEntryInput INPUT
+CreateBlocklistEntryPayload OBJECT
+CreateChatReportInput INPUT
+CreateChatReportPayload OBJECT
+CreateCommentInput INPUT
+CreateCommentPayload OBJECT
+CreateCommentReportInput INPUT
+CreateCommentReportPayload OBJECT
+CreateConversationBookmarkInput INPUT
+CreateConversationBookmarkPayload OBJECT
+CreateConversationInput INPUT
+CreateConversationMembershipsInput INPUT
+CreateConversationMembershipsPayload OBJECT
+CreateConversationPayload OBJECT
+CreateCourseInput INPUT
+CreateCoursePayload OBJECT
+CreateCourseworkInput INPUT
+CreateCourseworkPayload OBJECT
+CreateCustomDomainInput INPUT
+CreateCustomDomainPayload OBJECT
+CreateCustomFieldInput INPUT
+CreateCustomFieldOptionInput INPUT
+CreateCustomFieldOptionPayload OBJECT
+CreateCustomFieldPayload OBJECT
+CreateCustomOnboardingPointerInput INPUT
+CreateCustomOnboardingPointerPayload OBJECT
+CreateDefaultGiftDefinitionsInput INPUT
+CreateDefaultGiftDefinitionsPayload OBJECT
+CreateDirectMessageInput INPUT
+CreateDirectMessagePayload OBJECT
+CreateDirectMessageReactionInput INPUT
+CreateDirectMessageReactionPayload OBJECT
+CreateEventAnnouncementInput INPUT
+CreateEventAnnouncementPayload OBJECT
+CreateEventInput INPUT
+CreateEventPayload OBJECT
+CreateGiftDefinitionInput INPUT
+CreateGiftDefinitionPayload OBJECT
+CreateGiftInput INPUT
+CreateGiftPayload OBJECT
+CreateInviteRequestInput INPUT
+CreateInviteRequestPayload OBJECT
+CreateInvitesInput INPUT
+CreateInvitesPayload OBJECT
+CreateMarketingBannerInput INPUT
+CreateMarketingBannerPayload OBJECT
+CreateMemberBlockInput INPUT
+CreateMemberBlockPayload OBJECT
+CreateMemberFollowInput INPUT
+CreateMemberFollowPayload OBJECT
+CreateMemberReportInput INPUT
+CreateMemberReportPayload OBJECT
+CreateMessageInput INPUT
+CreateMessagePayload OBJECT
+CreateMessageReactionInput INPUT
+CreateMessageReactionPayload OBJECT
+CreatePaymentCouponInput INPUT
+CreatePaymentCouponPayload OBJECT
+CreatePaymentPlanAnnouncementInput INPUT
+CreatePaymentPlanAnnouncementPayload OBJECT
+CreatePaymentPlanInput INPUT
+CreatePaymentPlanPayload OBJECT
+CreatePaymentSubscriptionGroupInput INPUT
+CreatePaymentSubscriptionGroupPayload OBJECT
+CreatePinInput INPUT
+CreatePinPayload OBJECT
+CreatePollAnswerInput INPUT
+CreatePollAnswerPayload OBJECT
+CreatePollInput INPUT
+CreatePollPayload OBJECT
+CreatePostInput INPUT
+CreatePostMuteInput INPUT
+CreatePostMutePayload OBJECT
+CreatePostPayload OBJECT
+CreatePostReportInput INPUT
+CreatePostReportPayload OBJECT
+CreateProfileQuestionAnswersInput INPUT
+CreateProfileQuestionAnswersPayload OBJECT
+CreatePromptMuteInput INPUT
+CreatePromptMutePayload OBJECT
+CreateQuizAnswerInput INPUT
+CreateQuizAnswerPayload OBJECT
+CreateReactionInput INPUT
+CreateReactionPayload OBJECT
+CreateRsvpInput INPUT
+CreateRsvpPayload OBJECT
+CreateSavedPostInput INPUT
+CreateSavedPostPayload OBJECT
+CreateSpaceBlacklistInput INPUT
+CreateSpaceBlacklistPayload OBJECT
+CreateSpaceInput INPUT
+CreateSpaceLinkInput INPUT
+CreateSpaceLinkPayload OBJECT
+CreateSpaceMembershipsInput INPUT
+CreateSpaceMembershipsPayload OBJECT
+CreateSpacePayload OBJECT
+CreateSpacesCollectionInput INPUT
+CreateSpacesCollectionPayload OBJECT
+CreateTagInput INPUT
+CreateTagMembershipsInput INPUT
+CreateTagMembershipsPayload OBJECT
+CreateTagPayload OBJECT
+CreateUploadSessionInput INPUT
+CreateUploadSessionPayload OBJECT
+CreateWaitlistInput INPUT
+CreateWaitlistPayload OBJECT
+CreateWebhookCallbackInput INPUT
+CreateWebhookCallbackPayload OBJECT
+CustomDomain OBJECT
+CustomDomainCheckResult OBJECT
+CustomDomainConnection OBJECT
+CustomDomainEdge OBJECT
+CustomDomainStatus ENUM
+CustomField OBJECT
+CustomFieldAnswer OBJECT
+CustomFieldAnswerConnection OBJECT
+CustomFieldAnswerEdge OBJECT
+CustomFieldConnection OBJECT
+CustomFieldEdge OBJECT
+CustomFieldFilter INPUT
+CustomFieldOption OBJECT
+CustomFieldOptionConnection OBJECT
+CustomFieldOptionEdge OBJECT
+CustomFieldPrivacy ENUM
+CustomFieldResponseBy ENUM
+CustomFieldResponseType ENUM
+CustomFieldStatus ENUM
+CustomOnboardingPointerPin OBJECT
+DailyVisitStreak OBJECT
+DatabaseRecord INTERFACE
+DateRangeInput INPUT
+DeleteAnswerCheerInput INPUT
+DeleteAnswerCheerPayload OBJECT
+DeleteAutomationRuleInput INPUT
+DeleteAutomationRulePayload OBJECT
+DeleteBadgeInput INPUT
+DeleteBadgeMembershipsInput INPUT
+DeleteBadgeMembershipsPayload OBJECT
+DeleteBadgePayload OBJECT
+DeleteBlocklistEntryInput INPUT
+DeleteBlocklistEntryPayload OBJECT
+DeleteChatReportInput INPUT
+DeleteChatReportPayload OBJECT
+DeleteCommentInput INPUT
+DeleteCommentPayload OBJECT
+DeleteCommentReportInput INPUT
+DeleteCommentReportPayload OBJECT
+DeleteConversationBookmarkInput INPUT
+DeleteConversationBookmarkPayload OBJECT
+DeleteConversationMembershipsInput INPUT
+DeleteConversationMembershipsPayload OBJECT
+DeleteCourseInput INPUT
+DeleteCoursePayload OBJECT
+DeleteCourseworkInput INPUT
+DeleteCourseworkPayload OBJECT
+DeleteCustomDomainInput INPUT
+DeleteCustomDomainPayload OBJECT
+DeleteCustomFieldAnswerInput INPUT
+DeleteCustomFieldAnswerPayload OBJECT
+DeleteCustomFieldInput INPUT
+DeleteCustomFieldOptionInput INPUT
+DeleteCustomFieldOptionPayload OBJECT
+DeleteCustomFieldPayload OBJECT
+DeleteCustomOnboardingPointerInput INPUT
+DeleteCustomOnboardingPointerPayload OBJECT
+DeleteDirectMessageInput INPUT
+DeleteDirectMessagePayload OBJECT
+DeleteDirectMessageReactionInput INPUT
+DeleteDirectMessageReactionPayload OBJECT
+DeleteEventInput INPUT
+DeleteEventInstanceInput INPUT
+DeleteEventInstancePayload OBJECT
+DeleteEventPayload OBJECT
+DeleteEventRecurrenceExceptionInput INPUT
+DeleteEventRecurrenceExceptionPayload OBJECT
+DeleteGiftDefinitionInput INPUT
+DeleteGiftDefinitionPayload OBJECT
+DeleteMarketingBannerInput INPUT
+DeleteMarketingBannerPayload OBJECT
+DeleteMemberBlockInput INPUT
+DeleteMemberBlockPayload OBJECT
+DeleteMemberFollowInput INPUT
+DeleteMemberFollowPayload OBJECT
+DeleteMemberInput INPUT
+DeleteMemberPayload OBJECT
+DeleteMessageInput INPUT
+DeleteMessagePayload OBJECT
+DeleteMessageReactionInput INPUT
+DeleteMessageReactionPayload OBJECT
+DeleteNetworkMembershipInput INPUT
+DeleteNetworkMembershipPayload OBJECT
+DeletePaymentSubscriptionGroupInput INPUT
+DeletePaymentSubscriptionGroupPayload OBJECT
+DeletePinInput INPUT
+DeletePinPayload OBJECT
+DeletePostInput INPUT
+DeletePostMuteInput INPUT
+DeletePostMutePayload OBJECT
+DeletePostPayload OBJECT
+DeletePostReportInput INPUT
+DeletePostReportPayload OBJECT
+DeletePromptMuteInput INPUT
+DeletePromptMutePayload OBJECT
+DeleteReactionInput INPUT
+DeleteReactionPayload OBJECT
+DeleteRsvpInput INPUT
+DeleteRsvpPayload OBJECT
+DeleteSavedPostInput INPUT
+DeleteSavedPostPayload OBJECT
+DeleteSpaceBlacklistInput INPUT
+DeleteSpaceBlacklistPayload OBJECT
+DeleteSpaceInput INPUT
+DeleteSpaceLinkInput INPUT
+DeleteSpaceLinkPayload OBJECT
+DeleteSpaceMembershipInput INPUT
+DeleteSpaceMembershipPayload OBJECT
+DeleteSpacePayload OBJECT
+DeleteSpacesCollectionInput INPUT
+DeleteSpacesCollectionPayload OBJECT
+DeleteTagInput INPUT
+DeleteTagMembershipsInput INPUT
+DeleteTagMembershipsPayload OBJECT
+DeleteTagPayload OBJECT
+DeleteWaitlistInput INPUT
+DeleteWaitlistPayload OBJECT
+DeleteWebhookCallbackInput INPUT
+DeleteWebhookCallbackPayload OBJECT
+DirectMessage OBJECT
+DirectMessageOutcome ENUM
+EmailBlocklistType ENUM
+EmbeddedLink OBJECT
+EmbeddedLinkBundle OBJECT
+EmbeddedLinkTargetable UNION
+Event OBJECT
+EventDirection ENUM
+EventInstance OBJECT
+EventRecurrenceException OBJECT
+EventRecurrenceExceptionConnection OBJECT
+EventRecurrenceExceptionEdge OBJECT
+EventRecurrenceExceptionType ENUM
+FeatureToggle OBJECT
+FeedAction ENUM
+FeedConnection OBJECT
+FeedEdge OBJECT
+FeedFilters INPUT
+FeedItem UNION
+FeedPageInfo OBJECT
+FeedPostItem OBJECT
+FeedSortOrder ENUM
+GalleryGroup OBJECT
+GalleryGroupInput INPUT
+GalleryPage ENUM
+GalleryType ENUM
+GiftContextTargetable UNION
+GiftDefinition OBJECT
+GiftDefinitionConnection OBJECT
+GiftDefinitionEdge OBJECT
+GiftDefinitionTemplate OBJECT
+GiftLeaderboard OBJECT
+GiftLeaderboardDirection ENUM
+GiftLeaderboardEntry OBJECT
+GiftLeaderboardPeriod ENUM
+GiftSummaryEntry OBJECT
+GiftTransaction OBJECT
+IncomeReport OBJECT
+IncomeReportConnection OBJECT
+IncomeReportEdge OBJECT
+IncomeReportPeriod OBJECT
+IncomeReportPeriodConnection OBJECT
+IncomeReportPeriodEdge OBJECT
+IncomeReportPlanBreakdown OBJECT
+IncomeReportPlanBreakdownConnection OBJECT
+IncomeReportPlanBreakdownEdge OBJECT
+Invite OBJECT
+InviteConnection OBJECT
+InviteEdge OBJECT
+InviteRecipientInput INPUT
+InviteRequest OBJECT
+InviteRequestConnection OBJECT
+InviteRequestEdge OBJECT
+InviteRequestRejectionType ENUM
+InviteRequestStatus ENUM
+InviteSortField ENUM
+InviteState ENUM
+InviteStatusFilter ENUM
+LandingSpaceAudience ENUM
+Lead OBJECT
+LeadConnection OBJECT
+LeadDisplayedStatus ENUM
+LeadEdge OBJECT
+LeaveConversationInput INPUT
+LeaveConversationPayload OBJECT
+LiveSpace OBJECT
+LiveSpaceConnection OBJECT
+LiveSpaceEdge OBJECT
+LiveSpaceListFilter ENUM
+LiveSpaceRecordingStatus ENUM
+LiveSpaceStatus ENUM
+MarkAllConversationsReadInput INPUT
+MarkAllConversationsReadPayload OBJECT
+MarkConversationReadInput INPUT
+MarkConversationReadPayload OBJECT
+MarkDirectMessageReadInput INPUT
+MarkDirectMessageReadPayload OBJECT
+MarketingAudience OBJECT
+MarketingAudienceConnection OBJECT
+MarketingAudienceEdge OBJECT
+MarketingAudienceFilterItem OBJECT
+MarketingAudienceFilterItemConnection OBJECT
+MarketingAudienceFilterItemEdge OBJECT
+MarketingAudienceFilterType ENUM
+MarketingAudienceSortField ENUM
+MarketingAudienceStatus ENUM
+MarketingAudienceTargetable UNION
+MarketingBanner OBJECT
+MarketingBannerConnection OBJECT
+MarketingBannerEdge OBJECT
+MarketingBannerPlatform ENUM
+MarketingBannerSortField ENUM
+MarketingBannerStatus ENUM
+MarketingBannerTargetable UNION
+MarketingBannerTargetableType ENUM
+MarketingBannerTargetPlatform ENUM
+McpUsageSummary OBJECT
+MemberConnection OBJECT
+MemberCustomFieldResponse OBJECT
+MemberCustomFieldResponseConnection OBJECT
+MemberCustomFieldResponseEdge OBJECT
+MemberEdge OBJECT
+MemberFilter INPUT
+MemberPageInfo OBJECT
+Membership OBJECT
+MembershipAccessPathSource ENUM
+MembershipOutcome ENUM
+MembershipRole ENUM
+MembershipStatus ENUM
+MemberSort ENUM
+MemberType ENUM
+Message INTERFACE
+MetricGranularity ENUM
+MoveSpaceToCollectionInput INPUT
+MoveSpaceToCollectionPayload OBJECT
+Network OBJECT
+Node INTERFACE
+Notification OBJECT
+NotificationConnection OBJECT
+NotificationEdge OBJECT
+NotificationEmailFrequency ENUM
+NotificationMethod ENUM
+NotificationPageInfo OBJECT
+NotificationPreference OBJECT
+NotificationPreferenceKey ENUM
+NotificationPreferenceOverrideInput INPUT
+NotificationSetting OBJECT
+OnboardingPointer OBJECT
+OnboardingPointerPin OBJECT
+PageInfo OBJECT
+PaymentCoupon OBJECT
+PaymentCouponAmountOff OBJECT
+PaymentCouponAmountOffInput INPUT
+PaymentCouponCheckout OBJECT
+PaymentCouponConnection OBJECT
+PaymentCouponDiscountType ENUM
+PaymentCouponDuration ENUM
+PaymentCouponEdge OBJECT
+PaymentCouponRedemption OBJECT
+PaymentCouponRedemptionConnection OBJECT
+PaymentCouponRedemptionEdge OBJECT
+PaymentCouponSortField ENUM
+PaymentCouponStatus ENUM
+PaymentCouponValidation OBJECT
+PaymentPlan OBJECT
+PaymentPlanConnection OBJECT
+PaymentPlanEdge OBJECT
+PaymentPlanPrice OBJECT
+PaymentPlanPriceInput INPUT
+PaymentPlanPricingType ENUM
+PaymentPlanProfileQuestionInput INPUT
+PaymentPlanSortField ENUM
+PaymentPlanStatus ENUM
+PaymentPlatform ENUM
+PaymentSubscription OBJECT
+PaymentSubscriptionConnection OBJECT
+PaymentSubscriptionEdge OBJECT
+PaymentSubscriptionGroup OBJECT
+PaymentSubscriptionGroupItemInput INPUT
+PaymentSubscriptionGroupPlatformEnum ENUM
+PaymentSubscriptionSortField ENUM
+PaymentSubscriptionStatus ENUM
+Pin OBJECT
+PinList ENUM
+PinTarget UNION
+PinTargetType ENUM
+Poll OBJECT
+PollAnswer OBJECT
+PollAnswerConnection OBJECT
+PollAnswerEdge OBJECT
+PollChoice OBJECT
+PollChoiceInput INPUT
+PollConnection OBJECT
+PollEdge OBJECT
+PollType ENUM
+Post OBJECT
+PostContent UNION
+PostContentConnection OBJECT
+PostContentEdge OBJECT
+PostHeader OBJECT
+PostInterface INTERFACE
+PostStatus ENUM
+PostTag OBJECT
+PostType ENUM
+PrimaryMedia OBJECT
+PrivateConversation INTERFACE
+PrivateConversationConnection OBJECT
+PrivateConversationEdge OBJECT
+PrivateConversationPageInfo OBJECT
+PrivateMessage OBJECT
+PrivateMessageConnection OBJECT
+PrivateMessageEdge OBJECT
+ProfileQuestion OBJECT
+ProfileQuestionAnswer OBJECT
+ProfileQuestionAnswerConnection OBJECT
+ProfileQuestionAnswerEdge OBJECT
+ProfileQuestionAnswerInput INPUT
+ProfileQuestionConnection OBJECT
+ProfileQuestionContext ENUM
+ProfileQuestionEdge OBJECT
+ProfileQuestionInput INPUT
+PublicConversation INTERFACE
+PublicConversationConnection OBJECT
+PublicConversationEdge OBJECT
+PublicConversationPageInfo OBJECT
+PublishCourseworkInput INPUT
+PublishCourseworkPayload OBJECT
+PublishCustomDomainInput INPUT
+PublishCustomDomainPayload OBJECT
+PublishPaymentPlanInput INPUT
+PublishPaymentPlanPayload OBJECT
+Purchase OBJECT
+PurchaseConnection OBJECT
+PurchaseEdge OBJECT
+PurchaseSortField ENUM
+QuizAttempt OBJECT
+QuizAttemptConnection OBJECT
+QuizAttemptEdge OBJECT
+QuizAttemptStatus ENUM
+QuizStats OBJECT
+Reactable INTERFACE
+Reaction OBJECT
+ReactionConnection OBJECT
+ReactionEdge OBJECT
+ReactionGroup OBJECT
+Recognition OBJECT
+RecognitionConnection OBJECT
+RecognitionEdge OBJECT
+ReorderCourseworkInput INPUT
+ReorderCourseworkPayload OBJECT
+ReorderGalleryGroupInput INPUT
+ReorderGalleryGroupPayload OBJECT
+ReorderGiftDefinitionInput INPUT
+ReorderGiftDefinitionPayload OBJECT
+ReorderPinInput INPUT
+ReorderPinPayload OBJECT
+ReorderSpaceInput INPUT
+ReorderSpacePayload OBJECT
+ReorderSpacesCollectionInput INPUT
+ReorderSpacesCollectionPayload OBJECT
+ResendInviteInput INPUT
+ResendInvitePayload OBJECT
+RevokeInviteInput INPUT
+RevokeInvitePayload OBJECT
+Rsvp OBJECT
+RsvpConnection OBJECT
+RsvpEdge OBJECT
+RsvpStatus ENUM
+SearchConnection OBJECT
+SearchEdge OBJECT
+SearchPageInfo OBJECT
+SearchResult UNION
+SearchResultType ENUM
+Segment OBJECT
+SegmentConnection OBJECT
+SegmentEdge OBJECT
+SegmentFlavor ENUM
+SortOrder ENUM
+Space OBJECT
+SpaceConnection OBJECT
+SpaceEdge OBJECT
+SpaceFeature OBJECT
+SpaceFeatureToggleInput INPUT
+SpaceImageType ENUM
+SpaceInterface INTERFACE
+SpaceLink OBJECT
+SpacesCollection OBJECT
+SpaceTemplate OBJECT
+SpaceTemplatePlaceholders OBJECT
+SpaceTemplateType ENUM
+StreakMilestone OBJECT
+StripeAccount OBJECT
+StripeAccountStatus ENUM
+Tag OBJECT
+TagConnection OBJECT
+TagEdge OBJECT
+TagSort ENUM
+Theme OBJECT
+ThemeColors OBJECT
+ThemeColorsInput INPUT
+UniversalActionSourceKind ENUM
+UnpublishCourseworkInput INPUT
+UnpublishCourseworkPayload OBJECT
+UnpublishPaymentPlanInput INPUT
+UnpublishPaymentPlanPayload OBJECT
+UpdateAutomationRuleInput INPUT
+UpdateAutomationRulePayload OBJECT
+UpdateBadgeInput INPUT
+UpdateBadgePayload OBJECT
+UpdateCommentInput INPUT
+UpdateCommentPayload OBJECT
+UpdateConversationInput INPUT
+UpdateConversationPayload OBJECT
+UpdateCourseworkInput INPUT
+UpdateCourseworkPayload OBJECT
+UpdateCourseworkProgressInput INPUT
+UpdateCourseworkProgressPayload OBJECT
+UpdateCustomFieldAnswerInput INPUT
+UpdateCustomFieldAnswerPayload OBJECT
+UpdateCustomFieldInput INPUT
+UpdateCustomFieldOptionInput INPUT
+UpdateCustomFieldOptionPayload OBJECT
+UpdateCustomFieldPayload OBJECT
+UpdateCustomOnboardingPointerInput INPUT
+UpdateCustomOnboardingPointerPayload OBJECT
+UpdateEventInput INPUT
+UpdateEventInstanceInput INPUT
+UpdateEventInstancePayload OBJECT
+UpdateEventPayload OBJECT
+UpdateGalleryGroupInput INPUT
+UpdateGalleryGroupPayload OBJECT
+UpdateGalleryGroupsInput INPUT
+UpdateGalleryGroupsPayload OBJECT
+UpdateGiftDefinitionInput INPUT
+UpdateGiftDefinitionPayload OBJECT
+UpdateInviteRequestInput INPUT
+UpdateInviteRequestPayload OBJECT
+UpdateInviteRequestsInput INPUT
+UpdateInviteRequestsPayload OBJECT
+UpdateMarketingBannerInput INPUT
+UpdateMarketingBannerPayload OBJECT
+UpdateMemberInput INPUT
+UpdateMemberPayload OBJECT
+UpdateMemberReportsInput INPUT
+UpdateMemberReportsPayload OBJECT
+UpdateMembershipInput INPUT
+UpdateMembershipPayload OBJECT
+UpdateNetworkImageInput INPUT
+UpdateNetworkImagePayload OBJECT
+UpdateNetworkInput INPUT
+UpdateNetworkLandingSpaceInput INPUT
+UpdateNetworkLandingSpacePayload OBJECT
+UpdateNetworkPayload OBJECT
+UpdateNetworkSubdomainInput INPUT
+UpdateNetworkSubdomainPayload OBJECT
+UpdateNetworkThemeInput INPUT
+UpdateNetworkThemePayload OBJECT
+UpdateNotificationInput INPUT
+UpdateNotificationPayload OBJECT
+UpdateNotificationSettingInput INPUT
+UpdateNotificationSettingPayload OBJECT
+UpdatePaymentCouponInput INPUT
+UpdatePaymentCouponPayload OBJECT
+UpdatePaymentPlanInput INPUT
+UpdatePaymentPlanPayload OBJECT
+UpdatePaymentPlanProfileQuestionsInput INPUT
+UpdatePaymentPlanProfileQuestionsPayload OBJECT
+UpdatePaymentSubscriptionGroupInput INPUT
+UpdatePaymentSubscriptionGroupPayload OBJECT
+UpdatePollInput INPUT
+UpdatePollPayload OBJECT
+UpdatePostInput INPUT
+UpdatePostPayload OBJECT
+UpdateRsvpInput INPUT
+UpdateRsvpPayload OBJECT
+UpdateSpaceImageInput INPUT
+UpdateSpaceImagePayload OBJECT
+UpdateSpaceInput INPUT
+UpdateSpaceLinkInput INPUT
+UpdateSpaceLinkPayload OBJECT
+UpdateSpacePayload OBJECT
+UpdateSpaceProfileQuestionsInput INPUT
+UpdateSpaceProfileQuestionsPayload OBJECT
+UpdateSpacesCollectionInput INPUT
+UpdateSpacesCollectionPayload OBJECT
+UpdateTagInput INPUT
+UpdateTagPayload OBJECT
+UpdateVideoProgressInput INPUT
+UpdateVideoProgressPayload OBJECT
+UpdateWaitlistInput INPUT
+UpdateWaitlistPayload OBJECT
+UpdateWebhookCallbackInput INPUT
+UpdateWebhookCallbackPayload OBJECT
+UploadAssetKind ENUM
+UploadAssetStyle ENUM
+UploadByteRange OBJECT
+UploadInstruction OBJECT
+UploadMode ENUM
+UploadProvider ENUM
+UploadReceipt OBJECT
+UploadReceiptExtractor OBJECT
+UploadReceiptInput INPUT
+UploadRequest OBJECT
+UploadRequestBody OBJECT
+UploadRequestHeader OBJECT
+UploadSession OBJECT
+UploadSessionStatus ENUM
+UploadStrategy ENUM
+User OBJECT
+UserConnection OBJECT
+UserEdge OBJECT
+VideoProgress OBJECT
+VideoProgressConnection OBJECT
+VideoProgressEdge OBJECT
+VoidPurchaseInput INPUT
+VoidPurchasePayload OBJECT
+Waitlist OBJECT
+WaitlistConnection OBJECT
+WaitlistEdge OBJECT
+WaitlistTargetUnion UNION
+WebhookCallback OBJECT
+WebhookCallbackConnection OBJECT
+WebhookCallbackEdge OBJECT
+WebhookEventType ENUM
+WelcomeChecklistItem OBJECT
+WelcomeChecklistTarget UNION
+On this page
+About the Headless API What’s in the schema today
+Endpoint
+Authentication Create an OAuth application
+Authorization Code flow
+Token scope and permissions
+Why GraphQL Relay conventions
+Making a Request
+Schema and Introspection GraphiQL Explorer
+Fetching the schema
+Introspection (alternative)
+Rate Limits
+Errors
+Headless API vs. Admin API
+Support
+Overview
+Headless API
+Copy page Copy page
+GraphQL API for building custom clients, integrations, and back-office tools on Mighty Networks
+Copy page Copy page
+Every change to the published schema is recorded on the changelog , and breaking changes are deprecated and announced there before they take effect. Check it before you upgrade an integration.
+Explore the schema now
+Browse every type and field, and run queries against generated sample data in the GraphQL Schema Explorer . No tokens will be used, and no Mighty Network of your own is required.
+​
+About the Headless API
+The Mighty Networks Headless API is a GraphQL API built on the same surface area that powers the official Mighty Networks clients. It does not yet expose the entire surface, but it covers most of the host- and member-facing product today and is actively expanding. It is the foundation for member-facing experiences (custom apps, embeds, integrations) as well as host-facing and back-office tooling that goes beyond what the Admin REST API covers.
+Where the Admin API is a curated REST surface intended for server-to-server administrative automation, the Headless API operates in the context of an authenticated user (member, moderator, or host) and grants the same access that user has in the product. With a host or admin token, that includes administrative reads and writes; with a member token, it’s limited to what that member can see and do.
+Use the Headless API when you want to:
+Build a custom client (web, mobile, embed) that surfaces a Network’s content to its members
+Build host-facing tools, dashboards, or admin consoles that need data the Admin REST API doesn’t expose
+Power a third-party integration that acts on behalf of a specific user (member, moderator, or host)
+Query exactly the fields you need in a single round trip, including nested associations
+​
+What’s in the schema today
+The Headless API covers most of the host- and member-facing product surface. At a glance, the public schema currently exposes:
+Network & branding — Network settings and updates (including landing and home space configuration and feature toggles), the branding theme, custom domains (validate, register, publish, remove), Pinned Links in the navigation menu, payment currencies, the connected Stripe account, and the Network’s own Mighty Networks billing plan and enabled features
+Members — the authenticated viewer ( me ), the member roster with filtering and single-member lookup; member profile updates, removal, ban, and account deletion; membership role and status (read and update); member-to-member follows; profile social links; custom fields (definitions, options, and member answers) and profile questions
+Spaces & structure — spaces (create, update, delete, reorder, move between collections), space memberships, spaces collections, space templates (read-only), live spaces, featured and welcome pins, and discovery-page gallery sections
+Posts & content — posts, threaded comments, reactions, tags (including bulk member tagging), polls and poll answers, announcements, saved posts, embedded link previews, the ranked member feed, and media assets (including uploads)
+Events — events with recurrence rules, per-occurrence overrides and cancellations, and RSVPs
+Chat — space group chats: list conversations, send and delete messages, mark conversations read, react to messages, and bookmark conversations. Member-to-member direct messages are not exposed.
+Commerce — payment plans (create, update, publish, unpublish, archive), subscription groups, member subscriptions (list, cancel), one-time purchases (list, void), promo codes, income reports, and gifts with recognition leaderboards
+Courses & learning — courses and coursework (create, update, publish, reorder), member course and video progress, and quizzes (answering, completion, and attempt reporting)
+Growth & onboarding — invites (create, resend, revoke), join requests (approve, reject, bulk update), leads (read-only) and waitlists, the Ambassador program (referral stats and the recruitment announcement), the welcome checklist, and custom onboarding steps
+Marketing & member data — member segments, marketing audiences, and marketing banners
+Moderation & safety — member reports (file, list, clear), the email blocklist, member-to-member blocks, content reporting for posts, comments, and chat messages, and post, prompt, and space muting
+Gamification — badges (definitions and member assignment), daily-visit streaks, points balances, and gift leaderboards
+Notifications — the viewer’s notification inbox (list, mark read or unread) and notification delivery settings
+Automation & integrations — automation rules with execution logs, outbound webhooks, and OAuth application management
+Search — cross-entity search with typed result filtering
+Availability of plan-gated features (for example webhooks, marketing audiences, or Pinned Links) follows the Network’s Mighty Networks plan.
+Everything in the schema is introspectable — see Schema and Introspection for SDL and introspection endpoints. The set above will continue to grow.
+​
+Endpoint
+All GraphQL requests are issued as POST to a single per-network endpoint:
+https://api.mn.co/networks/:network_id_or_subdomain/graphql
+The path segment :network_id_or_subdomain accepts either:
+The Network’s numeric ID (e.g. 12345 )
+The Network’s subdomain (e.g. my-community for my-community.mn.co )
+Both forms resolve to the same Network and execute against the same schema.
+cURL
+Node.js
+Python
+curl https://api.mn.co/networks/my-community/graphql \
+-H "Authorization: Bearer YOUR_ACCESS_TOKEN" \
+-H "Content-Type: application/json" \
+-d '{
+"query": "query { me { id name } }"
+}'
+const response = await fetch (
+`https://api.mn.co/networks/ ${ NETWORK } /graphql` ,
+{
+method: 'POST' ,
+headers: {
+'Authorization' : `Bearer ${ ACCESS_TOKEN } ` ,
+'Content-Type' : 'application/json'
+},
+body: JSON . stringify ({
+query: `query { me { id name } }`
+})
+}
+);
+const { data , errors } = await response . json ();
+import requests
+response = requests.post(
+f "https://api.mn.co/networks/ { NETWORK } /graphql" ,
+headers = {
+"Authorization" : f "Bearer { ACCESS_TOKEN } " ,
+"Content-Type" : "application/json"
+},
+json = { "query" : "query { me { id name } }" }
+)
+payload = response.json()
+​
+Authentication
+The Headless API authenticates requests with OAuth 2.0 . Unlike the Admin API , which uses a long-lived Bearer token tied to a Network admin, the Headless API issues short-lived access tokens that act on behalf of a specific user in a specific Network — member, moderator, or host. Once you have an access token, you pass it as a Bearer token on every GraphQL request.
+OAuth application management is available on the Scale plan or above . If you don’t see Integrations > OAuth Applications in Network Admin, check your Network’s plan, or reach out to Mighty support .
+​
+Create an OAuth application
+OAuth applications are created and managed by Network hosts under Network Admin > Integrations > OAuth Applications . For the full walkthrough — client types, redirect URI rules, scope catalog, secret rotation, and revocation — see OAuth Applications .
+At a glance:
+Sign in as a host or admin and open Network Admin .
+Go to Integrations > OAuth Applications and click New OAuth Application .
+Provide a name, choose a client type (public or confidential), register redirect URIs, and select the scopes your app needs.
+Mighty issues a Client ID and (for confidential clients) a Client Secret , shown once.
+See OAuth Applications for the detailed setup, configuration, and management guide.
+​
+Authorization Code flow
+The standard flow for user-facing apps:
+Redirect the user to the authorization endpoint. OAuth endpoints live on the Network’s community host, not on api.mn.co :
+https://:network_subdomain.mn.co/oauth/authorize
+?response_type=code
+&client_id=YOUR_CLIENT_ID
+&redirect_uri=YOUR_REDIRECT_URI
+&scope=SPACE_SEPARATED_SCOPES
+&state=RANDOM_OPAQUE_STRING
+&code_challenge=PKCE_CHALLENGE
+&code_challenge_method=S256
+The canonical endpoint URLs are also advertised at https://:network_subdomain.mn.co/.well-known/oauth-authorization-server (RFC 8414).
+The user signs in (if needed) and approves the requested scopes. Mighty redirects back to your redirect_uri with a code and the state you sent. Verify that the returned state exactly matches the cryptographically random value you generated for this request — if it doesn’t, reject the callback and do not exchange the code. This is your CSRF defense.
+Exchange the code for an access token:
+curl https://:network_subdomain.mn.co/oauth/token \
+-H "Content-Type: application/x-www-form-urlencoded" \
+-d "grant_type=authorization_code" \
+-d "code=AUTH_CODE_FROM_REDIRECT" \
+-d "redirect_uri=YOUR_REDIRECT_URI" \
+-d "client_id=YOUR_CLIENT_ID" \
+-d "client_secret=YOUR_CLIENT_SECRET" \
+-d "code_verifier=PKCE_VERIFIER"
+The response contains an access_token , refresh_token , expires_in , and the granted scope :
+{
+"access_token" : "eyJhbGciOi..." ,
+"token_type" : "Bearer" ,
+"expires_in" : 3600 ,
+"refresh_token" : "def50200..." ,
+"scope" : "read:posts write:posts"
+}
+Pass the access token on every GraphQL request:
+Authorization : Bearer eyJhbGciOi...
+When the access token expires, exchange the refresh token for a new one using grant_type=refresh_token against the same /oauth/token endpoint.
+​
+Token scope and permissions
+The access token grants exactly the access the underlying user has in the product, intersected with the scopes the user approved. A member token sees what that member sees; a host or admin token additionally exposes host- and admin-level fields and mutations. Asking for more scopes than your app needs is a smell — request the narrowest set that lets the feature work.
+For full details on the OAuth flows, scope catalog, and token rotation, see the Authentication Guide .
+​
+Why GraphQL
+GraphQL allows us to expose the full functionality of Mighty’s platform, without making assumptions about what kinds of experience you’ll build on top of it. A REST surface forces the API designer to enumerate every endpoint, response shape, and association ahead of time — which means the only apps that fit comfortably are the ones we anticipated. That’s the wrong shape for a community platform: members, hosts, and integrators put Mighty Networks to uses we couldn’t have predicted. A consumer-mobile reader, an internal back-office dashboard, an AI agent that summarizes a space’s activity, a custom embed that pulls a single post into a marketing page — these all want different fields, different depths, and different shapes from the same underlying data.
+GraphQL lets a client request exactly the fields it needs, traverse associations in one request, and avoid the over-fetching that comes with rigid REST endpoints. The API surface is the schema; what you do with it is up to you.
+Concretely, this means:
+One endpoint, many shapes. A mobile feed view and a desktop sidebar can hit the same query and select different fields. Same for a CRM sync job and a Discord bot — they ask for what they need and ignore the rest.
+Typed schema. Every field, argument, and return type is described in the schema and discoverable via introspection — no out-of-band docs required to know what’s possible.
+Composable queries. Fetch a post, its author, the author’s spaces, and the viewer’s permissions on each — in a single round trip. Build the view the app needs, not the view the API designer guessed at.
+Forward-compatible by default. New fields and types can be added without breaking existing clients, because clients only see the fields they explicitly ask for. The schema can grow alongside the use cases we haven’t thought of yet.
+If you’re new to GraphQL, the official documentation is the best starting point:
+graphql.org — language overview, learning resources, and tooling
+GraphQL specification — the formal language and execution spec
+​
+Relay conventions
+The schema is designed to be consumed by Relay -compatible clients. Concretely:
+Nodes are addressable by a globally unique id and reachable through the top-level node(id: ID!) field, per the GraphQL Global Object Identification spec.
+Lists are paginated using cursor-based Connection types ( edges , node , pageInfo ) — see also API Pagination for general guidance.
+Mutations follow the Relay input/payload pattern : a single input argument and a payload type that includes the mutated node(s).
+You don’t need to use the Relay client — any GraphQL client will work — but if you do, the schema is designed to drop straight in. Useful reading:
+Relay docs — client framework guide
+GraphQL Server Specification — the conventions the schema follows
+Cursor Connections Specification — pagination contract
+​
+Making a Request
+A GraphQL request is a POST with a JSON body containing query and (optionally) variables and operationName .
+Requests to api.mn.co must include a non-empty User-Agent header. Requests without one are blocked by bot protection and receive an HTML challenge page with HTTP 403 — a JSON-parse error on the client. We recommend your-app-name/version (+url) .
+POST /networks/my-community/graphql HTTP / 1.1
+Host : api.mn.co
+Authorization : Bearer YOUR_ACCESS_TOKEN
+Content-Type : application/json
+User-Agent : my-app/1.0 (+https://example.com)
+{
+"query" : "query Post($id: ID!) { network { post(idOrSlug: $id) { id title author { id name } } } }" ,
+"variables" : { "id" : "12345" }
+}
+Successful responses return an HTTP 200 with a data object:
+{
+"data" : {
+"network" : {
+"post" : {
+"id" : "12345" ,
+"title" : "Welcome to the network" ,
+"author" : { "id" : "678" , "name" : "Jane" }
+}
+}
+}
+}
+Errors are returned as an errors array alongside (or instead of) data . Each error carries a human-readable message , an extensions.code for programmatic handling, and (where applicable) a path indicating which field produced the error.
+{
+"data" : null ,
+"errors" : [
+{
+"message" : "Post not found" ,
+"path" : [ "post" ],
+"extensions" : { "code" : "NOT_FOUND" }
+}
+]
+}
+GraphQL returns HTTP 200 for most application-level errors. Inspect the errors array on every response, not just the HTTP status.
+​
+Schema and Introspection
+The schema is fully introspectable. You can explore it with any standard GraphQL tool (GraphiQL, Apollo Sandbox, Insomnia, Postman) by pointing the tool at your Network’s endpoint and supplying a valid Bearer token.
+Two explorers are available, and they do different jobs. The GraphQL Schema Explorer needs no token and no Network of your own: it runs in your browser against generated mock data, so it is the place to read the schema and shape a query. The hosted GraphiQL explorer below runs real queries against a real Network, and is limited to that Network’s hosts.
+​
+GraphiQL Explorer
+Network hosts get a hosted GraphiQL explorer for ad-hoc queries and schema browsing, under Network Admin > Integrations > Headless API on the Network’s community host (not on api.mn.co ):
+https://:network_subdomain.mn.co/admin/headless-api/explorer
+Pick one of your Network’s OAuth applications and the explorer mints a short-lived access token bound to that application and your host account — there’s no Bearer token to paste in. Queries execute against the api.mn.co GraphQL endpoint exactly as an integration using that application would.
+​
+Fetching the schema
+The fastest way to get a code-generation-ready schema is the dedicated SDL endpoint , which returns the Network’s GraphQL schema as Schema Definition Language. No authentication required:
+GET https://api.mn.co/networks/:network_id_or_subdomain/graphql/schema
+curl https://api.mn.co/networks/my-community/graphql/schema > schema.graphql
+The response is the public surface filtered to the types, fields, and arguments actually exposed by the GraphQL endpoint — the same surface your queries execute against. Pipe it straight into graphql-code-generator , the Relay compiler , or any other tool that consumes SDL.
+Start here for codegen. The SDL endpoint is unauthenticated, cacheable, and avoids the round-trip overhead of running a full introspection query.
+​
+Introspection (alternative)
+The GraphQL endpoint also responds to the standard introspection query , which returns the type system as JSON. Use this if your tooling expects an introspection result instead of SDL, or if you want to query schema metadata at runtime.
+A minimal introspection query:
+query {
+__schema {
+types {
+name
+kind
+}
+}
+}
+For a complete dump, use the canonical introspection query published in graphql-js — every popular tool ships a copy of it. Common ways to fetch and persist it:
+get-graphql-schema (JSON or SDL)
+Apollo Rover (SDL)
+Raw introspection (JSON)
+# Install: npm i -g get-graphql-schema
+get-graphql-schema \
+--header "Authorization=Bearer YOUR_ACCESS_TOKEN" \
+https://api.mn.co/networks/my-community/graphql \
+> schema.graphql
+# Install: https://www.apollographql.com/docs/rover/
+APOLLO_HEADERS = '{"Authorization":"Bearer YOUR_ACCESS_TOKEN"}' \
+rover graph introspect https://api.mn.co/networks/my-community/graphql \
+> schema.graphql
+curl https://api.mn.co/networks/my-community/graphql \
+-H "Authorization: Bearer YOUR_ACCESS_TOKEN" \
+-H "Content-Type: application/json" \
+-d '{"query":"query IntrospectionQuery { __schema { queryType { name } mutationType { name } subscriptionType { name } types { ...FullType } directives { name description locations args { ...InputValue } } } } fragment FullType on __Type { kind name description fields(includeDeprecated: true) { name description args { ...InputValue } type { ...TypeRef } isDeprecated deprecationReason } inputFields { ...InputValue } interfaces { ...TypeRef } enumValues(includeDeprecated: true) { name description isDeprecated deprecationReason } possibleTypes { ...TypeRef } } fragment InputValue on __InputValue { name description type { ...TypeRef } defaultValue } fragment TypeRef on __Type { kind name ofType { kind name ofType { kind name ofType { kind name ofType { kind name ofType { kind name ofType { kind name ofType { kind name } } } } } } } }"}' \
+> schema.json
+​
+Rate Limits
+The Headless API follows the same rate-limit and quota model described in the Admin API , but its quota is tracked separately — Headless API usage does not count against the Admin API quota and vice versa. The unit of accounting is the GraphQL operation rather than the REST request, and highly nested queries may additionally be subject to query-complexity limits.
+​
+Errors
+Errors follow the GraphQL error spec . Each error includes a message , an extensions.code for programmatic handling, and (where applicable) a path indicating which field produced the error. The code vocabulary mirrors Apollo Server’s defaults, so any GraphQL client library that already understands those codes will work without configuration:
+Code Meaning UNAUTHENTICATED Missing, expired, or invalid Bearer token. Also returned with HTTP 401 from the bearer-auth layer. FORBIDDEN Authenticated, but the viewer lacks permission for the action. NOT_FOUND The referenced resource does not exist, or the viewer cannot see it. Visibility checks collapse to NOT_FOUND rather than FORBIDDEN to avoid leaking existence. BAD_USER_INPUT An argument failed semantic validation (e.g. malformed cursor, unknown enum value). INTERNAL_SERVER_ERROR An unexpected error escaped the resolver. The message is generic — details are recorded server-side.
+Most application-level errors are returned with HTTP 200 and an errors array; only UNAUTHENTICATED from the bearer-auth layer (missing or invalid Bearer token) and 404 (Network does not exist or Headless API is not enabled) surface as non- 200 HTTP statuses.
+​
+Headless API vs. Admin API
+Headless API Admin API Style GraphQL REST Endpoint api.mn.co/networks/:id_or_subdomain/graphql api.mn.co/admin/v1/... Acts as The authenticated user (member, moderator, or host) Network administrator Surface area Broad — the full product surface, including host and admin capabilities Curated — a stable subset for administrative automation Best for Custom clients, member- and host-facing apps, embeds, and integrations that act on behalf of a user Server-to-server automation and bulk admin tasks where REST and a stable contract are preferable
+​
+Support
+Authentication
+Generate and manage tokens for the Headless API.
+Admin API
+Compare with the REST-based admin surface.
+GraphQL Schema Explorer
+⌘ I
+x linkedin instagram
+Powered by This documentation is built and hosted on Mintlify, a developer documentation platform
+Assistant
+Responses are generated using AI and may contain mistakes.
+Contact support

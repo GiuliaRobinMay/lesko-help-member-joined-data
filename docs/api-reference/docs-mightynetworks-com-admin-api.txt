@@ -1,0 +1,634 @@
+SOURCE: https://docs.mightynetworks.com/admin-api
+FETCHED: 2026-08-18 12:58 UTC
+
+Admin API - Mighty Networks Developer
+Documentation Index
+Fetch the complete documentation index at: /llms.txt
+Use this file to discover all available pages before exploring further.
+Skip to main content
+Mighty Networks Developer home page v1
+Search...
+⌘ K Ask Assistant
+Search...
+Navigation
+Overview
+Admin API
+For Hosts
+For Members
+API Guides
+Headless API
+Admin API
+Overview
+Admin API
+Changelog
+Authentication
+Pagination
+Error Handling
+Members
+GET
+Return members of the given space
+POST
+Add a user as a member to the space
+GET
+Return a single member by user ID
+PUT
+Update a member's role in the space
+DEL
+Remove a member from the space
+PATCH
+Update a member's role in the space
+POST
+Ban a user from the Network
+GET
+Return members of the given plan
+POST
+Add a member directly to a free/nonpaid plan, granting them access
+The member will be granted access immediately; no invite is sent.
+GET
+Return a single member by member ID
+GET
+Return members of the given Network
+POST
+Create a new member in the Network
+GET
+Return a single member by ID
+PUT
+Update a member's role in the Network
+DEL
+Delete a member's account (soft delete)
+PATCH
+Update a member's role in the Network
+GET
+Return a single member by email address
+DEL
+Remove a member from the Network (can rejoin)
+Courseworks
+GET
+Returns a list of coursework items for the given space (course)
+POST
+Create a new coursework item (lesson, quiz, or section)
+GET
+Returns a single coursework item by ID
+PUT
+Update an existing coursework item
+DEL
+Delete a coursework item
+PATCH
+Update an existing coursework item
+Reactions
+GET
+Returns a list of reactions for a specific post
+POST
+Create a new reaction on a post
+DEL
+Delete the reaction from a post
+GET
+Returns a list of reactions for a specific comment
+POST
+Create a new reaction on a comment
+DEL
+Delete the reaction from a comment
+Mute
+POST
+Mute a post for a specific user (unfollow notifications)
+DEL
+Unmute a post for a specific user (refollow notifications)
+Comments
+GET
+Returns a list of comments for a specific post
+POST
+Create a new comment on a post
+GET
+Query details of a specific comment by its ID
+DEL
+Delete a comment from a post
+Invites
+GET
+Return all invites for the given plan
+POST
+Create an invite to a plan
+GET
+Return a single invite by ID
+PUT
+Resend an existing invite
+DEL
+Revoke an unaccepted invite
+PATCH
+Resend an existing invite
+GET
+Returns a list of invitations for the current Network
+POST
+Create a new invite and send an email to the intended recipient
+PUT
+Update an invite
+DEL
+Delete an unaccepted invite
+PATCH
+Update an invite
+Tags
+GET
+Return tags for the given member
+POST
+Add a tag to a member
+GET
+Return a single tag by ID for the given member
+DEL
+Remove a tag from a member
+GET
+Return all tags for the Network
+POST
+Create a new tag
+GET
+Return a single tag by ID
+PUT
+Update a tag
+DEL
+Delete a tag
+PATCH
+Update a tag
+Spaces
+GET
+Return spaces for a given member
+GET
+Returns a list of spaces for the current Network
+POST
+Create a new space in the Network
+GET
+Query details of a specific space by its ID
+PUT
+Update a space by its ID
+DEL
+Delete a space by its ID
+PATCH
+Update a space by its ID
+Plans
+GET
+Return all plans that a member has access to
+GET
+Return all plans in the Network
+GET
+Return a single plan by ID
+DEL
+Archive a plan. This will cancel all associated subscriptions and revoke access.
+DEL
+Remove a member from a plan by canceling their subscription or purchase
+PasswordResets
+POST
+Send a password reset email to a member
+Badges
+GET
+Return badges for the given member
+POST
+Add a badge to the given member
+GET
+Return a single badge by ID for the given member
+DEL
+Remove a badge from the given member
+GET
+Return all badges for the Network
+POST
+Create a new badge
+GET
+Return a single badge by ID
+PUT
+Update a badge
+DEL
+Delete a badge
+PATCH
+Update a badge
+Rsvps
+GET
+List RSVPs for an event
+POST
+Create or update an RSVP for an event
+GET
+Get a specific RSVP by ID
+PUT
+Update an existing RSVP
+DEL
+Delete an RSVP
+PATCH
+Update an existing RSVP
+Options
+GET
+Return all options for a custom field
+POST
+Create a new option for a custom field
+GET
+Return a single option by ID
+PUT
+Update an option
+DEL
+Delete an option
+PATCH
+Update an option
+Answers
+GET
+Return all responses for a member to a custom field
+POST
+Create or update a member's response to a custom field
+DEL
+Delete a member's response to a custom field
+GET
+Return a single response by ID
+Subscriptions
+GET
+List all payment subscriptions for the Network
+GET
+Get details of a specific payment subscription
+DEL
+Cancel a payment subscription
+Purchases
+GET
+Return purchases and subscriptions for the given Network
+GET
+Return a single purchase by ID
+DEL
+Remove a member from a plan (revoke purchase access). Note: Cannot remove members from Apple In-App Purchases.
+Posts
+GET
+Returns a list of posts for the current Network
+POST
+Create a new post, and optionally notify the Network
+GET
+Query details of a specific post by its ID
+PUT
+Update an existing post or article
+DEL
+Delete a post or article
+PATCH
+Update an existing post or article
+Polls
+GET
+Returns a paginated list of polls and questions in the Network
+POST
+Creates a new poll or question in the Network
+GET
+Returns details of a specific poll or question
+PUT
+Updates a poll or question
+DEL
+Deletes a poll or question
+PATCH
+Updates a poll or question
+Networks
+GET
+Returns details of the Network - must match the Network owning the requesting API key
+Me
+GET
+Return information about the authenticated access token
+Events
+GET
+Returns a paginated list of events in the Network
+POST
+Creates a new event in the Network
+GET
+Returns details of a specific event
+PUT
+Updates an existing event
+DEL
+Deletes an event
+PATCH
+Updates an existing event
+CustomFields
+GET
+Return custom fields of the given Network
+POST
+Create a new custom field
+GET
+Return a single custom field by ID
+PUT
+Update a custom field
+DEL
+Delete a custom field
+PATCH
+Update a custom field
+Collections
+GET
+Return all collections in the Network
+POST
+Create a new collection
+GET
+Return a single collection by ID
+PUT
+Update a collection by its ID
+DEL
+Delete a collection
+PATCH
+Update a collection by its ID
+PUT
+Reorder spaces within a collection
+Assets
+POST
+Upload a new asset (image or file)
+AbuseReports
+GET
+Returns a list of abuse reports for the current Network
+Webhooks
+HOOK
+RsvpUpdated
+HOOK
+RsvpDeleted
+HOOK
+RsvpCreated
+HOOK
+ReportedContentCreated
+HOOK
+ReactionDeleted
+HOOK
+ReactionCreated
+HOOK
+QuestionUpdated
+HOOK
+QuestionCreated
+HOOK
+PostUpdated
+HOOK
+PostCreated
+HOOK
+PercentagePollUpdated
+HOOK
+PercentagePollCreated
+HOOK
+MultipleChoicePollUpdated
+HOOK
+MultipleChoicePollCreated
+HOOK
+MemberUpdated
+HOOK
+MemberTagRemoved
+HOOK
+MemberTagAdded
+HOOK
+MemberSubscriptionRenewed
+HOOK
+MemberSubscriptionCanceled
+HOOK
+MemberRemovedFromPlan
+HOOK
+MemberPurchased
+HOOK
+MemberPurchaseRequested
+HOOK
+MemberPlanChanged
+HOOK
+MemberLeft
+HOOK
+MemberJoined
+HOOK
+MemberJoinRequested
+HOOK
+MemberCourseProgressUpdated
+HOOK
+MemberCourseProgressStarted
+HOOK
+MemberCourseProgressCompleted
+HOOK
+MemberBadgeRemoved
+HOOK
+MemberBadgeAdded
+HOOK
+MemberAmbassadorLeveledUp
+HOOK
+InviteRequested
+HOOK
+HotColdPollUpdated
+HOOK
+HotColdPollCreated
+HOOK
+GiftLeaderboardUpdated
+HOOK
+EventUpdated
+HOOK
+EventCreated
+HOOK
+CustomFieldResponseUpdated
+HOOK
+CustomFieldResponseRemoved
+HOOK
+CustomFieldResponseCreated
+HOOK
+CommentCreated
+HOOK
+ArticleUpdated
+HOOK
+ArticleCreated
+On this page
+About the Admin API
+Base URL
+Authentication
+Getting Started
+Core Resources Networks
+Members
+Content & Posts
+Events
+Spaces
+Webhooks How It Works
+Webhook Delivery Format
+Available Events
+Security
+Best Practices
+Expected Responses
+Circuit breaker
+Rate Limit and Quota
+Error Handling
+Pagination
+Quick Reference Common Operations
+Request Format
+Response Format
+Best Practices
+Support
+Overview
+Admin API
+Copy page Copy page
+Comprehensive guide to the Mighty Networks Admin API
+Copy page Copy page
+​
+About the Admin API
+The Mighty Networks Admin API provides programmatic access to manage and automate your Network operations. With the Admin API, you can manage members, content, events, and more.
+​
+Base URL
+All API requests should be made to:
+https://api.mn.co/admin
+​
+Authentication
+The Admin API uses Bearer token authentication. All requests must include a valid API token.
+Authentication Guide
+Learn how to generate tokens, authenticate requests, and implement security best practices.
+​
+Getting Started
+Quickstart Guide
+Make your first API call in under 5 minutes.
+Authentication
+Set up authentication and manage API tokens.
+​
+Core Resources
+The Admin API provides access to the following resources:
+​
+Networks
+Manage Network settings, information, and configuration.
+​
+Members
+List and search members
+View member profiles and activity
+Update member information
+Manage member permissions and roles
+​
+Content & Posts
+Create, read, update, and delete posts
+Manage comments and reactions
+Moderate content
+Work with rich media attachments
+​
+Events
+Create and manage events
+Track RSVPs and attendance
+Update event details
+​
+Spaces
+Manage Network spaces
+Configure space settings
+Control space membership
+​
+Webhooks
+Webhooks allow you to receive real-time HTTP notifications when events occur in your Network. Instead of polling the API for changes, webhooks push data to your server as events happen.
+​
+How It Works
+You configure a webhook endpoint URL in your Network settings
+You select which events you want to receive
+When an event occurs, Mighty Networks sends an HTTP POST request to your URL
+Your server processes the webhook and responds with any 2xx status code (200, 201, 202, 204, etc.)
+​
+Webhook Delivery Format
+Webhooks are delivered as HTTP POST requests with JSON payloads:
+POST /your-webhook-endpoint
+Host : your-domain.com
+Content-Type : application/json
+Accept : application/json
+Authorization : Bearer YOUR_CONFIGURED_API_KEY
+{
+"event_id" : "abc123-uuid" ,
+"event_timestamp" : "2024-01-15T10:30:00Z" ,
+"event_type" : "PostCreated" ,
+"payload" : {
+"id" : 12345 ,
+"title" : "Example post title" ,
+"author" : {
+"id" : 67890 ,
+"email" : "user@example.com" ,
+"first_name" : "John"
+},
+"space_id" : 111 ,
+"created_at" : "2024-01-15T10:30:00Z"
+}
+}
+​
+Available Events
+See the Webhooks section for a complete list of available events and their payload schemas.
+​
+Security
+HTTPS Required : Webhook endpoints must use HTTPS in production
+Authentication : Configure an API key that will be included as a Bearer token in the Authorization header
+Verify the source : Always validate the Authorization header matches your configured key
+​
+Best Practices
+Respond quickly
+Return any 2xx status code (200, 201, 202, 204, etc.) as fast as possible. Process the webhook payload asynchronously if needed—webhooks timeout after 30 seconds.
+Handle retries
+Webhooks are retried on failure with any non-2xx status code. Implement idempotency to handle duplicate deliveries gracefully.
+Keep your endpoint healthy
+Repeated failures trip a circuit breaker that temporarily pauses delivery to your endpoint. Monitor your endpoint’s availability so deliveries aren’t suspended. See Circuit breaker for details.
+Expect async delivery
+Webhooks are delivered asynchronously via background jobs. There may be a slight delay between when an event occurs and when you receive the webhook.
+Log webhook payloads
+Store incoming webhook data for debugging and auditing purposes.
+​
+Expected Responses
+Your endpoint should return any 2xx status code to acknowledge successful receipt. Common success codes include 200 (OK), 201 (Created), 202 (Accepted), and 204 (No Content):
+Status Code Meaning 2xx (200-299) Webhook received successfully Any non-2xx status Delivery failed—will be retried
+​
+Circuit breaker
+Outbound webhook delivery is protected by a circuit breaker . If your endpoint fails repeatedly in a row, we temporarily stop delivering webhooks to it rather than continuing to retry against an endpoint that appears to be down.
+Trips on repeated failures : When deliveries to your endpoint fail multiple consecutive times (any non-2xx response, a timeout, or a connection error), the circuit breaker opens and delivery is paused.
+Delivery is paused temporarily : While the circuit is open, new webhooks for that endpoint are not delivered. This protects both your service and ours from wasted retries against a failing endpoint.
+Automatic recovery : After a cooldown period, we probe your endpoint again. Once it responds successfully, the circuit closes and normal delivery resumes automatically—no manual intervention required.
+Keep your endpoint highly available and return a 2xx status quickly to avoid tripping the circuit breaker. If you notice a gap in delivery, check your endpoint’s logs and uptime for a recent run of failures.
+​
+Rate Limit and Quota
+The Admin API is rate limited to ensure fair usage. Each plan includes a monthly request quota, with additional usage billed per request past your plan’s permitted volume:
+Plan Included API Requests Extra API Requests Scale 5,000 / month $0.002 / request Growth Custom Custom Mighty Pro Basic Custom Custom Mighty Pro Essential Custom Custom Mighty Pro Complete Custom Custom
+Contact your account team for the specific limits and pricing that apply to your plan.
+​
+Error Handling
+The API uses standard HTTP status codes:
+Status Code Description 200 Success 201 Created 400 Bad Request - Invalid parameters 401 Unauthorized - Invalid or missing API token 403 Forbidden - Insufficient permissions 404 Not Found - Resource doesn’t exist 429 Too Many Requests - Rate limit exceeded 500 Internal Server Error
+Error responses include a JSON body with details:
+{
+"error" : "unauthorized" ,
+"message" : "Invalid API token" ,
+"status" : 401
+}
+​
+Pagination
+List endpoints support pagination using the following query parameters:
+page : Page number (default: 1)
+per_page : Items per page (default: 25, max: 100)
+Pagination metadata is included in the response:
+{
+"data" : [ ... ],
+"meta" : {
+"current_page" : 1 ,
+"total_pages" : 10 ,
+"total_count" : 250 ,
+"per_page" : 25
+}
+}
+​
+Quick Reference
+​
+Common Operations
+All API operations are scoped to a specific Network:
+List Resources - GET /networks/{id}/members
+Get Resource - GET /networks/{id}/members/{member_id}
+Create Resource - POST /networks/{id}/posts
+Update Resource - PATCH /networks/{id}/members/{member_id}
+Delete Resource - DELETE /networks/{id}/spaces/{space_id}/members/{user_id}
+​
+Request Format
+All requests require authentication and use standard REST conventions:
+curl https://api.mn.co/admin/v1/networks/{network_id}/endpoint \
+-H "Authorization: Bearer YOUR_API_TOKEN" \
+-H "Content-Type: application/json" \
+-H "User-Agent: my-app/1.0 (+https://example.com)"
+Requests to api.mn.co must include a non-empty User-Agent header. Requests without one are blocked by bot protection and receive an HTML challenge page with HTTP 403 . We recommend your-app-name/version (+url) .
+​
+Response Format
+Successful list endpoints return paginated data:
+{
+"items" : [ ... ],
+"links" : {
+"self" : "current_page_url" ,
+"next" : "next_page_url"
+}
+}
+​
+Best Practices
+Store tokens securely - Never expose API tokens in client-side code or public repositories
+Handle rate limits - Implement exponential backoff when hitting rate limits
+Use pagination - Always paginate through large result sets
+Validate input - Validate data before sending to the API
+Monitor errors - Log and monitor API errors for debugging
+​
+Support
+Need help with the Admin API?
+Support Center
+Visit our FAQ and support documentation.
+Contact Support
+Get in touch with our technical support team.
+Changelog
+⌘ I
+x linkedin instagram
+Powered by This documentation is built and hosted on Mintlify, a developer documentation platform
+Assistant
+Responses are generated using AI and may contain mistakes.
+Contact support
