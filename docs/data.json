@@ -1,17 +1,4148 @@
 {
  "meta": {
-  "generated_at": "2026-08-18T12:57:37+00:00",
-  "as_of": null,
-  "first_snapshot": null,
-  "snapshot_count": 0,
-  "members_tracked": 0,
+  "generated_at": "2026-08-18T15:58:37+00:00",
+  "as_of": "2026-08-18",
+  "first_snapshot": "2026-08-18",
+  "snapshot_count": 1,
+  "members_tracked": 23884,
   "lookback_days": 70,
   "weeks": 10
  },
  "totals": {
-  "joined": 0,
+  "joined": 1640,
   "entered": 0,
-  "not_entered": 0
+  "not_entered": 1640
  },
- "rows": []
+ "rows": [
+  {
+   "date": "2026-08-18",
+   "joined": 17,
+   "entered": 0,
+   "not_entered": 17,
+   "approx": false,
+   "weeks": [
+    {
+     "n": 0,
+     "closed": false,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    }
+   ]
+  },
+  {
+   "date": "2026-08-17",
+   "joined": 33,
+   "entered": 0,
+   "not_entered": 33,
+   "approx": false,
+   "weeks": [
+    {
+     "n": 0,
+     "closed": false,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    }
+   ]
+  },
+  {
+   "date": "2026-08-16",
+   "joined": 27,
+   "entered": 0,
+   "not_entered": 27,
+   "approx": false,
+   "weeks": [
+    {
+     "n": 0,
+     "closed": false,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    }
+   ]
+  },
+  {
+   "date": "2026-08-15",
+   "joined": 24,
+   "entered": 0,
+   "not_entered": 24,
+   "approx": false,
+   "weeks": [
+    {
+     "n": 0,
+     "closed": false,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    }
+   ]
+  },
+  {
+   "date": "2026-08-14",
+   "joined": 37,
+   "entered": 0,
+   "not_entered": 37,
+   "approx": false,
+   "weeks": [
+    {
+     "n": 0,
+     "closed": false,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    }
+   ]
+  },
+  {
+   "date": "2026-08-13",
+   "joined": 32,
+   "entered": 0,
+   "not_entered": 32,
+   "approx": false,
+   "weeks": [
+    {
+     "n": 0,
+     "closed": false,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    }
+   ]
+  },
+  {
+   "date": "2026-08-12",
+   "joined": 25,
+   "entered": 0,
+   "not_entered": 25,
+   "approx": false,
+   "weeks": [
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    }
+   ]
+  },
+  {
+   "date": "2026-08-11",
+   "joined": 25,
+   "entered": 0,
+   "not_entered": 25,
+   "approx": false,
+   "weeks": [
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    }
+   ]
+  },
+  {
+   "date": "2026-08-10",
+   "joined": 29,
+   "entered": 0,
+   "not_entered": 29,
+   "approx": false,
+   "weeks": [
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    }
+   ]
+  },
+  {
+   "date": "2026-08-09",
+   "joined": 28,
+   "entered": 0,
+   "not_entered": 28,
+   "approx": false,
+   "weeks": [
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    }
+   ]
+  },
+  {
+   "date": "2026-08-08",
+   "joined": 34,
+   "entered": 0,
+   "not_entered": 34,
+   "approx": false,
+   "weeks": [
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    }
+   ]
+  },
+  {
+   "date": "2026-08-07",
+   "joined": 30,
+   "entered": 0,
+   "not_entered": 30,
+   "approx": false,
+   "weeks": [
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    }
+   ]
+  },
+  {
+   "date": "2026-08-06",
+   "joined": 34,
+   "entered": 0,
+   "not_entered": 34,
+   "approx": false,
+   "weeks": [
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    }
+   ]
+  },
+  {
+   "date": "2026-08-05",
+   "joined": 20,
+   "entered": 0,
+   "not_entered": 20,
+   "approx": false,
+   "weeks": [
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    }
+   ]
+  },
+  {
+   "date": "2026-08-04",
+   "joined": 203,
+   "entered": 0,
+   "not_entered": 203,
+   "approx": false,
+   "weeks": [
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    }
+   ]
+  },
+  {
+   "date": "2026-08-03",
+   "joined": 16,
+   "entered": 0,
+   "not_entered": 16,
+   "approx": false,
+   "weeks": [
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    }
+   ]
+  },
+  {
+   "date": "2026-08-02",
+   "joined": 7,
+   "entered": 0,
+   "not_entered": 7,
+   "approx": false,
+   "weeks": [
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    }
+   ]
+  },
+  {
+   "date": "2026-08-01",
+   "joined": 55,
+   "entered": 0,
+   "not_entered": 55,
+   "approx": false,
+   "weeks": [
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    }
+   ]
+  },
+  {
+   "date": "2026-07-31",
+   "joined": 53,
+   "entered": 0,
+   "not_entered": 53,
+   "approx": false,
+   "weeks": [
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    }
+   ]
+  },
+  {
+   "date": "2026-07-30",
+   "joined": 21,
+   "entered": 0,
+   "not_entered": 21,
+   "approx": false,
+   "weeks": [
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    }
+   ]
+  },
+  {
+   "date": "2026-07-29",
+   "joined": 13,
+   "entered": 0,
+   "not_entered": 13,
+   "approx": false,
+   "weeks": [
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    }
+   ]
+  },
+  {
+   "date": "2026-07-28",
+   "joined": 22,
+   "entered": 0,
+   "not_entered": 22,
+   "approx": false,
+   "weeks": [
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    }
+   ]
+  },
+  {
+   "date": "2026-07-27",
+   "joined": 19,
+   "entered": 0,
+   "not_entered": 19,
+   "approx": false,
+   "weeks": [
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    }
+   ]
+  },
+  {
+   "date": "2026-07-26",
+   "joined": 13,
+   "entered": 0,
+   "not_entered": 13,
+   "approx": false,
+   "weeks": [
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    }
+   ]
+  },
+  {
+   "date": "2026-07-25",
+   "joined": 15,
+   "entered": 0,
+   "not_entered": 15,
+   "approx": false,
+   "weeks": [
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    }
+   ]
+  },
+  {
+   "date": "2026-07-24",
+   "joined": 24,
+   "entered": 0,
+   "not_entered": 24,
+   "approx": false,
+   "weeks": [
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    }
+   ]
+  },
+  {
+   "date": "2026-07-23",
+   "joined": 22,
+   "entered": 0,
+   "not_entered": 22,
+   "approx": false,
+   "weeks": [
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    }
+   ]
+  },
+  {
+   "date": "2026-07-22",
+   "joined": 13,
+   "entered": 0,
+   "not_entered": 13,
+   "approx": false,
+   "weeks": [
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    }
+   ]
+  },
+  {
+   "date": "2026-07-21",
+   "joined": 18,
+   "entered": 0,
+   "not_entered": 18,
+   "approx": false,
+   "weeks": [
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    }
+   ]
+  },
+  {
+   "date": "2026-07-20",
+   "joined": 16,
+   "entered": 0,
+   "not_entered": 16,
+   "approx": false,
+   "weeks": [
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    }
+   ]
+  },
+  {
+   "date": "2026-07-19",
+   "joined": 10,
+   "entered": 0,
+   "not_entered": 10,
+   "approx": false,
+   "weeks": [
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    }
+   ]
+  },
+  {
+   "date": "2026-07-18",
+   "joined": 10,
+   "entered": 0,
+   "not_entered": 10,
+   "approx": false,
+   "weeks": [
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    }
+   ]
+  },
+  {
+   "date": "2026-07-17",
+   "joined": 21,
+   "entered": 0,
+   "not_entered": 21,
+   "approx": false,
+   "weeks": [
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    }
+   ]
+  },
+  {
+   "date": "2026-07-16",
+   "joined": 14,
+   "entered": 0,
+   "not_entered": 14,
+   "approx": false,
+   "weeks": [
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    }
+   ]
+  },
+  {
+   "date": "2026-07-15",
+   "joined": 18,
+   "entered": 0,
+   "not_entered": 18,
+   "approx": false,
+   "weeks": [
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    }
+   ]
+  },
+  {
+   "date": "2026-07-14",
+   "joined": 20,
+   "entered": 0,
+   "not_entered": 20,
+   "approx": false,
+   "weeks": [
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    }
+   ]
+  },
+  {
+   "date": "2026-07-13",
+   "joined": 19,
+   "entered": 0,
+   "not_entered": 19,
+   "approx": false,
+   "weeks": [
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    }
+   ]
+  },
+  {
+   "date": "2026-07-12",
+   "joined": 8,
+   "entered": 0,
+   "not_entered": 8,
+   "approx": false,
+   "weeks": [
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    }
+   ]
+  },
+  {
+   "date": "2026-07-11",
+   "joined": 9,
+   "entered": 0,
+   "not_entered": 9,
+   "approx": false,
+   "weeks": [
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    }
+   ]
+  },
+  {
+   "date": "2026-07-10",
+   "joined": 15,
+   "entered": 0,
+   "not_entered": 15,
+   "approx": false,
+   "weeks": [
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    }
+   ]
+  },
+  {
+   "date": "2026-07-09",
+   "joined": 21,
+   "entered": 0,
+   "not_entered": 21,
+   "approx": false,
+   "weeks": [
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    }
+   ]
+  },
+  {
+   "date": "2026-07-08",
+   "joined": 13,
+   "entered": 0,
+   "not_entered": 13,
+   "approx": false,
+   "weeks": [
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    }
+   ]
+  },
+  {
+   "date": "2026-07-07",
+   "joined": 24,
+   "entered": 0,
+   "not_entered": 24,
+   "approx": false,
+   "weeks": [
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    }
+   ]
+  },
+  {
+   "date": "2026-07-06",
+   "joined": 38,
+   "entered": 0,
+   "not_entered": 38,
+   "approx": false,
+   "weeks": [
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    }
+   ]
+  },
+  {
+   "date": "2026-07-05",
+   "joined": 12,
+   "entered": 0,
+   "not_entered": 12,
+   "approx": false,
+   "weeks": [
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    }
+   ]
+  },
+  {
+   "date": "2026-07-04",
+   "joined": 14,
+   "entered": 0,
+   "not_entered": 14,
+   "approx": false,
+   "weeks": [
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    }
+   ]
+  },
+  {
+   "date": "2026-07-03",
+   "joined": 19,
+   "entered": 0,
+   "not_entered": 19,
+   "approx": false,
+   "weeks": [
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    }
+   ]
+  },
+  {
+   "date": "2026-07-02",
+   "joined": 27,
+   "entered": 0,
+   "not_entered": 27,
+   "approx": false,
+   "weeks": [
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    }
+   ]
+  },
+  {
+   "date": "2026-07-01",
+   "joined": 227,
+   "entered": 0,
+   "not_entered": 227,
+   "approx": false,
+   "weeks": [
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    }
+   ]
+  },
+  {
+   "date": "2026-06-30",
+   "joined": 14,
+   "entered": 0,
+   "not_entered": 14,
+   "approx": false,
+   "weeks": [
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    }
+   ]
+  },
+  {
+   "date": "2026-06-29",
+   "joined": 7,
+   "entered": 0,
+   "not_entered": 7,
+   "approx": false,
+   "weeks": [
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    }
+   ]
+  },
+  {
+   "date": "2026-06-28",
+   "joined": 5,
+   "entered": 0,
+   "not_entered": 5,
+   "approx": false,
+   "weeks": [
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    }
+   ]
+  },
+  {
+   "date": "2026-06-27",
+   "joined": 6,
+   "entered": 0,
+   "not_entered": 6,
+   "approx": false,
+   "weeks": [
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    }
+   ]
+  },
+  {
+   "date": "2026-06-26",
+   "joined": 6,
+   "entered": 0,
+   "not_entered": 6,
+   "approx": false,
+   "weeks": [
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    }
+   ]
+  },
+  {
+   "date": "2026-06-25",
+   "joined": 7,
+   "entered": 0,
+   "not_entered": 7,
+   "approx": false,
+   "weeks": [
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    }
+   ]
+  },
+  {
+   "date": "2026-06-24",
+   "joined": 6,
+   "entered": 0,
+   "not_entered": 6,
+   "approx": false,
+   "weeks": [
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    }
+   ]
+  },
+  {
+   "date": "2026-06-23",
+   "joined": 13,
+   "entered": 0,
+   "not_entered": 13,
+   "approx": false,
+   "weeks": [
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    }
+   ]
+  },
+  {
+   "date": "2026-06-22",
+   "joined": 12,
+   "entered": 0,
+   "not_entered": 12,
+   "approx": false,
+   "weeks": [
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    }
+   ]
+  },
+  {
+   "date": "2026-06-21",
+   "joined": 2,
+   "entered": 0,
+   "not_entered": 2,
+   "approx": false,
+   "weeks": [
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    }
+   ]
+  },
+  {
+   "date": "2026-06-20",
+   "joined": 10,
+   "entered": 0,
+   "not_entered": 10,
+   "approx": false,
+   "weeks": [
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    }
+   ]
+  },
+  {
+   "date": "2026-06-19",
+   "joined": 6,
+   "entered": 0,
+   "not_entered": 6,
+   "approx": false,
+   "weeks": [
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    }
+   ]
+  },
+  {
+   "date": "2026-06-18",
+   "joined": 5,
+   "entered": 0,
+   "not_entered": 5,
+   "approx": false,
+   "weeks": [
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    }
+   ]
+  },
+  {
+   "date": "2026-06-17",
+   "joined": 13,
+   "entered": 0,
+   "not_entered": 13,
+   "approx": false,
+   "weeks": [
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": false
+    }
+   ]
+  },
+  {
+   "date": "2026-06-16",
+   "joined": 13,
+   "entered": 0,
+   "not_entered": 13,
+   "approx": false,
+   "weeks": [
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": true
+    }
+   ]
+  },
+  {
+   "date": "2026-06-15",
+   "joined": 10,
+   "entered": 0,
+   "not_entered": 10,
+   "approx": false,
+   "weeks": [
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": true
+    }
+   ]
+  },
+  {
+   "date": "2026-06-14",
+   "joined": 11,
+   "entered": 0,
+   "not_entered": 11,
+   "approx": false,
+   "weeks": [
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": true
+    }
+   ]
+  },
+  {
+   "date": "2026-06-13",
+   "joined": 5,
+   "entered": 0,
+   "not_entered": 5,
+   "approx": false,
+   "weeks": [
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": true
+    }
+   ]
+  },
+  {
+   "date": "2026-06-12",
+   "joined": 5,
+   "entered": 0,
+   "not_entered": 5,
+   "approx": false,
+   "weeks": [
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": true
+    }
+   ]
+  },
+  {
+   "date": "2026-06-11",
+   "joined": 10,
+   "entered": 0,
+   "not_entered": 10,
+   "approx": false,
+   "weeks": [
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": false,
+     "started": true
+    }
+   ]
+  },
+  {
+   "date": "2026-06-10",
+   "joined": 10,
+   "entered": 0,
+   "not_entered": 10,
+   "approx": false,
+   "weeks": [
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    },
+    {
+     "n": 0,
+     "closed": true,
+     "started": true
+    }
+   ]
+  }
+ ]
 }
