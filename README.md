@@ -43,9 +43,12 @@ needs a Network on the Scale, Growth, or Mighty Pro plan, and (per Mighty's
 quick-start) "an API access token from your Network's admin panel". To switch
 the pipeline on:
 
-1. Create the API access token in the Mighty Networks admin panel (if you
-   can't find the API section there, ask your Mighty contact — they enabled
-   the API program for this Network).
+1. Create the API access token in the Mighty Networks admin panel — per
+   Mighty's authentication guide: log in → **Admin** → **Settings** →
+   **API Keys** → **Generate New API Key**. Name it (e.g. "cohort tracker"),
+   and copy the token right away — Mighty shows it only once. (If the API Keys
+   section is missing, ask your Mighty contact — they enabled the API program
+   for this Network in July 2026.)
 2. In this repository: **Settings → Secrets and variables → Actions →
    New repository secret**, name it **`MIGHTY_API_TOKEN`**, paste the token.
 3. Run the **daily-snapshot** workflow once by hand (Actions tab → daily-snapshot
