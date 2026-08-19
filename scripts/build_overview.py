@@ -255,36 +255,19 @@ LIGHT_RAMP = [("#cde2fb", "#0b0b0b"), ("#b7d3f6", "#0b0b0b"), ("#9ec5f4", "#0b0b
               ("#86b6ef", "#0b0b0b"), ("#6da7ec", "#0b0b0b"), ("#5598e7", "#0b0b0b"),
               ("#3987e5", "#ffffff"), ("#2a78d6", "#ffffff"), ("#256abf", "#ffffff"),
               ("#1c5cab", "#ffffff")]
-DARK_RAMP = [("#0d366b", "#ffffff"), ("#104281", "#ffffff"), ("#184f95", "#ffffff"),
-             ("#1c5cab", "#ffffff"), ("#256abf", "#ffffff"), ("#2a78d6", "#ffffff"),
-             ("#3987e5", "#ffffff"), ("#5598e7", "#0b0b0b"), ("#6da7ec", "#0b0b0b"),
-             ("#86b6ef", "#0b0b0b")]
 
+# Lesko Help brand chrome (from the How-we-work-together identity): cream
+# paper, navy ink, red + yellow accents. Data-cell colors stay untouched.
 LIGHT_TOKENS = {
-    "page": "#f9f9f7", "surface": "#fcfcfb", "ink": "#0b0b0b", "ink-2": "#52514e",
-    "ink-3": "#898781", "grid": "#e1e0d9", "ring": "rgba(11,11,11,0.10)",
-    "accent": "#2a78d6", "good": "#006300",
-    "grp": "#f1f0ec", "grp2": "#f6f5f1",
+    "page": "#faf6ec", "surface": "#fffefa", "ink": "#16223f", "ink-2": "#4a5570",
+    "ink-3": "#8a93a8", "grid": "rgba(22,34,63,0.14)", "ring": "rgba(22,34,63,0.22)",
+    "accent": "#e8453c", "good": "#006300", "brand-yellow": "#f6c544",
+    "grp": "#f1ead8", "grp2": "#f6f0e1",
     "ramp-gradient": "linear-gradient(to right,#cde2fb,#6da7ec,#2a78d6,#1c5cab)",
     # Members column: solid green cell, white numerals.
     "joined-bg": "#006300", "joined-ink": "#ffffff",
     # "Not yet entered": red severity ramp, w1 lightest (nearly everyone in)
     # to w5 deepest (nobody entered yet); yellow the moment everyone is in.
-    "w1-bg": "#fbb724", "w1-ink": "#0b0b0b",
-    "w2-bg": "#f79009", "w2-ink": "#0b0b0b",
-    "w3-bg": "#ef6c0a", "w3-ink": "#0b0b0b",
-    "w4-bg": "#e04315", "w4-ink": "#ffffff",
-    "w5-bg": "#d21f1f", "w5-ink": "#ffffff",
-    "done-bg": "#ffd60a", "done-ink": "#0b0b0b",
-    "wait-gradient": "linear-gradient(to right,#fbb724,#ef6c0a,#d21f1f)",
-}
-DARK_TOKENS = {
-    "page": "#0d0d0d", "surface": "#1a1a19", "ink": "#ffffff", "ink-2": "#c3c2b7",
-    "ink-3": "#898781", "grid": "#2c2c2a", "ring": "rgba(255,255,255,0.10)",
-    "accent": "#3987e5", "good": "#0ca30c",
-    "grp": "#232322", "grp2": "#1e1e1d",
-    "ramp-gradient": "linear-gradient(to right,#0d366b,#256abf,#5598e7,#86b6ef)",
-    "joined-bg": "#0ca30c", "joined-ink": "#0b0b0b",
     "w1-bg": "#fbb724", "w1-ink": "#0b0b0b",
     "w2-bg": "#f79009", "w2-ink": "#0b0b0b",
     "w3-bg": "#ef6c0a", "w3-ink": "#0b0b0b",
@@ -304,19 +287,25 @@ def token_block(tokens, ramp):
 
 BASE_CSS = """
 * { box-sizing: border-box; }
+:root {
+  --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+}
 body {
   margin: 0; background: var(--page); color: var(--ink);
-  font: 15px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif;
+  font: 15px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 main { max-width: 1180px; margin: 0 auto; padding: 32px 20px 48px; }
-header h1 { font-size: 24px; margin: 0 0 4px; text-wrap: balance; }
-header p { margin: 0; color: var(--ink-2); }
-.asof { display: inline-block; margin-top: 10px; padding: 2px 10px; border: 1px solid var(--ring);
-        border-radius: 999px; color: var(--ink-2); font-size: 13px; background: var(--surface); }
+header h1 { font-family: var(--serif); font-size: 27px; margin: 0 0 4px; text-wrap: balance; }
+header p { margin: 0; color: var(--ink-2); font-family: var(--serif); font-style: italic; }
+.asof { display: inline-block; margin-top: 10px; padding: 3px 12px;
+        border-radius: 999px; color: var(--ink); font-size: 13px; font-weight: 600;
+        background: var(--brand-yellow); }
 .tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 12px; margin: 24px 0 16px; }
 .tile { background: var(--surface); border: 1px solid var(--ring); border-radius: 10px; padding: 14px 16px; }
-.tile .k { font-size: 13px; color: var(--ink-2); }
-.tile .v { font-size: 28px; font-weight: 650; margin-top: 2px; }
+.tile .k { font-family: var(--mono); font-size: 11px; text-transform: uppercase;
+  letter-spacing: 0.05em; color: var(--ink-2); }
+.tile .v { font-family: var(--serif); font-size: 30px; font-weight: 650; margin-top: 3px; }
 .tile .sub { font-size: 14px; font-weight: 400; color: var(--ink-2); }
 .card { background: var(--surface); border: 1px solid var(--ring); border-radius: 10px; padding: 8px; margin-top: 8px; }
 .card.setup { padding: 20px 24px; max-width: 640px; }
@@ -324,7 +313,8 @@ header p { margin: 0; color: var(--ink-2); }
 .card.setup code { background: var(--page); border: 1px solid var(--grid); border-radius: 4px; padding: 1px 5px; }
 .tablewrap { overflow-x: auto; }
 table { border-collapse: separate; border-spacing: 2px; width: 100%; font-variant-numeric: tabular-nums; }
-thead th { font-size: 12px; font-weight: 600; color: var(--ink-3); text-align: right; padding: 6px 5px; white-space: nowrap; }
+thead th { font-family: var(--mono); font-size: 10.5px; font-weight: 600; color: var(--ink-2);
+  text-transform: uppercase; letter-spacing: 0.06em; text-align: right; padding: 6px 5px; white-space: nowrap; }
 thead th:first-child { text-align: left; }
 tbody th { font-weight: 500; text-align: left; padding: 4px 10px 4px 8px; white-space: nowrap; color: var(--ink); font-size: 13.5px; }
 tbody td { text-align: right; padding: 4px 7px 4px 4px; border-radius: 4px; min-width: 34px; font-size: 13.5px; }
@@ -345,10 +335,10 @@ tr.grp th { cursor: pointer; user-select: none; }
 tr.grp th::before { content: "\\25B8"; display: inline-block; width: 14px; color: var(--ink-3); }
 tr.grp[aria-expanded="true"] th::before { content: "\\25BE"; }
 tr.g-year th, tr.g-year td.num { font-weight: 700; }
-tr.g-year th { font-size: 14.5px; }
+tr.g-year th { font-family: var(--serif); font-size: 15.5px; }
 tr.g-year { background: var(--grp); }
 tr.g-month { background: var(--grp2); }
-tr.g-month th { font-weight: 650; padding-left: 20px; }
+tr.g-month th { font-family: var(--serif); font-weight: 650; padding-left: 20px; }
 tr.g-week th { padding-left: 32px; color: var(--ink-2); }
 tr.day th { padding-left: 50px; font-weight: 450; }
 .legend { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; padding: 10px 8px 6px; color: var(--ink-2); font-size: 12.5px; }
@@ -362,7 +352,7 @@ tr.day th { padding-left: 50px; font-weight: 450; }
 .note { color: var(--ink-2); font-size: 13.5px; max-width: 820px; }
 .note.notice { background: var(--surface); border: 1px solid var(--ring); border-left: 3px solid var(--accent);
   border-radius: 8px; padding: 10px 14px; max-width: none; margin: 0 0 8px; }
-footer { margin-top: 28px; color: var(--ink-3); font-size: 12.5px; }
+footer { margin-top: 28px; color: var(--ink-3); font-size: 11.5px; font-family: var(--mono); }
 #tip { position: fixed; display: none; max-width: 280px; padding: 6px 10px; background: var(--ink); color: var(--page);
   border-radius: 6px; font-size: 12.5px; pointer-events: none; z-index: 10; }
 """
@@ -419,19 +409,10 @@ PAGE_JS = """
 
 
 def build_css(mode):
-    light = token_block(LIGHT_TOKENS, LIGHT_RAMP)
-    dark = token_block(DARK_TOKENS, DARK_RAMP)
-    if mode == "artifact":
-        # Three viewer states: unstamped (system), data-theme=light, data-theme=dark.
-        theme = (":root {\n  color-scheme: light;\n%s\n}\n"
-                 "@media (prefers-color-scheme: dark) {\n"
-                 "  :root:not([data-theme=\"light\"]) {\n  color-scheme: dark;\n%s\n  }\n}\n"
-                 ":root[data-theme=\"dark\"] {\n  color-scheme: dark;\n%s\n}\n"
-                 % (light, dark, dark))
-    else:
-        theme = (":root {\n  color-scheme: light;\n%s\n}\n"
-                 "@media (prefers-color-scheme: dark) {\n"
-                 "  :root {\n  color-scheme: dark;\n%s\n  }\n}\n" % (light, dark))
+    # One deliberate brand look (cream paper, navy ink) in every context -
+    # the background and all colors are painted explicitly, so the page
+    # holds on any host theme.
+    theme = ":root {\n  color-scheme: light;\n%s\n}\n" % token_block(LIGHT_TOKENS, LIGHT_RAMP)
     return theme + BASE_CSS.replace("__HEAT_RULES__", HEAT_RULES)
 
 
@@ -643,6 +624,10 @@ DOC_SHELL = """<!doctype html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Lesko Help Member Cohorts</title>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#16223f">
+<link rel="icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-192.png">
 <style>__CSS__</style>
 </head>
 <body>

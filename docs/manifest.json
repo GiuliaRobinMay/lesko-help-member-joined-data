@@ -1,0 +1,14 @@
+{
+  "name": "Lesko Help Member Cohorts",
+  "short_name": "Lesko Cohorts",
+  "description": "How many members join Lesko Help each day and how quickly they enter the community.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#faf6ec",
+  "theme_color": "#16223f",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}

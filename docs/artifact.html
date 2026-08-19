@@ -1,17 +1,18 @@
 <title>Lesko Help Member Cohorts</title>
 <style>:root {
   color-scheme: light;
-  --page: #f9f9f7;
-  --surface: #fcfcfb;
-  --ink: #0b0b0b;
-  --ink-2: #52514e;
-  --ink-3: #898781;
-  --grid: #e1e0d9;
-  --ring: rgba(11,11,11,0.10);
-  --accent: #2a78d6;
+  --page: #faf6ec;
+  --surface: #fffefa;
+  --ink: #16223f;
+  --ink-2: #4a5570;
+  --ink-3: #8a93a8;
+  --grid: rgba(22,34,63,0.14);
+  --ring: rgba(22,34,63,0.22);
+  --accent: #e8453c;
   --good: #006300;
-  --grp: #f1f0ec;
-  --grp2: #f6f5f1;
+  --brand-yellow: #f6c544;
+  --grp: #f1ead8;
+  --grp2: #f6f0e1;
   --ramp-gradient: linear-gradient(to right,#cde2fb,#6da7ec,#2a78d6,#1c5cab);
   --joined-bg: #006300;
   --joined-ink: #ffffff;
@@ -39,103 +40,27 @@
   --h9-bg: #256abf; --h9-ink: #ffffff;
   --h10-bg: #1c5cab; --h10-ink: #ffffff;
 }
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-  color-scheme: dark;
-  --page: #0d0d0d;
-  --surface: #1a1a19;
-  --ink: #ffffff;
-  --ink-2: #c3c2b7;
-  --ink-3: #898781;
-  --grid: #2c2c2a;
-  --ring: rgba(255,255,255,0.10);
-  --accent: #3987e5;
-  --good: #0ca30c;
-  --grp: #232322;
-  --grp2: #1e1e1d;
-  --ramp-gradient: linear-gradient(to right,#0d366b,#256abf,#5598e7,#86b6ef);
-  --joined-bg: #0ca30c;
-  --joined-ink: #0b0b0b;
-  --w1-bg: #fbb724;
-  --w1-ink: #0b0b0b;
-  --w2-bg: #f79009;
-  --w2-ink: #0b0b0b;
-  --w3-bg: #ef6c0a;
-  --w3-ink: #0b0b0b;
-  --w4-bg: #e04315;
-  --w4-ink: #ffffff;
-  --w5-bg: #d21f1f;
-  --w5-ink: #ffffff;
-  --done-bg: #ffd60a;
-  --done-ink: #0b0b0b;
-  --wait-gradient: linear-gradient(to right,#fbb724,#ef6c0a,#d21f1f);
-  --h1-bg: #0d366b; --h1-ink: #ffffff;
-  --h2-bg: #104281; --h2-ink: #ffffff;
-  --h3-bg: #184f95; --h3-ink: #ffffff;
-  --h4-bg: #1c5cab; --h4-ink: #ffffff;
-  --h5-bg: #256abf; --h5-ink: #ffffff;
-  --h6-bg: #2a78d6; --h6-ink: #ffffff;
-  --h7-bg: #3987e5; --h7-ink: #ffffff;
-  --h8-bg: #5598e7; --h8-ink: #0b0b0b;
-  --h9-bg: #6da7ec; --h9-ink: #0b0b0b;
-  --h10-bg: #86b6ef; --h10-ink: #0b0b0b;
-  }
-}
-:root[data-theme="dark"] {
-  color-scheme: dark;
-  --page: #0d0d0d;
-  --surface: #1a1a19;
-  --ink: #ffffff;
-  --ink-2: #c3c2b7;
-  --ink-3: #898781;
-  --grid: #2c2c2a;
-  --ring: rgba(255,255,255,0.10);
-  --accent: #3987e5;
-  --good: #0ca30c;
-  --grp: #232322;
-  --grp2: #1e1e1d;
-  --ramp-gradient: linear-gradient(to right,#0d366b,#256abf,#5598e7,#86b6ef);
-  --joined-bg: #0ca30c;
-  --joined-ink: #0b0b0b;
-  --w1-bg: #fbb724;
-  --w1-ink: #0b0b0b;
-  --w2-bg: #f79009;
-  --w2-ink: #0b0b0b;
-  --w3-bg: #ef6c0a;
-  --w3-ink: #0b0b0b;
-  --w4-bg: #e04315;
-  --w4-ink: #ffffff;
-  --w5-bg: #d21f1f;
-  --w5-ink: #ffffff;
-  --done-bg: #ffd60a;
-  --done-ink: #0b0b0b;
-  --wait-gradient: linear-gradient(to right,#fbb724,#ef6c0a,#d21f1f);
-  --h1-bg: #0d366b; --h1-ink: #ffffff;
-  --h2-bg: #104281; --h2-ink: #ffffff;
-  --h3-bg: #184f95; --h3-ink: #ffffff;
-  --h4-bg: #1c5cab; --h4-ink: #ffffff;
-  --h5-bg: #256abf; --h5-ink: #ffffff;
-  --h6-bg: #2a78d6; --h6-ink: #ffffff;
-  --h7-bg: #3987e5; --h7-ink: #ffffff;
-  --h8-bg: #5598e7; --h8-ink: #0b0b0b;
-  --h9-bg: #6da7ec; --h9-ink: #0b0b0b;
-  --h10-bg: #86b6ef; --h10-ink: #0b0b0b;
-}
 
 * { box-sizing: border-box; }
+:root {
+  --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+}
 body {
   margin: 0; background: var(--page); color: var(--ink);
-  font: 15px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif;
+  font: 15px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 main { max-width: 1180px; margin: 0 auto; padding: 32px 20px 48px; }
-header h1 { font-size: 24px; margin: 0 0 4px; text-wrap: balance; }
-header p { margin: 0; color: var(--ink-2); }
-.asof { display: inline-block; margin-top: 10px; padding: 2px 10px; border: 1px solid var(--ring);
-        border-radius: 999px; color: var(--ink-2); font-size: 13px; background: var(--surface); }
+header h1 { font-family: var(--serif); font-size: 27px; margin: 0 0 4px; text-wrap: balance; }
+header p { margin: 0; color: var(--ink-2); font-family: var(--serif); font-style: italic; }
+.asof { display: inline-block; margin-top: 10px; padding: 3px 12px;
+        border-radius: 999px; color: var(--ink); font-size: 13px; font-weight: 600;
+        background: var(--brand-yellow); }
 .tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 12px; margin: 24px 0 16px; }
 .tile { background: var(--surface); border: 1px solid var(--ring); border-radius: 10px; padding: 14px 16px; }
-.tile .k { font-size: 13px; color: var(--ink-2); }
-.tile .v { font-size: 28px; font-weight: 650; margin-top: 2px; }
+.tile .k { font-family: var(--mono); font-size: 11px; text-transform: uppercase;
+  letter-spacing: 0.05em; color: var(--ink-2); }
+.tile .v { font-family: var(--serif); font-size: 30px; font-weight: 650; margin-top: 3px; }
 .tile .sub { font-size: 14px; font-weight: 400; color: var(--ink-2); }
 .card { background: var(--surface); border: 1px solid var(--ring); border-radius: 10px; padding: 8px; margin-top: 8px; }
 .card.setup { padding: 20px 24px; max-width: 640px; }
@@ -143,7 +68,8 @@ header p { margin: 0; color: var(--ink-2); }
 .card.setup code { background: var(--page); border: 1px solid var(--grid); border-radius: 4px; padding: 1px 5px; }
 .tablewrap { overflow-x: auto; }
 table { border-collapse: separate; border-spacing: 2px; width: 100%; font-variant-numeric: tabular-nums; }
-thead th { font-size: 12px; font-weight: 600; color: var(--ink-3); text-align: right; padding: 6px 5px; white-space: nowrap; }
+thead th { font-family: var(--mono); font-size: 10.5px; font-weight: 600; color: var(--ink-2);
+  text-transform: uppercase; letter-spacing: 0.06em; text-align: right; padding: 6px 5px; white-space: nowrap; }
 thead th:first-child { text-align: left; }
 tbody th { font-weight: 500; text-align: left; padding: 4px 10px 4px 8px; white-space: nowrap; color: var(--ink); font-size: 13.5px; }
 tbody td { text-align: right; padding: 4px 7px 4px 4px; border-radius: 4px; min-width: 34px; font-size: 13.5px; }
@@ -173,10 +99,10 @@ tr.grp th { cursor: pointer; user-select: none; }
 tr.grp th::before { content: "\25B8"; display: inline-block; width: 14px; color: var(--ink-3); }
 tr.grp[aria-expanded="true"] th::before { content: "\25BE"; }
 tr.g-year th, tr.g-year td.num { font-weight: 700; }
-tr.g-year th { font-size: 14.5px; }
+tr.g-year th { font-family: var(--serif); font-size: 15.5px; }
 tr.g-year { background: var(--grp); }
 tr.g-month { background: var(--grp2); }
-tr.g-month th { font-weight: 650; padding-left: 20px; }
+tr.g-month th { font-family: var(--serif); font-weight: 650; padding-left: 20px; }
 tr.g-week th { padding-left: 32px; color: var(--ink-2); }
 tr.day th { padding-left: 50px; font-weight: 450; }
 .legend { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; padding: 10px 8px 6px; color: var(--ink-2); font-size: 12.5px; }
@@ -190,7 +116,7 @@ tr.day th { padding-left: 50px; font-weight: 450; }
 .note { color: var(--ink-2); font-size: 13.5px; max-width: 820px; }
 .note.notice { background: var(--surface); border: 1px solid var(--ring); border-left: 3px solid var(--accent);
   border-radius: 8px; padding: 10px 14px; max-width: none; margin: 0 0 8px; }
-footer { margin-top: 28px; color: var(--ink-3); font-size: 12.5px; }
+footer { margin-top: 28px; color: var(--ink-3); font-size: 11.5px; font-family: var(--mono); }
 #tip { position: fixed; display: none; max-width: 280px; padding: 6px 10px; background: var(--ink); color: var(--page);
   border-radius: 6px; font-size: 12.5px; pointer-events: none; z-index: 10; }
 </style>
@@ -688,7 +614,7 @@ footer { margin-top: 28px; color: var(--ink-3); font-size: 12.5px; }
   <em>by W1</em> and <em>by W2</em>, so the numbers grow to the right and are never added together.
   Week timing is tracked from Wed 19 Aug onward; older cohorts show their exact entered totals with the
   week cells left blank.</p>
-  <footer>Data straight from the Mighty Networks member API &middot; rebuilt daily &middot; generated 2026-08-19 12:35 UTC</footer>
+  <footer>Data straight from the Mighty Networks member API &middot; rebuilt daily &middot; generated 2026-08-19 12:41 UTC</footer>
 </main>
 <div id="tip" role="tooltip"></div>
 <script>
