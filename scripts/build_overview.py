@@ -328,13 +328,15 @@ def build_analytics(members, snapshots, backfill):
     tracking_start = snapshots[0][0]
     tracking_ym = tracking_start.strftime("%Y-%m")
 
-    joins, joins_entered, outs = {}, {}, {}
+    joins, joins_entered, still_here, outs = {}, {}, {}, {}
     for m in members.values():
         ym = m["join"].strftime("%Y-%m")
         joins[ym] = joins.get(ym, 0) + 1
         if m["entry"]:
             joins_entered[ym] = joins_entered.get(ym, 0) + 1
-        if m["left"]:
+        if m["left"] is None:
+            still_here[ym] = still_here.get(ym, 0) + 1
+        else:
             lym = m["left"].strftime("%Y-%m")
             outs[lym] = outs.get(lym, 0) + 1
 
@@ -356,10 +358,22 @@ def build_analytics(members, snapshots, backfill):
             partial = ym == tracking_ym and tracking_start.day > 1
             row["joined"], row["joined_approx"] = cohort, pre or partial
         row["left"] = (bf["left"] if bf else None) if pre else outs.get(ym, 0)
-        row["entered_pct"] = round(100.0 * joins_entered.get(ym, 0) / cohort, 1) if cohort else None
-        # Survivor bias: members who never entered tend to get removed over
-        # time, so pre-tracking entered shares skew toward 100%.
-        row["entered_approx"] = pre
+        # "Of those added this month, how many are members today" - exact for
+        # every month, because members seen once are remembered forever.
+        row["still"] = still_here.get(ym, 0)
+        entered = joins_entered.get(ym, 0)
+        if pre and bf:
+            # True denominator, but leavers' entered-state is unknowable:
+            # the share is a LOWER BOUND of the truth.
+            row["entered_pct"] = round(100.0 * entered / bf["joined"], 1) if bf["joined"] else None
+            row["entered_bound"] = True
+            row["entered_approx"] = False
+        else:
+            row["entered_pct"] = round(100.0 * entered / cohort, 1) if cohort else None
+            row["entered_bound"] = False
+            # Survivor bias: members who never entered tend to get removed
+            # over time, so unbackfilled pre-tracking shares skew high.
+            row["entered_approx"] = pre
         rows.append(row)
         cursor = (cursor.replace(day=28) + dt.timedelta(days=4)).replace(day=1)
     return {"months": rows, "years": sorted({r["year"] for r in rows})}
@@ -819,7 +833,9 @@ def cohort_panel(meta, totals, years):
   &ldquo;this many had entered by the end of their third week&rdquo; &mdash; it already includes everyone from
   <em>by W1</em> and <em>by W2</em>, so the numbers grow to the right and are never added together.
   Week timing is tracked from %(baseline)s onward; older cohorts show their exact entered totals with the
-  week cells left blank.</p>""" % {
+  week cells left blank. From 18 Aug 2026 on, every added member is counted here forever &mdash; also after
+  they leave. Rows before that can only include members the tracker has seen; the true monthly additions
+  live on the Analytics tab.</p>""" % {
         "joined": totals["joined"],
         "entered": totals["entered"],
         "pct": pct_total,
@@ -1003,13 +1019,15 @@ def chart_svg(metric_name, months, years, value_key, approx_key=None, pct=False)
 
 def analytics_panel(meta, analytics):
     months, years = analytics["months"], analytics["years"]
+    for r in months:
+        r["entered_dim"] = r.get("entered_approx") or r.get("entered_bound")
     charts = (chart_svg("Members in", months, years, "joined", approx_key="joined_approx")
               + chart_svg("Members out", months, years, "left")
               + chart_svg("Entered the community", months, years, "entered_pct",
-                          approx_key="entered_approx", pct=True))
+                          approx_key="entered_dim", pct=True))
 
-    head = "".join('<th scope="col" colspan="3" style="text-align:center">%d</th>' % y for y in years)
-    sub = "<th></th>" + "".join("<th>In</th><th>Out</th><th>Entered</th>" for _ in years)
+    head = "".join('<th scope="col" colspan="4" style="text-align:center">%d</th>' % y for y in years)
+    sub = "<th></th>" + "".join("<th>In</th><th>Still here</th><th>Out</th><th>Entered</th>" for _ in years)
     body = []
     by_ym = {(r["year"], r["month"]): r for r in months}
     for mi in range(1, 13):
@@ -1017,16 +1035,21 @@ def analytics_panel(meta, analytics):
         for y in years:
             r = by_ym.get((y, mi))
             if not r:
-                cells.append('<td class="num muted">&ndash;</td>' * 3)
+                cells.append('<td class="num muted">&ndash;</td>' * 4)
                 continue
             j = r.get("joined")
             ja = "&asymp;&thinsp;" if r.get("joined_approx") else ""
             cells.append('<td class="num">%s%s</td>' % (ja, "{:,}".format(j)) if j is not None else '<td class="num muted">&ndash;</td>')
+            st = r.get("still")
+            cells.append('<td class="num">%s</td>' % "{:,}".format(st) if st is not None else '<td class="num muted">&ndash;</td>')
             l = r.get("left")
             cells.append('<td class="num">%s</td>' % "{:,}".format(l) if l is not None else '<td class="num muted">&ndash;</td>')
             p = r.get("entered_pct")
-            pa = "&asymp;&thinsp;" if r.get("entered_approx") else ""
-            cells.append('<td class="num muted">%s%.0f%%</td>' % (pa, p) if p is not None else '<td class="num muted">&ndash;</td>')
+            if p is None:
+                cells.append('<td class="num muted">&ndash;</td>')
+            else:
+                pfx = "&ge;&thinsp;" if r.get("entered_bound") else ("&asymp;&thinsp;" if r.get("entered_approx") else "")
+                cells.append('<td class="num muted">%s%.0f%%</td>' % (pfx, p))
         body.append('<tr><th scope="row">%s</th>%s</tr>' % (MONTH_ABBR[mi - 1], "".join(cells)))
 
     return """

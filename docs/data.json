@@ -1,6 +1,6 @@
 {
  "meta": {
-  "generated_at": "2026-08-19T14:13:54+00:00",
+  "generated_at": "2026-08-19T14:34:49+00:00",
   "as_of": "2026-08-19",
   "first_snapshot": "2026-08-18",
   "signal_baseline": "2026-08-19",
@@ -48365,7 +48365,9 @@
     "joined": 746,
     "joined_approx": true,
     "left": null,
+    "still": 746,
     "entered_pct": 100.0,
+    "entered_bound": false,
     "entered_approx": true
    },
    {
@@ -48376,7 +48378,9 @@
     "joined": 607,
     "joined_approx": true,
     "left": null,
+    "still": 607,
     "entered_pct": 100.0,
+    "entered_bound": false,
     "entered_approx": true
    },
    {
@@ -48387,7 +48391,9 @@
     "joined": 535,
     "joined_approx": true,
     "left": null,
+    "still": 535,
     "entered_pct": 100.0,
+    "entered_bound": false,
     "entered_approx": true
    },
    {
@@ -48398,7 +48404,9 @@
     "joined": 275,
     "joined_approx": true,
     "left": null,
+    "still": 275,
     "entered_pct": 100.0,
+    "entered_bound": false,
     "entered_approx": true
    },
    {
@@ -48409,7 +48417,9 @@
     "joined": 253,
     "joined_approx": true,
     "left": null,
+    "still": 253,
     "entered_pct": 100.0,
+    "entered_bound": false,
     "entered_approx": true
    },
    {
@@ -48420,7 +48430,9 @@
     "joined": 233,
     "joined_approx": true,
     "left": null,
+    "still": 233,
     "entered_pct": 100.0,
+    "entered_bound": false,
     "entered_approx": true
    },
    {
@@ -48431,7 +48443,9 @@
     "joined": 318,
     "joined_approx": true,
     "left": null,
+    "still": 318,
     "entered_pct": 100.0,
+    "entered_bound": false,
     "entered_approx": true
    },
    {
@@ -48442,8 +48456,10 @@
     "joined": 1101,
     "joined_approx": false,
     "left": null,
-    "entered_pct": 100.0,
-    "entered_approx": true
+    "still": 356,
+    "entered_pct": 32.3,
+    "entered_bound": true,
+    "entered_approx": false
    },
    {
     "ym": "2025-09",
@@ -48453,8 +48469,10 @@
     "joined": 826,
     "joined_approx": false,
     "left": null,
-    "entered_pct": 100.0,
-    "entered_approx": true
+    "still": 256,
+    "entered_pct": 31.0,
+    "entered_bound": true,
+    "entered_approx": false
    },
    {
     "ym": "2025-10",
@@ -48464,8 +48482,10 @@
     "joined": 818,
     "joined_approx": false,
     "left": null,
-    "entered_pct": 100.0,
-    "entered_approx": true
+    "still": 312,
+    "entered_pct": 38.1,
+    "entered_bound": true,
+    "entered_approx": false
    },
    {
     "ym": "2025-11",
@@ -48475,8 +48495,10 @@
     "joined": 654,
     "joined_approx": false,
     "left": null,
-    "entered_pct": 100.0,
-    "entered_approx": true
+    "still": 311,
+    "entered_pct": 47.6,
+    "entered_bound": true,
+    "entered_approx": false
    },
    {
     "ym": "2025-12",
@@ -48486,8 +48508,10 @@
     "joined": 608,
     "joined_approx": false,
     "left": null,
-    "entered_pct": 100.0,
-    "entered_approx": true
+    "still": 344,
+    "entered_pct": 56.6,
+    "entered_bound": true,
+    "entered_approx": false
    },
    {
     "ym": "2026-01",
@@ -48497,8 +48521,10 @@
     "joined": 443,
     "joined_approx": false,
     "left": null,
-    "entered_pct": 100.0,
-    "entered_approx": true
+    "still": 222,
+    "entered_pct": 50.1,
+    "entered_bound": true,
+    "entered_approx": false
    },
    {
     "ym": "2026-02",
@@ -48508,8 +48534,10 @@
     "joined": 558,
     "joined_approx": false,
     "left": null,
-    "entered_pct": 100.0,
-    "entered_approx": true
+    "still": 259,
+    "entered_pct": 46.4,
+    "entered_bound": true,
+    "entered_approx": false
    },
    {
     "ym": "2026-03",
@@ -48519,8 +48547,10 @@
     "joined": 721,
     "joined_approx": false,
     "left": null,
-    "entered_pct": 100.0,
-    "entered_approx": true
+    "still": 340,
+    "entered_pct": 47.2,
+    "entered_bound": true,
+    "entered_approx": false
    },
    {
     "ym": "2026-04",
@@ -48530,8 +48560,10 @@
     "joined": 631,
     "joined_approx": false,
     "left": null,
-    "entered_pct": 100.0,
-    "entered_approx": true
+    "still": 334,
+    "entered_pct": 52.9,
+    "entered_bound": true,
+    "entered_approx": false
    },
    {
     "ym": "2026-05",
@@ -48541,8 +48573,10 @@
     "joined": 953,
     "joined_approx": false,
     "left": null,
-    "entered_pct": 100.0,
-    "entered_approx": true
+    "still": 446,
+    "entered_pct": 46.8,
+    "entered_bound": true,
+    "entered_approx": false
    },
    {
     "ym": "2026-06",
@@ -48552,8 +48586,10 @@
     "joined": 483,
     "joined_approx": false,
     "left": null,
-    "entered_pct": 100.0,
-    "entered_approx": true
+    "still": 290,
+    "entered_pct": 60.0,
+    "entered_bound": true,
+    "entered_approx": false
    },
    {
     "ym": "2026-07",
@@ -48563,8 +48599,10 @@
     "joined": 1064,
     "joined_approx": false,
     "left": null,
-    "entered_pct": 64.7,
-    "entered_approx": true
+    "still": 788,
+    "entered_pct": 47.9,
+    "entered_bound": true,
+    "entered_approx": false
    },
    {
     "ym": "2026-08",
@@ -48574,7 +48612,9 @@
     "joined": 692,
     "joined_approx": true,
     "left": 3,
+    "still": 690,
     "entered_pct": 48.0,
+    "entered_bound": false,
     "entered_approx": false
    }
   ],
