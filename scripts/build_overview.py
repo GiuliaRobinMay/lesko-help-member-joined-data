@@ -270,13 +270,13 @@ LIGHT_TOKENS = {
     "joined-bg": "#006300", "joined-ink": "#ffffff",
     # "Not yet entered": red severity ramp, w1 lightest (nearly everyone in)
     # to w5 deepest (nobody entered yet); yellow the moment everyone is in.
-    "w1-bg": "#f3c1bd", "w1-ink": "#0b0b0b",
-    "w2-bg": "#ea948e", "w2-ink": "#0b0b0b",
-    "w3-bg": "#dd625c", "w3-ink": "#ffffff",
-    "w4-bg": "#c73a3a", "w4-ink": "#ffffff",
-    "w5-bg": "#9c1f1f", "w5-ink": "#ffffff",
-    "done-bg": "#eda100", "done-ink": "#0b0b0b",
-    "wait-gradient": "linear-gradient(to right,#f3c1bd,#dd625c,#9c1f1f)",
+    "w1-bg": "#fbb724", "w1-ink": "#0b0b0b",
+    "w2-bg": "#f79009", "w2-ink": "#0b0b0b",
+    "w3-bg": "#ef6c0a", "w3-ink": "#0b0b0b",
+    "w4-bg": "#e04315", "w4-ink": "#ffffff",
+    "w5-bg": "#d21f1f", "w5-ink": "#ffffff",
+    "done-bg": "#ffd60a", "done-ink": "#0b0b0b",
+    "wait-gradient": "linear-gradient(to right,#fbb724,#ef6c0a,#d21f1f)",
 }
 DARK_TOKENS = {
     "page": "#0d0d0d", "surface": "#1a1a19", "ink": "#ffffff", "ink-2": "#c3c2b7",
@@ -285,13 +285,13 @@ DARK_TOKENS = {
     "grp": "#232322", "grp2": "#1e1e1d",
     "ramp-gradient": "linear-gradient(to right,#0d366b,#256abf,#5598e7,#86b6ef)",
     "joined-bg": "#0ca30c", "joined-ink": "#0b0b0b",
-    "w1-bg": "#4a2422", "w1-ink": "#ffffff",
-    "w2-bg": "#6b2a29", "w2-ink": "#ffffff",
-    "w3-bg": "#8f3231", "w3-ink": "#ffffff",
-    "w4-bg": "#c04241", "w4-ink": "#ffffff",
-    "w5-bg": "#e35b5a", "w5-ink": "#0b0b0b",
-    "done-bg": "#eda100", "done-ink": "#0b0b0b",
-    "wait-gradient": "linear-gradient(to right,#4a2422,#8f3231,#e35b5a)",
+    "w1-bg": "#fbb724", "w1-ink": "#0b0b0b",
+    "w2-bg": "#f79009", "w2-ink": "#0b0b0b",
+    "w3-bg": "#ef6c0a", "w3-ink": "#0b0b0b",
+    "w4-bg": "#e04315", "w4-ink": "#ffffff",
+    "w5-bg": "#d21f1f", "w5-ink": "#ffffff",
+    "done-bg": "#ffd60a", "done-ink": "#0b0b0b",
+    "wait-gradient": "linear-gradient(to right,#fbb724,#ef6c0a,#d21f1f)",
 }
 
 
@@ -324,10 +324,10 @@ header p { margin: 0; color: var(--ink-2); }
 .card.setup code { background: var(--page); border: 1px solid var(--grid); border-radius: 4px; padding: 1px 5px; }
 .tablewrap { overflow-x: auto; }
 table { border-collapse: separate; border-spacing: 2px; width: 100%; font-variant-numeric: tabular-nums; }
-thead th { font-size: 12px; font-weight: 600; color: var(--ink-3); text-align: center; padding: 6px 5px; white-space: nowrap; }
+thead th { font-size: 12px; font-weight: 600; color: var(--ink-3); text-align: right; padding: 6px 5px; white-space: nowrap; }
 thead th:first-child { text-align: left; }
 tbody th { font-weight: 500; text-align: left; padding: 4px 10px 4px 8px; white-space: nowrap; color: var(--ink); font-size: 13.5px; }
-tbody td { text-align: center; padding: 4px 4px; border-radius: 4px; min-width: 34px; font-size: 13.5px; }
+tbody td { text-align: right; padding: 4px 7px 4px 4px; border-radius: 4px; min-width: 34px; font-size: 13.5px; }
 td.num { color: var(--ink); }
 td.joined { font-weight: 650; background: var(--joined-bg); color: var(--joined-ink); }
 td.w1 { background: var(--w1-bg); color: var(--w1-ink); }
@@ -486,19 +486,21 @@ def week_cells(label, totals_or_row, joined_for_shading, entry_signal):
 
 
 def stat_cells(label, joined, entered, not_entered, entry_signal):
-    """Members (green), Not-yet-entered (red/yellow) ... Entered, Share."""
+    """Members (green), Not-joined count + %% (red/yellow), Entered, Share."""
     joined_cell = '<td class="num joined">%d</td>' % joined if joined else '<td class="num muted">0</td>'
+    dash = '<td class="num muted">&ndash;</td>'
     if not entry_signal:
-        return (joined_cell, '<td class="num muted">&ndash;</td>',
-                '<td class="num muted">&ndash;</td>', '<td class="num muted">&ndash;</td>')
+        return (joined_cell, dash, dash, dash, dash)
     if joined == 0:
-        return (joined_cell, '<td class="c0"></td>', '<td class="num muted">0</td>',
-                '<td class="num muted">&ndash;</td>')
+        return (joined_cell, '<td class="c0"></td>', '<td class="c0"></td>',
+                '<td class="num muted">0</td>', dash)
     cls = wait_class(entered, joined)
     share = round(100 * entered / joined)
-    tip = "%s &middot; %d of %d still not entered (%d%% entered)" % (label, not_entered, joined, share)
+    missing_pct = round(100 * not_entered / joined)
+    tip = "%s &middot; %d of %d still not joined (%d%%)" % (label, not_entered, joined, missing_pct)
     waiting = '<td class="%s" data-tip="%s">%d</td>' % (cls, tip, not_entered)
-    return (joined_cell, waiting, '<td class="num">%d</td>' % entered,
+    waiting_pct = '<td class="num muted">%d%%</td>' % missing_pct
+    return (joined_cell, waiting, waiting_pct, '<td class="num">%d</td>' % entered,
             '<td class="num muted">%d%%</td>' % share)
 
 
@@ -509,15 +511,15 @@ def render_table_rows(years, entry_signal, asof):
     out = []
 
     def group_row(level, key, parents, label, totals):
-        j, w, e, s = stat_cells(label, totals["joined"], totals["entered"],
-                                totals["not_entered"], entry_signal)
+        j, w, wp, e, s = stat_cells(label, totals["joined"], totals["entered"],
+                                    totals["not_entered"], entry_signal)
         shade_n = totals["wk_joined"] if not totals.get("wk_na") else 0
         cells = week_cells(label, totals, shade_n, entry_signal)
         opened = ' data-open="1"' if key in open_keys else ""
-        out.append('<tr class="grp g-%s" data-key="%s"%s%s><th scope="row">%s</th>%s%s%s%s%s</tr>'
+        out.append('<tr class="grp g-%s" data-key="%s"%s%s><th scope="row">%s</th>%s%s%s%s%s%s</tr>'
                    % (level, key,
                       (' data-parents="%s"' % " ".join(parents)) if parents else "",
-                      opened, label, j, w, cells, e, s))
+                      opened, label, j, w, wp, cells, e, s))
 
     for y in years:
         group_row("year", y["key"], [], y["label"], y["totals"])
@@ -527,12 +529,12 @@ def render_table_rows(years, entry_signal, asof):
                 group_row("week", w["key"], [y["key"], m["key"]], w["label"], w["totals"])
                 for r in w["days"]:
                     label = pretty(r["date"])
-                    j, wt, e, s = stat_cells(label, r["joined"], r["entered"],
-                                             r["not_entered"], entry_signal)
+                    j, wt, wtp, e, s = stat_cells(label, r["joined"], r["entered"],
+                                                  r["not_entered"], entry_signal)
                     cells = week_cells(label, r, r["joined"], entry_signal)
                     dim = " empty" if r["joined"] == 0 else ""
-                    out.append('<tr class="day%s" data-parents="%s %s %s"><th scope="row">%s</th>%s%s%s%s%s</tr>'
-                               % (dim, y["key"], m["key"], w["key"], label, j, wt, cells, e, s))
+                    out.append('<tr class="day%s" data-parents="%s %s %s"><th scope="row">%s</th>%s%s%s%s%s%s</tr>'
+                               % (dim, y["key"], m["key"], w["key"], label, j, wt, wtp, cells, e, s))
     return "\n".join(out)
 
 
@@ -557,14 +559,14 @@ def build_body(meta, totals, years):
     entry_signal = meta.get("entry_signal", False)
     if entry_signal:
         entered_tile = ('<div class="tile"><div class="k">Entered the community</div><div class="v">%s <span class="sub">%s</span></div></div>'
-                        '<div class="tile"><div class="k">Not yet entered</div><div class="v">%s</div></div>'
+                        '<div class="tile"><div class="k">Not joined yet</div><div class="v">%s</div></div>'
                         % (totals["entered"], pct_total, totals["not_entered"]))
         notice = ""
         legend = """<div class="legend">
       <span class="chip joined-demo"></span><span>members added that day</span>
       <span class="sep"></span>
       <span class="ramp wait" aria-hidden="true"></span>
-      <span>still missing &mdash; deeper red = fewer have entered</span>
+      <span>still missing &mdash; red = few entered, warms to orange as they come in</span>
       <span class="sep"></span>
       <span><span class="chip done-demo"></span> everyone entered</span>
       <span class="sep"></span>
@@ -597,7 +599,8 @@ def build_body(meta, totals, years):
           <tr>
             <th scope="col">Joined on</th>
             <th scope="col">Members</th>
-            <th scope="col">Not yet entered</th>
+            <th scope="col">Not joined</th>
+            <th scope="col">%%</th>
             %(week_heads)s
             <th scope="col">Entered</th>
             <th scope="col">Share</th>
