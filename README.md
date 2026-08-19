@@ -55,6 +55,14 @@ misleading zero. Two tracks to light them up:
    activity (usable as an "active since" signal) or only profile edits.
    Decide from the evidence, never silently.
 
+   *Day 1 (18 → 19 Aug):* 601 of 23,883 members moved (2.5%) — no bulk
+   touching. Movement follows join recency exactly as real activity would:
+   Aug-2026 joiners 14.9%, 2026 joiners 6.9%, 2024–25 2.2%, 2021–23 0.9%.
+   Caveat to watch: ~260 of the 601 moves cluster at 04:00–05:00 UTC, which
+   may be a nightly system job touching records rather than member visits;
+   with 3+ days of data, repeat-movers at that hour will reveal it.
+   Promising, not yet concluded.
+
 ## The one manual step: the API token
 
 Mighty's API program was enabled for lesko-help-2 in July 2026. The Admin API
