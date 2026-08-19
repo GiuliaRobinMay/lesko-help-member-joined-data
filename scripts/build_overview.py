@@ -472,7 +472,8 @@ def main():
 
     ctx = {"meta": meta, "totals": totals, "cohort_groups": cohort_groups,
            "leaver_groups": leaver_groups, "leaver_totals": leaver_totals,
-           "churn": churn, "analytics": analytics}
+           "churn": churn, "analytics": analytics,
+           "backfill": backfill if snapshots else {}}
     with open(os.path.join(DOCS_DIR, "index.html"), "w") as fh:
         fh.write(render_page(ctx, mode="doc"))
     with open(os.path.join(DOCS_DIR, "artifact.html"), "w") as fh:
@@ -745,15 +746,53 @@ def cohort_stat_cells(label, joined, entered, not_entered, entry_signal):
             '<td class="num muted">%d%%</td>' % share)
 
 
-def render_cohort_rows(years, entry_signal, asof):
+def month_display(m, backfill, tracking_ym):
+    """True provided total for a fully-in-window pre-tracking month, if any."""
+    ym = m["key"].lstrip("Lm")[:7] if m["key"].startswith("m") else m["key"][1:8]
+    ym = m["key"][1:8]
+    bf = (backfill or {}).get(ym)
+    if not bf or ym >= tracking_ym:
+        return None
+    days_in_window = sum(len(w["days"]) for w in m["weeks"])
+    year, mon = int(ym[:4]), int(ym[5:7])
+    import calendar as _cal
+    if days_in_window < _cal.monthrange(year, mon)[1]:
+        return None  # month only partially inside the window - keep observed
+    if bf["joined"] < m["totals"]["joined"]:
+        return None
+    return bf["joined"]
+
+
+def bounded_stat_cells(label, true_joined, entered_known, seen):
+    """Month rows with a provided true total: exact adds, bounded rest."""
+    not_ub = true_joined - entered_known
+    share_lb = round(100.0 * entered_known / true_joined) if true_joined else 0
+    members = ('<td class="num joined" data-tip="%s &middot; %s added in total (provided by Mighty) '
+               '&middot; %s of them seen by the tracker">%s</td>'
+               % (label, "{:,}".format(true_joined), "{:,}".format(seen), "{:,}".format(true_joined)))
+    waiting = ('<td class="%s" data-tip="%s &middot; at most %s not entered &mdash; whether members who '
+               'left before tracking ever entered is unknowable">&le;&thinsp;%s</td>'
+               % (wait_class(entered_known, true_joined), label,
+                  "{:,}".format(not_ub), "{:,}".format(not_ub)))
+    waiting_pct = '<td class="num muted">&le;&thinsp;%d%%</td>' % round(100.0 * not_ub / true_joined)
+    entered = '<td class="num">&ge;&thinsp;%s</td>' % "{:,}".format(entered_known)
+    share = '<td class="num muted">&ge;&thinsp;%d%%</td>' % share_lb
+    return members, waiting, waiting_pct, entered, share
+
+
+def render_cohort_rows(years, entry_signal, asof, backfill, tracking_ym):
     today = parse_date(asof)
     open_keys = {"y%d" % today.year, "m%s" % today.strftime("%Y-%m"),
                  "w%s-%02d" % (today.strftime("%Y-%m"), today.isocalendar()[1])}
     out = []
 
-    def group_row(level, key, parents, label, totals):
-        j, w, wp, e, s = cohort_stat_cells(label, totals["joined"], totals["entered"],
-                                           totals["not_entered"], entry_signal)
+    def group_row(level, key, parents, label, totals, true_joined=None):
+        if true_joined:
+            j, w, wp, e, s = bounded_stat_cells(label, true_joined,
+                                                totals["entered"], totals["joined"])
+        else:
+            j, w, wp, e, s = cohort_stat_cells(label, totals["joined"], totals["entered"],
+                                               totals["not_entered"], entry_signal)
         if level == "week":
             denom = totals["wk_joined"] if not totals.get("wk_na") else 0
             cells = cohort_week_cells(label, totals, denom, entry_signal)
@@ -766,9 +805,15 @@ def render_cohort_rows(years, entry_signal, asof):
                       opened, label, j, w, wp, cells, e, s))
 
     for y in years:
-        group_row("year", y["key"], [], y["label"], y["totals"])
+        month_true = {m["key"]: month_display(m, backfill, tracking_ym) for m in y["months"]}
+        if any(month_true.values()):
+            year_true = sum(month_true[m["key"]] or m["totals"]["joined"] for m in y["months"])
+        else:
+            year_true = None
+        group_row("year", y["key"], [], y["label"], y["totals"], true_joined=year_true)
         for m in y["months"]:
-            group_row("month", m["key"], [y["key"]], m["label"], m["totals"])
+            group_row("month", m["key"], [y["key"]], m["label"], m["totals"],
+                      true_joined=month_true[m["key"]])
             for w in m["weeks"]:
                 group_row("week", w["key"], [y["key"], m["key"]], w["label"], w["totals"])
                 for r in w["days"]:
@@ -782,10 +827,30 @@ def render_cohort_rows(years, entry_signal, asof):
     return "\n".join(out)
 
 
-def cohort_panel(meta, totals, years):
+def cohort_panel(meta, totals, years, backfill):
     week_heads = "".join("<th>by W%d</th>" % w for w in range(1, WEEKS + 1))
-    pct_total = ("%d%%" % round(100 * totals["entered"] / totals["joined"])) if totals["joined"] else "&ndash;"
     entry_signal = meta.get("entry_signal", False)
+    tracking_ym = meta["first_snapshot"][:7]
+    # Window totals with the true provided month totals folded in.
+    true_total, any_true = 0, False
+    for y in years:
+        for m in y["months"]:
+            t = month_display(m, backfill, tracking_ym)
+            if t:
+                true_total += t
+                any_true = True
+            else:
+                true_total += m["totals"]["joined"]
+    if any_true:
+        joined_tile = "&ge;&thinsp;" + "{:,}".format(true_total)
+        entered_tile_v = "&ge;&thinsp;" + "{:,}".format(totals["entered"])
+        pct_total = "&ge;&thinsp;%d%%" % round(100 * totals["entered"] / true_total)
+        not_tile = "&le;&thinsp;" + "{:,}".format(true_total - totals["entered"])
+    else:
+        joined_tile = "{:,}".format(totals["joined"])
+        entered_tile_v = "{:,}".format(totals["entered"])
+        pct_total = ("%d%%" % round(100 * totals["entered"] / totals["joined"])) if totals["joined"] else "&ndash;"
+        not_tile = "{:,}".format(totals["not_entered"])
 
     return """
   <section class="tiles">
@@ -834,16 +899,19 @@ def cohort_panel(meta, totals, years):
   <em>by W1</em> and <em>by W2</em>, so the numbers grow to the right and are never added together.
   Week timing is tracked from %(baseline)s onward; older cohorts show their exact entered totals with the
   week cells left blank. From 18 Aug 2026 on, every added member is counted here forever &mdash; also after
-  they leave. Rows before that can only include members the tracker has seen; the true monthly additions
-  live on the Analytics tab.</p>""" % {
-        "joined": totals["joined"],
-        "entered": totals["entered"],
+  they leave. Month rows before that show Mighty&rsquo;s <strong>true</strong> added totals (provided
+  history); since members who left back then are invisible to the tracker, their entered numbers are
+  honest bounds &mdash; &ge; means &ldquo;at least&rdquo;, &le; means &ldquo;at most&rdquo; &mdash; and the
+  day rows beneath can only show members the tracker has seen.</p>""" % {
+        "joined": joined_tile,
+        "entered": entered_tile_v,
         "pct": pct_total,
-        "not_entered": totals["not_entered"],
+        "not_entered": not_tile,
         "snaps": meta["snapshot_count"],
         "first": pretty(meta["first_snapshot"]),
         "week_heads": week_heads,
-        "rows": render_cohort_rows(years, entry_signal, meta["as_of"]),
+        "rows": render_cohort_rows(years, entry_signal, meta["as_of"], backfill,
+                                   meta["first_snapshot"][:7]),
         "baseline": pretty(meta["signal_baseline"]) if meta.get("signal_baseline") else "the first snapshot",
     }
 
@@ -1195,7 +1263,7 @@ def build_body(ctx):
   <div class="panel" id="panel-churn">%s
   </div>
   <div class="panel" id="panel-analytics">%s
-  </div>""" % (cohort_panel(meta, ctx["totals"], ctx["cohort_groups"]),
+  </div>""" % (cohort_panel(meta, ctx["totals"], ctx["cohort_groups"], ctx["backfill"]),
                leaver_panel(meta, ctx["leaver_groups"], ctx["leaver_totals"]),
                churn_panel(meta, ctx["churn"]),
                analytics_panel(meta, ctx["analytics"]))
