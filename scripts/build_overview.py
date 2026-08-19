@@ -265,7 +265,7 @@ LIGHT_TOKENS = {
     "grp": "#f1ead8", "grp2": "#f6f0e1",
     "ramp-gradient": "linear-gradient(to right,#cde2fb,#6da7ec,#2a78d6,#1c5cab)",
     # Members column: solid green cell, white numerals.
-    "joined-bg": "#006300", "joined-ink": "#ffffff",
+    "joined-bg": "#2e9e5b", "joined-ink": "#ffffff",
     # "Not yet entered": red severity ramp, w1 lightest (nearly everyone in)
     # to w5 deepest (nobody entered yet); yellow the moment everyone is in.
     "w1-bg": "#fbb724", "w1-ink": "#0b0b0b",
