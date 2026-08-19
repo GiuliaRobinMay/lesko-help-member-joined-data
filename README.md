@@ -10,9 +10,13 @@ first time themselves. Mighty Networks shows this as an empty *last visit*.
 This repository takes a snapshot of the member list **every morning**, works
 out per daily cohort who has entered, and rebuilds the overview page:
 
-* **`docs/index.html`** — the overview: one row per join-day (last 70 days),
-  the number of members added, and cumulative week 1 → week 10 columns showing
-  how many of them had entered the community by then.
+* **`docs/index.html`** — the overview app, three tabs:
+  **Cohorts** (one row per join-day, rolling 12 months, collapsible
+  year → month → week, cumulative by-week entry columns), **Leavers**
+  (who disappeared from the member list each day, with tenure columns:
+  left in month 1–12 of membership or after 12+ months), and **Churn**
+  (joined / left / net / members per month, with one opening-balance
+  record covering everything older than tracking).
 * **`docs/data.json`** — the same numbers as data, for anything downstream.
 
 ## How it works

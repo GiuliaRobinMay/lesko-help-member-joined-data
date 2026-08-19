@@ -9,13 +9,15 @@
   --grid: rgba(22,34,63,0.14);
   --ring: rgba(22,34,63,0.22);
   --accent: #e8453c;
-  --good: #006300;
+  --good: #2e9e5b;
   --brand-yellow: #f6c544;
   --grp: #f1ead8;
   --grp2: #f6f0e1;
   --ramp-gradient: linear-gradient(to right,#cde2fb,#6da7ec,#2a78d6,#1c5cab);
   --joined-bg: #2e9e5b;
   --joined-ink: #ffffff;
+  --left-bg: #e8453c;
+  --left-ink: #ffffff;
   --w1-bg: #fbb724;
   --w1-ink: #0b0b0b;
   --w2-bg: #f79009;
@@ -56,7 +58,13 @@ header p { margin: 0; color: var(--ink-2); font-family: var(--serif); font-style
 .asof { display: inline-block; margin-top: 10px; padding: 3px 12px;
         border-radius: 999px; color: var(--ink); font-size: 13px; font-weight: 600;
         background: var(--brand-yellow); }
-.tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 12px; margin: 24px 0 16px; }
+.tabs { display: flex; flex-wrap: wrap; gap: 8px; margin: 22px 0 2px; }
+.tab { font-family: var(--serif); font-size: 15px; padding: 7px 20px; border-radius: 999px;
+  border: 1px solid var(--ring); background: var(--surface); color: var(--ink); cursor: pointer; }
+.tab.active { background: var(--ink); color: var(--page); border-color: var(--ink); }
+.panel { display: none; }
+.panel.active { display: block; }
+.tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 12px; margin: 20px 0 16px; }
 .tile { background: var(--surface); border: 1px solid var(--ring); border-radius: 10px; padding: 14px 16px; }
 .tile .k { font-family: var(--mono); font-size: 11px; text-transform: uppercase;
   letter-spacing: 0.05em; color: var(--ink-2); }
@@ -75,6 +83,7 @@ tbody th { font-weight: 500; text-align: left; padding: 4px 10px 4px 8px; white-
 tbody td { text-align: right; padding: 4px 7px 4px 4px; border-radius: 4px; min-width: 34px; font-size: 13.5px; }
 td.num { color: var(--ink); }
 td.joined { font-weight: 650; background: var(--joined-bg); color: var(--joined-ink); }
+td.leftc { font-weight: 650; background: var(--left-bg); color: var(--left-ink); }
 td.w1 { background: var(--w1-bg); color: var(--w1-ink); }
 td.w2 { background: var(--w2-bg); color: var(--w2-ink); }
 td.w3 { background: var(--w3-bg); color: var(--w3-ink); }
@@ -82,6 +91,8 @@ td.w4 { background: var(--w4-bg); color: var(--w4-ink); }
 td.w5 { background: var(--w5-bg); color: var(--w5-ink); }
 td.done { font-weight: 650; background: var(--done-bg); color: var(--done-ink); }
 td.muted { color: var(--ink-2); }
+td.pos { color: var(--good); font-weight: 650; }
+td.neg { color: var(--accent); font-weight: 650; }
 tr.empty th, tr.empty td { opacity: 0.45; }
 td.c0 { color: var(--ink-3); }
 td.c1 { background: var(--h1-bg); color: var(--h1-ink); }
@@ -105,6 +116,8 @@ tr.g-month { background: var(--grp2); }
 tr.g-month th { font-family: var(--serif); font-weight: 650; padding-left: 20px; }
 tr.g-week th { padding-left: 32px; color: var(--ink-2); }
 tr.day th { padding-left: 50px; font-weight: 450; }
+tr.opening { background: var(--grp); }
+tr.opening th { font-family: var(--serif); font-weight: 650; }
 .legend { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; padding: 10px 8px 6px; color: var(--ink-2); font-size: 12.5px; }
 .legend .ramp { width: 110px; height: 10px; border-radius: 5px; border: 1px solid var(--ring); background: var(--ramp-gradient); }
 .legend .ramp.wait { background: var(--wait-gradient); }
@@ -113,6 +126,7 @@ tr.day th { padding-left: 50px; font-weight: 450; }
 .legend .chip.open-demo { outline: 1.5px dashed var(--ink-3); outline-offset: -1.5px; }
 .legend .chip.done-demo { background: var(--done-bg); }
 .legend .chip.joined-demo { background: var(--joined-bg); }
+.legend .chip.left-demo { background: var(--left-bg); }
 .note { color: var(--ink-2); font-size: 13.5px; max-width: 820px; }
 .note.notice { background: var(--surface); border: 1px solid var(--ring); border-left: 3px solid var(--accent);
   border-radius: 8px; padding: 10px 14px; max-width: none; margin: 0 0 8px; }
@@ -122,17 +136,23 @@ footer { margin-top: 28px; color: var(--ink-3); font-size: 11.5px; font-family: 
 </style>
 <main>
   <header>
-    <h1>Lesko Help &mdash; member cohort overview</h1>
-    <p>How many members were added each day, and how quickly they actually enter the community.</p>
+    <h1>Lesko Help &mdash; member overview</h1>
+    <p>Who joins, who actually enters the community, who leaves &mdash; day by day.</p>
     <span class="asof">Data as of Wed 19 Aug</span>
   </header>
 
+  <nav class="tabs" aria-label="Views">
+    <button class="tab active" data-tab="cohorts">Cohorts</button>
+    <button class="tab" data-tab="leavers">Leavers</button>
+    <button class="tab" data-tab="churn">Churn</button>
+  </nav>
+  <div class="panel active" id="panel-cohorts">
   <section class="tiles">
     <div class="tile"><div class="k">New members &middot; last 12 months</div><div class="v">4768</div></div>
-    <div class="tile"><div class="k">Entered the community</div><div class="v">4130 <span class="sub">87%</span></div></div><div class="tile"><div class="k">Not joined yet</div><div class="v">638</div></div>
+    <div class="tile"><div class="k">Entered the community</div><div class="v">4130 <span class="sub">87%</span></div></div>
+    <div class="tile"><div class="k">Not joined yet</div><div class="v">638</div></div>
     <div class="tile"><div class="k">Daily snapshots</div><div class="v">2 <span class="sub">since Tue 18 Aug</span></div></div>
   </section>
-  
   <section class="card">
     <div class="tablewrap">
       <table>
@@ -614,7 +634,79 @@ footer { margin-top: 28px; color: var(--ink-3); font-size: 11.5px; font-family: 
   <em>by W1</em> and <em>by W2</em>, so the numbers grow to the right and are never added together.
   Week timing is tracked from Wed 19 Aug onward; older cohorts show their exact entered totals with the
   week cells left blank.</p>
-  <footer>Data straight from the Mighty Networks member API &middot; rebuilt daily &middot; generated 2026-08-19 12:48 UTC</footer>
+  </div>
+  <div class="panel" id="panel-leavers">
+  <section class="tiles">
+    <div class="tile"><div class="k">Members left &middot; since Tue 18 Aug</div><div class="v">3</div></div>
+    <div class="tile"><div class="k">Left within month 1</div><div class="v">2</div></div>
+    <div class="tile"><div class="k">Left after 12+ months</div><div class="v">1</div></div>
+    <div class="tile"><div class="k">Days tracked</div><div class="v">1</div></div>
+  </section>
+  <section class="card">
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Left on</th>
+            <th scope="col">Left</th>
+            <th>M1</th><th>M2</th><th>M3</th><th>M4</th><th>M5</th><th>M6</th><th>M7</th><th>M8</th><th>M9</th><th>M10</th><th>M11</th><th>M12</th><th>12m+</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="grp g-year" data-key="Ly2026" data-open="1"><th scope="row">2026</th><td class="num leftc">3</td><td class="c7" data-tip="2026 &middot; 2 of 3 leavers were a member for month 1">2</td><td class="c0">0</td><td class="c0">0</td><td class="c0">0</td><td class="c0">0</td><td class="c0">0</td><td class="c0">0</td><td class="c0">0</td><td class="c0">0</td><td class="c0">0</td><td class="c0">0</td><td class="c0">0</td><td class="c4" data-tip="2026 &middot; 1 of 3 leavers were a member for 12+ months">1</td></tr>
+<tr class="grp g-month" data-key="Lm2026-08" data-parents="Ly2026" data-open="1"><th scope="row">August 2026</th><td class="num leftc">3</td><td class="c7" data-tip="August 2026 &middot; 2 of 3 leavers were a member for month 1">2</td><td class="c0">0</td><td class="c0">0</td><td class="c0">0</td><td class="c0">0</td><td class="c0">0</td><td class="c0">0</td><td class="c0">0</td><td class="c0">0</td><td class="c0">0</td><td class="c0">0</td><td class="c0">0</td><td class="c4" data-tip="August 2026 &middot; 1 of 3 leavers were a member for 12+ months">1</td></tr>
+<tr class="grp g-week" data-key="Lw2026-08-34" data-parents="Ly2026 Lm2026-08" data-open="1"><th scope="row">Week 34 &middot; 17&ndash;23 Aug</th><td class="num leftc">3</td><td class="c7" data-tip="Week 34 &middot; 17&ndash;23 Aug &middot; 2 of 3 leavers were a member for month 1">2</td><td class="c0">0</td><td class="c0">0</td><td class="c0">0</td><td class="c0">0</td><td class="c0">0</td><td class="c0">0</td><td class="c0">0</td><td class="c0">0</td><td class="c0">0</td><td class="c0">0</td><td class="c0">0</td><td class="c4" data-tip="Week 34 &middot; 17&ndash;23 Aug &middot; 1 of 3 leavers were a member for 12+ months">1</td></tr>
+<tr class="day" data-parents="Ly2026 Lm2026-08 Lw2026-08-34"><th scope="row">Wed 19 Aug</th><td class="num leftc">3</td><td class="c7" data-tip="Wed 19 Aug &middot; 2 of 3 leavers were a member for month 1">2</td><td class="c0">0</td><td class="c0">0</td><td class="c0">0</td><td class="c0">0</td><td class="c0">0</td><td class="c0">0</td><td class="c0">0</td><td class="c0">0</td><td class="c0">0</td><td class="c0">0</td><td class="c0">0</td><td class="c4" data-tip="Wed 19 Aug &middot; 1 of 3 leavers were a member for 12+ months">1</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="legend">
+      <span class="chip left-demo"></span><span>members who left that day</span>
+      <span class="sep"></span>
+      <span class="ramp" aria-hidden="true"></span>
+      <span>share of that day&rsquo;s leavers per tenure column</span>
+    </div>
+  </section>
+  <p class="note"><strong>M1</strong> = left in their first month of membership, <strong>M2</strong> in their
+  second, and so on; <strong>12m+</strong> = they were a member for more than twelve months (counted in
+  30-day months from their join date). Leaving is detected by comparing the daily snapshots &mdash; a member
+  present yesterday and missing today left. Tracking runs from Tue 18 Aug; who left before that is not
+  visible anywhere and is covered by the opening balance on the Churn tab.</p>
+  </div>
+  <div class="panel" id="panel-churn">
+  <section class="tiles">
+    <div class="tile"><div class="k">Members in the community</div><div class="v">23,897</div></div>
+    <div class="tile"><div class="k">Joined since Tue 18 Aug</div><div class="v">14</div></div>
+    <div class="tile"><div class="k">Left since Tue 18 Aug</div><div class="v">3</div></div>
+    <div class="tile"><div class="k">Net growth</div><div class="v">+11</div></div>
+  </section>
+  <section class="card">
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Month</th>
+            <th scope="col">Joined</th>
+            <th scope="col">Left</th>
+            <th scope="col">Net</th>
+            <th scope="col">Members at end</th>
+            <th scope="col">Churn</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">August 2026 (from 18 Aug) &middot; to date</th><td class="num joined">14</td><td class="num leftc">3</td><td class="pos">+11</td><td class="num"><strong>23,897</strong></td><td class="num muted">0.01%</td></tr>
+          <tr class="opening"><th scope="row">Before tracking &middot; everything up to Tue 18 Aug</th><td class="num muted" colspan="3">one opening record</td><td class="num"><strong>23,886</strong></td><td class="num muted">&ndash;</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+  <p class="note">Joined and left are counted on the day the daily snapshot observed them (at most one day
+  after the fact), so <em>members at end</em> always matches the real member count. <em>Churn</em> is the
+  share of members at the start of the month who left during it. Everything older than the first snapshot
+  lives in the one opening record &mdash; month-by-month history before Tue 18 Aug does not exist in any
+  source we can reach.</p>
+  </div>
+  <footer>Data straight from the Mighty Networks member API &middot; rebuilt daily &middot; generated 2026-08-19 13:39 UTC</footer>
 </main>
 <div id="tip" role="tooltip"></div>
 <script>
@@ -634,7 +726,25 @@ footer { margin-top: 28px; color: var(--ink-3); font-size: 11.5px; font-family: 
     tip.style.left = x + 'px'; tip.style.top = y + 'px';
   });
 
-  // Collapsible year / month / week sections.
+  // Tabs.
+  function showTab(name) {
+    document.querySelectorAll('.tab').forEach(function (b) {
+      b.classList.toggle('active', b.getAttribute('data-tab') === name);
+    });
+    document.querySelectorAll('.panel').forEach(function (p) {
+      p.classList.toggle('active', p.id === 'panel-' + name);
+    });
+  }
+  document.querySelectorAll('.tab').forEach(function (b) {
+    b.addEventListener('click', function () {
+      showTab(b.getAttribute('data-tab'));
+      if (history.replaceState) history.replaceState(null, '', '#' + b.getAttribute('data-tab'));
+    });
+  });
+  var hash = (location.hash || '').replace('#', '');
+  if (hash && document.getElementById('panel-' + hash)) showTab(hash);
+
+  // Collapsible year / month / week sections (shared across tables).
   var expanded = {};
   document.querySelectorAll('tr.grp[data-open="1"]').forEach(function (tr) {
     expanded[tr.getAttribute('data-key')] = true;
