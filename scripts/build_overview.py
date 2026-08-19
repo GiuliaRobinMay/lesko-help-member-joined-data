@@ -4,8 +4,9 @@
 Reads every data/snapshots/YYYY-MM-DD.csv (one per day, written by
 fetch_members.py) and produces:
 
-* docs/data.json      - the computed cohort matrix, for anything downstream
-* docs/index.html     - the self-contained overview page (GitHub Pages)
+* docs/data.json      - the computed cohort data (flat days + grouped), for
+                        anything downstream
+* docs/index.html     - the self-contained overview page (Netlify / Pages)
 * docs/artifact.html  - the same overview in Claude-artifact form (no
                         document shell, three-state theme support)
 
@@ -18,15 +19,14 @@ first entered is pinned down by watching the daily snapshots: the first
 snapshot where last_visited appears dates their entry (we use the
 last_visited value itself at that moment, which is at most one day off).
 
-Members who had already entered before the very first snapshot ever taken are
-attributed to the week of their last_visited value at that time - an upper
-bound, so their week attribution is approximate (never earlier than reality
-... the true first visit can only be earlier, i.e. in an earlier week).
-Their "entered vs. not entered" status is exact either way.
+The first snapshot that carries last_visited data at all (2026-08-19 - the
+day Mighty added the field to the Admin API) is the signal baseline. Entries
+already present in the baseline are upper bounds. Cohorts whose entire
+10-week window closed before the baseline get blank week cells - their
+entered / not-entered totals are still exact as of today.
 
-While the Admin API exposes no last-visit field (verified 2026-08-18), no
-member has an entry observation, and the page renders dashes plus a notice
-for the entered/week columns instead of a misleading zero.
+The page groups the daily rows year -> month -> week, each section
+collapsible with its own totals row.
 
 Standard library only.
 """
@@ -41,7 +41,7 @@ REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SNAPSHOT_DIR = os.path.join(REPO_ROOT, "data", "snapshots")
 DOCS_DIR = os.path.join(REPO_ROOT, "docs")
 
-LOOKBACK_DAYS = 70   # rows on the page: the last ~2 months of daily cohorts
+LOOKBACK_DAYS = 365  # rolling window of daily cohorts shown on the page
 WEEKS = 10           # week columns
 
 
@@ -65,12 +65,12 @@ def load_snapshots():
 
 
 def fold_members(snapshots):
-    """Collapse the daily snapshots into one record per member."""
+    """Collapse the daily snapshots into one record per member.
+
+    Returns (members, signal_baseline) where signal_baseline is the date of
+    the first snapshot carrying any last_visited data (None if none does).
+    """
     members = {}
-    # The signal baseline is the first snapshot that carries any last_visited
-    # data (the field appeared in the API on 2026-08-19, after the first
-    # snapshot day) - entries first observed in that baseline were not watched
-    # happening, so their week attribution is an upper bound.
     first_signal_snap = None
     for snap_date, rows in snapshots:
         if any(r.get("last_visited", "").strip() for r in rows):
@@ -81,7 +81,7 @@ def fold_members(snapshots):
             mid = row.get("member_id", "").strip()
             if not mid:
                 continue
-            m = members.setdefault(mid, {"join": None, "entry": None, "approx": False})
+            m = members.setdefault(mid, {"join": None, "entry": None})
             jd = row.get("join_date", "").strip()
             if jd:
                 m["join"] = parse_date(jd)
@@ -91,26 +91,25 @@ def fold_members(snapshots):
                 if m["join"] and entry < m["join"]:
                     entry = m["join"]
                 m["entry"] = entry
-                # Already entered when the signal baseline was taken, and the
-                # bound is loose enough to cross a week boundary -> mark it.
-                if (snap_date == first_signal_snap and m["join"]
-                        and (entry - m["join"]).days > 6):
-                    m["approx"] = True
-    return {mid: m for mid, m in members.items() if m["join"]}
+    return {mid: m for mid, m in members.items() if m["join"]}, first_signal_snap
 
 
-def build_matrix(members, asof):
+def build_days(members, asof, baseline):
+    """One row per calendar day in the lookback window, newest first."""
     start = asof - dt.timedelta(days=LOOKBACK_DAYS - 1)
     by_day = {}
     for m in members.values():
         by_day.setdefault(m["join"], []).append(m)
 
-    rows = []
+    days = []
     day = asof
     while day >= start:
         cohort = by_day.get(day, [])
         joined = len(cohort)
         entered = [m for m in cohort if m["entry"]]
+        # Whole 10-week window closed before the entry signal existed ->
+        # week timing is unknowable; totals remain exact.
+        wk_na = baseline is None or (day + dt.timedelta(days=7 * WEEKS - 1)) < baseline
         cells = []
         for w in range(1, WEEKS + 1):
             week_start = day + dt.timedelta(days=7 * (w - 1))
@@ -121,22 +120,77 @@ def build_matrix(members, asof):
                 "closed": week_end <= asof,
                 "started": week_start <= asof,
             })
-        rows.append({
+        days.append({
             "date": day.isoformat(),
             "joined": joined,
             "entered": len(entered),
             "not_entered": joined - len(entered),
-            "approx": any(m["approx"] for m in cohort),
+            "wk_na": wk_na,
             "weeks": cells,
         })
         day -= dt.timedelta(days=1)
+    return days
 
-    totals = {
-        "joined": sum(r["joined"] for r in rows),
-        "entered": sum(r["entered"] for r in rows),
-        "not_entered": sum(r["not_entered"] for r in rows),
+
+def aggregate(day_rows):
+    """Totals + summed week cells for a group of day rows."""
+    joined = sum(r["joined"] for r in day_rows)
+    entered = sum(r["entered"] for r in day_rows)
+    usable = [r for r in day_rows if not r["wk_na"] and r["joined"] > 0]
+    cells = []
+    for i in range(WEEKS):
+        if usable:
+            cells.append({
+                "n": sum(r["weeks"][i]["n"] for r in usable),
+                "closed": all(r["weeks"][i]["closed"] for r in usable),
+                "started": any(r["weeks"][i]["started"] for r in usable),
+            })
+        else:
+            cells.append({"n": 0, "closed": False, "started": False})
+    return {
+        "joined": joined,
+        "entered": entered,
+        "not_entered": joined - entered,
+        "wk_na": not usable,
+        "wk_joined": sum(r["joined"] for r in usable),  # denominator for cell shading
+        "weeks": cells,
     }
-    return rows, totals
+
+
+def group_days(day_rows):
+    """Nest the (newest-first) day rows into years -> months -> weeks."""
+    years = []
+    for r in day_rows:
+        d = parse_date(r["date"])
+        yk = "y%d" % d.year
+        mk = "m%s" % d.strftime("%Y-%m")
+        iso_week = d.isocalendar()[1]
+        wk = "w%s-%02d" % (d.strftime("%Y-%m"), iso_week)
+        if not years or years[-1]["key"] != yk:
+            years.append({"key": yk, "label": str(d.year), "months": []})
+        y = years[-1]
+        if not y["months"] or y["months"][-1]["key"] != mk:
+            y["months"].append({"key": mk, "label": d.strftime("%B %Y"), "weeks": []})
+        m = y["months"][-1]
+        if not m["weeks"] or m["weeks"][-1]["key"] != wk:
+            monday = d - dt.timedelta(days=d.weekday())
+            sunday = monday + dt.timedelta(days=6)
+            if monday.month == sunday.month:
+                span = "%s&ndash;%s %s" % (monday.day, sunday.day, sunday.strftime("%b"))
+            else:
+                span = "%s %s&ndash;%s %s" % (monday.day, monday.strftime("%b"),
+                                              sunday.day, sunday.strftime("%b"))
+            label = "Week %d &middot; %s" % (iso_week, span)
+            m["weeks"].append({"key": wk, "label": label, "days": []})
+        m["weeks"][-1]["days"].append(r)
+
+    for y in years:
+        for m in y["months"]:
+            for w in m["weeks"]:
+                w["totals"] = aggregate(w["days"])
+            m["totals"] = aggregate([d for w in m["weeks"] for d in w["days"]])
+        y["totals"] = aggregate([d for m in y["months"] for w in m["weeks"] for d in w["days"]])
+    return years
 
 
 def main():
@@ -146,28 +200,34 @@ def main():
 
     if snapshots:
         asof = snapshots[-1][0]
-        members = fold_members(snapshots)
-        rows, totals = build_matrix(members, asof)
+        members, baseline = fold_members(snapshots)
+        days = build_days(members, asof, baseline)
+        years = group_days(days)
+        totals = {
+            "joined": sum(r["joined"] for r in days),
+            "entered": sum(r["entered"] for r in days),
+            "not_entered": sum(r["not_entered"] for r in days),
+        }
         meta = {
             "generated_at": generated.isoformat(timespec="seconds"),
             "as_of": asof.isoformat(),
             "first_snapshot": snapshots[0][0].isoformat(),
+            "signal_baseline": baseline.isoformat() if baseline else None,
             "snapshot_count": len(snapshots),
             "members_tracked": len(members),
             "lookback_days": LOOKBACK_DAYS,
             "weeks": WEEKS,
-            # True once at least one member has an observed entry. The Admin
-            # API exposes no last-visit field today, so until an entry source
-            # exists the page must say "no data" rather than "0 entered".
-            "entry_signal": any(m["entry"] for m in members.values()),
+            "entry_signal": baseline is not None,
         }
     else:
         asof = None
-        rows, totals = [], {"joined": 0, "entered": 0, "not_entered": 0}
+        days, years = [], []
+        totals = {"joined": 0, "entered": 0, "not_entered": 0}
         meta = {
             "generated_at": generated.isoformat(timespec="seconds"),
             "as_of": None,
             "first_snapshot": None,
+            "signal_baseline": None,
             "snapshot_count": 0,
             "members_tracked": 0,
             "lookback_days": LOOKBACK_DAYS,
@@ -176,20 +236,21 @@ def main():
         }
 
     with open(os.path.join(DOCS_DIR, "data.json"), "w") as fh:
-        json.dump({"meta": meta, "totals": totals, "rows": rows}, fh, indent=1)
+        json.dump({"meta": meta, "totals": totals, "rows": days, "groups": years}, fh, indent=1)
 
     with open(os.path.join(DOCS_DIR, "index.html"), "w") as fh:
-        fh.write(render_page(meta, totals, rows, mode="doc"))
+        fh.write(render_page(meta, totals, years, mode="doc"))
     with open(os.path.join(DOCS_DIR, "artifact.html"), "w") as fh:
-        fh.write(render_page(meta, totals, rows, mode="artifact"))
+        fh.write(render_page(meta, totals, years, mode="artifact"))
     print("Built docs/index.html, docs/artifact.html and docs/data.json "
-          "(%d cohort rows, %d snapshots)." % (len(rows), meta["snapshot_count"]))
+          "(%d day rows, %d snapshots)." % (len(days), meta["snapshot_count"]))
 
 
 # ------------------------------------------------------------------ rendering
 
 # Palette per the validated reference instance (dataviz method): sequential
-# blue ramp for cell shading, chart chrome tokens for ink and surfaces.
+# blue ramp for the week cells, chart chrome tokens for ink and surfaces,
+# plus the green / red / yellow cells Giulia asked for.
 LIGHT_RAMP = [("#cde2fb", "#0b0b0b"), ("#b7d3f6", "#0b0b0b"), ("#9ec5f4", "#0b0b0b"),
               ("#86b6ef", "#0b0b0b"), ("#6da7ec", "#0b0b0b"), ("#5598e7", "#0b0b0b"),
               ("#3987e5", "#ffffff"), ("#2a78d6", "#ffffff"), ("#256abf", "#ffffff"),
@@ -203,13 +264,34 @@ LIGHT_TOKENS = {
     "page": "#f9f9f7", "surface": "#fcfcfb", "ink": "#0b0b0b", "ink-2": "#52514e",
     "ink-3": "#898781", "grid": "#e1e0d9", "ring": "rgba(11,11,11,0.10)",
     "accent": "#2a78d6", "good": "#006300",
+    "grp": "#f1f0ec", "grp2": "#f6f5f1",
     "ramp-gradient": "linear-gradient(to right,#cde2fb,#6da7ec,#2a78d6,#1c5cab)",
+    # Members column: solid green cell, white numerals.
+    "joined-bg": "#006300", "joined-ink": "#ffffff",
+    # "Not yet entered": red severity ramp, w1 lightest (nearly everyone in)
+    # to w5 deepest (nobody entered yet); yellow the moment everyone is in.
+    "w1-bg": "#f3c1bd", "w1-ink": "#0b0b0b",
+    "w2-bg": "#ea948e", "w2-ink": "#0b0b0b",
+    "w3-bg": "#dd625c", "w3-ink": "#ffffff",
+    "w4-bg": "#c73a3a", "w4-ink": "#ffffff",
+    "w5-bg": "#9c1f1f", "w5-ink": "#ffffff",
+    "done-bg": "#eda100", "done-ink": "#0b0b0b",
+    "wait-gradient": "linear-gradient(to right,#f3c1bd,#dd625c,#9c1f1f)",
 }
 DARK_TOKENS = {
     "page": "#0d0d0d", "surface": "#1a1a19", "ink": "#ffffff", "ink-2": "#c3c2b7",
     "ink-3": "#898781", "grid": "#2c2c2a", "ring": "rgba(255,255,255,0.10)",
     "accent": "#3987e5", "good": "#0ca30c",
+    "grp": "#232322", "grp2": "#1e1e1d",
     "ramp-gradient": "linear-gradient(to right,#0d366b,#256abf,#5598e7,#86b6ef)",
+    "joined-bg": "#0ca30c", "joined-ink": "#0b0b0b",
+    "w1-bg": "#4a2422", "w1-ink": "#ffffff",
+    "w2-bg": "#6b2a29", "w2-ink": "#ffffff",
+    "w3-bg": "#8f3231", "w3-ink": "#ffffff",
+    "w4-bg": "#c04241", "w4-ink": "#ffffff",
+    "w5-bg": "#e35b5a", "w5-ink": "#0b0b0b",
+    "done-bg": "#eda100", "done-ink": "#0b0b0b",
+    "wait-gradient": "linear-gradient(to right,#4a2422,#8f3231,#e35b5a)",
 }
 
 
@@ -242,38 +324,54 @@ header p { margin: 0; color: var(--ink-2); }
 .card.setup code { background: var(--page); border: 1px solid var(--grid); border-radius: 4px; padding: 1px 5px; }
 .tablewrap { overflow-x: auto; }
 table { border-collapse: separate; border-spacing: 2px; width: 100%; font-variant-numeric: tabular-nums; }
-thead th { font-size: 12px; font-weight: 600; color: var(--ink-3); text-align: center; padding: 6px 8px; white-space: nowrap; }
+thead th { font-size: 12px; font-weight: 600; color: var(--ink-3); text-align: center; padding: 6px 5px; white-space: nowrap; }
 thead th:first-child { text-align: left; }
 tbody th { font-weight: 500; text-align: left; padding: 4px 10px 4px 8px; white-space: nowrap; color: var(--ink); font-size: 13.5px; }
-tbody td { text-align: center; padding: 4px 5px; border-radius: 4px; min-width: 36px; font-size: 13.5px; }
+tbody td { text-align: center; padding: 4px 4px; border-radius: 4px; min-width: 34px; font-size: 13.5px; }
 td.num { color: var(--ink); }
-td.joined { font-weight: 650; color: var(--good); }
-td.waiting { color: var(--ink-2); }
+td.joined { font-weight: 650; background: var(--joined-bg); color: var(--joined-ink); }
+td.w1 { background: var(--w1-bg); color: var(--w1-ink); }
+td.w2 { background: var(--w2-bg); color: var(--w2-ink); }
+td.w3 { background: var(--w3-bg); color: var(--w3-ink); }
+td.w4 { background: var(--w4-bg); color: var(--w4-ink); }
+td.w5 { background: var(--w5-bg); color: var(--w5-ink); }
+td.done { font-weight: 650; background: var(--done-bg); color: var(--done-ink); }
 td.muted { color: var(--ink-2); }
 tr.empty th, tr.empty td { opacity: 0.45; }
 td.c0 { color: var(--ink-3); }
 __HEAT_RULES__
 td.open { outline: 1.5px dashed var(--ink-3); outline-offset: -1.5px; }
-.approx { color: var(--ink-3); }
+tr.grp th { cursor: pointer; user-select: none; }
+tr.grp th::before { content: "\\25B8"; display: inline-block; width: 14px; color: var(--ink-3); }
+tr.grp[aria-expanded="true"] th::before { content: "\\25BE"; }
+tr.g-year th, tr.g-year td.num { font-weight: 700; }
+tr.g-year th { font-size: 14.5px; }
+tr.g-year { background: var(--grp); }
+tr.g-month { background: var(--grp2); }
+tr.g-month th { font-weight: 650; padding-left: 20px; }
+tr.g-week th { padding-left: 32px; color: var(--ink-2); }
+tr.day th { padding-left: 50px; font-weight: 450; }
 .legend { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; padding: 10px 8px 6px; color: var(--ink-2); font-size: 12.5px; }
-.legend .ramp { width: 120px; height: 10px; border-radius: 5px; border: 1px solid var(--ring); background: var(--ramp-gradient); }
+.legend .ramp { width: 110px; height: 10px; border-radius: 5px; border: 1px solid var(--ring); background: var(--ramp-gradient); }
+.legend .ramp.wait { background: var(--wait-gradient); }
 .legend .sep { width: 1px; height: 14px; background: var(--grid); }
-.legend .chip.open-demo { display: inline-block; width: 14px; height: 14px; border-radius: 3px;
-  outline: 1.5px dashed var(--ink-3); outline-offset: -1.5px; vertical-align: -2px; }
-.note { color: var(--ink-2); font-size: 13.5px; max-width: 760px; }
+.legend .chip { display: inline-block; width: 14px; height: 14px; border-radius: 3px; vertical-align: -2px; }
+.legend .chip.open-demo { outline: 1.5px dashed var(--ink-3); outline-offset: -1.5px; }
+.legend .chip.done-demo { background: var(--done-bg); }
+.legend .chip.joined-demo { background: var(--joined-bg); }
+.note { color: var(--ink-2); font-size: 13.5px; max-width: 820px; }
 .note.notice { background: var(--surface); border: 1px solid var(--ring); border-left: 3px solid var(--accent);
   border-radius: 8px; padding: 10px 14px; max-width: none; margin: 0 0 8px; }
 footer { margin-top: 28px; color: var(--ink-3); font-size: 12.5px; }
 #tip { position: fixed; display: none; max-width: 280px; padding: 6px 10px; background: var(--ink); color: var(--page);
   border-radius: 6px; font-size: 12.5px; pointer-events: none; z-index: 10; }
-@media (prefers-reduced-motion: no-preference) { .tile, .card { transition: border-color 120ms ease; } }
 """
 
 HEAT_RULES = "\n".join(
     "td.c%d { background: var(--h%d-bg); color: var(--h%d-ink); }" % (i, i, i)
     for i in range(1, 11))
 
-TIP_JS = """
+PAGE_JS = """
 (function () {
   var tip = document.getElementById('tip');
   document.addEventListener('mouseover', function (e) {
@@ -289,6 +387,33 @@ TIP_JS = """
     if (y + tip.offsetHeight > window.innerHeight - 8) y = e.clientY - tip.offsetHeight - 10;
     tip.style.left = x + 'px'; tip.style.top = y + 'px';
   });
+
+  // Collapsible year / month / week sections.
+  var expanded = {};
+  document.querySelectorAll('tr.grp[data-open="1"]').forEach(function (tr) {
+    expanded[tr.getAttribute('data-key')] = true;
+  });
+  function apply() {
+    document.querySelectorAll('tbody tr').forEach(function (tr) {
+      var parents = tr.getAttribute('data-parents');
+      var show = true;
+      if (parents) {
+        parents.split(' ').forEach(function (p) { if (!expanded[p]) show = false; });
+      }
+      tr.style.display = show ? '' : 'none';
+      if (tr.classList.contains('grp')) {
+        tr.setAttribute('aria-expanded', expanded[tr.getAttribute('data-key')] ? 'true' : 'false');
+      }
+    });
+  }
+  document.querySelectorAll('tr.grp th').forEach(function (th) {
+    th.addEventListener('click', function () {
+      var key = th.parentElement.getAttribute('data-key');
+      expanded[key] = !expanded[key];
+      apply();
+    });
+  });
+  apply();
 })();
 """
 
@@ -318,50 +443,100 @@ def heat_class(count, joined):
     return "c%d" % bucket
 
 
+def wait_class(entered, joined):
+    """Red severity for the "Not yet entered" cell; yellow when complete."""
+    if joined == 0:
+        return "c0"
+    if entered >= joined:
+        return "done"
+    share = entered / joined
+    if share >= 0.75:
+        return "w1"
+    if share >= 0.5:
+        return "w2"
+    if share >= 0.25:
+        return "w3"
+    if share > 0:
+        return "w4"
+    return "w5"
+
+
 def pretty(date_iso):
     d = parse_date(date_iso)
     return d.strftime("%a %e %b").replace("  ", " ")
 
 
-def render_rows(rows, entry_signal):
-    if not rows:
-        return ""
-    out = []
-    for r in rows:
-        dim = ' class="empty"' if r["joined"] == 0 else ""
-        approx = '<span class="approx" title="Joined before tracking started; week timing is approximate">&asymp;</span> ' if r["approx"] else ""
-        if not entry_signal:
-            cells = '<td class="c0"></td>' * len(r["weeks"])
-            out.append(
-                '<tr%s><th scope="row">%s%s</th><td class="num joined">%d</td>'
-                '<td class="num muted">&ndash;</td>%s'
-                '<td class="num muted">&ndash;</td><td class="num muted">&ndash;</td></tr>'
-                % (dim, approx, pretty(r["date"]), r["joined"], cells))
+def week_cells(label, totals_or_row, joined_for_shading, entry_signal):
+    """The ten by-W cells for a day row or a group totals row."""
+    if not entry_signal or totals_or_row.get("wk_na"):
+        return '<td class="c0"></td>' * WEEKS
+    cells = []
+    for i, c in enumerate(totals_or_row["weeks"]):
+        if joined_for_shading == 0 or not c["started"]:
+            cells.append('<td class="c0"></td>')
             continue
-        pct = ("%d%%" % round(100 * r["entered"] / r["joined"])) if r["joined"] else "&ndash;"
-        cells = []
-        for i, c in enumerate(r["weeks"]):
-            if r["joined"] == 0 or not c["started"]:
-                cells.append('<td class="c0"></td>')
-                continue
-            cls = heat_class(c["n"], r["joined"])
-            open_cls = "" if c["closed"] else " open"
-            share = "%d%%" % round(100 * c["n"] / r["joined"])
-            state = "" if c["closed"] else " &middot; week still running"
-            tip = "%s &middot; by end of week %d: %d of %d entered (%s)%s" % (
-                pretty(r["date"]), i + 1, c["n"], r["joined"], share, state)
-            cells.append('<td class="%s%s" data-tip="%s">%d</td>' % (cls, open_cls, tip, c["n"]))
-        waiting = ('<td class="num waiting">%d</td>' % r["not_entered"]) if r["joined"] \
-                  else '<td class="num waiting"></td>'
-        out.append(
-            '<tr%s><th scope="row">%s%s</th><td class="num joined">%d</td>%s%s'
-            '<td class="num">%d</td><td class="num muted">%s</td></tr>'
-            % (dim, approx, pretty(r["date"]), r["joined"], waiting,
-               "".join(cells), r["entered"], pct))
+        cls = heat_class(c["n"], joined_for_shading)
+        open_cls = "" if c["closed"] else " open"
+        share = "%d%%" % round(100 * c["n"] / joined_for_shading)
+        state = "" if c["closed"] else " &middot; week still running"
+        tip = "%s &middot; by end of week %d: %d of %d entered (%s)%s" % (
+            label, i + 1, c["n"], joined_for_shading, share, state)
+        cells.append('<td class="%s%s" data-tip="%s">%d</td>' % (cls, open_cls, tip, c["n"]))
+    return "".join(cells)
+
+
+def stat_cells(label, joined, entered, not_entered, entry_signal):
+    """Members (green), Not-yet-entered (red/yellow) ... Entered, Share."""
+    joined_cell = '<td class="num joined">%d</td>' % joined if joined else '<td class="num muted">0</td>'
+    if not entry_signal:
+        return (joined_cell, '<td class="num muted">&ndash;</td>',
+                '<td class="num muted">&ndash;</td>', '<td class="num muted">&ndash;</td>')
+    if joined == 0:
+        return (joined_cell, '<td class="c0"></td>', '<td class="num muted">0</td>',
+                '<td class="num muted">&ndash;</td>')
+    cls = wait_class(entered, joined)
+    share = round(100 * entered / joined)
+    tip = "%s &middot; %d of %d still not entered (%d%% entered)" % (label, not_entered, joined, share)
+    waiting = '<td class="%s" data-tip="%s">%d</td>' % (cls, tip, not_entered)
+    return (joined_cell, waiting, '<td class="num">%d</td>' % entered,
+            '<td class="num muted">%d%%</td>' % share)
+
+
+def render_table_rows(years, entry_signal, asof):
+    today = parse_date(asof)
+    open_keys = {"y%d" % today.year, "m%s" % today.strftime("%Y-%m"),
+                 "w%s-%02d" % (today.strftime("%Y-%m"), today.isocalendar()[1])}
+    out = []
+
+    def group_row(level, key, parents, label, totals):
+        j, w, e, s = stat_cells(label, totals["joined"], totals["entered"],
+                                totals["not_entered"], entry_signal)
+        shade_n = totals["wk_joined"] if not totals.get("wk_na") else 0
+        cells = week_cells(label, totals, shade_n, entry_signal)
+        opened = ' data-open="1"' if key in open_keys else ""
+        out.append('<tr class="grp g-%s" data-key="%s"%s%s><th scope="row">%s</th>%s%s%s%s%s</tr>'
+                   % (level, key,
+                      (' data-parents="%s"' % " ".join(parents)) if parents else "",
+                      opened, label, j, w, cells, e, s))
+
+    for y in years:
+        group_row("year", y["key"], [], y["label"], y["totals"])
+        for m in y["months"]:
+            group_row("month", m["key"], [y["key"]], m["label"], m["totals"])
+            for w in m["weeks"]:
+                group_row("week", w["key"], [y["key"], m["key"]], w["label"], w["totals"])
+                for r in w["days"]:
+                    label = pretty(r["date"])
+                    j, wt, e, s = stat_cells(label, r["joined"], r["entered"],
+                                             r["not_entered"], entry_signal)
+                    cells = week_cells(label, r, r["joined"], entry_signal)
+                    dim = " empty" if r["joined"] == 0 else ""
+                    out.append('<tr class="day%s" data-parents="%s %s %s"><th scope="row">%s</th>%s%s%s%s%s</tr>'
+                               % (dim, y["key"], m["key"], w["key"], label, j, wt, cells, e, s))
     return "\n".join(out)
 
 
-def build_body(meta, totals, rows):
+def build_body(meta, totals, years):
     week_heads = "".join("<th>by W%d</th>" % w for w in range(1, WEEKS + 1))
     pct_total = ("%d%%" % round(100 * totals["entered"] / totals["joined"])) if totals["joined"] else "&ndash;"
 
@@ -386,12 +561,17 @@ def build_body(meta, totals, rows):
                         % (totals["entered"], pct_total, totals["not_entered"]))
         notice = ""
         legend = """<div class="legend">
+      <span class="chip joined-demo"></span><span>members added that day</span>
+      <span class="sep"></span>
+      <span class="ramp wait" aria-hidden="true"></span>
+      <span>still missing &mdash; deeper red = fewer have entered</span>
+      <span class="sep"></span>
+      <span><span class="chip done-demo"></span> everyone entered</span>
+      <span class="sep"></span>
       <span class="ramp" aria-hidden="true"></span>
-      <span>share of the day&rsquo;s cohort that has entered &mdash; 0&thinsp;&ndash;&thinsp;100%</span>
+      <span>share entered by that week</span>
       <span class="sep"></span>
       <span><span class="chip open-demo"></span> week still running</span>
-      <span class="sep"></span>
-      <span>&asymp; joined before tracking began &mdash; week timing approximate, totals exact</span>
     </div>"""
     else:
         entered_tile = ('<div class="tile"><div class="k">Entered the community</div>'
@@ -399,14 +579,13 @@ def build_body(meta, totals, rows):
                         '<div class="tile"><div class="k">Not yet entered</div>'
                         '<div class="v">&ndash;</div><div class="k">no entry signal yet</div></div>')
         notice = ('<p class="note notice">The joined-per-day numbers are live from the Mighty Networks API. '
-                  'The <em>entered / week</em> columns are waiting on an entry signal: the Admin API does not '
-                  'expose a member&rsquo;s last visit yet (confirmed against the live member object). '
-                  'They will fill in automatically the day that signal is connected.</p>')
+                  'The <em>entered / week</em> columns are waiting on an entry signal &mdash; they fill in '
+                  'automatically the day it is connected.</p>')
         legend = ""
 
     return """
   <section class="tiles">
-    <div class="tile"><div class="k">New members &middot; last %(days)s days</div><div class="v">%(joined)s</div></div>
+    <div class="tile"><div class="k">New members &middot; last 12 months</div><div class="v">%(joined)s</div></div>
     %(entered_tile)s
     <div class="tile"><div class="k">Daily snapshots</div><div class="v">%(snaps)s <span class="sub">since %(first)s</span></div></div>
   </section>
@@ -432,22 +611,21 @@ def build_body(meta, totals, rows):
     %(legend)s
   </section>
 
-  <p class="note">Week columns are <strong>running totals</strong>, not per-week counts:
-  <em>by W3</em> means &ldquo;this many had entered by the end of their third week&rdquo; &mdash;
-  it already includes everyone from <em>by W1</em> and <em>by W2</em>, so the numbers grow to the
-  right and are never added together. <span style="color: var(--good); font-weight: 650;">Members</span>
-  joined that day; <em>Not yet entered</em> counts who still hasn&rsquo;t come in as of today.
-  Each day&rsquo;s snapshot pins down who entered since the day before, so the columns get more
-  precise every single day the tracker runs.</p>""" % {
-        "days": meta["lookback_days"],
+  <p class="note">Click a year, month, or week row to open it up or fold it away &mdash; each shows its own
+  totals. Week columns are <strong>running totals</strong>, not per-week counts: <em>by W3</em> means
+  &ldquo;this many had entered by the end of their third week&rdquo; &mdash; it already includes everyone from
+  <em>by W1</em> and <em>by W2</em>, so the numbers grow to the right and are never added together.
+  Week timing is tracked from %(baseline)s onward; older cohorts show their exact entered totals with the
+  week cells left blank.</p>""" % {
         "joined": totals["joined"],
         "entered_tile": entered_tile,
         "notice": notice,
         "snaps": meta["snapshot_count"],
         "first": pretty(meta["first_snapshot"]),
         "week_heads": week_heads,
-        "rows": render_rows(rows, entry_signal),
+        "rows": render_table_rows(years, entry_signal, meta["as_of"]),
         "legend": legend,
+        "baseline": pretty(meta["signal_baseline"]) if meta.get("signal_baseline") else "the first snapshot",
     }
 
 
@@ -484,14 +662,14 @@ __BODY__
 """
 
 
-def render_page(meta, totals, rows, mode):
+def render_page(meta, totals, years, mode):
     badge = ('<span class="asof">Data as of %s</span>' % pretty(meta["as_of"])) if meta["as_of"] else \
             '<span class="asof">Not connected yet</span>'
     content = (CONTENT_SHELL
                .replace("__BADGE__", badge)
-               .replace("__BODY__", build_body(meta, totals, rows))
+               .replace("__BODY__", build_body(meta, totals, years))
                .replace("__GENERATED__", meta["generated_at"].replace("T", " ")[:16])
-               .replace("__JS__", TIP_JS))
+               .replace("__JS__", PAGE_JS))
     shell = ARTIFACT_SHELL if mode == "artifact" else DOC_SHELL
     return shell.replace("__CSS__", build_css(mode)).replace("__CONTENT__", content)
 
