@@ -1,6 +1,6 @@
 {
  "meta": {
-  "generated_at": "2026-08-19T14:05:54+00:00",
+  "generated_at": "2026-08-19T14:13:54+00:00",
   "as_of": "2026-08-19",
   "first_snapshot": "2026-08-18",
   "signal_baseline": "2026-08-19",
@@ -48242,7 +48242,116 @@
     "churn_pct": 0.012559658377292138
    }
   ],
-  "history": [],
+  "history": [
+   {
+    "key": "2026-07",
+    "label": "July 2026 &middot; provided",
+    "joined": 1064,
+    "left": null,
+    "net": null,
+    "end_total": null,
+    "churn_pct": null
+   },
+   {
+    "key": "2026-06",
+    "label": "June 2026 &middot; provided",
+    "joined": 483,
+    "left": null,
+    "net": null,
+    "end_total": null,
+    "churn_pct": null
+   },
+   {
+    "key": "2026-05",
+    "label": "May 2026 &middot; provided",
+    "joined": 953,
+    "left": null,
+    "net": null,
+    "end_total": null,
+    "churn_pct": null
+   },
+   {
+    "key": "2026-04",
+    "label": "April 2026 &middot; provided",
+    "joined": 631,
+    "left": null,
+    "net": null,
+    "end_total": null,
+    "churn_pct": null
+   },
+   {
+    "key": "2026-03",
+    "label": "March 2026 &middot; provided",
+    "joined": 721,
+    "left": null,
+    "net": null,
+    "end_total": null,
+    "churn_pct": null
+   },
+   {
+    "key": "2026-02",
+    "label": "February 2026 &middot; provided",
+    "joined": 558,
+    "left": null,
+    "net": null,
+    "end_total": null,
+    "churn_pct": null
+   },
+   {
+    "key": "2026-01",
+    "label": "January 2026 &middot; provided",
+    "joined": 443,
+    "left": null,
+    "net": null,
+    "end_total": null,
+    "churn_pct": null
+   },
+   {
+    "key": "2025-12",
+    "label": "December 2025 &middot; provided",
+    "joined": 608,
+    "left": null,
+    "net": null,
+    "end_total": null,
+    "churn_pct": null
+   },
+   {
+    "key": "2025-11",
+    "label": "November 2025 &middot; provided",
+    "joined": 654,
+    "left": null,
+    "net": null,
+    "end_total": null,
+    "churn_pct": null
+   },
+   {
+    "key": "2025-10",
+    "label": "October 2025 &middot; provided",
+    "joined": 818,
+    "left": null,
+    "net": null,
+    "end_total": null,
+    "churn_pct": null
+   },
+   {
+    "key": "2025-09",
+    "label": "September 2025 &middot; provided",
+    "joined": 826,
+    "left": null,
+    "net": null,
+    "end_total": null,
+    "churn_pct": null
+   },
+   {
+    "key": "2025-08",
+    "label": "August 2025 &middot; provided",
+    "joined": 1101,
+    "left": null,
+    "net": null,
+    "end_total": null,
+    "churn_pct": null
+   }
+  ],
   "history_start_total": null,
   "current_total": 23897
  },
@@ -48330,8 +48439,8 @@
     "year": 2025,
     "month": 8,
     "pre": true,
-    "joined": 356,
-    "joined_approx": true,
+    "joined": 1101,
+    "joined_approx": false,
     "left": null,
     "entered_pct": 100.0,
     "entered_approx": true
@@ -48341,8 +48450,8 @@
     "year": 2025,
     "month": 9,
     "pre": true,
-    "joined": 256,
-    "joined_approx": true,
+    "joined": 826,
+    "joined_approx": false,
     "left": null,
     "entered_pct": 100.0,
     "entered_approx": true
@@ -48352,8 +48461,8 @@
     "year": 2025,
     "month": 10,
     "pre": true,
-    "joined": 312,
-    "joined_approx": true,
+    "joined": 818,
+    "joined_approx": false,
     "left": null,
     "entered_pct": 100.0,
     "entered_approx": true
@@ -48363,8 +48472,8 @@
     "year": 2025,
     "month": 11,
     "pre": true,
-    "joined": 311,
-    "joined_approx": true,
+    "joined": 654,
+    "joined_approx": false,
     "left": null,
     "entered_pct": 100.0,
     "entered_approx": true
@@ -48374,8 +48483,8 @@
     "year": 2025,
     "month": 12,
     "pre": true,
-    "joined": 344,
-    "joined_approx": true,
+    "joined": 608,
+    "joined_approx": false,
     "left": null,
     "entered_pct": 100.0,
     "entered_approx": true
@@ -48385,8 +48494,8 @@
     "year": 2026,
     "month": 1,
     "pre": true,
-    "joined": 222,
-    "joined_approx": true,
+    "joined": 443,
+    "joined_approx": false,
     "left": null,
     "entered_pct": 100.0,
     "entered_approx": true
@@ -48396,8 +48505,8 @@
     "year": 2026,
     "month": 2,
     "pre": true,
-    "joined": 259,
-    "joined_approx": true,
+    "joined": 558,
+    "joined_approx": false,
     "left": null,
     "entered_pct": 100.0,
     "entered_approx": true
@@ -48407,8 +48516,8 @@
     "year": 2026,
     "month": 3,
     "pre": true,
-    "joined": 340,
-    "joined_approx": true,
+    "joined": 721,
+    "joined_approx": false,
     "left": null,
     "entered_pct": 100.0,
     "entered_approx": true
@@ -48418,8 +48527,8 @@
     "year": 2026,
     "month": 4,
     "pre": true,
-    "joined": 334,
-    "joined_approx": true,
+    "joined": 631,
+    "joined_approx": false,
     "left": null,
     "entered_pct": 100.0,
     "entered_approx": true
@@ -48429,8 +48538,8 @@
     "year": 2026,
     "month": 5,
     "pre": true,
-    "joined": 446,
-    "joined_approx": true,
+    "joined": 953,
+    "joined_approx": false,
     "left": null,
     "entered_pct": 100.0,
     "entered_approx": true
@@ -48440,8 +48549,8 @@
     "year": 2026,
     "month": 6,
     "pre": true,
-    "joined": 290,
-    "joined_approx": true,
+    "joined": 483,
+    "joined_approx": false,
     "left": null,
     "entered_pct": 100.0,
     "entered_approx": true
@@ -48451,8 +48560,8 @@
     "year": 2026,
     "month": 7,
     "pre": true,
-    "joined": 788,
-    "joined_approx": true,
+    "joined": 1064,
+    "joined_approx": false,
     "left": null,
     "entered_pct": 64.7,
     "entered_approx": true
@@ -48463,7 +48572,7 @@
     "month": 8,
     "pre": false,
     "joined": 692,
-    "joined_approx": false,
+    "joined_approx": true,
     "left": 3,
     "entered_pct": 48.0,
     "entered_approx": false

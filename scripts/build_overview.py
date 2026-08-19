@@ -221,12 +221,18 @@ def load_backfill():
     with open(path, newline="") as fh:
         for row in csv.DictReader(fh):
             ym = (row.get("month") or "").strip()[:7]
-            if len(ym) == 7:
-                try:
-                    out[ym] = {"joined": int(row.get("joined") or 0),
-                               "left": int(row.get("left") or 0)}
-                except ValueError:
-                    continue
+            if len(ym) != 7:
+                continue
+            try:
+                joined = int((row.get("joined") or "").strip())
+            except ValueError:
+                continue
+            left_raw = (row.get("left") or "").strip()
+            try:
+                left = int(left_raw) if left_raw else None
+            except ValueError:
+                left = None
+            out[ym] = {"joined": joined, "left": left}
     return out
 
 
@@ -280,25 +286,32 @@ def build_churn(members, snapshots, backfill=None):
 
     # Provided history, chained backward from the opening balance.
     history = []
+    chain_ok = bool(backfill)
+    end_running = opening
     if backfill:
         tracking_ym = tracking_start.strftime("%Y-%m")
-        end_running = opening
         for ym in sorted((k for k in backfill if k < tracking_ym), reverse=True):
             joined, left = backfill[ym]["joined"], backfill[ym]["left"]
-            start_total = end_running - joined + left
-            history.append({
-                "key": ym,
-                "label": dt.date(int(ym[:4]), int(ym[5:]), 1).strftime("%B %Y") + " &middot; provided",
-                "joined": joined, "left": left, "net": joined - left,
-                "end_total": end_running,
-                "churn_pct": (100.0 * left / start_total) if start_total else 0.0,
-            })
-            end_running = start_total
+            row = {"key": ym,
+                   "label": dt.date(int(ym[:4]), int(ym[5:]), 1).strftime("%B %Y") + " &middot; provided",
+                   "joined": joined, "left": left,
+                   "net": None, "end_total": None, "churn_pct": None}
+            if left is not None and chain_ok:
+                start_total = end_running - joined + left
+                row["net"] = joined - left
+                row["end_total"] = end_running
+                row["churn_pct"] = (100.0 * left / start_total) if start_total else 0.0
+                end_running = start_total
+            else:
+                # Leavers unknown for this month - member totals cannot be
+                # chained further back from here.
+                chain_ok = False
+            history.append(row)
     return {
         "opening": {"date": tracking_start.isoformat(), "members": opening},
         "months": rows,
         "history": history,
-        "history_start_total": end_running if backfill and history else None,
+        "history_start_total": end_running if history and chain_ok else None,
         "current_total": total,
     }
 
@@ -312,7 +325,8 @@ def build_analytics(members, snapshots, backfill):
     if not snapshots:
         return None
     asof = snapshots[-1][0]
-    tracking_ym = snapshots[0][0].strftime("%Y-%m")
+    tracking_start = snapshots[0][0]
+    tracking_ym = tracking_start.strftime("%Y-%m")
 
     joins, joins_entered, outs = {}, {}, {}
     for m in members.values():
@@ -337,7 +351,10 @@ def build_analytics(members, snapshots, backfill):
         else:
             # Pre-tracking months without backfill only count the members
             # who are still here today (survivors) - marked approximate.
-            row["joined"], row["joined_approx"] = cohort, pre
+            # The month tracking STARTED in is partially survivor-counted
+            # too, so it carries the mark until it is fully tracked.
+            partial = ym == tracking_ym and tracking_start.day > 1
+            row["joined"], row["joined_approx"] = cohort, pre or partial
         row["left"] = (bf["left"] if bf else None) if pre else outs.get(ym, 0)
         row["entered_pct"] = round(100.0 * joins_entered.get(ym, 0) / cohort, 1) if cohort else None
         # Survivor bias: members who never entered tend to get removed over
@@ -930,7 +947,10 @@ def nice_ceiling(v):
     if v <= 10:
         return 10
     mag = 10 ** (len(str(int(v))) - 1)
-    return ((int(v) // mag) + 1) * mag
+    for f in (1, 1.2, 1.5, 2, 2.5, 3, 4, 5, 6, 8, 10):
+        if f * mag >= v:
+            return int(f * mag)
+    return 10 * mag
 
 
 def chart_svg(metric_name, months, years, value_key, approx_key=None, pct=False):
@@ -1057,13 +1077,20 @@ def churn_panel(meta, churn):
                       "{:,}".format(churn["opening"]["members"])))
     for r in churn.get("history", []):
         joined_cell = ('<td class="num joined">%d</td>' % r["joined"]) if r["joined"] else '<td class="num muted">0</td>'
-        left_cell = ('<td class="num leftc">%d</td>' % r["left"]) if r["left"] else '<td class="num muted">0</td>'
-        net_cls = "pos" if r["net"] > 0 else ("neg" if r["net"] < 0 else "muted num")
-        net_txt = ("+%d" % r["net"]) if r["net"] > 0 else str(r["net"])
-        opening_row += ('\n<tr><th scope="row">%s</th>%s%s<td class="%s">%s</td>'
-                        '<td class="num"><strong>%s</strong></td><td class="num muted">%.2f%%</td></tr>'
-                        % (r["label"], joined_cell, left_cell, net_cls, net_txt,
-                           "{:,}".format(r["end_total"]), r["churn_pct"]))
+        if r["left"] is None:
+            left_cell = '<td class="num muted">&ndash;</td>'
+            net_html = '<td class="num muted">&ndash;</td>'
+            end_html = '<td class="num muted">&ndash;</td>'
+            churn_html = '<td class="num muted">&ndash;</td>'
+        else:
+            left_cell = ('<td class="num leftc">%d</td>' % r["left"]) if r["left"] else '<td class="num muted">0</td>'
+            net_cls = "pos" if r["net"] > 0 else ("neg" if r["net"] < 0 else "muted num")
+            net_txt = ("+%d" % r["net"]) if r["net"] > 0 else str(r["net"])
+            net_html = '<td class="%s">%s</td>' % (net_cls, net_txt)
+            end_html = '<td class="num"><strong>%s</strong></td>' % "{:,}".format(r["end_total"])
+            churn_html = '<td class="num muted">%.2f%%</td>' % r["churn_pct"]
+        opening_row += ('\n<tr><th scope="row">%s</th>%s%s%s%s%s</tr>'
+                        % (r["label"], joined_cell, left_cell, net_html, end_html, churn_html))
     if churn.get("history_start_total") is not None:
         opening_row += ('\n<tr class="opening"><th scope="row">Start of provided history</th>'
                         '<td class="num muted" colspan="3"></td>'
