@@ -36,32 +36,29 @@ had already entered before the very first snapshot are attributed to the week
 of their last visit at that moment (marked ≈ on the page — an upper bound;
 their entered/not-entered status is exact either way).
 
-## Status of the "entered" signal (verified 2026-08-18)
+## The "entered" signal — LIVE since 2026-08-19
 
-The first live run confirmed the member object the Admin API v1 returns:
-`id, email, first_name, last_name, avatar, bio, location, time_zone,
-member_type, ambassador_level, referral_count, categories, permalink,
-created_at, updated_at`. **There is no last-visit field yet**, so the page
-currently shows the joined-per-day numbers (live and exact, from
-`created_at`) and dashes for the entered/week columns instead of a
-misleading zero. Two tracks to light them up:
+History, for whoever reads this later:
 
-1. **Ask Mighty** which API exposes the "Last visit" column from the admin
-   People table (the API program contacts who enabled it for this Network in
-   July 2026 are the right people). The candidate field names are already
-   configured — the columns fill automatically the day such a field appears.
-2. **`updated_at` experiment** — each snapshot stores it; after a few days
-   of data, day-over-day movement will show whether it tracks member
-   activity (usable as an "active since" signal) or only profile edits.
-   Decide from the evidence, never silently.
+* **18 Aug 2026** — first live snapshot. The Admin API member object had
+  `created_at` (join date) but **no last-visit field**, so the page showed
+  joins only, with dashes for the entered columns.
+* **19 Aug 2026** — the morning snapshot suddenly carried a last-visit value
+  for 97% of members: Mighty added the field to the API (the day after we
+  asked about it). The pre-configured candidate field names picked it up
+  automatically, and the entered/week columns lit up with no code change.
+  Cross-check: 636 members with no last visit ≈ the 637 "never activated"
+  the BTB warehouse counts independently.
 
-   *Day 1 (18 → 19 Aug):* 601 of 23,883 members moved (2.5%) — no bulk
-   touching. Movement follows join recency exactly as real activity would:
-   Aug-2026 joiners 14.9%, 2026 joiners 6.9%, 2024–25 2.2%, 2021–23 0.9%.
-   Caveat to watch: ~260 of the 601 moves cluster at 04:00–05:00 UTC, which
-   may be a nightly system job touching records rather than member visits;
-   with 3+ days of data, repeat-movers at that hour will reveal it.
-   Promising, not yet concluded.
+The 19 Aug snapshot is the **signal baseline**: members already entered by
+then are attributed to the week of their last visit at that moment — an
+upper bound, marked ≈ on the page when it could cross a week boundary (the
+true first visit can only be earlier). From 19 Aug onward, entries are
+pinned day-by-day by the snapshots and the week columns are exact.
+
+The `updated_at` experiment (day 1: 2.5% daily movement, activity-shaped
+gradient by join recency) is closed as no longer needed — the column is
+still captured, and remains available as a secondary activity signal.
 
 ## The one manual step: the API token
 

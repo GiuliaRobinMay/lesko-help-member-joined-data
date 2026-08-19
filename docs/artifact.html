@@ -1,8 +1,3 @@
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Lesko Help Member Cohorts</title>
 <style>:root {
   color-scheme: light;
@@ -27,7 +22,7 @@
   --h10-bg: #1c5cab; --h10-ink: #ffffff;
 }
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme="light"]) {
   color-scheme: dark;
   --page: #0d0d0d;
   --surface: #1a1a19;
@@ -49,6 +44,28 @@
   --h9-bg: #6da7ec; --h9-ink: #0b0b0b;
   --h10-bg: #86b6ef; --h10-ink: #0b0b0b;
   }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --page: #0d0d0d;
+  --surface: #1a1a19;
+  --ink: #ffffff;
+  --ink-2: #c3c2b7;
+  --ink-3: #898781;
+  --grid: #2c2c2a;
+  --ring: rgba(255,255,255,0.10);
+  --accent: #3987e5;
+  --ramp-gradient: linear-gradient(to right,#0d366b,#256abf,#5598e7,#86b6ef);
+  --h1-bg: #0d366b; --h1-ink: #ffffff;
+  --h2-bg: #104281; --h2-ink: #ffffff;
+  --h3-bg: #184f95; --h3-ink: #ffffff;
+  --h4-bg: #1c5cab; --h4-ink: #ffffff;
+  --h5-bg: #256abf; --h5-ink: #ffffff;
+  --h6-bg: #2a78d6; --h6-ink: #ffffff;
+  --h7-bg: #3987e5; --h7-ink: #ffffff;
+  --h8-bg: #5598e7; --h8-ink: #0b0b0b;
+  --h9-bg: #6da7ec; --h9-ink: #0b0b0b;
+  --h10-bg: #86b6ef; --h10-ink: #0b0b0b;
 }
 
 * { box-sizing: border-box; }
@@ -106,8 +123,6 @@ footer { margin-top: 28px; color: var(--ink-3); font-size: 12.5px; }
   border-radius: 6px; font-size: 12.5px; pointer-events: none; z-index: 10; }
 @media (prefers-reduced-motion: no-preference) { .tile, .card { transition: border-color 120ms ease; } }
 </style>
-</head>
-<body>
 <main>
   <header>
     <h1>Lesko Help &mdash; member cohort overview</h1>
@@ -242,5 +257,3 @@ footer { margin-top: 28px; color: var(--ink-3); font-size: 12.5px; }
 })();
 </script>
 
-</body>
-</html>

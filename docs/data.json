@@ -1,6 +1,6 @@
 {
  "meta": {
-  "generated_at": "2026-08-19T06:02:53+00:00",
+  "generated_at": "2026-08-19T11:39:33+00:00",
   "as_of": "2026-08-19",
   "first_snapshot": "2026-08-18",
   "snapshot_count": 2,
@@ -492,7 +492,7 @@
    "joined": 25,
    "entered": 14,
    "not_entered": 11,
-   "approx": false,
+   "approx": true,
    "weeks": [
     {
      "n": 10,
@@ -551,7 +551,7 @@
    "joined": 29,
    "entered": 23,
    "not_entered": 6,
-   "approx": false,
+   "approx": true,
    "weeks": [
     {
      "n": 12,
@@ -610,7 +610,7 @@
    "joined": 28,
    "entered": 18,
    "not_entered": 10,
-   "approx": false,
+   "approx": true,
    "weeks": [
     {
      "n": 10,
@@ -669,7 +669,7 @@
    "joined": 34,
    "entered": 22,
    "not_entered": 12,
-   "approx": false,
+   "approx": true,
    "weeks": [
     {
      "n": 14,
@@ -728,7 +728,7 @@
    "joined": 30,
    "entered": 19,
    "not_entered": 11,
-   "approx": false,
+   "approx": true,
    "weeks": [
     {
      "n": 9,
@@ -787,7 +787,7 @@
    "joined": 34,
    "entered": 20,
    "not_entered": 14,
-   "approx": false,
+   "approx": true,
    "weeks": [
     {
      "n": 10,
@@ -846,7 +846,7 @@
    "joined": 20,
    "entered": 10,
    "not_entered": 10,
-   "approx": false,
+   "approx": true,
    "weeks": [
     {
      "n": 4,
@@ -905,7 +905,7 @@
    "joined": 203,
    "entered": 33,
    "not_entered": 170,
-   "approx": false,
+   "approx": true,
    "weeks": [
     {
      "n": 10,
@@ -964,7 +964,7 @@
    "joined": 16,
    "entered": 15,
    "not_entered": 1,
-   "approx": false,
+   "approx": true,
    "weeks": [
     {
      "n": 7,
@@ -1023,7 +1023,7 @@
    "joined": 7,
    "entered": 4,
    "not_entered": 3,
-   "approx": false,
+   "approx": true,
    "weeks": [
     {
      "n": 2,
@@ -1082,7 +1082,7 @@
    "joined": 55,
    "entered": 41,
    "not_entered": 14,
-   "approx": false,
+   "approx": true,
    "weeks": [
     {
      "n": 11,
@@ -1141,7 +1141,7 @@
    "joined": 53,
    "entered": 43,
    "not_entered": 10,
-   "approx": false,
+   "approx": true,
    "weeks": [
     {
      "n": 19,
@@ -1200,7 +1200,7 @@
    "joined": 21,
    "entered": 17,
    "not_entered": 4,
-   "approx": false,
+   "approx": true,
    "weeks": [
     {
      "n": 8,
@@ -1259,7 +1259,7 @@
    "joined": 13,
    "entered": 10,
    "not_entered": 3,
-   "approx": false,
+   "approx": true,
    "weeks": [
     {
      "n": 3,
@@ -1318,7 +1318,7 @@
    "joined": 22,
    "entered": 19,
    "not_entered": 3,
-   "approx": false,
+   "approx": true,
    "weeks": [
     {
      "n": 6,
@@ -1377,7 +1377,7 @@
    "joined": 19,
    "entered": 16,
    "not_entered": 3,
-   "approx": false,
+   "approx": true,
    "weeks": [
     {
      "n": 7,
@@ -1436,7 +1436,7 @@
    "joined": 13,
    "entered": 11,
    "not_entered": 2,
-   "approx": false,
+   "approx": true,
    "weeks": [
     {
      "n": 3,
@@ -1495,7 +1495,7 @@
    "joined": 15,
    "entered": 11,
    "not_entered": 4,
-   "approx": false,
+   "approx": true,
    "weeks": [
     {
      "n": 5,
@@ -1554,7 +1554,7 @@
    "joined": 24,
    "entered": 14,
    "not_entered": 10,
-   "approx": false,
+   "approx": true,
    "weeks": [
     {
      "n": 2,
@@ -1613,7 +1613,7 @@
    "joined": 22,
    "entered": 20,
    "not_entered": 2,
-   "approx": false,
+   "approx": true,
    "weeks": [
     {
      "n": 8,
@@ -1672,7 +1672,7 @@
    "joined": 13,
    "entered": 12,
    "not_entered": 1,
-   "approx": false,
+   "approx": true,
    "weeks": [
     {
      "n": 6,
@@ -1731,7 +1731,7 @@
    "joined": 18,
    "entered": 16,
    "not_entered": 2,
-   "approx": false,
+   "approx": true,
    "weeks": [
     {
      "n": 4,
@@ -1790,7 +1790,7 @@
    "joined": 16,
    "entered": 14,
    "not_entered": 2,
-   "approx": false,
+   "approx": true,
    "weeks": [
     {
      "n": 4,
@@ -1849,7 +1849,7 @@
    "joined": 10,
    "entered": 8,
    "not_entered": 2,
-   "approx": false,
+   "approx": true,
    "weeks": [
     {
      "n": 3,
@@ -1908,7 +1908,7 @@
    "joined": 10,
    "entered": 6,
    "not_entered": 4,
-   "approx": false,
+   "approx": true,
    "weeks": [
     {
      "n": 4,
@@ -1967,7 +1967,7 @@
    "joined": 21,
    "entered": 15,
    "not_entered": 6,
-   "approx": false,
+   "approx": true,
    "weeks": [
     {
      "n": 4,
@@ -2026,7 +2026,7 @@
    "joined": 14,
    "entered": 12,
    "not_entered": 2,
-   "approx": false,
+   "approx": true,
    "weeks": [
     {
      "n": 5,
@@ -2085,7 +2085,7 @@
    "joined": 18,
    "entered": 12,
    "not_entered": 6,
-   "approx": false,
+   "approx": true,
    "weeks": [
     {
      "n": 5,
@@ -2144,7 +2144,7 @@
    "joined": 20,
    "entered": 17,
    "not_entered": 3,
-   "approx": false,
+   "approx": true,
    "weeks": [
     {
      "n": 3,
@@ -2203,7 +2203,7 @@
    "joined": 19,
    "entered": 15,
    "not_entered": 4,
-   "approx": false,
+   "approx": true,
    "weeks": [
     {
      "n": 5,
@@ -2262,7 +2262,7 @@
    "joined": 8,
    "entered": 6,
    "not_entered": 2,
-   "approx": false,
+   "approx": true,
    "weeks": [
     {
      "n": 3,
@@ -2321,7 +2321,7 @@
    "joined": 9,
    "entered": 8,
    "not_entered": 1,
-   "approx": false,
+   "approx": true,
    "weeks": [
     {
      "n": 3,
@@ -2380,7 +2380,7 @@
    "joined": 15,
    "entered": 15,
    "not_entered": 0,
-   "approx": false,
+   "approx": true,
    "weeks": [
     {
      "n": 7,
@@ -2439,7 +2439,7 @@
    "joined": 21,
    "entered": 19,
    "not_entered": 2,
-   "approx": false,
+   "approx": true,
    "weeks": [
     {
      "n": 7,
@@ -2498,7 +2498,7 @@
    "joined": 13,
    "entered": 13,
    "not_entered": 0,
-   "approx": false,
+   "approx": true,
    "weeks": [
     {
      "n": 3,
@@ -2557,7 +2557,7 @@
    "joined": 24,
    "entered": 19,
    "not_entered": 5,
-   "approx": false,
+   "approx": true,
    "weeks": [
     {
      "n": 3,
@@ -2616,7 +2616,7 @@
    "joined": 38,
    "entered": 31,
    "not_entered": 7,
-   "approx": false,
+   "approx": true,
    "weeks": [
     {
      "n": 8,
@@ -2675,7 +2675,7 @@
    "joined": 12,
    "entered": 9,
    "not_entered": 3,
-   "approx": false,
+   "approx": true,
    "weeks": [
     {
      "n": 3,
@@ -2734,7 +2734,7 @@
    "joined": 14,
    "entered": 10,
    "not_entered": 4,
-   "approx": false,
+   "approx": true,
    "weeks": [
     {
      "n": 6,
@@ -2793,7 +2793,7 @@
    "joined": 19,
    "entered": 15,
    "not_entered": 4,
-   "approx": false,
+   "approx": true,
    "weeks": [
     {
      "n": 8,
@@ -2852,7 +2852,7 @@
    "joined": 27,
    "entered": 21,
    "not_entered": 6,
-   "approx": false,
+   "approx": true,
    "weeks": [
     {
      "n": 11,
@@ -2911,7 +2911,7 @@
    "joined": 227,
    "entered": 56,
    "not_entered": 171,
-   "approx": false,
+   "approx": true,
    "weeks": [
     {
      "n": 16,
@@ -2970,7 +2970,7 @@
    "joined": 14,
    "entered": 14,
    "not_entered": 0,
-   "approx": false,
+   "approx": true,
    "weeks": [
     {
      "n": 5,
@@ -3029,7 +3029,7 @@
    "joined": 7,
    "entered": 7,
    "not_entered": 0,
-   "approx": false,
+   "approx": true,
    "weeks": [
     {
      "n": 0,
@@ -3088,7 +3088,7 @@
    "joined": 5,
    "entered": 5,
    "not_entered": 0,
-   "approx": false,
+   "approx": true,
    "weeks": [
     {
      "n": 2,
@@ -3147,7 +3147,7 @@
    "joined": 6,
    "entered": 6,
    "not_entered": 0,
-   "approx": false,
+   "approx": true,
    "weeks": [
     {
      "n": 2,
@@ -3206,7 +3206,7 @@
    "joined": 6,
    "entered": 6,
    "not_entered": 0,
-   "approx": false,
+   "approx": true,
    "weeks": [
     {
      "n": 1,
@@ -3265,7 +3265,7 @@
    "joined": 7,
    "entered": 7,
    "not_entered": 0,
-   "approx": false,
+   "approx": true,
    "weeks": [
     {
      "n": 0,
@@ -3324,7 +3324,7 @@
    "joined": 6,
    "entered": 6,
    "not_entered": 0,
-   "approx": false,
+   "approx": true,
    "weeks": [
     {
      "n": 2,
@@ -3383,7 +3383,7 @@
    "joined": 13,
    "entered": 13,
    "not_entered": 0,
-   "approx": false,
+   "approx": true,
    "weeks": [
     {
      "n": 4,
@@ -3442,7 +3442,7 @@
    "joined": 12,
    "entered": 12,
    "not_entered": 0,
-   "approx": false,
+   "approx": true,
    "weeks": [
     {
      "n": 3,
@@ -3501,7 +3501,7 @@
    "joined": 2,
    "entered": 2,
    "not_entered": 0,
-   "approx": false,
+   "approx": true,
    "weeks": [
     {
      "n": 0,
@@ -3560,7 +3560,7 @@
    "joined": 10,
    "entered": 10,
    "not_entered": 0,
-   "approx": false,
+   "approx": true,
    "weeks": [
     {
      "n": 3,
@@ -3619,7 +3619,7 @@
    "joined": 6,
    "entered": 6,
    "not_entered": 0,
-   "approx": false,
+   "approx": true,
    "weeks": [
     {
      "n": 2,
@@ -3678,7 +3678,7 @@
    "joined": 5,
    "entered": 5,
    "not_entered": 0,
-   "approx": false,
+   "approx": true,
    "weeks": [
     {
      "n": 2,
@@ -3737,7 +3737,7 @@
    "joined": 13,
    "entered": 13,
    "not_entered": 0,
-   "approx": false,
+   "approx": true,
    "weeks": [
     {
      "n": 3,
@@ -3796,7 +3796,7 @@
    "joined": 13,
    "entered": 13,
    "not_entered": 0,
-   "approx": false,
+   "approx": true,
    "weeks": [
     {
      "n": 6,
@@ -3855,7 +3855,7 @@
    "joined": 10,
    "entered": 10,
    "not_entered": 0,
-   "approx": false,
+   "approx": true,
    "weeks": [
     {
      "n": 5,
@@ -3914,7 +3914,7 @@
    "joined": 11,
    "entered": 11,
    "not_entered": 0,
-   "approx": false,
+   "approx": true,
    "weeks": [
     {
      "n": 2,
@@ -3973,7 +3973,7 @@
    "joined": 5,
    "entered": 5,
    "not_entered": 0,
-   "approx": false,
+   "approx": true,
    "weeks": [
     {
      "n": 1,
@@ -4032,7 +4032,7 @@
    "joined": 5,
    "entered": 5,
    "not_entered": 0,
-   "approx": false,
+   "approx": true,
    "weeks": [
     {
      "n": 2,
@@ -4091,7 +4091,7 @@
    "joined": 10,
    "entered": 10,
    "not_entered": 0,
-   "approx": false,
+   "approx": true,
    "weeks": [
     {
      "n": 1,
