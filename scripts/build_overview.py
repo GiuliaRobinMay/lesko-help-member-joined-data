@@ -513,8 +513,13 @@ def render_table_rows(years, entry_signal, asof):
     def group_row(level, key, parents, label, totals):
         j, w, wp, e, s = stat_cells(label, totals["joined"], totals["entered"],
                                     totals["not_entered"], entry_signal)
-        shade_n = totals["wk_joined"] if not totals.get("wk_na") else 0
-        cells = week_cells(label, totals, shade_n, entry_signal)
+        if level == "week":
+            shade_n = totals["wk_joined"] if not totals.get("wk_na") else 0
+            cells = week_cells(label, totals, shade_n, entry_signal)
+        else:
+            # Month and year rows: the summed week cells mix different time
+            # windows and read strangely - show them only on weeks and days.
+            cells = '<td class="c0"></td>' * WEEKS
         opened = ' data-open="1"' if key in open_keys else ""
         out.append('<tr class="grp g-%s" data-key="%s"%s%s><th scope="row">%s</th>%s%s%s%s%s%s</tr>'
                    % (level, key,
