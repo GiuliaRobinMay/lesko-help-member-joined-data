@@ -202,10 +202,43 @@ def aggregate_leavers(day_rows):
     }
 
 
+# ----------------------------------------------------------------- backfill
+
+BACKFILL_DIR = os.path.join(REPO_ROOT, "data", "backfill")
+
+
+def load_backfill():
+    """Optional provided history for months before tracking began.
+
+    data/backfill/monthly.csv with columns month,joined,left (month as
+    YYYY-MM). Rows for months inside the tracked period are ignored - the
+    snapshots are authoritative there.
+    """
+    path = os.path.join(BACKFILL_DIR, "monthly.csv")
+    if not os.path.exists(path):
+        return {}
+    out = {}
+    with open(path, newline="") as fh:
+        for row in csv.DictReader(fh):
+            ym = (row.get("month") or "").strip()[:7]
+            if len(ym) == 7:
+                try:
+                    out[ym] = {"joined": int(row.get("joined") or 0),
+                               "left": int(row.get("left") or 0)}
+                except ValueError:
+                    continue
+    return out
+
+
 # -------------------------------------------------------------- churn maths
 
-def build_churn(members, snapshots):
-    """Opening balance + one row per month, attributed by observation day."""
+def build_churn(members, snapshots, backfill=None):
+    """Opening balance + one row per month, attributed by observation day.
+
+    Provided pre-tracking history (backfill) is chained BACKWARD from the
+    opening balance: end(M) = start of the following period, so the member
+    totals stay anchored to today's real count.
+    """
     if not snapshots:
         return None
     snap_dates = [d for d, _ in snapshots]
@@ -244,11 +277,75 @@ def build_churn(members, snapshots):
         })
         cursor = (cursor.replace(day=28) + dt.timedelta(days=4)).replace(day=1)
     rows.reverse()
+
+    # Provided history, chained backward from the opening balance.
+    history = []
+    if backfill:
+        tracking_ym = tracking_start.strftime("%Y-%m")
+        end_running = opening
+        for ym in sorted((k for k in backfill if k < tracking_ym), reverse=True):
+            joined, left = backfill[ym]["joined"], backfill[ym]["left"]
+            start_total = end_running - joined + left
+            history.append({
+                "key": ym,
+                "label": dt.date(int(ym[:4]), int(ym[5:]), 1).strftime("%B %Y") + " &middot; provided",
+                "joined": joined, "left": left, "net": joined - left,
+                "end_total": end_running,
+                "churn_pct": (100.0 * left / start_total) if start_total else 0.0,
+            })
+            end_running = start_total
     return {
         "opening": {"date": tracking_start.isoformat(), "members": opening},
         "months": rows,
+        "history": history,
+        "history_start_total": end_running if backfill and history else None,
         "current_total": total,
     }
+
+
+# ------------------------------------------------------------ analytics maths
+
+def build_analytics(members, snapshots, backfill):
+    """Per calendar month from January of last year: members in, members
+    out, and the entered share of that month's join cohort - the material
+    for the year-over-year comparison."""
+    if not snapshots:
+        return None
+    asof = snapshots[-1][0]
+    tracking_ym = snapshots[0][0].strftime("%Y-%m")
+
+    joins, joins_entered, outs = {}, {}, {}
+    for m in members.values():
+        ym = m["join"].strftime("%Y-%m")
+        joins[ym] = joins.get(ym, 0) + 1
+        if m["entry"]:
+            joins_entered[ym] = joins_entered.get(ym, 0) + 1
+        if m["left"]:
+            lym = m["left"].strftime("%Y-%m")
+            outs[lym] = outs.get(lym, 0) + 1
+
+    rows = []
+    cursor = dt.date(asof.year - 1, 1, 1)
+    while cursor <= asof:
+        ym = cursor.strftime("%Y-%m")
+        pre = ym < tracking_ym
+        bf = (backfill or {}).get(ym)
+        cohort = joins.get(ym, 0)
+        row = {"ym": ym, "year": cursor.year, "month": cursor.month, "pre": pre}
+        if pre and bf:
+            row["joined"], row["joined_approx"] = bf["joined"], False
+        else:
+            # Pre-tracking months without backfill only count the members
+            # who are still here today (survivors) - marked approximate.
+            row["joined"], row["joined_approx"] = cohort, pre
+        row["left"] = (bf["left"] if bf else None) if pre else outs.get(ym, 0)
+        row["entered_pct"] = round(100.0 * joins_entered.get(ym, 0) / cohort, 1) if cohort else None
+        # Survivor bias: members who never entered tend to get removed over
+        # time, so pre-tracking entered shares skew toward 100%.
+        row["entered_approx"] = pre
+        rows.append(row)
+        cursor = (cursor.replace(day=28) + dt.timedelta(days=4)).replace(day=1)
+    return {"months": rows, "years": sorted({r["year"] for r in rows})}
 
 
 # ----------------------------------------------------------------- grouping
@@ -302,7 +399,9 @@ def main():
         cohort_groups = group_days(cohort_days, aggregate_cohort)
         leaver_days = build_leaver_days(members, asof, tracking_start)
         leaver_groups = group_days(leaver_days, aggregate_leavers, key_prefix="L")
-        churn = build_churn(members, snapshots)
+        backfill = load_backfill()
+        churn = build_churn(members, snapshots, backfill)
+        analytics = build_analytics(members, snapshots, backfill)
         totals = {
             "joined": sum(r["joined"] for r in cohort_days),
             "entered": sum(r["entered"] for r in cohort_days),
@@ -324,6 +423,7 @@ def main():
         asof = None
         cohort_days, cohort_groups, leaver_days, leaver_groups = [], [], [], []
         churn = None
+        analytics = None
         totals = {"joined": 0, "entered": 0, "not_entered": 0}
         leaver_totals = {"left": 0, "buckets": [0] * TENURE_BUCKETS}
         meta = {
@@ -337,11 +437,11 @@ def main():
         json.dump({"meta": meta, "totals": totals, "rows": cohort_days,
                    "groups": cohort_groups, "leavers": leaver_days,
                    "leaver_groups": leaver_groups, "leaver_totals": leaver_totals,
-                   "churn": churn}, fh, indent=1)
+                   "churn": churn, "analytics": analytics}, fh, indent=1)
 
     ctx = {"meta": meta, "totals": totals, "cohort_groups": cohort_groups,
            "leaver_groups": leaver_groups, "leaver_totals": leaver_totals,
-           "churn": churn}
+           "churn": churn, "analytics": analytics}
     with open(os.path.join(DOCS_DIR, "index.html"), "w") as fh:
         fh.write(render_page(ctx, mode="doc"))
     with open(os.path.join(DOCS_DIR, "artifact.html"), "w") as fh:
@@ -460,6 +560,10 @@ tr.opening th { font-family: var(--serif); font-weight: 650; }
 .legend .chip.done-demo { background: var(--done-bg); }
 .legend .chip.joined-demo { background: var(--joined-bg); }
 .legend .chip.left-demo { background: var(--left-bg); }
+.chart { padding: 12px 10px 4px; }
+.chart h3 { font-family: var(--serif); font-size: 15.5px; margin: 0 0 10px 4px; }
+.chart svg { width: 100%; height: auto; display: block; }
+.chart .legend { padding-top: 4px; }
 .note { color: var(--ink-2); font-size: 13.5px; max-width: 820px; }
 .note.notice { background: var(--surface); border: 1px solid var(--ring); border-left: 3px solid var(--accent);
   border-radius: 8px; padding: 10px 14px; max-width: none; margin: 0 0 8px; }
@@ -810,6 +914,124 @@ def leaver_panel(meta, leaver_groups, leaver_totals):
     }
 
 
+# -------------------------------------------------------- analytics renderer
+
+MONTH_ABBR = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
+              "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+YEAR_STEPS = ["#9ec5f4", "#2a78d6", "#1c5cab"]  # ordered blue steps, oldest first
+
+
+def year_colors(years):
+    steps = YEAR_STEPS[-len(years):] if len(years) <= len(YEAR_STEPS) else YEAR_STEPS
+    return {y: steps[i % len(steps)] for i, y in enumerate(years)}
+
+
+def nice_ceiling(v):
+    if v <= 10:
+        return 10
+    mag = 10 ** (len(str(int(v))) - 1)
+    return ((int(v) // mag) + 1) * mag
+
+
+def chart_svg(metric_name, months, years, value_key, approx_key=None, pct=False):
+    """Grouped monthly bars, one series per year. Inline SVG, no libraries."""
+    colors = year_colors(years)
+    vals = [r[value_key] for r in months if r.get(value_key) is not None]
+    vmax = 100 if pct else nice_ceiling(max(vals) if vals else 10)
+    W, H, X0, Y0, X1, Y1 = 1080, 240, 46, 12, 1072, 196
+    gw = (X1 - X0) / 12.0
+    bw = gw * 0.72 / max(len(years), 1)
+    parts = []
+    # y gridlines + labels
+    for i in range(5):
+        v = vmax * i / 4.0
+        y = Y1 - (Y1 - Y0) * i / 4.0
+        parts.append('<line x1="%d" y1="%.1f" x2="%d" y2="%.1f" stroke="var(--grid)" stroke-width="1"/>' % (X0, y, X1, y))
+        lbl = ("%d%%" % v) if pct else ("%d" % v)
+        parts.append('<text x="%d" y="%.1f" text-anchor="end" font-size="10" font-family="var(--mono)" fill="var(--ink-3)">%s</text>' % (X0 - 6, y + 3, lbl))
+    # bars
+    by_ym = {(r["year"], r["month"]): r for r in months}
+    for mi in range(1, 13):
+        gx = X0 + (mi - 1) * gw + gw * 0.14
+        for yi, yr in enumerate(years):
+            r = by_ym.get((yr, mi))
+            if not r or r.get(value_key) is None:
+                continue
+            v = r[value_key]
+            h = (Y1 - Y0) * (min(v, vmax) / vmax) if vmax else 0
+            x = gx + yi * bw
+            approx = bool(approx_key and r.get(approx_key))
+            tip = "%s %d &middot; %s: %s%s%s" % (MONTH_ABBR[mi - 1], yr, metric_name,
+                                                 ("%.1f%%" % v) if pct else "{:,}".format(int(v)),
+                                                 " &middot; survivors only (&asymp;)" if approx else "",
+                                                 "")
+            parts.append('<rect x="%.1f" y="%.1f" width="%.1f" height="%.1f" rx="3" fill="%s"%s data-tip="%s"/>'
+                         % (x, Y1 - h, bw - 2, max(h, 1.5), colors[yr],
+                            ' opacity="0.5"' if approx else "", tip))
+    # x labels + baseline
+    parts.append('<line x1="%d" y1="%d" x2="%d" y2="%d" stroke="var(--ring)" stroke-width="1"/>' % (X0, Y1, X1, Y1))
+    for mi in range(1, 13):
+        cx = X0 + (mi - 1) * gw + gw / 2
+        parts.append('<text x="%.1f" y="%d" text-anchor="middle" font-size="10.5" font-family="var(--mono)" fill="var(--ink-2)">%s</text>' % (cx, Y1 + 16, MONTH_ABBR[mi - 1].upper()))
+    legend = "".join('<span class="chip" style="background:%s"></span><span>%d</span>' % (colors[y], y)
+                     for y in years)
+    return ('<div class="chart"><h3>%s</h3>'
+            '<svg viewBox="0 0 %d %d" role="img" aria-label="%s per month, by year">%s</svg>'
+            '<div class="legend">%s</div></div>'
+            % (metric_name, W, H, metric_name, "".join(parts), legend))
+
+
+def analytics_panel(meta, analytics):
+    months, years = analytics["months"], analytics["years"]
+    charts = (chart_svg("Members in", months, years, "joined", approx_key="joined_approx")
+              + chart_svg("Members out", months, years, "left")
+              + chart_svg("Entered the community", months, years, "entered_pct",
+                          approx_key="entered_approx", pct=True))
+
+    head = "".join('<th scope="col" colspan="3" style="text-align:center">%d</th>' % y for y in years)
+    sub = "<th></th>" + "".join("<th>In</th><th>Out</th><th>Entered</th>" for _ in years)
+    body = []
+    by_ym = {(r["year"], r["month"]): r for r in months}
+    for mi in range(1, 13):
+        cells = []
+        for y in years:
+            r = by_ym.get((y, mi))
+            if not r:
+                cells.append('<td class="num muted">&ndash;</td>' * 3)
+                continue
+            j = r.get("joined")
+            ja = "&asymp;&thinsp;" if r.get("joined_approx") else ""
+            cells.append('<td class="num">%s%s</td>' % (ja, "{:,}".format(j)) if j is not None else '<td class="num muted">&ndash;</td>')
+            l = r.get("left")
+            cells.append('<td class="num">%s</td>' % "{:,}".format(l) if l is not None else '<td class="num muted">&ndash;</td>')
+            p = r.get("entered_pct")
+            pa = "&asymp;&thinsp;" if r.get("entered_approx") else ""
+            cells.append('<td class="num muted">%s%.0f%%</td>' % (pa, p) if p is not None else '<td class="num muted">&ndash;</td>')
+        body.append('<tr><th scope="row">%s</th>%s</tr>' % (MONTH_ABBR[mi - 1], "".join(cells)))
+
+    return """
+  <section class="card">%(charts)s</section>
+  <section class="card">
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr><th scope="col">Month</th>%(head)s</tr>
+          <tr>%(sub)s</tr>
+        </thead>
+        <tbody>
+          %(body)s
+        </tbody>
+      </table>
+    </div>
+  </section>
+  <p class="note">Year-over-year, month by month: <em>In</em> = members added, <em>Out</em> = members who
+  left, <em>Entered</em> = share of that month&rsquo;s new members who have entered the community by today.
+  Faded bars and &asymp; values are months before tracking began (18 Aug 2026) &mdash; they only count members
+  who are still here today, so real joins were at least that high and real entered shares lower than shown. <em>Out</em> is blank for those months
+  unless provided history is added (see the README&rsquo;s backfill section).</p>""" % {
+        "charts": charts, "head": head, "sub": sub, "body": "\n".join(body)}
+
+
 # ------------------------------------------------------------ churn renderer
 
 def churn_panel(meta, churn):
@@ -823,10 +1045,30 @@ def churn_panel(meta, churn):
                     '<td class="num"><strong>%s</strong></td><td class="num muted">%.2f%%</td></tr>'
                     % (r["label"], joined_cell, left_cell, net_cls, net_txt,
                        "{:,}".format(r["end_total"]), r["churn_pct"]))
-    opening_row = ('<tr class="opening"><th scope="row">Before tracking &middot; everything up to %s</th>'
-                   '<td class="num muted" colspan="3">one opening record</td>'
+    if churn.get("history"):
+        opening_label = "Members at start of tracking &middot; %s" % pretty(churn["opening"]["date"])
+    else:
+        opening_label = "Before tracking &middot; everything up to %s" % pretty(churn["opening"]["date"])
+    opening_row = ('<tr class="opening"><th scope="row">%s</th>'
+                   '<td class="num muted" colspan="3">%s</td>'
                    '<td class="num"><strong>%s</strong></td><td class="num muted">&ndash;</td></tr>'
-                   % (pretty(churn["opening"]["date"]), "{:,}".format(churn["opening"]["members"])))
+                   % (opening_label,
+                      "provided history below" if churn.get("history") else "one opening record",
+                      "{:,}".format(churn["opening"]["members"])))
+    for r in churn.get("history", []):
+        joined_cell = ('<td class="num joined">%d</td>' % r["joined"]) if r["joined"] else '<td class="num muted">0</td>'
+        left_cell = ('<td class="num leftc">%d</td>' % r["left"]) if r["left"] else '<td class="num muted">0</td>'
+        net_cls = "pos" if r["net"] > 0 else ("neg" if r["net"] < 0 else "muted num")
+        net_txt = ("+%d" % r["net"]) if r["net"] > 0 else str(r["net"])
+        opening_row += ('\n<tr><th scope="row">%s</th>%s%s<td class="%s">%s</td>'
+                        '<td class="num"><strong>%s</strong></td><td class="num muted">%.2f%%</td></tr>'
+                        % (r["label"], joined_cell, left_cell, net_cls, net_txt,
+                           "{:,}".format(r["end_total"]), r["churn_pct"]))
+    if churn.get("history_start_total") is not None:
+        opening_row += ('\n<tr class="opening"><th scope="row">Start of provided history</th>'
+                        '<td class="num muted" colspan="3"></td>'
+                        '<td class="num"><strong>%s</strong></td><td class="num muted">&ndash;</td></tr>'
+                        % "{:,}".format(churn["history_start_total"]))
     return """
   <section class="tiles">
     <div class="tile"><div class="k">Members in the community</div><div class="v">%(total)s</div></div>
@@ -894,15 +1136,19 @@ def build_body(ctx):
     <button class="tab active" data-tab="cohorts">Cohorts</button>
     <button class="tab" data-tab="leavers">Leavers</button>
     <button class="tab" data-tab="churn">Churn</button>
+    <button class="tab" data-tab="analytics">Analytics</button>
   </nav>
   <div class="panel active" id="panel-cohorts">%s
   </div>
   <div class="panel" id="panel-leavers">%s
   </div>
   <div class="panel" id="panel-churn">%s
+  </div>
+  <div class="panel" id="panel-analytics">%s
   </div>""" % (cohort_panel(meta, ctx["totals"], ctx["cohort_groups"]),
                leaver_panel(meta, ctx["leaver_groups"], ctx["leaver_totals"]),
-               churn_panel(meta, ctx["churn"]))
+               churn_panel(meta, ctx["churn"]),
+               analytics_panel(meta, ctx["analytics"]))
 
 
 DOC_SHELL = """<!doctype html>

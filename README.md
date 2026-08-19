@@ -17,7 +17,14 @@ out per daily cohort who has entered, and rebuilds the overview page:
   left in month 1–12 of membership or after 12+ months), and **Churn**
   (joined / left / net / members per month, with one opening-balance
   record covering everything older than tracking).
+  A fourth tab, **Analytics**, compares year over year, month by month:
+  members in, members out, and the entered share — as charts plus a table.
 * **`docs/data.json`** — the same numbers as data, for anything downstream.
+
+Every daily snapshot is committed to this repository permanently, so the full
+history is kept here even though Mighty's own dashboard only shows the last
+12 months — no external database needed. Numbers from before tracking began
+can be supplied as provided history: see `data/backfill/README.md`.
 
 ## How it works
 

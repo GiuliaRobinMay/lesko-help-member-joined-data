@@ -1,6 +1,6 @@
 {
  "meta": {
-  "generated_at": "2026-08-19T13:39:15+00:00",
+  "generated_at": "2026-08-19T14:05:54+00:00",
   "as_of": "2026-08-19",
   "first_snapshot": "2026-08-18",
   "signal_baseline": "2026-08-19",
@@ -48242,6 +48242,236 @@
     "churn_pct": 0.012559658377292138
    }
   ],
+  "history": [],
+  "history_start_total": null,
   "current_total": 23897
+ },
+ "analytics": {
+  "months": [
+   {
+    "ym": "2025-01",
+    "year": 2025,
+    "month": 1,
+    "pre": true,
+    "joined": 746,
+    "joined_approx": true,
+    "left": null,
+    "entered_pct": 100.0,
+    "entered_approx": true
+   },
+   {
+    "ym": "2025-02",
+    "year": 2025,
+    "month": 2,
+    "pre": true,
+    "joined": 607,
+    "joined_approx": true,
+    "left": null,
+    "entered_pct": 100.0,
+    "entered_approx": true
+   },
+   {
+    "ym": "2025-03",
+    "year": 2025,
+    "month": 3,
+    "pre": true,
+    "joined": 535,
+    "joined_approx": true,
+    "left": null,
+    "entered_pct": 100.0,
+    "entered_approx": true
+   },
+   {
+    "ym": "2025-04",
+    "year": 2025,
+    "month": 4,
+    "pre": true,
+    "joined": 275,
+    "joined_approx": true,
+    "left": null,
+    "entered_pct": 100.0,
+    "entered_approx": true
+   },
+   {
+    "ym": "2025-05",
+    "year": 2025,
+    "month": 5,
+    "pre": true,
+    "joined": 253,
+    "joined_approx": true,
+    "left": null,
+    "entered_pct": 100.0,
+    "entered_approx": true
+   },
+   {
+    "ym": "2025-06",
+    "year": 2025,
+    "month": 6,
+    "pre": true,
+    "joined": 233,
+    "joined_approx": true,
+    "left": null,
+    "entered_pct": 100.0,
+    "entered_approx": true
+   },
+   {
+    "ym": "2025-07",
+    "year": 2025,
+    "month": 7,
+    "pre": true,
+    "joined": 318,
+    "joined_approx": true,
+    "left": null,
+    "entered_pct": 100.0,
+    "entered_approx": true
+   },
+   {
+    "ym": "2025-08",
+    "year": 2025,
+    "month": 8,
+    "pre": true,
+    "joined": 356,
+    "joined_approx": true,
+    "left": null,
+    "entered_pct": 100.0,
+    "entered_approx": true
+   },
+   {
+    "ym": "2025-09",
+    "year": 2025,
+    "month": 9,
+    "pre": true,
+    "joined": 256,
+    "joined_approx": true,
+    "left": null,
+    "entered_pct": 100.0,
+    "entered_approx": true
+   },
+   {
+    "ym": "2025-10",
+    "year": 2025,
+    "month": 10,
+    "pre": true,
+    "joined": 312,
+    "joined_approx": true,
+    "left": null,
+    "entered_pct": 100.0,
+    "entered_approx": true
+   },
+   {
+    "ym": "2025-11",
+    "year": 2025,
+    "month": 11,
+    "pre": true,
+    "joined": 311,
+    "joined_approx": true,
+    "left": null,
+    "entered_pct": 100.0,
+    "entered_approx": true
+   },
+   {
+    "ym": "2025-12",
+    "year": 2025,
+    "month": 12,
+    "pre": true,
+    "joined": 344,
+    "joined_approx": true,
+    "left": null,
+    "entered_pct": 100.0,
+    "entered_approx": true
+   },
+   {
+    "ym": "2026-01",
+    "year": 2026,
+    "month": 1,
+    "pre": true,
+    "joined": 222,
+    "joined_approx": true,
+    "left": null,
+    "entered_pct": 100.0,
+    "entered_approx": true
+   },
+   {
+    "ym": "2026-02",
+    "year": 2026,
+    "month": 2,
+    "pre": true,
+    "joined": 259,
+    "joined_approx": true,
+    "left": null,
+    "entered_pct": 100.0,
+    "entered_approx": true
+   },
+   {
+    "ym": "2026-03",
+    "year": 2026,
+    "month": 3,
+    "pre": true,
+    "joined": 340,
+    "joined_approx": true,
+    "left": null,
+    "entered_pct": 100.0,
+    "entered_approx": true
+   },
+   {
+    "ym": "2026-04",
+    "year": 2026,
+    "month": 4,
+    "pre": true,
+    "joined": 334,
+    "joined_approx": true,
+    "left": null,
+    "entered_pct": 100.0,
+    "entered_approx": true
+   },
+   {
+    "ym": "2026-05",
+    "year": 2026,
+    "month": 5,
+    "pre": true,
+    "joined": 446,
+    "joined_approx": true,
+    "left": null,
+    "entered_pct": 100.0,
+    "entered_approx": true
+   },
+   {
+    "ym": "2026-06",
+    "year": 2026,
+    "month": 6,
+    "pre": true,
+    "joined": 290,
+    "joined_approx": true,
+    "left": null,
+    "entered_pct": 100.0,
+    "entered_approx": true
+   },
+   {
+    "ym": "2026-07",
+    "year": 2026,
+    "month": 7,
+    "pre": true,
+    "joined": 788,
+    "joined_approx": true,
+    "left": null,
+    "entered_pct": 64.7,
+    "entered_approx": true
+   },
+   {
+    "ym": "2026-08",
+    "year": 2026,
+    "month": 8,
+    "pre": false,
+    "joined": 692,
+    "joined_approx": false,
+    "left": 3,
+    "entered_pct": 48.0,
+    "entered_approx": false
+   }
+  ],
+  "years": [
+   2025,
+   2026
+  ]
  }
 }
