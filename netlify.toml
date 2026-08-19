@@ -1,0 +1,8 @@
+# Netlify serves the pre-built overview straight from docs/.
+# There is nothing to build here: the daily GitHub Action fetches the member
+# snapshot, rebuilds docs/, and commits - each commit triggers a fresh deploy,
+# so the Netlify site updates itself every morning.
+
+[build]
+  publish = "docs"
+  command = "echo 'Nothing to build - docs/ is committed pre-built by the daily GitHub Action.'"

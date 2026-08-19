@@ -103,6 +103,18 @@ The connection details live in `scripts/api_config.json` (Mighty **Admin API**,
 100 per page is roughly 300 API requests per day (~9k/month) — check what your
 Mighty plan includes so the volume is no surprise.
 
-To publish the overview at a URL, enable GitHub Pages: **Settings → Pages →
-Deploy from a branch → `main` / `docs`**. The page also opens fine straight
-from the repository.
+## Publishing the overview at a URL
+
+Two options (either works; both update automatically every morning because
+the daily snapshot is a commit):
+
+* **Netlify** — [app.netlify.com](https://app.netlify.com) → *Add new site →
+  Import an existing project → GitHub* → pick this repository → Deploy.
+  `netlify.toml` already tells Netlify to serve the `docs/` folder with no
+  build step, so no settings are needed. Every morning's snapshot commit
+  triggers a fresh deploy by itself.
+* **GitHub Pages** — Settings → Pages → Deploy from a branch → `main` /
+  `docs`.
+
+The page also opens fine straight from the repository, and a Claude artifact
+mirror exists for quick sharing.

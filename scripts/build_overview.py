@@ -202,13 +202,13 @@ DARK_RAMP = [("#0d366b", "#ffffff"), ("#104281", "#ffffff"), ("#184f95", "#fffff
 LIGHT_TOKENS = {
     "page": "#f9f9f7", "surface": "#fcfcfb", "ink": "#0b0b0b", "ink-2": "#52514e",
     "ink-3": "#898781", "grid": "#e1e0d9", "ring": "rgba(11,11,11,0.10)",
-    "accent": "#2a78d6",
+    "accent": "#2a78d6", "good": "#006300",
     "ramp-gradient": "linear-gradient(to right,#cde2fb,#6da7ec,#2a78d6,#1c5cab)",
 }
 DARK_TOKENS = {
     "page": "#0d0d0d", "surface": "#1a1a19", "ink": "#ffffff", "ink-2": "#c3c2b7",
     "ink-3": "#898781", "grid": "#2c2c2a", "ring": "rgba(255,255,255,0.10)",
-    "accent": "#3987e5",
+    "accent": "#3987e5", "good": "#0ca30c",
     "ramp-gradient": "linear-gradient(to right,#0d366b,#256abf,#5598e7,#86b6ef)",
 }
 
@@ -226,7 +226,7 @@ body {
   margin: 0; background: var(--page); color: var(--ink);
   font: 15px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif;
 }
-main { max-width: 1080px; margin: 0 auto; padding: 32px 20px 48px; }
+main { max-width: 1180px; margin: 0 auto; padding: 32px 20px 48px; }
 header h1 { font-size: 24px; margin: 0 0 4px; text-wrap: balance; }
 header p { margin: 0; color: var(--ink-2); }
 .asof { display: inline-block; margin-top: 10px; padding: 2px 10px; border: 1px solid var(--ring);
@@ -245,9 +245,10 @@ table { border-collapse: separate; border-spacing: 2px; width: 100%; font-varian
 thead th { font-size: 12px; font-weight: 600; color: var(--ink-3); text-align: center; padding: 6px 8px; white-space: nowrap; }
 thead th:first-child { text-align: left; }
 tbody th { font-weight: 500; text-align: left; padding: 4px 10px 4px 8px; white-space: nowrap; color: var(--ink); font-size: 13.5px; }
-tbody td { text-align: center; padding: 4px 6px; border-radius: 4px; min-width: 40px; font-size: 13.5px; }
+tbody td { text-align: center; padding: 4px 5px; border-radius: 4px; min-width: 36px; font-size: 13.5px; }
 td.num { color: var(--ink); }
-td.joined { font-weight: 650; }
+td.joined { font-weight: 650; color: var(--good); }
+td.waiting { color: var(--ink-2); }
 td.muted { color: var(--ink-2); }
 tr.empty th, tr.empty td { opacity: 0.45; }
 td.c0 { color: var(--ink-3); }
@@ -332,7 +333,8 @@ def render_rows(rows, entry_signal):
         if not entry_signal:
             cells = '<td class="c0"></td>' * len(r["weeks"])
             out.append(
-                '<tr%s><th scope="row">%s%s</th><td class="num joined">%d</td>%s'
+                '<tr%s><th scope="row">%s%s</th><td class="num joined">%d</td>'
+                '<td class="num muted">&ndash;</td>%s'
                 '<td class="num muted">&ndash;</td><td class="num muted">&ndash;</td></tr>'
                 % (dim, approx, pretty(r["date"]), r["joined"], cells))
             continue
@@ -349,15 +351,18 @@ def render_rows(rows, entry_signal):
             tip = "%s &middot; by end of week %d: %d of %d entered (%s)%s" % (
                 pretty(r["date"]), i + 1, c["n"], r["joined"], share, state)
             cells.append('<td class="%s%s" data-tip="%s">%d</td>' % (cls, open_cls, tip, c["n"]))
+        waiting = ('<td class="num waiting">%d</td>' % r["not_entered"]) if r["joined"] \
+                  else '<td class="num waiting"></td>'
         out.append(
-            '<tr%s><th scope="row">%s%s</th><td class="num joined">%d</td>%s'
+            '<tr%s><th scope="row">%s%s</th><td class="num joined">%d</td>%s%s'
             '<td class="num">%d</td><td class="num muted">%s</td></tr>'
-            % (dim, approx, pretty(r["date"]), r["joined"], "".join(cells), r["entered"], pct))
+            % (dim, approx, pretty(r["date"]), r["joined"], waiting,
+               "".join(cells), r["entered"], pct))
     return "\n".join(out)
 
 
 def build_body(meta, totals, rows):
-    week_heads = "".join("<th>W%d</th>" % w for w in range(1, WEEKS + 1))
+    week_heads = "".join("<th>by W%d</th>" % w for w in range(1, WEEKS + 1))
     pct_total = ("%d%%" % round(100 * totals["entered"] / totals["joined"])) if totals["joined"] else "&ndash;"
 
     if meta["snapshot_count"] == 0:
@@ -413,6 +418,7 @@ def build_body(meta, totals, rows):
           <tr>
             <th scope="col">Joined on</th>
             <th scope="col">Members</th>
+            <th scope="col">Not yet entered</th>
             %(week_heads)s
             <th scope="col">Entered</th>
             <th scope="col">Share</th>
@@ -426,9 +432,13 @@ def build_body(meta, totals, rows):
     %(legend)s
   </section>
 
-  <p class="note">Week columns are cumulative: <em>W3</em> means &ldquo;had entered by the end of
-  their third week&rdquo;. Each day&rsquo;s snapshot pins down who entered since the day before,
-  so these columns get more precise every single day the tracker runs.</p>""" % {
+  <p class="note">Week columns are <strong>running totals</strong>, not per-week counts:
+  <em>by W3</em> means &ldquo;this many had entered by the end of their third week&rdquo; &mdash;
+  it already includes everyone from <em>by W1</em> and <em>by W2</em>, so the numbers grow to the
+  right and are never added together. <span style="color: var(--good); font-weight: 650;">Members</span>
+  joined that day; <em>Not yet entered</em> counts who still hasn&rsquo;t come in as of today.
+  Each day&rsquo;s snapshot pins down who entered since the day before, so the columns get more
+  precise every single day the tracker runs.</p>""" % {
         "days": meta["lookback_days"],
         "joined": totals["joined"],
         "entered_tile": entered_tile,
