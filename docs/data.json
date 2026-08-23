@@ -1,75 +1,134 @@
 {
  "meta": {
-  "generated_at": "2026-08-22T05:59:37+00:00",
-  "as_of": "2026-08-22",
+  "generated_at": "2026-08-23T06:01:43+00:00",
+  "as_of": "2026-08-23",
   "first_snapshot": "2026-08-18",
   "signal_baseline": "2026-08-19",
-  "snapshot_count": 5,
-  "members_tracked": 23998,
+  "snapshot_count": 6,
+  "members_tracked": 24034,
   "lookback_days": 365,
   "weeks": 10,
   "entry_signal": true
  },
  "totals": {
-  "joined": 4818,
-  "entered": 4159,
-  "not_entered": 659
+  "joined": 4837,
+  "entered": 4165,
+  "not_entered": 672
  },
  "rows": [
   {
-   "date": "2026-08-22",
-   "joined": 5,
-   "entered": 3,
-   "not_entered": 2,
+   "date": "2026-08-23",
+   "joined": 3,
+   "entered": 2,
+   "not_entered": 1,
    "wk_na": false,
    "weeks": [
     {
-     "n": 3,
+     "n": 2,
      "closed": false,
      "started": true
     },
     {
-     "n": 3,
+     "n": 2,
      "closed": false,
      "started": false
     },
     {
-     "n": 3,
+     "n": 2,
      "closed": false,
      "started": false
     },
     {
-     "n": 3,
+     "n": 2,
      "closed": false,
      "started": false
     },
     {
-     "n": 3,
+     "n": 2,
      "closed": false,
      "started": false
     },
     {
-     "n": 3,
+     "n": 2,
      "closed": false,
      "started": false
     },
     {
-     "n": 3,
+     "n": 2,
      "closed": false,
      "started": false
     },
     {
-     "n": 3,
+     "n": 2,
      "closed": false,
      "started": false
     },
     {
-     "n": 3,
+     "n": 2,
      "closed": false,
      "started": false
     },
     {
-     "n": 3,
+     "n": 2,
+     "closed": false,
+     "started": false
+    }
+   ]
+  },
+  {
+   "date": "2026-08-22",
+   "joined": 29,
+   "entered": 14,
+   "not_entered": 15,
+   "wk_na": false,
+   "weeks": [
+    {
+     "n": 14,
+     "closed": false,
+     "started": true
+    },
+    {
+     "n": 14,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 14,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 14,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 14,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 14,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 14,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 14,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 14,
+     "closed": false,
+     "started": false
+    },
+    {
+     "n": 14,
      "closed": false,
      "started": false
     }
@@ -320,7 +379,7 @@
    "weeks": [
     {
      "n": 22,
-     "closed": false,
+     "closed": true,
      "started": true
     },
     {
@@ -385,7 +444,7 @@
     {
      "n": 12,
      "closed": false,
-     "started": false
+     "started": true
     },
     {
      "n": 12,
@@ -738,7 +797,7 @@
     },
     {
      "n": 23,
-     "closed": false,
+     "closed": true,
      "started": true
     },
     {
@@ -803,7 +862,7 @@
     {
      "n": 18,
      "closed": false,
-     "started": false
+     "started": true
     },
     {
      "n": 18,
@@ -1156,7 +1215,7 @@
     },
     {
      "n": 15,
-     "closed": false,
+     "closed": true,
      "started": true
     },
     {
@@ -1221,7 +1280,7 @@
     {
      "n": 4,
      "closed": false,
-     "started": false
+     "started": true
     },
     {
      "n": 4,
@@ -1574,7 +1633,7 @@
     },
     {
      "n": 16,
-     "closed": false,
+     "closed": true,
      "started": true
     },
     {
@@ -1639,7 +1698,7 @@
     {
      "n": 12,
      "closed": false,
-     "started": false
+     "started": true
     },
     {
      "n": 12,
@@ -1992,7 +2051,7 @@
     },
     {
      "n": 14,
-     "closed": false,
+     "closed": true,
      "started": true
     },
     {
@@ -2057,7 +2116,7 @@
     {
      "n": 8,
      "closed": false,
-     "started": false
+     "started": true
     },
     {
      "n": 8,
@@ -2143,8 +2202,8 @@
   {
    "date": "2026-07-17",
    "joined": 21,
-   "entered": 15,
-   "not_entered": 6,
+   "entered": 16,
+   "not_entered": 5,
    "wk_na": false,
    "weeks": [
     {
@@ -2173,27 +2232,27 @@
      "started": true
     },
     {
-     "n": 15,
+     "n": 16,
      "closed": false,
      "started": true
     },
     {
-     "n": 15,
+     "n": 16,
      "closed": false,
      "started": false
     },
     {
-     "n": 15,
+     "n": 16,
      "closed": false,
      "started": false
     },
     {
-     "n": 15,
+     "n": 16,
      "closed": false,
      "started": false
     },
     {
-     "n": 15,
+     "n": 16,
      "closed": false,
      "started": false
     }
@@ -2410,7 +2469,7 @@
     },
     {
      "n": 15,
-     "closed": false,
+     "closed": true,
      "started": true
     },
     {
@@ -2475,7 +2534,7 @@
     {
      "n": 6,
      "closed": false,
-     "started": false
+     "started": true
     },
     {
      "n": 6,
@@ -2828,7 +2887,7 @@
     },
     {
      "n": 31,
-     "closed": false,
+     "closed": true,
      "started": true
     },
     {
@@ -2893,7 +2952,7 @@
     {
      "n": 9,
      "closed": false,
-     "started": false
+     "started": true
     },
     {
      "n": 9,
@@ -3246,7 +3305,7 @@
     },
     {
      "n": 7,
-     "closed": false,
+     "closed": true,
      "started": true
     },
     {
@@ -3311,7 +3370,7 @@
     {
      "n": 5,
      "closed": false,
-     "started": false
+     "started": true
     },
     {
      "n": 5,
@@ -3664,7 +3723,7 @@
     },
     {
      "n": 12,
-     "closed": false,
+     "closed": true,
      "started": true
     },
     {
@@ -3729,7 +3788,7 @@
     {
      "n": 2,
      "closed": false,
-     "started": false
+     "started": true
     }
    ]
   },
@@ -4082,7 +4141,7 @@
     },
     {
      "n": 10,
-     "closed": false,
+     "closed": true,
      "started": true
     }
    ]
@@ -17954,8 +18013,8 @@
   },
   {
    "date": "2025-10-22",
-   "joined": 14,
-   "entered": 14,
+   "joined": 15,
+   "entered": 15,
    "not_entered": 0,
    "wk_na": true,
    "weeks": [
@@ -21491,65 +21550,6 @@
      "started": true
     }
    ]
-  },
-  {
-   "date": "2025-08-23",
-   "joined": 9,
-   "entered": 9,
-   "not_entered": 0,
-   "wk_na": true,
-   "weeks": [
-    {
-     "n": 2,
-     "closed": true,
-     "started": true
-    },
-    {
-     "n": 2,
-     "closed": true,
-     "started": true
-    },
-    {
-     "n": 2,
-     "closed": true,
-     "started": true
-    },
-    {
-     "n": 2,
-     "closed": true,
-     "started": true
-    },
-    {
-     "n": 2,
-     "closed": true,
-     "started": true
-    },
-    {
-     "n": 2,
-     "closed": true,
-     "started": true
-    },
-    {
-     "n": 2,
-     "closed": true,
-     "started": true
-    },
-    {
-     "n": 2,
-     "closed": true,
-     "started": true
-    },
-    {
-     "n": 2,
-     "closed": true,
-     "started": true
-    },
-    {
-     "n": 3,
-     "closed": true,
-     "started": true
-    }
-   ]
   }
  ],
  "groups": [
@@ -21566,59 +21566,118 @@
        "label": "Week 34 &middot; 17&ndash;23 Aug",
        "days": [
         {
-         "date": "2026-08-22",
-         "joined": 5,
-         "entered": 3,
-         "not_entered": 2,
+         "date": "2026-08-23",
+         "joined": 3,
+         "entered": 2,
+         "not_entered": 1,
          "wk_na": false,
          "weeks": [
           {
-           "n": 3,
+           "n": 2,
            "closed": false,
            "started": true
           },
           {
-           "n": 3,
+           "n": 2,
            "closed": false,
            "started": false
           },
           {
-           "n": 3,
+           "n": 2,
            "closed": false,
            "started": false
           },
           {
-           "n": 3,
+           "n": 2,
            "closed": false,
            "started": false
           },
           {
-           "n": 3,
+           "n": 2,
            "closed": false,
            "started": false
           },
           {
-           "n": 3,
+           "n": 2,
            "closed": false,
            "started": false
           },
           {
-           "n": 3,
+           "n": 2,
            "closed": false,
            "started": false
           },
           {
-           "n": 3,
+           "n": 2,
            "closed": false,
            "started": false
           },
           {
-           "n": 3,
+           "n": 2,
            "closed": false,
            "started": false
           },
           {
-           "n": 3,
+           "n": 2,
+           "closed": false,
+           "started": false
+          }
+         ]
+        },
+        {
+         "date": "2026-08-22",
+         "joined": 29,
+         "entered": 14,
+         "not_entered": 15,
+         "wk_na": false,
+         "weeks": [
+          {
+           "n": 14,
+           "closed": false,
+           "started": true
+          },
+          {
+           "n": 14,
+           "closed": false,
+           "started": false
+          },
+          {
+           "n": 14,
+           "closed": false,
+           "started": false
+          },
+          {
+           "n": 14,
+           "closed": false,
+           "started": false
+          },
+          {
+           "n": 14,
+           "closed": false,
+           "started": false
+          },
+          {
+           "n": 14,
+           "closed": false,
+           "started": false
+          },
+          {
+           "n": 14,
+           "closed": false,
+           "started": false
+          },
+          {
+           "n": 14,
+           "closed": false,
+           "started": false
+          },
+          {
+           "n": 14,
+           "closed": false,
+           "started": false
+          },
+          {
+           "n": 14,
            "closed": false,
            "started": false
           }
@@ -21869,7 +21928,7 @@
          "weeks": [
           {
            "n": 22,
-           "closed": false,
+           "closed": true,
            "started": true
           },
           {
@@ -21921,59 +21980,59 @@
         }
        ],
        "totals": {
-        "joined": 152,
-        "entered": 101,
-        "not_entered": 51,
+        "joined": 179,
+        "entered": 114,
+        "not_entered": 65,
         "wk_na": false,
-        "wk_joined": 152,
+        "wk_joined": 179,
         "weeks": [
          {
-          "n": 101,
+          "n": 114,
           "closed": false,
           "started": true
          },
          {
-          "n": 101,
+          "n": 114,
           "closed": false,
           "started": false
          },
          {
-          "n": 101,
+          "n": 114,
           "closed": false,
           "started": false
          },
          {
-          "n": 101,
+          "n": 114,
           "closed": false,
           "started": false
          },
          {
-          "n": 101,
+          "n": 114,
           "closed": false,
           "started": false
          },
          {
-          "n": 101,
+          "n": 114,
           "closed": false,
           "started": false
          },
          {
-          "n": 101,
+          "n": 114,
           "closed": false,
           "started": false
          },
          {
-          "n": 101,
+          "n": 114,
           "closed": false,
           "started": false
          },
          {
-          "n": 101,
+          "n": 114,
           "closed": false,
           "started": false
          },
          {
-          "n": 101,
+          "n": 114,
           "closed": false,
           "started": false
          }
@@ -21999,7 +22058,7 @@
           {
            "n": 12,
            "closed": false,
-           "started": false
+           "started": true
           },
           {
            "n": 12,
@@ -22352,7 +22411,7 @@
           },
           {
            "n": 23,
-           "closed": false,
+           "closed": true,
            "started": true
           },
           {
@@ -22482,7 +22541,7 @@
           {
            "n": 18,
            "closed": false,
-           "started": false
+           "started": true
           },
           {
            "n": 18,
@@ -22835,7 +22894,7 @@
           },
           {
            "n": 15,
-           "closed": false,
+           "closed": true,
            "started": true
           },
           {
@@ -22965,7 +23024,7 @@
           {
            "n": 4,
            "closed": false,
-           "started": false
+           "started": true
           },
           {
            "n": 4,
@@ -23121,59 +23180,59 @@
       }
      ],
      "totals": {
-      "joined": 778,
-      "entered": 394,
-      "not_entered": 384,
+      "joined": 805,
+      "entered": 407,
+      "not_entered": 398,
       "wk_na": false,
-      "wk_joined": 778,
+      "wk_joined": 805,
       "weeks": [
        {
-        "n": 272,
+        "n": 285,
         "closed": false,
         "started": true
        },
        {
-        "n": 367,
+        "n": 380,
         "closed": false,
         "started": true
        },
        {
-        "n": 394,
+        "n": 407,
         "closed": false,
         "started": true
        },
        {
-        "n": 394,
+        "n": 407,
         "closed": false,
         "started": true
        },
        {
-        "n": 394,
+        "n": 407,
         "closed": false,
         "started": false
        },
        {
-        "n": 394,
+        "n": 407,
         "closed": false,
         "started": false
        },
        {
-        "n": 394,
+        "n": 407,
         "closed": false,
         "started": false
        },
        {
-        "n": 394,
+        "n": 407,
         "closed": false,
         "started": false
        },
        {
-        "n": 394,
+        "n": 407,
         "closed": false,
         "started": false
        },
        {
-        "n": 394,
+        "n": 407,
         "closed": false,
         "started": false
        }
@@ -23448,7 +23507,7 @@
           },
           {
            "n": 16,
-           "closed": false,
+           "closed": true,
            "started": true
           },
           {
@@ -23578,7 +23637,7 @@
           {
            "n": 12,
            "closed": false,
-           "started": false
+           "started": true
           },
           {
            "n": 12,
@@ -23931,7 +23990,7 @@
           },
           {
            "n": 14,
-           "closed": false,
+           "closed": true,
            "started": true
           },
           {
@@ -24061,7 +24120,7 @@
           {
            "n": 8,
            "closed": false,
-           "started": false
+           "started": true
           },
           {
            "n": 8,
@@ -24147,8 +24206,8 @@
         {
          "date": "2026-07-17",
          "joined": 21,
-         "entered": 15,
-         "not_entered": 6,
+         "entered": 16,
+         "not_entered": 5,
          "wk_na": false,
          "weeks": [
           {
@@ -24177,27 +24236,27 @@
            "started": true
           },
           {
-           "n": 15,
+           "n": 16,
            "closed": false,
            "started": true
           },
           {
-           "n": 15,
+           "n": 16,
            "closed": false,
            "started": false
           },
           {
-           "n": 15,
+           "n": 16,
            "closed": false,
            "started": false
           },
           {
-           "n": 15,
+           "n": 16,
            "closed": false,
            "started": false
           },
           {
-           "n": 15,
+           "n": 16,
            "closed": false,
            "started": false
           }
@@ -24414,7 +24473,7 @@
           },
           {
            "n": 15,
-           "closed": false,
+           "closed": true,
            "started": true
           },
           {
@@ -24442,8 +24501,8 @@
        ],
        "totals": {
         "joined": 112,
-        "entered": 85,
-        "not_entered": 27,
+        "entered": 86,
+        "not_entered": 26,
         "wk_na": false,
         "wk_joined": 112,
         "weeks": [
@@ -24473,27 +24532,27 @@
           "started": true
          },
          {
-          "n": 85,
+          "n": 86,
           "closed": false,
           "started": true
          },
          {
-          "n": 85,
+          "n": 86,
           "closed": false,
           "started": false
          },
          {
-          "n": 85,
+          "n": 86,
           "closed": false,
           "started": false
          },
          {
-          "n": 85,
+          "n": 86,
           "closed": false,
           "started": false
          },
          {
-          "n": 85,
+          "n": 86,
           "closed": false,
           "started": false
          }
@@ -24544,7 +24603,7 @@
           {
            "n": 6,
            "closed": false,
-           "started": false
+           "started": true
           },
           {
            "n": 6,
@@ -24897,7 +24956,7 @@
           },
           {
            "n": 31,
-           "closed": false,
+           "closed": true,
            "started": true
           },
           {
@@ -25027,7 +25086,7 @@
           {
            "n": 9,
            "closed": false,
-           "started": false
+           "started": true
           },
           {
            "n": 9,
@@ -25341,8 +25400,8 @@
      ],
      "totals": {
       "joined": 788,
-      "entered": 513,
-      "not_entered": 275,
+      "entered": 514,
+      "not_entered": 274,
       "wk_na": false,
       "wk_joined": 788,
       "weeks": [
@@ -25372,27 +25431,27 @@
         "started": true
        },
        {
-        "n": 481,
+        "n": 482,
         "closed": false,
         "started": true
        },
        {
-        "n": 510,
+        "n": 511,
         "closed": false,
         "started": true
        },
        {
-        "n": 513,
+        "n": 514,
         "closed": false,
         "started": true
        },
        {
-        "n": 513,
+        "n": 514,
         "closed": false,
         "started": false
        },
        {
-        "n": 513,
+        "n": 514,
         "closed": false,
         "started": false
        }
@@ -25510,7 +25569,7 @@
           },
           {
            "n": 7,
-           "closed": false,
+           "closed": true,
            "started": true
           },
           {
@@ -25640,7 +25699,7 @@
           {
            "n": 5,
            "closed": false,
-           "started": false
+           "started": true
           },
           {
            "n": 5,
@@ -25993,7 +26052,7 @@
           },
           {
            "n": 12,
-           "closed": false,
+           "closed": true,
            "started": true
           },
           {
@@ -26123,7 +26182,7 @@
           {
            "n": 2,
            "closed": false,
-           "started": false
+           "started": true
           }
          ]
         },
@@ -26476,7 +26535,7 @@
           },
           {
            "n": 10,
-           "closed": false,
+           "closed": true,
            "started": true
           }
          ]
@@ -38485,59 +38544,59 @@
     }
    ],
    "totals": {
-    "joined": 3457,
-    "entered": 2798,
-    "not_entered": 659,
+    "joined": 3484,
+    "entered": 2812,
+    "not_entered": 672,
     "wk_na": false,
-    "wk_joined": 1732,
+    "wk_joined": 1759,
     "weeks": [
      {
-      "n": 500,
+      "n": 513,
       "closed": false,
       "started": true
      },
      {
-      "n": 666,
+      "n": 679,
       "closed": false,
       "started": true
      },
      {
-      "n": 786,
+      "n": 799,
       "closed": false,
       "started": true
      },
      {
-      "n": 870,
+      "n": 883,
       "closed": false,
       "started": true
      },
      {
-      "n": 930,
+      "n": 943,
       "closed": false,
       "started": true
      },
      {
-      "n": 971,
+      "n": 985,
       "closed": false,
       "started": true
      },
      {
-      "n": 1023,
+      "n": 1037,
       "closed": false,
       "started": true
      },
      {
-      "n": 1048,
+      "n": 1062,
       "closed": false,
       "started": true
      },
      {
-      "n": 1064,
+      "n": 1078,
       "closed": false,
       "started": true
      },
      {
-      "n": 1073,
+      "n": 1087,
       "closed": false,
       "started": true
      }
@@ -43533,8 +43592,8 @@
         },
         {
          "date": "2025-10-22",
-         "joined": 14,
-         "entered": 14,
+         "joined": 15,
+         "entered": 15,
          "not_entered": 0,
          "wk_na": true,
          "weeks": [
@@ -43710,8 +43769,8 @@
         }
        ],
        "totals": {
-        "joined": 84,
-        "entered": 84,
+        "joined": 85,
+        "entered": 85,
         "not_entered": 0,
         "wk_na": true,
         "wk_joined": 0,
@@ -45087,8 +45146,8 @@
       }
      ],
      "totals": {
-      "joined": 312,
-      "entered": 312,
+      "joined": 313,
+      "entered": 313,
       "not_entered": 0,
       "wk_na": true,
       "wk_joined": 0,
@@ -47850,70 +47909,11 @@
            "started": true
           }
          ]
-        },
-        {
-         "date": "2025-08-23",
-         "joined": 9,
-         "entered": 9,
-         "not_entered": 0,
-         "wk_na": true,
-         "weeks": [
-          {
-           "n": 2,
-           "closed": true,
-           "started": true
-          },
-          {
-           "n": 2,
-           "closed": true,
-           "started": true
-          },
-          {
-           "n": 2,
-           "closed": true,
-           "started": true
-          },
-          {
-           "n": 2,
-           "closed": true,
-           "started": true
-          },
-          {
-           "n": 2,
-           "closed": true,
-           "started": true
-          },
-          {
-           "n": 2,
-           "closed": true,
-           "started": true
-          },
-          {
-           "n": 2,
-           "closed": true,
-           "started": true
-          },
-          {
-           "n": 2,
-           "closed": true,
-           "started": true
-          },
-          {
-           "n": 2,
-           "closed": true,
-           "started": true
-          },
-          {
-           "n": 3,
-           "closed": true,
-           "started": true
-          }
-         ]
         }
        ],
        "totals": {
-        "joined": 17,
-        "entered": 17,
+        "joined": 8,
+        "entered": 8,
         "not_entered": 0,
         "wk_na": true,
         "wk_joined": 0,
@@ -47973,8 +47973,8 @@
       }
      ],
      "totals": {
-      "joined": 138,
-      "entered": 138,
+      "joined": 129,
+      "entered": 129,
       "not_entered": 0,
       "wk_na": true,
       "wk_joined": 0,
@@ -48034,8 +48034,8 @@
     }
    ],
    "totals": {
-    "joined": 1361,
-    "entered": 1361,
+    "joined": 1353,
+    "entered": 1353,
     "not_entered": 0,
     "wk_na": true,
     "wk_joined": 0,
@@ -48095,6 +48095,25 @@
   }
  ],
  "leavers": [
+  {
+   "date": "2026-08-23",
+   "left": 4,
+   "buckets": [
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    2
+   ]
+  },
   {
    "date": "2026-08-22",
    "left": 10,
@@ -48186,6 +48205,25 @@
        "label": "Week 34 &middot; 17&ndash;23 Aug",
        "days": [
         {
+         "date": "2026-08-23",
+         "left": 4,
+         "buckets": [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          2
+         ]
+        },
+        {
          "date": "2026-08-22",
          "left": 10,
          "buckets": [
@@ -48263,10 +48301,10 @@
         }
        ],
        "totals": {
-        "left": 83,
+        "left": 87,
         "buckets": [
          19,
-         6,
+         7,
          8,
          4,
          3,
@@ -48276,17 +48314,17 @@
          7,
          2,
          0,
-         0,
-         29
+         1,
+         31
         ]
        }
       }
      ],
      "totals": {
-      "left": 83,
+      "left": 87,
       "buckets": [
        19,
-       6,
+       7,
        8,
        4,
        3,
@@ -48296,17 +48334,17 @@
        7,
        2,
        0,
-       0,
-       29
+       1,
+       31
       ]
      }
     }
    ],
    "totals": {
-    "left": 83,
+    "left": 87,
     "buckets": [
      19,
-     6,
+     7,
      8,
      4,
      3,
@@ -48316,17 +48354,17 @@
      7,
      2,
      0,
-     0,
-     29
+     1,
+     31
     ]
    }
   }
  ],
  "leaver_totals": {
-  "left": 83,
+  "left": 87,
   "buckets": [
    19,
-   6,
+   7,
    8,
    4,
    3,
@@ -48336,8 +48374,8 @@
    7,
    2,
    0,
-   0,
-   29
+   1,
+   31
   ]
  },
  "churn": {
@@ -48349,11 +48387,11 @@
    {
     "key": "2026-08",
     "label": "August 2026 (from 18 Aug) &middot; to date",
-    "joined": 112,
-    "left": 83,
-    "net": 29,
-    "end_total": 23915,
-    "churn_pct": 0.34748388177174916
+    "joined": 148,
+    "left": 87,
+    "net": 61,
+    "end_total": 23947,
+    "churn_pct": 0.364230092941472
    }
   ],
   "history": [
@@ -48467,7 +48505,7 @@
    }
   ],
   "history_start_total": null,
-  "current_total": 23915
+  "current_total": 23947
  },
  "analytics": {
   "months": [
@@ -48505,7 +48543,7 @@
     "joined": 535,
     "joined_approx": true,
     "left": null,
-    "still": 535,
+    "still": 534,
     "entered_pct": 100.0,
     "entered_bound": false,
     "entered_approx": true
@@ -48528,10 +48566,10 @@
     "year": 2025,
     "month": 5,
     "pre": true,
-    "joined": 253,
+    "joined": 254,
     "joined_approx": true,
     "left": null,
-    "still": 253,
+    "still": 254,
     "entered_pct": 100.0,
     "entered_bound": false,
     "entered_approx": true
@@ -48583,7 +48621,7 @@
     "joined": 826,
     "joined_approx": false,
     "left": null,
-    "still": 256,
+    "still": 255,
     "entered_pct": 31.0,
     "entered_bound": true,
     "entered_approx": false
@@ -48596,8 +48634,8 @@
     "joined": 818,
     "joined_approx": false,
     "left": null,
-    "still": 312,
-    "entered_pct": 38.1,
+    "still": 313,
+    "entered_pct": 38.3,
     "entered_bound": true,
     "entered_approx": false
    },
@@ -48713,8 +48751,8 @@
     "joined": 1064,
     "joined_approx": false,
     "left": null,
-    "still": 781,
-    "entered_pct": 48.2,
+    "still": 780,
+    "entered_pct": 48.3,
     "entered_bound": true,
     "entered_approx": false
    },
@@ -48723,10 +48761,10 @@
     "year": 2026,
     "month": 8,
     "pre": false,
-    "joined": 778,
+    "joined": 805,
     "joined_approx": true,
-    "left": 83,
-    "still": 762,
+    "left": 87,
+    "still": 789,
     "entered_pct": 50.6,
     "entered_bound": false,
     "entered_approx": false
