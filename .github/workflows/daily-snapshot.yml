@@ -2,7 +2,14 @@ name: daily-snapshot
 
 on:
   schedule:
-    - cron: "30 5 * * *"   # every morning, 05:30 UTC
+    # GitHub runs scheduled workflows on a best-effort basis - they are often
+    # delayed by hours and are sometimes dropped entirely under load. A missed
+    # day leaves a permanent hole in leaver detection, so there are three
+    # catch-up slots; the guard below makes every slot after the first a no-op
+    # once the day's snapshot exists, costing no API calls.
+    - cron: "30 5 * * *"    # morning, 05:30 UTC
+    - cron: "30 11 * * *"   # catch-up, 11:30 UTC
+    - cron: "30 17 * * *"   # catch-up, 17:30 UTC
   workflow_dispatch: {}
 
 permissions:
@@ -18,8 +25,19 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - id: today
+        name: Skip if today's snapshot already exists
+        run: |
+          if [ -f "data/snapshots/$(date -u +%Y-%m-%d).csv" ] && [ "${{ github.event_name }}" = "schedule" ]; then
+            echo "needed=false" >> "$GITHUB_OUTPUT"
+            echo "::notice::Today's snapshot is already in place - catch-up run does nothing."
+          else
+            echo "needed=true" >> "$GITHUB_OUTPUT"
+          fi
+
       - id: token
         name: Check for the Mighty API token
+        if: steps.today.outputs.needed == 'true'
         env:
           MIGHTY_API_TOKEN: ${{ secrets.MIGHTY_API_TOKEN }}
         run: |
@@ -31,15 +49,17 @@ jobs:
           fi
 
       - name: Fetch today's member snapshot from Mighty Networks
-        if: steps.token.outputs.present == 'true'
+        if: steps.today.outputs.needed == 'true' && steps.token.outputs.present == 'true'
         env:
           MIGHTY_API_TOKEN: ${{ secrets.MIGHTY_API_TOKEN }}
         run: python3 scripts/fetch_members.py
 
       - name: Rebuild the overview page
+        if: steps.today.outputs.needed == 'true'
         run: python3 scripts/build_overview.py
 
       - name: Commit and push changes
+        if: steps.today.outputs.needed == 'true'
         run: |
           git config user.name "lesko-cohort-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"

@@ -106,8 +106,16 @@ Change visibility).
 
 | Workflow | When | What it does |
 |---|---|---|
-| `daily-snapshot` | every morning + manual | fetch snapshot → rebuild overview → commit |
+| `daily-snapshot` | 05:30 UTC + two catch-ups + manual | fetch snapshot → rebuild overview → commit |
 | `probe-api-docs` | manual only | fetches Mighty's public API docs into `docs/api-reference/` (setup aid) |
+
+GitHub runs scheduled workflows on a best-effort basis — in practice they
+are often delayed by hours and are occasionally dropped altogether. Because a
+missed day would leave a permanent hole in leaver detection, the workflow has
+three slots (05:30, 11:30 and 17:30 UTC); the first one to run takes the
+snapshot and the later ones detect the day's file and exit immediately, so
+they cost no API calls. A manual run always fetches, so you can force a
+refresh at any time.
 
 The connection details live in `scripts/api_config.json` (Mighty **Admin API**,
 `https://api.mn.co/admin`, Bearer token). One daily snapshot of ~30k members at
